@@ -1,6 +1,7 @@
 # Summary
 
 * [关于本书](README.md)
+   * [示例与热身](ready.md)
 * [单基因组分析](chapter_1/README.md)
    * [de novo assembly](chapter_1/assembly.md)
 * [双基因组分析](chapter_2/README.md)
