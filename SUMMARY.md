@@ -3,7 +3,7 @@
 * [关于本书](README.md)
    * [示例与热身](ready.md)
 * [单基因组分析](chapter_1/README.md)
-   * [SRA 数据下载](chapter_1)
+   * [SRA 数据下载](chapter_1/download_sra.md)
    * [de novo assembly](chapter_1/assembly.md)
    * [Annotation](chapter_1/annotation.md)
 * [双基因组分析](chapter_2/README.md)
