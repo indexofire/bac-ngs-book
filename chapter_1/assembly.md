@@ -1,14 +1,5 @@
 # 细菌基因组组装工具
 
-### de novo sequencing
-
-全基因组 de novo sequencing 也叫做基因组从头测序，是指不依赖于任何已知基因组序列信息对某个物种的基因组进行测序，然后应用生物信息学手段对测序序列进行拼接和组装，最终获得该种基因组序列图谱。
-
-### de novo assembly
-
-由于细菌基因组的特点，一般都是采用 de novo sequencing 的方式来测细菌基因组。因此采用的拼接方法就称其为 de novo assembly。
-
-
 1. 安装 sra toolkit
 
 ```

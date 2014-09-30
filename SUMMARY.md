@@ -19,4 +19,5 @@
    * [Amazon EC2 教程](appendix/a2.md)
    * [名词解释](appendix/a3.md)
    * [网上资源](appendix/a4.md)
+   * [Assembly Tools and Quality](appendix/a5.md)
 
