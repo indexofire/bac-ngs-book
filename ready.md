@@ -47,10 +47,11 @@ $ sudo apt-get remove python-dev                # 删除python-dev
 
 有兴趣的生物学家可以先阅读以下资料，增强对 Unix 的相关知识：
 1. [Unix and Perl Primer for Biologists](http://korflab.ucdavis.edu/Unix_and_Perl/current.html)
+2. [The Linux Command Line](http://billie66.github.io/TLCL/book/zh/)S
 
 ## 我实在学不会 Linux，有没有别的方案？
 
-对于实在不喜学习命令行工具但仍想自己分析数据的，推荐尝试 [Orione][] 工具。这是一个基于 Galaxy （最主流的基于 web 的免费生物数据分析平台） 的微生物高通量测序数据分析框架，里面集成了常见的微生物数据分析工具，各种测序应用的分析工作流。 [Orione][] 的文档参考[这里](http://orione-documentation.readthedocs.org/)，想研究代码参考[这里](https://bitbucket.org/crs4/orione-tools)。
+对于实在不喜学习命令行工具但仍想自己分析微生物数据的，推荐尝试 [Orione][] 工具。这是一个基于 Galaxy （最主流的基于 web 的免费生物数据分析平台） 的微生物高通量测序数据分析框架，里面集成了常见的微生物数据分析工具，各种测序应用的分析工作流。 [Orione][] 的文档参考[这里](http://orione-documentation.readthedocs.org/)，想研究代码参考[这里](https://bitbucket.org/crs4/orione-tools)。
 
 对于可以接受购买商业化产品的用户，希望带 GUI 的本地软件用户，可以考虑购买 [CLC workbench](http://www.clcbio.com/products/clc-genomics-workbench/)
 S

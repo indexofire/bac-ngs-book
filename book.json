@@ -1,12 +1,16 @@
 {
     "plugins": [
-        "disqus"
+        "disqus",
+        "ga"
     ],
     "pluginsConfig": {
         "disqus": {
             "disqus": {
                 "shortName": "bac-ngs-book"
             }
+        },
+        "ga": {
+            "token": "UA-55420348-1"
         }
     }
 }

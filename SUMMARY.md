@@ -20,4 +20,5 @@
    * [名词解释](appendix/a3.md)
    * [网上资源](appendix/a4.md)
    * [Assembly Tools and Quality](appendix/a5.md)
+   * [Galaxy 配置](appendix/55_galaxy.md)
 
