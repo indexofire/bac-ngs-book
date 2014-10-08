@@ -6,4 +6,11 @@
 2. 搜索关键测获得目标
 3. 下载sra格式的文件
 
+### 1. edirect 安装
+
+```
+$ wget ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/edirect.tar.gz
+$ tar zxvf edirect.tar.gz ~/app
+```
+
 批量下载数据的方法

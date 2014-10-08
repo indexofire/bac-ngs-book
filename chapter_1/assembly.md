@@ -1,11 +1,20 @@
 # 细菌基因组组装工具
 
-1. 安装 sra toolkit
+### de novo assembly 流程图
+
+
+1. 安装 sra toolkit (for ubuntu x64 version)
 
 ```
-$ wget ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/edirect.tar.gz
-$ tar zxvf edirect.tar.gz ~/Apps
+~tmp $ curl -O http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.4.1/sratoolkit.2.4.1-ubuntu64.tar.gz
+~tmp $ tar zxvf sratoolkit.2.4.1-ubuntu64.tar.gz -C ~/app
+~tmp $ cd ~/app/sratoolkit.2.4.1-ubuntu64
+~tmp $ sudo ln -s `pwd`/bin/* /usr/local/sbin/
 ```
+
+2. QC
+
+3. trimming
 
 ### 组装工具的选择
 
@@ -14,6 +23,11 @@ $ tar zxvf edirect.tar.gz ~/Apps
 一套reads数据往往不同的拼接软件会产生不同的拼接结果，甚至彼此之间的差异也会比较大
 
 
+#### 1. SPAdes 的安装
+
+```
+~tmp $
+```
 
 ##### *Reference*
 

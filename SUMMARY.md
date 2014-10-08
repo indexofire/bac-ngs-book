@@ -1,11 +1,12 @@
 # Summary
 
-* [关于本书](README.md)
-   * [示例与热身](ready.md)
+* [CHANGELOGS](README.md)
+   * [关于本书与示例](preface/about.md)
 * [单基因组分析](chapter_1/README.md)
    * [SRA 数据下载](chapter_1/download_sra.md)
    * [de novo assembly](chapter_1/assembly.md)
    * [Annotation](chapter_1/annotation.md)
+   * [Visulization](chapter_1/visulization.md)
 * [双基因组分析](chapter_2/README.md)
    * [mapping](chapter_2/mapping.md)
 * [多基因组分析](chapter_3/README.md)
