@@ -7,6 +7,7 @@
    * [de novo assembly](chapter_1/assembly.md)
    * [Annotation](chapter_1/annotation.md)
    * [Visulization](chapter_1/visulization.md)
+   * [密码子偏好性分析](chapter_1/code.md)
 * [双基因组分析](chapter_2/README.md)
    * [mapping](chapter_2/mapping.md)
 * [多基因组分析](chapter_3/README.md)
@@ -22,4 +23,5 @@
    * [网上资源](appendix/a4.md)
    * [Assembly Tools and Quality](appendix/a5.md)
    * [Galaxy 配置](appendix/55_galaxy.md)
+   * [数据格式](README)
 
