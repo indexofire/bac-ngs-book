@@ -21,6 +21,7 @@
 * *[糗世界](http://pgfe.umassmed.edu/ou/)*
 * *[YGC](http://ygc.name/)*
 * *[Biostack](http://www.biostack.org/)*
+* *[宠辱不惊 一心问学](http://www.chenlianfu.com/)*
 * *[Bacterial Genomics](http://bacpathgenomics.wordpress.com/)*
 * *[Genome Unzipped](http://www.genomesunzipped.org/)*
 * *[Titus’s blog](http://ivory.idyll.org/blog/)*
@@ -31,7 +32,7 @@
 * *[Omics!](http://omicsomics.blogspot.com/)*
 * *[Pathogens genes & genomes](http://pathogenomics.bham.ac.uk/blog/)*
 
-### 在线工具
+### 在线工具和数据库
 * *[PATRIC](http://patricbrc.vbi.vt.edu/)* 非常棒的病原菌资源整合类数据库，用户界面设计比较友好，各种异步读取速度很快用户体验不错。
 * *[ARDB](http://ardb.cbcb.umd.edu/)* 马里兰大学维护的耐药基因数据库，可惜2009年已经停止更新。
 * *[CARD](http://arpcard.mcmaster.ca/)* 加拿大麦克马斯特大学维护的病原微生耐药数据库。
@@ -40,6 +41,7 @@
 * *[DBETH](http://www.hpppi.iicb.res.in/btox/About_DBETH.html)* 对人致病的细菌外毒素数据库，由印度科研机构维护。
 * *[Food Microbe Tracker](http://www.foodmicrobetracker.com/login/login.aspx)*S Cornell大学主持的食源性致病菌的数据库项目，主要有表型和PFGE分型资料。最大的特点可以提交自己的PFGE数据与数据库中的比对，但可能我使用不当或理解不对，比对出来的结果总是完全对不上，不知道它具体的算法
 * *[Genomespace](http://www.genomespace.org/)* 基于web界面的基因组分析工具
+* *[MBGD](http://mbgd.genome.ad.jp/)* 日本人做的微生物比较基因组数据库
 
 ### 讲座课件
 在线的各种PPT讲座课件，这里选择一些基础简介的可见和一些与微生物测序内容相关的课件

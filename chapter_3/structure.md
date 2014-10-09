@@ -5,8 +5,8 @@
 
 1. 安装 srst2
 ```
-apps/$ wget ...
-apps/$
+~/apps$ wget ...
+~/apps$
 ```
 
 2. 从一个菌株fastq数据了解 ST 型别和毒力与耐药基因
