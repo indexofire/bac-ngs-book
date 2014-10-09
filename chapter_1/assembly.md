@@ -3,6 +3,7 @@
 ### de novo assembly 流程
 
 1. 安装 sra toolkit (for ubuntu x64 version)
+
 ```
 ~/tmp$ curl -O http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.4.1/sratoolkit.2.4.1-ubuntu64.tar.gz
 ~/tmp$ tar zxvf sratoolkit.2.4.1-ubuntu64.tar.gz -C ~/app
@@ -11,7 +12,11 @@
 ```
 
 2. sra数据转成fastq格式
+
+SRR955386 这个数据的样本还用 Pacbio SMRT 平台 进行了测序，2组数据拼接形成一个完成图。用该完成图作为模板，考量一下不同拼接软的拼接结果。将 CSFAN006122 的基因组完成图数据下载。
 ```
+~/data$ prefetch -v SRR955386
+~/data$ mv ~/.ncbi/public/sra/SRR955386.sra .
 ~/data$ fastq-dump --split-files SRR955386.sra
 ```
 完成后可以看到 `data` 目录下新增了2个文件 `SRR955386_1.fastq` 和 `SRR955386_2.fastq`
@@ -27,18 +32,6 @@
 pass
 ```
 
-### 组装工具的选择
-
-原核生物的组装工具最常见的例如 velvet 和 等等。随着目前 MiSeq 读长的不断增加，其他拼接工具大量涌现，针对日常工作的一些问题做了优化。
-
-一套reads数据往往不同的拼接软件会产生不同的拼接结果，甚至彼此之间的差异也会比较大
-
-因为 SRR55386 这个数据的样本还用 Pacbio SMRT 平台 进行了测序，2组数据拼接形成一个完成图。用该完成图作为模板，考量一下不同拼接软的拼接结果。
-
-将 CSFAN006122 的基因组完成图数据下载。
-```
-~/data$ wget
-```
 
 **1. SPAdes**
 
