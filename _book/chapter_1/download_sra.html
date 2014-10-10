@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>de novo assembly | 微生物基因组分析应用教程 CHANGELOGS</title>
+        <title>SRA 数据下载 | 微生物基因组分析应用教程 CHANGELOGS</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,10 +18,10 @@
     
     
     
-    <link rel="next" href="../chapter_1/annotation.html" />
+    <link rel="next" href="../chapter_1/assembly.html" />
     
     
-    <link rel="prev" href="../chapter_1/download_sra.html" />
+    <link rel="prev" href="../chapter_1/README.html" />
     
 
         
@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="1.2" data-basepath=".." data-revision="1412930803996">
+    <div class="book"  data-level="1.1" data-basepath=".." data-revision="1412930803996">
     
 
 <div class="book-summary">
@@ -104,7 +104,7 @@
                 
     
         
-        <li class="chapter " data-level="1.1" data-path="chapter_1/download_sra.html">
+        <li class="chapter active" data-level="1.1" data-path="chapter_1/download_sra.html">
             
                 
                     <a href="../chapter_1/download_sra.html">
@@ -120,7 +120,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1.2" data-path="chapter_1/assembly.html">
+        <li class="chapter " data-level="1.2" data-path="chapter_1/assembly.html">
             
                 
                     <a href="../chapter_1/assembly.html">
@@ -573,70 +573,26 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_512">
+                    <section class="normal" id="section-gitbook_514">
                     
-                        <h1 id="">细菌基因组组装工具</h1>
-<h3 id="de-novo-assembly-">de novo assembly 流程</h3>
-<ol>
-<li>安装 sra toolkit (for ubuntu x64 version)</li>
-</ol>
-<pre><code>~/tmp$ curl -O http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.4.1/sratoolkit.2.4.1-ubuntu64.tar.gz
-~/tmp$ tar zxvf sratoolkit.2.4.1-ubuntu64.tar.gz -C ~/app
-~/tmp$ cd ~/app/sratoolkit.2.4.1-ubuntu64
-~/tmp$ sudo ln -s `pwd`/bin/* /usr/local/sbin/
-</code></pre><ol>
-<li>sra数据转成fastq格式</li>
-</ol>
-<p>SRR955386 这个数据的样本还用 Pacbio SMRT 平台 进行了测序，2组数据拼接形成一个完成图。用该完成图作为模板，考量一下不同拼接软的拼接结果。将 CSFAN006122 的基因组完成图数据下载。</p>
-<pre><code>~/data$ prefetch -v SRR955386
+                        <h1 id="">测序数据的获得</h1>
+<p>对于单个SRA数据，本地电脑可以通过浏览器下载。这里讨论在服务器端的操作。细菌基因组数据以 illumina MiSeq PE250 的测序 数据为例，其他测序数据格式将在附录中探讨。</p>
+<h3 id="-sra-">认识 SRA 数据库</h3>
+<h5 id="1-edirect-">1. edirect 安装</h5>
+<pre><code>~/tmp$ wget ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/edirect.tar.gz
+~/tmp$ tar zxvf edirect.tar.gz -C ~/app
+~/tmp$ sudo ln -s ~/app/edirect/*
+</code></pre><h5 id="2-">2. 搜索并下载数据</h5>
+<p>选择美国 FDA 提交的 SRR955386 数据。该数据是在Illumina Miseq平台上PE250的数据。生物样本是一株分离自奶酪的单增李斯特菌 CFSAN006122。如果你已经安装好 NCBI 的 sra_toolkit 工具，可以直接用里面的 prefetch 下载。</p>
+<pre><code class="lang-bash">~/data$ prefetch -v SRR955386
 ~/data$ mv ~/.ncbi/public/sra/SRR955386.sra .
-~/data$ fastq-dump --split-files SRR955386.sra
-</code></pre><p>完成后可以看到 <code>data</code> 目录下新增了2个文件 <code>SRR955386_1.fastq</code> 和 <code>SRR955386_2.fastq</code></p>
+</code></pre>
+<p><strong>Notes:</strong> <em>有些版本的 sra_toolkit 会有设置问题，建议使用最新版。而2.4.1 版本的 prefetch 调用 ascp 时选择的 ssh 密钥也是 windowns 版本的 .putty 而不是 .openssh，希望 bug 在新版本会有所修复。</em></p>
+<h3 id="">批量下载数据的方法</h3>
 <ol>
-<li>QC</li>
+<li>使用 aspera connect</li>
+<li>编写脚本</li>
 </ol>
-<pre><code>~/data$ fastq SRR955386_1.fastq
-</code></pre><p>使用FastQC软件查看，Adapter Content选项里显示序列无 Adapter。</p>
-<ol>
-<li>trimming</li>
-</ol>
-<pre><code>pass
-</code></pre><p><strong>1. SPAdes</strong></p>
-<p>1.1 下载并安装 SPAdes</p>
-<pre><code>~/tmp$ curl -O http://spades.bioinf.spbau.ru/release3.1.1/SPAdes-3.1.1-Linux.tar.gz
-~/tmp$ tar zxvf SPAdes-3.1.1-Linux.tar.gz -C ~/app
-~/tmp$ cd ~/app
-~/app$ sudo ln -s `pwd`/SPAdes-3.1.1-Linux/bin/* /usr/local/sbin
-</code></pre><p>1.2 开始拼装</p>
-<pre><code>~/app$ spades.py -t 2 -1 SRR95386_1.fastq -2 SRR955386_2.fastq -o spades_output
-</code></pre><p><strong>2. MaSuRCA</strong></p>
-<p>2.1 下载并安装 MaSuRCA</p>
-<pre><code>~/tmp$ curl -O ftp://ftp.genome.umd.edu/pub/MaSuRCA/MaSuRCA-2.3.0.tar.gz
-~/tmp$ tar zxvf MaSuRCA-2.3.0.tar.gz -C ~/app
-~/tmp$ cd ~/app
-~/app$ ./MaSuRCA-2.3.0/install.sh
-~/app$ sudo ln -s `pwd`/MaSuRCA-2.3.0/bin/masurca /usr/local/sbin
-</code></pre><p>2.2 建立拼装配置文件 <code>~/data/SRR955386_masurca.config</code></p>
-<pre><code>DATA
-PE= p1 500 50 SRR955386_1.fastq SRR955386_2.fastq
-END
-
-PARAMETERS
-GRAPH_KMER_SIZE=auto
-USE_LINKING_MATES=1
-LIMIT_JUMP_COVERAGE = 60
-KMER_COUNT_THRESHOLD = 1
-NUM_THREADS= 2
-JF_SIZE=100000000
-DO_HOMOPOLYMER_TRIM=0
-END
-</code></pre><p>2.3 开始拼装</p>
-<pre><code>~app$ masurca SRR955386_masurca.config
-~app$ ./assemble.sh
-</code></pre><p><strong>3. a5-miseq</strong></p>
-<p>3.1 下载并安装</p>
-<p>3.2 开始拼装</p>
-<h5 id="reference"><em>Reference</em></h5>
 
                     
                     </section>
@@ -647,10 +603,10 @@ END
         </div>
 
         
-        <a href="../chapter_1/download_sra.html" class="navigation navigation-prev " aria-label="Previous page: SRA 数据下载"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter_1/README.html" class="navigation navigation-prev " aria-label="Previous page: 单基因组分析"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter_1/annotation.html" class="navigation navigation-next " aria-label="Next page: Annotation"><i class="fa fa-angle-right"></i></a>
+        <a href="../chapter_1/assembly.html" class="navigation navigation-next " aria-label="Next page: de novo assembly"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>de novo assembly | 微生物基因组分析应用教程 CHANGELOGS</title>
+        <title>Assembly Tools and Quality | 微生物基因组分析应用教程 CHANGELOGS</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,10 +18,10 @@
     
     
     
-    <link rel="next" href="../chapter_1/annotation.html" />
+    <link rel="next" href="../appendix/a6_galaxy.html" />
     
     
-    <link rel="prev" href="../chapter_1/download_sra.html" />
+    <link rel="prev" href="../appendix/a4_resource.html" />
     
 
         
@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="1.2" data-basepath=".." data-revision="1412930803996">
+    <div class="book"  data-level="5.5" data-basepath=".." data-revision="1412930803996">
     
 
 <div class="book-summary">
@@ -120,7 +120,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1.2" data-path="chapter_1/assembly.html">
+        <li class="chapter " data-level="1.2" data-path="chapter_1/assembly.html">
             
                 
                     <a href="../chapter_1/assembly.html">
@@ -432,7 +432,7 @@
         </li>
     
         
-        <li class="chapter " data-level="5.5" data-path="appendix/a5_assembly.html">
+        <li class="chapter active" data-level="5.5" data-path="appendix/a5_assembly.html">
             
                 
                     <a href="../appendix/a5_assembly.html">
@@ -573,70 +573,24 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_512">
+                    <section class="normal" id="section-gitbook_520">
                     
-                        <h1 id="">细菌基因组组装工具</h1>
-<h3 id="de-novo-assembly-">de novo assembly 流程</h3>
+                        <h1 id="assembly-tools-and-quality">Assembly Tools and Quality</h1>
+<h3 id="quality">Quality</h3>
 <ol>
-<li>安装 sra toolkit (for ubuntu x64 version)</li>
+<li><a href="http://ccb.jhu.edu/gage_b/" target="_blank">GAGE-B</a></li>
+<li><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3844414/" target="_blank">Assemblathon 2</a></li>
+<li><a href="http://bioinf.spbau.ru/en/quast" target="_blank">Quast</a></li>
 </ol>
-<pre><code>~/tmp$ curl -O http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.4.1/sratoolkit.2.4.1-ubuntu64.tar.gz
-~/tmp$ tar zxvf sratoolkit.2.4.1-ubuntu64.tar.gz -C ~/app
-~/tmp$ cd ~/app/sratoolkit.2.4.1-ubuntu64
-~/tmp$ sudo ln -s `pwd`/bin/* /usr/local/sbin/
-</code></pre><ol>
-<li>sra数据转成fastq格式</li>
-</ol>
-<p>SRR955386 这个数据的样本还用 Pacbio SMRT 平台 进行了测序，2组数据拼接形成一个完成图。用该完成图作为模板，考量一下不同拼接软的拼接结果。将 CSFAN006122 的基因组完成图数据下载。</p>
-<pre><code>~/data$ prefetch -v SRR955386
-~/data$ mv ~/.ncbi/public/sra/SRR955386.sra .
-~/data$ fastq-dump --split-files SRR955386.sra
-</code></pre><p>完成后可以看到 <code>data</code> 目录下新增了2个文件 <code>SRR955386_1.fastq</code> 和 <code>SRR955386_2.fastq</code></p>
-<ol>
-<li>QC</li>
-</ol>
-<pre><code>~/data$ fastq SRR955386_1.fastq
-</code></pre><p>使用FastQC软件查看，Adapter Content选项里显示序列无 Adapter。</p>
-<ol>
-<li>trimming</li>
-</ol>
-<pre><code>pass
-</code></pre><p><strong>1. SPAdes</strong></p>
-<p>1.1 下载并安装 SPAdes</p>
-<pre><code>~/tmp$ curl -O http://spades.bioinf.spbau.ru/release3.1.1/SPAdes-3.1.1-Linux.tar.gz
-~/tmp$ tar zxvf SPAdes-3.1.1-Linux.tar.gz -C ~/app
-~/tmp$ cd ~/app
-~/app$ sudo ln -s `pwd`/SPAdes-3.1.1-Linux/bin/* /usr/local/sbin
-</code></pre><p>1.2 开始拼装</p>
-<pre><code>~/app$ spades.py -t 2 -1 SRR95386_1.fastq -2 SRR955386_2.fastq -o spades_output
-</code></pre><p><strong>2. MaSuRCA</strong></p>
-<p>2.1 下载并安装 MaSuRCA</p>
-<pre><code>~/tmp$ curl -O ftp://ftp.genome.umd.edu/pub/MaSuRCA/MaSuRCA-2.3.0.tar.gz
-~/tmp$ tar zxvf MaSuRCA-2.3.0.tar.gz -C ~/app
-~/tmp$ cd ~/app
-~/app$ ./MaSuRCA-2.3.0/install.sh
-~/app$ sudo ln -s `pwd`/MaSuRCA-2.3.0/bin/masurca /usr/local/sbin
-</code></pre><p>2.2 建立拼装配置文件 <code>~/data/SRR955386_masurca.config</code></p>
-<pre><code>DATA
-PE= p1 500 50 SRR955386_1.fastq SRR955386_2.fastq
-END
-
-PARAMETERS
-GRAPH_KMER_SIZE=auto
-USE_LINKING_MATES=1
-LIMIT_JUMP_COVERAGE = 60
-KMER_COUNT_THRESHOLD = 1
-NUM_THREADS= 2
-JF_SIZE=100000000
-DO_HOMOPOLYMER_TRIM=0
-END
-</code></pre><p>2.3 开始拼装</p>
-<pre><code>~app$ masurca SRR955386_masurca.config
-~app$ ./assemble.sh
-</code></pre><p><strong>3. a5-miseq</strong></p>
-<p>3.1 下载并安装</p>
-<p>3.2 开始拼装</p>
-<h5 id="reference"><em>Reference</em></h5>
+<h3 id="assembly-tools-for-bacterial-genome">Assembly tools for bacterial genome</h3>
+<ul>
+<li>SPAdes</li>
+<li>velvet</li>
+<li>ABySS</li>
+<li>MIRA</li>
+<li>SOAPdenovo
+*</li>
+</ul>
 
                     
                     </section>
@@ -647,10 +601,10 @@ END
         </div>
 
         
-        <a href="../chapter_1/download_sra.html" class="navigation navigation-prev " aria-label="Previous page: SRA 数据下载"><i class="fa fa-angle-left"></i></a>
+        <a href="../appendix/a4_resource.html" class="navigation navigation-prev " aria-label="Previous page: 网上资源"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter_1/annotation.html" class="navigation navigation-next " aria-label="Next page: Annotation"><i class="fa fa-angle-right"></i></a>
+        <a href="../appendix/a6_galaxy.html" class="navigation navigation-next " aria-label="Next page: Galaxy 配置"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>de novo assembly | 微生物基因组分析应用教程 CHANGELOGS</title>
+        <title>网上资源 | 微生物基因组分析应用教程 CHANGELOGS</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,10 +18,10 @@
     
     
     
-    <link rel="next" href="../chapter_1/annotation.html" />
+    <link rel="next" href="../appendix/a5_assembly.html" />
     
     
-    <link rel="prev" href="../chapter_1/download_sra.html" />
+    <link rel="prev" href="../appendix/a3_explanation.html" />
     
 
         
@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="1.2" data-basepath=".." data-revision="1412930803996">
+    <div class="book"  data-level="5.4" data-basepath=".." data-revision="1412930803996">
     
 
 <div class="book-summary">
@@ -120,7 +120,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1.2" data-path="chapter_1/assembly.html">
+        <li class="chapter " data-level="1.2" data-path="chapter_1/assembly.html">
             
                 
                     <a href="../chapter_1/assembly.html">
@@ -416,7 +416,7 @@
         </li>
     
         
-        <li class="chapter " data-level="5.4" data-path="appendix/a4_resource.html">
+        <li class="chapter active" data-level="5.4" data-path="appendix/a4_resource.html">
             
                 
                     <a href="../appendix/a4_resource.html">
@@ -573,70 +573,86 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_512">
+                    <section class="normal" id="section-gitbook_519">
                     
-                        <h1 id="">细菌基因组组装工具</h1>
-<h3 id="de-novo-assembly-">de novo assembly 流程</h3>
-<ol>
-<li>安装 sra toolkit (for ubuntu x64 version)</li>
-</ol>
-<pre><code>~/tmp$ curl -O http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.4.1/sratoolkit.2.4.1-ubuntu64.tar.gz
-~/tmp$ tar zxvf sratoolkit.2.4.1-ubuntu64.tar.gz -C ~/app
-~/tmp$ cd ~/app/sratoolkit.2.4.1-ubuntu64
-~/tmp$ sudo ln -s `pwd`/bin/* /usr/local/sbin/
-</code></pre><ol>
-<li>sra数据转成fastq格式</li>
-</ol>
-<p>SRR955386 这个数据的样本还用 Pacbio SMRT 平台 进行了测序，2组数据拼接形成一个完成图。用该完成图作为模板，考量一下不同拼接软的拼接结果。将 CSFAN006122 的基因组完成图数据下载。</p>
-<pre><code>~/data$ prefetch -v SRR955386
-~/data$ mv ~/.ncbi/public/sra/SRR955386.sra .
-~/data$ fastq-dump --split-files SRR955386.sra
-</code></pre><p>完成后可以看到 <code>data</code> 目录下新增了2个文件 <code>SRR955386_1.fastq</code> 和 <code>SRR955386_2.fastq</code></p>
-<ol>
-<li>QC</li>
-</ol>
-<pre><code>~/data$ fastq SRR955386_1.fastq
-</code></pre><p>使用FastQC软件查看，Adapter Content选项里显示序列无 Adapter。</p>
-<ol>
-<li>trimming</li>
-</ol>
-<pre><code>pass
-</code></pre><p><strong>1. SPAdes</strong></p>
-<p>1.1 下载并安装 SPAdes</p>
-<pre><code>~/tmp$ curl -O http://spades.bioinf.spbau.ru/release3.1.1/SPAdes-3.1.1-Linux.tar.gz
-~/tmp$ tar zxvf SPAdes-3.1.1-Linux.tar.gz -C ~/app
-~/tmp$ cd ~/app
-~/app$ sudo ln -s `pwd`/SPAdes-3.1.1-Linux/bin/* /usr/local/sbin
-</code></pre><p>1.2 开始拼装</p>
-<pre><code>~/app$ spades.py -t 2 -1 SRR95386_1.fastq -2 SRR955386_2.fastq -o spades_output
-</code></pre><p><strong>2. MaSuRCA</strong></p>
-<p>2.1 下载并安装 MaSuRCA</p>
-<pre><code>~/tmp$ curl -O ftp://ftp.genome.umd.edu/pub/MaSuRCA/MaSuRCA-2.3.0.tar.gz
-~/tmp$ tar zxvf MaSuRCA-2.3.0.tar.gz -C ~/app
-~/tmp$ cd ~/app
-~/app$ ./MaSuRCA-2.3.0/install.sh
-~/app$ sudo ln -s `pwd`/MaSuRCA-2.3.0/bin/masurca /usr/local/sbin
-</code></pre><p>2.2 建立拼装配置文件 <code>~/data/SRR955386_masurca.config</code></p>
-<pre><code>DATA
-PE= p1 500 50 SRR955386_1.fastq SRR955386_2.fastq
-END
-
-PARAMETERS
-GRAPH_KMER_SIZE=auto
-USE_LINKING_MATES=1
-LIMIT_JUMP_COVERAGE = 60
-KMER_COUNT_THRESHOLD = 1
-NUM_THREADS= 2
-JF_SIZE=100000000
-DO_HOMOPOLYMER_TRIM=0
-END
-</code></pre><p>2.3 开始拼装</p>
-<pre><code>~app$ masurca SRR955386_masurca.config
-~app$ ./assemble.sh
-</code></pre><p><strong>3. a5-miseq</strong></p>
-<p>3.1 下载并安装</p>
-<p>3.2 开始拼装</p>
-<h5 id="reference"><em>Reference</em></h5>
+                        <h1 id="">网上资源</h1>
+<p>网络上一些学习资源和工具网站。注：部分网站需要翻墙。</p>
+<h3 id="">交流社区</h3>
+<p>测序相关的论坛和问答社区，社交化的科研工作者交流平台。</p>
+<ul>
+<li><em><a href="https://www.biostars.org/" target="_blank">Biostar</a></em></li>
+<li><em><a href="http://seqanswers.com/forums/index.php" target="_blank">Seq Answer</a></em></li>
+<li><em><a href="http://www.bioask.net/" target="_blank">bioask</a></em></li>
+<li><em><a href="https://www.researchgate.net/" target="_blank">Research Gate</a></em></li>
+</ul>
+<h3 id="">免费课程资料</h3>
+<p>国外院校举办的生物信息学与高通量测序技术培训所提供的授课资料。</p>
+<ul>
+<li><em><a href="http://www.personal.psu.edu/iua1/lectures.html" target="_blank">Bioinformatics Courses at Penn State</a></em></li>
+<li><em><a href="http://angus.readthedocs.org/en/2014/" target="_blank">ANGUS bioinformatics c</a></em></li>
+<li><em><a href="http://training.bioinformatics.ucdavis.edu/" target="_blank">UC Davis training</a></em></li>
+<li><em><a href="https://wikis.utexas.edu/display/bioiteam/Home" target="_blank">UC Texas at Austin wiki</a></em></li>
+</ul>
+<h3 id="">博客</h3>
+<p>关于生物信息学与高通量测序技术相关内容的博客网站。</p>
+<ul>
+<li><em><a href="http://pgfe.umassmed.edu/ou/" target="_blank">糗世界</a></em></li>
+<li><em><a href="http://ygc.name/" target="_blank">YGC</a></em></li>
+<li><em><a href="http://www.biostack.org/" target="_blank">Biostack</a></em></li>
+<li><em><a href="http://www.chenlianfu.com/" target="_blank">宠辱不惊 一心问学</a></em></li>
+<li><em><a href="http://bacpathgenomics.wordpress.com/" target="_blank">Bacterial Genomics</a></em></li>
+<li><em><a href="http://www.genomesunzipped.org/" target="_blank">Genome Unzipped</a></em></li>
+<li><em><a href="http://ivory.idyll.org/blog/" target="_blank">Titus’s blog</a></em></li>
+<li><em><a href="http://bcbio.wordpress.com/" target="_blank">Blue Collar Bioinformatics</a></em></li>
+<li><em><a href="http://massgenomics.org/" target="_blank">Mass Genomis</a></em></li>
+<li><em><a href="http://blog.nextgenetics.net/" target="_blank">Next Genetics</a></em></li>
+<li><em><a href="http://gettinggeneticsdone.blogspot.com/" target="_blank">Getting Genetics Done</a></em></li>
+<li><em><a href="http://omicsomics.blogspot.com/" target="_blank">Omics!</a></em></li>
+<li><em><a href="http://pathogenomics.bham.ac.uk/blog/" target="_blank">Pathogens genes &amp; genomes</a></em></li>
+</ul>
+<h3 id="">在线工具和数据库</h3>
+<ul>
+<li><em><a href="http://patricbrc.vbi.vt.edu/" target="_blank">PATRIC</a></em> 非常棒的病原菌资源整合类数据库，用户界面设计比较友好，各种异步读取速度很快用户体验不错。</li>
+<li><em><a href="http://ardb.cbcb.umd.edu/" target="_blank">ARDB</a></em> 马里兰大学维护的耐药基因数据库，可惜2009年已经停止更新。</li>
+<li><em><a href="http://arpcard.mcmaster.ca/" target="_blank">CARD</a></em> 加拿大麦克马斯特大学维护的病原微生耐药数据库。</li>
+<li><em><a href="http://www.mgc.ac.cn/VFs/main.htm" target="_blank">VFDB</a></em> 中国医学科学院病原系统生物学研究室创建的病原菌毒力基因数据库</li>
+<li><em><a href="http://mvirdb.llnl.gov/" target="_blank">MVIRDB</a></em> Lawrence Livermore National Laboratory 创建毒力基因整合数据库。数据来源于包括VFDB在内的多个数据库。</li>
+<li><em><a href="http://www.hpppi.iicb.res.in/btox/About_DBETH.html" target="_blank">DBETH</a></em> 对人致病的细菌外毒素数据库，由印度科研机构维护。</li>
+<li><em><a href="http://www.foodmicrobetracker.com/login/login.aspx" target="_blank">Food Microbe Tracker</a></em>S Cornell大学主持的食源性致病菌的数据库项目，主要有表型和PFGE分型资料。最大的特点可以提交自己的PFGE数据与数据库中的比对，但可能我使用不当或理解不对，比对出来的结果总是完全对不上，不知道它具体的算法</li>
+<li><em><a href="http://www.genomespace.org/" target="_blank">Genomespace</a></em> 基于web界面的基因组分析工具</li>
+<li><em><a href="http://mbgd.genome.ad.jp/" target="_blank">MBGD</a></em> 日本人做的微生物比较基因组数据库</li>
+</ul>
+<h3 id="">讲座课件</h3>
+<p>在线的各种PPT讲座课件，这里选择一些基础简介的可见和一些与微生物测序内容相关的课件</p>
+<ul>
+<li><em><a href="http://www.slideshare.net/suryasaha/sequencing-32243702" target="_blank">Next Generation Sequencing</a></em></li>
+<li><em><a href="http://www.slideshare.net/flxlex/assembly-before-and-after" target="_blank">Assembly before and after</a></em></li>
+</ul>
+<h3 id="">视频资料</h3>
+<p>如果嫌光看课件不够明确，Youtube里有一些不错的测序公司与基因组学视频频道可以收看</p>
+<ul>
+<li><em><a href="https://www.youtube.com/channel/UCxWMU29FF4kIG8YmQf6Zv0g" target="_blank">Illumina</a></em></li>
+<li><em><a href="https://www.youtube.com/channel/UCmZQ-P0dCwd1eOZtMuQrQGg" target="_blank">Iontorrent</a></em></li>
+<li><em><a href="https://www.youtube.com/user/GenomeTV" target="_blank">Genome TV</a></em></li>
+<li><em><a href="https://www.youtube.com/channel/UCa2HSyCToFAAqQlKmd5-l8g" target="_blank">Pathogenomics</a></em></li>
+<li><em><a href="https://www.youtube.com/channel/UCv4IbnP9j9RC_aZAs8wqdeQ" target="_blank">Broad Institute</a></em></li>
+</ul>
+<h3 id="">网络学校</h3>
+<p>希望学习一些基础知识的可以通过在线学校资源，里面有一些关于生物信息学的基础课程给没有学过的微生物学研究者入门。还有一些 Perl 或者 Python 脚本语言入门课程，给希望能编写脚本的工作者学习。另外还有一些如进化树分析的理论知识课程也可以参考。</p>
+<ul>
+<li><em><a href="http://mooc.guokr.com/" target="_blank">MOOC 学院</a></em></li>
+<li><em><a href="https://www.edx.org/" target="_blank">edX</a></em></li>
+<li><em><a href="https://www.coursera.org/" target="_blank">coursera</a></em></li>
+</ul>
+<h3 id="">软件工具</h3>
+<ul>
+<li><a href="http://www.galaxy.org" target="_blank">Galaxy</a></li>
+<li><a href="http://circos.ca" target="_blank">circos</a></li>
+</ul>
+<h3 id="">其他</h3>
+<ul>
+<li><em><a href="http://www.biocompare.com/" target="_blank">Biocompare</a></em> 给购买者提供产品信息和技术资料的网站，对于实验室选择仪器和试剂挺有帮助，就是不知道有没有收公司的钱</li>
+</ul>
 
                     
                     </section>
@@ -647,10 +663,10 @@ END
         </div>
 
         
-        <a href="../chapter_1/download_sra.html" class="navigation navigation-prev " aria-label="Previous page: SRA 数据下载"><i class="fa fa-angle-left"></i></a>
+        <a href="../appendix/a3_explanation.html" class="navigation navigation-prev " aria-label="Previous page: 名词解释"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter_1/annotation.html" class="navigation navigation-next " aria-label="Next page: Annotation"><i class="fa fa-angle-right"></i></a>
+        <a href="../appendix/a5_assembly.html" class="navigation navigation-next " aria-label="Next page: Assembly Tools and Quality"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
