@@ -11,4 +11,3 @@
 * ABySS
 * MIRA
 * SOAPdenovo
-*
