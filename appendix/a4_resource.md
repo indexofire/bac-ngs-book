@@ -17,11 +17,12 @@
 * *[UC Texas at Austin wiki](https://wikis.utexas.edu/display/bioiteam/Home)*
 
 ### 博客
-关于生物信息学与高通量测序技术相关内容的博客网站。
+关于微生物的生物信息学与高通量测序技术相关内容的博客网站。
 * *[糗世界](http://pgfe.umassmed.edu/ou/)*
 * *[YGC](http://ygc.name/)*
 * *[Biostack](http://www.biostack.org/)*
 * *[宠辱不惊 一心问学](http://www.chenlianfu.com/)*
+* *[佛说有缘](http://jch100.cool.blog.163.com/blog/)*
 * *[Bacterial Genomics](http://bacpathgenomics.wordpress.com/)*
 * *[Genome Unzipped](http://www.genomesunzipped.org/)*
 * *[Titus’s blog](http://ivory.idyll.org/blog/)*
