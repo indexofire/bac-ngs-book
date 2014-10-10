@@ -23,6 +23,7 @@
 * *[Biostack](http://www.biostack.org/)*
 * *[宠辱不惊 一心问学](http://www.chenlianfu.com/)*
 * *[每日一生信](http://blog.sina.com.cn/tiehan1990)*
+* *[佛说有缘](http://jch100.cool.blog.163.com/blog/)*
 * *[Bacterial Genomics](http://bacpathgenomics.wordpress.com/)*
 * *[Genome Unzipped](http://www.genomesunzipped.org/)*
 * *[Titus’s blog](http://ivory.idyll.org/blog/)*
