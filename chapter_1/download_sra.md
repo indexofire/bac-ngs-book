@@ -22,7 +22,7 @@
 ~/data$ mv ~/.ncbi/public/sra/SRR955386.sra .
 ```
 
-**Notes:** *有些版本的 sra_toolkit 会有设置问题，建议使用最新版。而2.4.1 版本的 prefetch 调用 ascp 时选择的 ssh 密钥也是 windowns 版本的 .putty 而不是 .openssh，希望 bug 在新版本会有所修复。*
+**Notes:** *2.3.x版本的 sra_toolkit 会有些配置问题，建议使用最新版。不过2.4.x版本的程序调用ascp时，比如 prefetch 调用 ascp 时选择的 ssh 密钥是老版 `asperaweb_id_dsa.putty`, 而目前新版的ascp在linux里是使用 `asperaweb_id_dsa.openssh`，已经在 github 上提交了 issue，希望 bug 能尽快修复。*
 
 ### 批量下载数据的方法
 

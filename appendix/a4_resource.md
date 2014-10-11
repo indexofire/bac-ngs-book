@@ -9,6 +9,10 @@
 * *[bioask](http://www.bioask.net/)*
 * *[Research Gate](https://www.researchgate.net/)*
 
+### 综合性网站
+测序技术与生物信学综合类信息与新闻网站
+* *[Plob](http://www.plob.org/)*
+
 ### 免费课程资料
 国外院校举办的生物信息学与高通量测序技术培训所提供的授课资料。
 * *[Bioinformatics Courses at Penn State](http://www.personal.psu.edu/iua1/lectures.html)*
@@ -33,6 +37,7 @@
 * *[Getting Genetics Done](http://gettinggeneticsdone.blogspot.com/)*
 * *[Omics!](http://omicsomics.blogspot.com/)*
 * *[Pathogens genes & genomes](http://pathogenomics.bham.ac.uk/blog/)*
+* *[Opiniomics](http://biomickwatson.wordpress.com/)*
 
 ### 在线工具和数据库
 * *[PATRIC](http://patricbrc.vbi.vt.edu/)* 非常棒的病原菌资源整合类数据库，用户界面设计比较友好，各种异步读取速度很快用户体验不错。

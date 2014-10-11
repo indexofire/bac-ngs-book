@@ -1,7 +1,7 @@
 # Summary
 
-* [CHANGELOGS](README.md)
-   * [关于本书与示例](preface/about.md)
+* [关于本书](README.md)
+   * [关于示例](preface/about.md)
 * [单基因组分析](chapter_1/README.md)
    * [SRA 数据下载](chapter_1/download_sra.md)
    * [de novo assembly](chapter_1/assembly.md)
@@ -25,4 +25,5 @@
    * [Assembly Tools and Quality](appendix/a5_assembly.md)
    * [Galaxy 配置](appendix/a6_galaxy.md)
    * [数据格式](appendix/a7_file_format.md)
+   * [NCBI 资料汇总](appendix/ncbi_blast+.md)
 
