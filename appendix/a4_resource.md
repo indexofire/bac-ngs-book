@@ -38,6 +38,7 @@
 * *[Omics!](http://omicsomics.blogspot.com/)*
 * *[Pathogens genes & genomes](http://pathogenomics.bham.ac.uk/blog/)*
 * *[Opiniomics](http://biomickwatson.wordpress.com/)*
+* *[YOKOFAKUN](http://plindenbaum.blogspot.com/)*
 
 ### 在线工具和数据库
 * *[PATRIC](http://patricbrc.vbi.vt.edu/)* 非常棒的病原菌资源整合类数据库，用户界面设计比较友好，各种异步读取速度很快用户体验不错。
