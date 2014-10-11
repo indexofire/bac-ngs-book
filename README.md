@@ -6,7 +6,7 @@
 
 本笔记代码托管在 [Github][], 所有内容可以从 [这里](http://github.com/indexofire/bac-ngs-book.git) 获得。笔者接触 NGS 时间不长，内容中肯定会有许多错误之处，欢迎大家提交 issues。一个人的眼界毕竟有限，欢迎大家提交内容到仓库。
 
-** 方法: **
+**方法:**
 
 1. 在GitHub上fork本书作为自己的仓库，如indexofire/bac-ngs-book，然后clone到本地，并设置用户信息。
 ```
