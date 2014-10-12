@@ -1,4 +1,4 @@
-# Assembly Tools and Quality
+## Assembly Tools and Quality
 
 ### Quality
 1. [GAGE-B](http://ccb.jhu.edu/gage_b/)

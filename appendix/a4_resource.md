@@ -1,4 +1,4 @@
-# 网上资源
+## 网上资源
 
 网络上一些学习资源和工具网站。注：部分网站需要翻墙。
 
@@ -16,7 +16,7 @@
 ### 免费课程资料
 国外院校举办的生物信息学与高通量测序技术培训所提供的授课资料。
 * *[Bioinformatics Courses at Penn State](http://www.personal.psu.edu/iua1/lectures.html)*
-* *[ANGUS bioinformatics c](http://angus.readthedocs.org/en/2014/)*
+* *[ANGUS bioinformatics](http://angus.readthedocs.org/en/2014/)*
 * *[UC Davis training](http://training.bioinformatics.ucdavis.edu/)*
 * *[UC Texas at Austin wiki](https://wikis.utexas.edu/display/bioiteam/Home)*
 

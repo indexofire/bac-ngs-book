@@ -1,14 +1,14 @@
-# 测序平台
+## 测序平台
 
 1. Illumina MiSeq
 2. Pacbio
 3. iontorrent
 
-### Illumina MiSeq
+##### Illumina MiSeq
 
 PE与MP
 
-### Pacbio
+##### Pacbio
 
 
-### iontorrent
+##### iontorrent

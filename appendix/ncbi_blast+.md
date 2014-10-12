@@ -1,4 +1,7 @@
-### 本地 NCBI blast+
+## NCBI
+
+
+#### 本地 NCBI blast+
 
 1. 下载安装 NCBI Blast+
 
@@ -13,7 +16,7 @@
 ```
 
 
-### Accession 前缀含义
+#### Accession 前缀含义
 
 | Accession 前缀| 分子类型 | 含义 |
 | --            | --       | --   |
