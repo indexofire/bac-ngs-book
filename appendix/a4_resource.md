@@ -74,5 +74,12 @@
 * [Galaxy](http://www.galaxy.org)
 * [circos](http://circos.ca)
 
+### 生物信息数据分析
+* *[DNAnexus](https://platform.dnanexus.com/)* DNAnexus基于云计算的生物信息分析平台
+* *[Seven Bridges](https://www.sbgenomics.com)*
+* *[Tute Genomics](http://tutegenomics.com/)*
+
+
+
 ### 其他
 * *[Biocompare](http://www.biocompare.com/)* 给购买者提供产品信息和技术资料的网站，对于实验室选择仪器和试剂挺有帮助，就是不知道有没有收公司的钱

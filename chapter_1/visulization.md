@@ -6,3 +6,4 @@
 1. USCS
 2. circos
 3. blast atlas
+4. IGV
