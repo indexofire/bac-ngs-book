@@ -12,7 +12,7 @@
 
 2. sra数据转成fastq格式
 
- SRR955386 这个数据的样本还用 Pacbio SMRT 平台 进行了测序，2组数据拼接形成一个完成图。用该完成图作为模板，考量一下不同拼接软的拼接结果。将 CSFAN006122 的基因组完成图数据下载。
+ SRR955386 这个数据的样本还用 Pacbio SMRT 平台进行了测序，Pacbio 单分子测序技术获得基因组完成图。用该完成图作为模板，考量一下不同拼接软的拼接结果。将 CSFAN006122 的基因组完成图数据下载。
 ```
 ~/data$ prefetch -v SRR955386
 ~/data$ mv ~/.ncbi/public/sra/SRR955386.sra .
@@ -25,12 +25,16 @@
 ```
 ~/data$ fastq SRR955386_1.fastq
 ```
-使用FastQC软件查看，Adapter Content选项里显示序列无 Adapter。
+
+ 使用FastQC软件查看，Adapter Content选项里显示序列无 Adapter。
+
+ *note: 服务器端的QC较好的实现方式？*
 
 4. trimming
 ```
 pass
 ```
+ *note: 需要自动化区分对于提交的数据是否做过trimming*
 
 #### 拼接
 
