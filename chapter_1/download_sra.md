@@ -4,6 +4,8 @@
 
 ### 认识 SRA 数据库
 
+
+
 ##### 1. edirect 安装
 
 ```
@@ -22,6 +24,12 @@
 ```
 
 **Notes:** *2.3.x版本的 sra_toolkit 会有些配置问题，建议使用最新版。不过2.4.x版本的程序调用ascp时，比如 prefetch 调用 ascp 时选择的 ssh 密钥是老版 `asperaweb_id_dsa.putty`, 而目前新版的ascp在linux里是使用 `asperaweb_id_dsa.openssh`。*
+
+##### 3. 用aspera connect下载
+用aspera connect工具下载NCBI的数据速度非常快，而且不光可以下载SRA数据库里的数据，还可以下载NCBI FTP里的其他资源。
+```
+~/data$ ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh --user=anonftp --host=ftp-private.ncbi.nlm.nih.gov --mode=recv /sra/sra-instant/reads/ByRun/sra/ERR/ERR175/ERR175655 .
+```
 
 ### 批量下载数据的方法
 

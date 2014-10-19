@@ -21,21 +21,6 @@
 
  完成后可以看到 `data` 目录下新增了2个文件 `SRR955386_1.fastq` 和 `SRR955386_2.fastq`
 
-3. QC
-```
-~/data$ fastq SRR955386_1.fastq
-```
-
- 使用FastQC软件查看，Adapter Content选项里显示序列无 Adapter。
-
- *note: 服务器端的QC较好的实现方式？*
-
-4. trimming
-```
-pass
-```
- *note: 需要自动化区分对于提交的数据是否做过trimming*
-
 #### 拼接
 
 物种的核酸特性以及测序技术的发展，不断有针对新技术优化的拼接软件出现。这里比较几个微生物拼接评测中比较优秀的工具，看看针对 Listeria monocytogenes 的拼接结果。

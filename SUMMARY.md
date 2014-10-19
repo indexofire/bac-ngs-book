@@ -4,6 +4,7 @@
    * [关于示例](preface/about.md)
 * [单基因组分析](chapter_1/README.md)
    * [SRA 数据下载](chapter_1/download_sra.md)
+   * [Fastq 质量控制](chapter_1/trim.md)
    * [de novo assembly](chapter_1/assembly.md)
    * [Annotation](chapter_1/annotation.md)
    * [Visulization](chapter_1/visulization.md)
