@@ -48,6 +48,7 @@
 * *[Opiniomics](http://biomickwatson.wordpress.com/)*
 * *[YOKOFAKUN](http://plindenbaum.blogspot.com/)*
 * *[In between lines of code](https://flxlexblog.wordpress.com/)*
+* *[Core-genome](http://core-genomics.blogspot.com/)*
 
 ### 在线工具和数据库
 
@@ -103,4 +104,5 @@
 ### 其他
 
 * *[Biocompare](http://www.biocompare.com/)* 给购买者提供产品信息和技术资料的网站，对于实验室选择仪器和试剂有所帮助。
-* *[Publons](https://publons.com)* 发表的科研文章的reviewer发布reviews的网站，作者可与reviewer交互讨论。
+* *[Publons](https://publons.com)* 发表的科研文章的reviewer发布reviews的网站，作者可与reviewer交互讨论
+* *[genohub](https://genohub.com/)* 提供测序技术及相关服务供应商的搜索信息
