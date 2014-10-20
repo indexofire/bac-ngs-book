@@ -1,13 +1,13 @@
 ## QC 质量控制
+
 测序数据质量控制类软件
-* Picard
+
 * FastQC
-* Trimmoma@c
+* Trimmomaic
+* Picard
 * trimAL
 * PRINSEQ
 * BMTagger
-
----
 
 #### FastQC的安装和使用
 ```
@@ -30,7 +30,7 @@ fastq文件的基本信息，可以看到序列数量和读长，fastq文件版�
 
 **Per base sequence content:**
 
-####Fastx_toolkit安装
+#### Fastx_toolkit安装
 ```
 ~/tmp$ wget http://cancan.cshl.edu/labmembers/gordon/files/libgtextutils-0.7.tar.bz2
 ~/tmp$ wget http://cancan.cshl.edu/labmembers/gordon/files/fastx_toolkit-0.0.14.tar.bz2
