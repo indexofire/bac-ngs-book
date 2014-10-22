@@ -30,7 +30,14 @@ fastq文件的基本信息，可以看到序列数量和读长，fastq文件版�
 
 **Per base sequence content:**
 
-#### Fastx_toolkit安装
+#### Picard
+```
+~/tmp$ wget https://github.com/broadinstitute/picard/releases/download/1.123/picard-tools-1.123.zip
+~/tmp$ unzip -n picard-tools-1.123.zip -d ~/app
+```
+
+
+#### Fastx_toolkit
 ```
 ~/tmp$ wget http://cancan.cshl.edu/labmembers/gordon/files/libgtextutils-0.7.tar.bz2
 ~/tmp$ wget http://cancan.cshl.edu/labmembers/gordon/files/fastx_toolkit-0.0.14.tar.bz2
