@@ -29,7 +29,6 @@ GAEMR 是 BroadInstitute 用 Python 开发的对拼接结果提供分析报告�
 
 ##### 1.2 安装 ncbi-blast+
 
-
 ##### 1.3 安装 bwa
 
 ##### 1.4 安装 bowtie2
@@ -84,15 +83,24 @@ RNAmmer需要有edu的信箱去申请才能免费下载使用。
 ~tmp/$ unzip rdp_classifier_2.9.zip -d ~/apps
 ```
 
-#### 1.8 安装 Python 依赖包
+##### 1.8 安装 Python 依赖包
 ```
 ~tmp/$ sudo apt-get install python-biopython python-matplotlib python-numpy python-pip
 ~tmp/$ sudo pip install pysam
 ```
 
+##### 1.9 安装GAEMR
+```
+~/tmp$ wget http://www.broadinstitute.org/software/gaemr/wp-content/uploads/2012/12/GAEMR-1.0.1.tar.gz
+~/tmp$ tar zxvf GAEMR-1.0.1.tar.gz -C ~/app/GAEMR-1.0.1
+~/tmp$ cd ~/app/GAEMR-1.0.1
+~/app$ sudo python setup.py install
+```
+
 #### 2. GAEMR 的使用
-将上一节用不同拼装工具拼装出基因组数用 GAEMR.py 分析
+将上一节用不同拼装工具拼装出基因组数用 GAEMR.py 进行分析
 
-
+```
+~/data$ GAEMR.py -s assembly.fasta
 
 
