@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>Genome alignment | 开始之前</title>
+        <title>NCBI 资料汇总 | 开始之前</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,10 +18,8 @@
     
     
     
-    <link rel="next" href="../chapter_2/mapping.html" />
     
-    
-    <link rel="prev" href="../chapter_2/code.html" />
+    <link rel="prev" href="../appendix/a7_file_format.html" />
     
 
         
@@ -33,7 +31,7 @@
 
 
         
-    <div class="book"  data-level="2.2" data-basepath=".." data-revision="1414034927150">
+    <div class="book"  data-level="5.8" data-basepath=".." data-revision="1414034927150">
     
 
 <div class="book-summary">
@@ -238,7 +236,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="2.2" data-path="chapter_2/alignment.html">
+        <li class="chapter " data-level="2.2" data-path="chapter_2/alignment.html">
             
                 
                     <a href="../chapter_2/alignment.html">
@@ -512,7 +510,7 @@
         </li>
     
         
-        <li class="chapter " data-level="5.8" data-path="appendix/ncbi_blast+.html">
+        <li class="chapter active" data-level="5.8" data-path="appendix/ncbi_blast+.html">
             
                 
                     <a href="../appendix/ncbi_blast+.html">
@@ -621,9 +619,111 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_2389">
+                    <section class="normal" id="section-gitbook_2386">
                     
-                        <h1 id="alignment">Alignment</h1>
+                        <h2 id="ncbi">NCBI</h2>
+<h4 id="-ncbi-blast">本地 NCBI blast+</h4>
+<ol>
+<li>下载安装 NCBI Blast+</li>
+</ol>
+<pre><code>~/tmp$
+</code></pre><ol>
+<li>构建自己的数据库</li>
+</ol>
+<pre><code>~$ makeblastdb -in data/database.fasta -dbtype nucl -parse_seqids
+</code></pre><h4 id="accession-">Accession 前缀含义</h4>
+<table>
+<thead>
+<tr>
+<th>Accession 前缀</th>
+<th>分子类型</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AC_</td>
+<td>Genomic</td>
+<td>2:2</td>
+</tr>
+<tr>
+<td>NC_</td>
+<td>Genomic</td>
+<td>完整的基因组</td>
+</tr>
+<tr>
+<td>NG_</td>
+<td>Genomic</td>
+<td>不完整的基因组</td>
+</tr>
+<tr>
+<td>NT_</td>
+<td>Genomic</td>
+<td>2:5</td>
+</tr>
+<tr>
+<td>NW_</td>
+<td>Genomic</td>
+<td>2:6</td>
+</tr>
+<tr>
+<td>NS_</td>
+<td>Genomic</td>
+<td>环境序列</td>
+</tr>
+<tr>
+<td>NZ_b</td>
+<td>Genomic</td>
+<td>未完成的WGS</td>
+</tr>
+<tr>
+<td>NM_</td>
+<td>mRNA</td>
+<td>2:9</td>
+</tr>
+<tr>
+<td>NR_</td>
+<td>RNA</td>
+<td>2:10</td>
+</tr>
+<tr>
+<td>XM_c</td>
+<td>mRNA</td>
+<td>2:11</td>
+</tr>
+<tr>
+<td>XR_c</td>
+<td>mRNA</td>
+<td>假设的模型</td>
+</tr>
+<tr>
+<td>AP_</td>
+<td>Protein</td>
+<td>2:13</td>
+</tr>
+<tr>
+<td>NP_</td>
+<td>Protein</td>
+<td>2:14</td>
+</tr>
+<tr>
+<td>YP_c</td>
+<td>Protein</td>
+<td>2:15</td>
+</tr>
+<tr>
+<td>XP_c</td>
+<td>Protein</td>
+<td>2:15</td>
+</tr>
+<tr>
+<td>ZP_c</td>
+<td>Protein</td>
+<td>2:15</td>
+</tr>
+</tbody>
+</table>
+<p><strong><a href="http://www.personal.psu.edu/iua1/courses/files/2014/lecture-12.pdf" target="_blank">http://www.personal.psu.edu/iua1/courses/files/2014/lecture-12.pdf</a></strong></p>
 
                     
                     </section>
@@ -634,10 +734,8 @@
         </div>
 
         
-        <a href="../chapter_2/code.html" class="navigation navigation-prev " aria-label="Previous page: 密码子偏好性分析"><i class="fa fa-angle-left"></i></a>
+        <a href="../appendix/a7_file_format.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 数据格式"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../chapter_2/mapping.html" class="navigation navigation-next " aria-label="Next page: Genome mapping"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

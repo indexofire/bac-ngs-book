@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>SRA 数据下载 | 微生物基因组分析应用教程 CHANGELOGS</title>
+        <title>SRA 数据下载 | 开始之前</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,7 +18,7 @@
     
     
     
-    <link rel="next" href="../chapter_1/assembly.html" />
+    <link rel="next" href="../chapter_1/trim.html" />
     
     
     <link rel="prev" href="../chapter_1/README.html" />
@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="1.1" data-basepath=".." data-revision="1412930803996">
+    <div class="book"  data-level="1.1" data-basepath=".." data-revision="1414034927150">
     
 
 <div class="book-summary">
@@ -57,7 +57,7 @@
                     <a href="../index.html">
                         <i class="fa fa-check"></i>
                         
-                         CHANGELOGS
+                         关于本书
                     </a>
                 
             
@@ -74,7 +74,7 @@
                         
                             <b>0.1.</b>
                         
-                         关于本书与示例
+                         关于示例
                     </a>
                 
             
@@ -120,15 +120,15 @@
         </li>
     
         
-        <li class="chapter " data-level="1.2" data-path="chapter_1/assembly.html">
+        <li class="chapter " data-level="1.2" data-path="chapter_1/trim.html">
             
                 
-                    <a href="../chapter_1/assembly.html">
+                    <a href="../chapter_1/trim.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.2.</b>
                         
-                         de novo assembly
+                         Fastq 剪切与修饰
                     </a>
                 
             
@@ -136,13 +136,45 @@
         </li>
     
         
-        <li class="chapter " data-level="1.3" data-path="chapter_1/annotation.html">
+        <li class="chapter " data-level="1.3" data-path="chapter_1/assembly.html">
+            
+                
+                    <a href="../chapter_1/assembly.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                         De novo assembly
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.4" data-path="chapter_1/assemble_report.html">
+            
+                
+                    <a href="../chapter_1/assemble_report.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                         Assemble report
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.5" data-path="chapter_1/annotation.html">
             
                 
                     <a href="../chapter_1/annotation.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>1.3.</b>
+                            <b>1.5.</b>
                         
                          Annotation
                     </a>
@@ -152,13 +184,13 @@
         </li>
     
         
-        <li class="chapter " data-level="1.4" data-path="chapter_1/visulization.html">
+        <li class="chapter " data-level="1.6" data-path="chapter_1/visulization.html">
             
                 
                     <a href="../chapter_1/visulization.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>1.4.</b>
+                            <b>1.6.</b>
                         
                          Visulization
                     </a>
@@ -479,6 +511,22 @@
             
         </li>
     
+        
+        <li class="chapter " data-level="5.8" data-path="appendix/ncbi_blast+.html">
+            
+                
+                    <a href="../appendix/ncbi_blast+.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                         NCBI 资料汇总
+                    </a>
+                
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -565,7 +613,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >微生物基因组分析应用教程 CHANGELOGS</a>
+        <a href="../" >开始之前</a>
     </h1>
 </div>
 
@@ -573,9 +621,9 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_514">
+                    <section class="normal" id="section-gitbook_2375">
                     
-                        <h1 id="">测序数据的获得</h1>
+                        <h2 id="">测序数据的获得</h2>
 <p>对于单个SRA数据，本地电脑可以通过浏览器下载。这里讨论在服务器端的操作。细菌基因组数据以 illumina MiSeq PE250 的测序 数据为例，其他测序数据格式将在附录中探讨。</p>
 <h3 id="-sra-">认识 SRA 数据库</h3>
 <h5 id="1-edirect-">1. edirect 安装</h5>
@@ -587,8 +635,11 @@
 <pre><code class="lang-bash">~/data$ prefetch -v SRR955386
 ~/data$ mv ~/.ncbi/public/sra/SRR955386.sra .
 </code></pre>
-<p><strong>Notes:</strong> <em>有些版本的 sra_toolkit 会有设置问题，建议使用最新版。而2.4.1 版本的 prefetch 调用 ascp 时选择的 ssh 密钥也是 windowns 版本的 .putty 而不是 .openssh，希望 bug 在新版本会有所修复。</em></p>
-<h3 id="">批量下载数据的方法</h3>
+<p><strong>Notes:</strong> <em>2.3.x版本的 sra_toolkit 会有些配置问题，建议使用最新版。不过2.4.x版本的程序调用ascp时，比如 prefetch 调用 ascp 时选择的 ssh 密钥是老版 <code>asperaweb_id_dsa.putty</code>, 而目前新版的ascp在linux里是使用 <code>asperaweb_id_dsa.openssh</code>。</em></p>
+<h5 id="3-aspera-connect">3. 用aspera connect下载</h5>
+<p>用aspera connect工具下载NCBI的数据速度非常快，而且不光可以下载SRA数据库里的数据，还可以下载NCBI FTP里的其他资源。</p>
+<pre><code>~/data$ ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh --user=anonftp --host=ftp-private.ncbi.nlm.nih.gov --mode=recv /sra/sra-instant/reads/ByRun/sra/ERR/ERR175/ERR175655 .
+</code></pre><h3 id="">批量下载数据的方法</h3>
 <ol>
 <li>使用 aspera connect</li>
 <li>编写脚本</li>
@@ -606,7 +657,7 @@
         <a href="../chapter_1/README.html" class="navigation navigation-prev " aria-label="Previous page: 单基因组分析"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter_1/assembly.html" class="navigation navigation-next " aria-label="Next page: de novo assembly"><i class="fa fa-angle-right"></i></a>
+        <a href="../chapter_1/trim.html" class="navigation navigation-next " aria-label="Next page: Fastq 剪切与修饰"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

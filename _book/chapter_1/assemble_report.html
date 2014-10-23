@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>Genome alignment | 开始之前</title>
+        <title>Assemble report | 开始之前</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,10 +18,10 @@
     
     
     
-    <link rel="next" href="../chapter_2/mapping.html" />
+    <link rel="next" href="../chapter_1/annotation.html" />
     
     
-    <link rel="prev" href="../chapter_2/code.html" />
+    <link rel="prev" href="../chapter_1/assembly.html" />
     
 
         
@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="2.2" data-basepath=".." data-revision="1414034927150">
+    <div class="book"  data-level="1.4" data-basepath=".." data-revision="1414034927150">
     
 
 <div class="book-summary">
@@ -152,7 +152,7 @@
         </li>
     
         
-        <li class="chapter " data-level="1.4" data-path="chapter_1/assemble_report.html">
+        <li class="chapter active" data-level="1.4" data-path="chapter_1/assemble_report.html">
             
                 
                     <a href="../chapter_1/assemble_report.html">
@@ -238,7 +238,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="2.2" data-path="chapter_2/alignment.html">
+        <li class="chapter " data-level="2.2" data-path="chapter_2/alignment.html">
             
                 
                     <a href="../chapter_2/alignment.html">
@@ -621,9 +621,70 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_2389">
+                    <section class="normal" id="section-gitbook_2373">
                     
-                        <h1 id="alignment">Alignment</h1>
+                        <h2 id="assemble-report">Assemble report</h2>
+<h4 id="1-gaemr-">1. GAEMR 安装</h4>
+<p>GAEMR 是 BroadInstitute 用 Python 开发的对拼接结果提供分析报告的工具。安装 GAEMR 分析依赖的工具和相关依赖库。</p>
+<p>出具完整报告所需安装的第三方软件：</p>
+<ul>
+<li>samtools</li>
+<li>bwa</li>
+<li>bowtie2</li>
+<li>ncbi-blast+</li>
+<li>Picard</li>
+<li>RNAmmer</li>
+<li>RDP_Classifier</li>
+<li>biopython</li>
+<li>numpy</li>
+<li>matplotlib</li>
+<li>pysam</li>
+</ul>
+<h5 id="11-samtools">1.1 安装samtools</h5>
+<pre><code>~/tmp$ sudo apt-get install libncurses-dev
+~/tmp$ wget http://jaist.dl.sourceforge.net/project/samtools/samtools/1.1/samtools-1.1.tar.bz2
+~/tmp$ tar jxvf samtools-1.1.tar.bz2 -C ~/app
+~/tmp$ cd ~/apps/samtools-1.1
+~/app$ make
+~/app$ sudo ln -s `pwd`/samtools /usr/local/sbin
+</code></pre><h5 id="12--ncbi-blast">1.2 安装 ncbi-blast+</h5>
+<h5 id="13--bwa">1.3 安装 bwa</h5>
+<h5 id="14--bowtie2">1.4 安装 bowtie2</h5>
+<h5 id="15--picard">1.5 安装 Picard</h5>
+<h5 id="16--rnammer">1.6 安装 RNAmmer</h5>
+<p>先安装 RNAmmer 的依赖软件 hmmer。但是不要安装 hmmer3，否则不能使用。建议使用低版本的 hmmer2.3.2。</p>
+<pre><code>~/tmp$ wget ftp://selab.janelia.org/pub/software/hmmer/2.3.2/hmmer-2.3.2.bin.intel-linux.tar.gz
+~/tmp$ tar -zxvf hmmer-2.3.2.bin.intel-linux.tar.gz -C ~/app
+~/tmp$ cd ~/app/hmmer-2.3.2.bin.intel-linux
+~/app$ ./configure
+~/app$ make
+~/app$ sudo make install
+</code></pre><p>RNAmmer需要有edu的信箱去申请才能免费下载使用。</p>
+<pre><code>~/app$ uncompress rnammer-1.2.tar.Z
+~/app$ mkdir -p rnammer-1.2
+~/app$ tar -xvf rnammer-1.2.tar -C rnammer-1.2
+~/app$ vim rnammer-1.2/rnammer
+</code></pre><p>修改 rnammer文件以适应本机使用, 下面是 diff 修改前后差异，大家可以根据自己实际情况修改</p>
+<pre><code>~/app$ diff rnammer-1.2/rnammer rnammer-1.2/rnammer.orig
+</code></pre><p>主要配置好自己机器上 hmmer 和 rnammer 的路径即可。结果如下：</p>
+<pre><code>35c35
+&lt; my $INSTALL_PATH = &quot;/home/ubuntu/apps/rnammer-1.2&quot;;
+---
+&gt; my $INSTALL_PATH = &quot;/usr/cbs/bio/src/rnammer-1.2&quot;;
+50c50
+&lt;     $HMMSEARCH_BINARY = &quot;/usr/local/bin/hmmsearch&quot;;
+---
+&gt;     $HMMSEARCH_BINARY = &quot;/usr/cbs/bio/bin/linux64/hmmsearch&quot;;
+</code></pre><p>由于 RNAmmer 需要安装 perl 的 Getopt::Long 和 XML::Simple 模块 模。具体安装方法有很多了，可以自行搜索 Perl 模块安装。因为 Bioperl 几乎是必装的工具，所以直接安装 bioperl 偷懒完事。</p>
+<pre><code>~tmp/$ sudo apt-get install bioperl
+</code></pre><h5 id="17--rdp_classifier">1.7 安装 rdp_classifier</h5>
+<pre><code>~tmp/$ wget http://jaist.dl.sourceforge.net/project/rdp-classifier/rdp-classifier/rdp_classifier_2.9.zip
+~tmp/$ unzip rdp_classifier_2.9.zip -d ~/apps
+</code></pre><h4 id="18--python-">1.8 安装 Python 依赖包</h4>
+<pre><code>~tmp/$ sudo apt-get install python-biopython python-matplotlib python-numpy python-pip
+~tmp/$ sudo pip install pysam
+</code></pre><h4 id="2-gaemr-">2. GAEMR 的使用</h4>
+<p>将上一节用不同拼装工具拼装出基因组数用 GAEMR.py 分析</p>
 
                     
                     </section>
@@ -634,10 +695,10 @@
         </div>
 
         
-        <a href="../chapter_2/code.html" class="navigation navigation-prev " aria-label="Previous page: 密码子偏好性分析"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter_1/assembly.html" class="navigation navigation-prev " aria-label="Previous page: De novo assembly"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter_2/mapping.html" class="navigation navigation-next " aria-label="Next page: Genome mapping"><i class="fa fa-angle-right"></i></a>
+        <a href="../chapter_1/annotation.html" class="navigation navigation-next " aria-label="Next page: Annotation"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

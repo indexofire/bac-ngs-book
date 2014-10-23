@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>de novo assembly | 微生物基因组分析应用教程 CHANGELOGS</title>
+        <title>De novo assembly | 开始之前</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,10 +18,10 @@
     
     
     
-    <link rel="next" href="../chapter_1/annotation.html" />
+    <link rel="next" href="../chapter_1/assemble_report.html" />
     
     
-    <link rel="prev" href="../chapter_1/download_sra.html" />
+    <link rel="prev" href="../chapter_1/trim.html" />
     
 
         
@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="1.2" data-basepath=".." data-revision="1412930803996">
+    <div class="book"  data-level="1.3" data-basepath=".." data-revision="1414034927150">
     
 
 <div class="book-summary">
@@ -57,7 +57,7 @@
                     <a href="../index.html">
                         <i class="fa fa-check"></i>
                         
-                         CHANGELOGS
+                         关于本书
                     </a>
                 
             
@@ -74,7 +74,7 @@
                         
                             <b>0.1.</b>
                         
-                         关于本书与示例
+                         关于示例
                     </a>
                 
             
@@ -120,15 +120,15 @@
         </li>
     
         
-        <li class="chapter active" data-level="1.2" data-path="chapter_1/assembly.html">
+        <li class="chapter " data-level="1.2" data-path="chapter_1/trim.html">
             
                 
-                    <a href="../chapter_1/assembly.html">
+                    <a href="../chapter_1/trim.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.2.</b>
                         
-                         de novo assembly
+                         Fastq 剪切与修饰
                     </a>
                 
             
@@ -136,13 +136,45 @@
         </li>
     
         
-        <li class="chapter " data-level="1.3" data-path="chapter_1/annotation.html">
+        <li class="chapter active" data-level="1.3" data-path="chapter_1/assembly.html">
+            
+                
+                    <a href="../chapter_1/assembly.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                         De novo assembly
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.4" data-path="chapter_1/assemble_report.html">
+            
+                
+                    <a href="../chapter_1/assemble_report.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                         Assemble report
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.5" data-path="chapter_1/annotation.html">
             
                 
                     <a href="../chapter_1/annotation.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>1.3.</b>
+                            <b>1.5.</b>
                         
                          Annotation
                     </a>
@@ -152,13 +184,13 @@
         </li>
     
         
-        <li class="chapter " data-level="1.4" data-path="chapter_1/visulization.html">
+        <li class="chapter " data-level="1.6" data-path="chapter_1/visulization.html">
             
                 
                     <a href="../chapter_1/visulization.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>1.4.</b>
+                            <b>1.6.</b>
                         
                          Visulization
                     </a>
@@ -479,6 +511,22 @@
             
         </li>
     
+        
+        <li class="chapter " data-level="5.8" data-path="appendix/ncbi_blast+.html">
+            
+                
+                    <a href="../appendix/ncbi_blast+.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                         NCBI 资料汇总
+                    </a>
+                
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -565,7 +613,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >微生物基因组分析应用教程 CHANGELOGS</a>
+        <a href="../" >开始之前</a>
     </h1>
 </div>
 
@@ -573,35 +621,29 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_512">
+                    <section class="normal" id="section-gitbook_2374">
                     
-                        <h1 id="">细菌基因组组装工具</h1>
-<h3 id="de-novo-assembly-">de novo assembly 流程</h3>
+                        <h2 id="">细菌基因组组装</h2>
+<h4 id="qc">数据转换与QC</h4>
 <ol>
-<li>安装 sra toolkit (for ubuntu x64 version)</li>
-</ol>
+<li><p>安装 sra toolkit (for ubuntu x64 version)</p>
 <pre><code>~/tmp$ curl -O http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.4.1/sratoolkit.2.4.1-ubuntu64.tar.gz
 ~/tmp$ tar zxvf sratoolkit.2.4.1-ubuntu64.tar.gz -C ~/app
 ~/tmp$ cd ~/app/sratoolkit.2.4.1-ubuntu64
 ~/tmp$ sudo ln -s `pwd`/bin/* /usr/local/sbin/
-</code></pre><ol>
-<li>sra数据转成fastq格式</li>
-</ol>
-<p>SRR955386 这个数据的样本还用 Pacbio SMRT 平台 进行了测序，2组数据拼接形成一个完成图。用该完成图作为模板，考量一下不同拼接软的拼接结果。将 CSFAN006122 的基因组完成图数据下载。</p>
+</code></pre></li>
+<li><p>sra数据转成fastq格式</p>
+<p>SRR955386 这个数据的样本还用 Pacbio SMRT 平台进行了测序，Pacbio 单分子测序技术获得基因组完成图。用该完成图作为模板，考量一下不同拼接软件的拼接结果。</p>
+<p>将 CSFAN006122 的基因组完成图数据下载。</p>
 <pre><code>~/data$ prefetch -v SRR955386
 ~/data$ mv ~/.ncbi/public/sra/SRR955386.sra .
 ~/data$ fastq-dump --split-files SRR955386.sra
 </code></pre><p>完成后可以看到 <code>data</code> 目录下新增了2个文件 <code>SRR955386_1.fastq</code> 和 <code>SRR955386_2.fastq</code></p>
-<ol>
-<li>QC</li>
+</li>
 </ol>
-<pre><code>~/data$ fastq SRR955386_1.fastq
-</code></pre><p>使用FastQC软件查看，Adapter Content选项里显示序列无 Adapter。</p>
-<ol>
-<li>trimming</li>
-</ol>
-<pre><code>pass
-</code></pre><p><strong>1. SPAdes</strong></p>
+<h4 id="">拼接</h4>
+<p>物种的核酸特性以及测序技术的发展，不断有针对新技术优化的拼接软件出现。这里比较几个微生物拼接评测中比较优秀的工具，看看针对 Listeria monocytogenes 的拼接结果。</p>
+<p><strong>1. SPAdes</strong></p>
 <p>1.1 下载并安装 SPAdes</p>
 <pre><code>~/tmp$ curl -O http://spades.bioinf.spbau.ru/release3.1.1/SPAdes-3.1.1-Linux.tar.gz
 ~/tmp$ tar zxvf SPAdes-3.1.1-Linux.tar.gz -C ~/app
@@ -609,7 +651,8 @@
 ~/app$ sudo ln -s `pwd`/SPAdes-3.1.1-Linux/bin/* /usr/local/sbin
 </code></pre><p>1.2 开始拼装</p>
 <pre><code>~/app$ spades.py -t 2 -1 SRR95386_1.fastq -2 SRR955386_2.fastq -o spades_output
-</code></pre><p><strong>2. MaSuRCA</strong></p>
+</code></pre><p>SPAdes会尝试不同的Kmer，因此拼装时间也会根据Kmer选择数量成倍增加。
+<strong>2. MaSuRCA</strong></p>
 <p>2.1 下载并安装 MaSuRCA</p>
 <pre><code>~/tmp$ curl -O ftp://ftp.genome.umd.edu/pub/MaSuRCA/MaSuRCA-2.3.0.tar.gz
 ~/tmp$ tar zxvf MaSuRCA-2.3.0.tar.gz -C ~/app
@@ -630,13 +673,13 @@ NUM_THREADS= 2
 JF_SIZE=100000000
 DO_HOMOPOLYMER_TRIM=0
 END
-</code></pre><p>2.3 开始拼装</p>
+</code></pre><p>设置<code>GRAPH_KMER_SIZE=auto</code>，软件直接调用Kmer=31来进行拼装。对于MiSeq v2以上的试剂，可以考虑使用更大的Kmer</p>
+<p>2.3 开始拼装</p>
 <pre><code>~app$ masurca SRR955386_masurca.config
 ~app$ ./assemble.sh
 </code></pre><p><strong>3. a5-miseq</strong></p>
 <p>3.1 下载并安装</p>
 <p>3.2 开始拼装</p>
-<h5 id="reference"><em>Reference</em></h5>
 
                     
                     </section>
@@ -647,10 +690,10 @@ END
         </div>
 
         
-        <a href="../chapter_1/download_sra.html" class="navigation navigation-prev " aria-label="Previous page: SRA 数据下载"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter_1/trim.html" class="navigation navigation-prev " aria-label="Previous page: Fastq 剪切与修饰"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter_1/annotation.html" class="navigation navigation-next " aria-label="Next page: Annotation"><i class="fa fa-angle-right"></i></a>
+        <a href="../chapter_1/assemble_report.html" class="navigation navigation-next " aria-label="Next page: Assemble report"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

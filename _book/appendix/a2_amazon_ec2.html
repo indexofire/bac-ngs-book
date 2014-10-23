@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>Amazon EC2 教程 | 微生物基因组分析应用教程 CHANGELOGS</title>
+        <title>Amazon EC2 教程 | 开始之前</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="5.2" data-basepath=".." data-revision="1412930803996">
+    <div class="book"  data-level="5.2" data-basepath=".." data-revision="1414034927150">
     
 
 <div class="book-summary">
@@ -57,7 +57,7 @@
                     <a href="../index.html">
                         <i class="fa fa-check"></i>
                         
-                         CHANGELOGS
+                         关于本书
                     </a>
                 
             
@@ -74,7 +74,7 @@
                         
                             <b>0.1.</b>
                         
-                         关于本书与示例
+                         关于示例
                     </a>
                 
             
@@ -120,15 +120,15 @@
         </li>
     
         
-        <li class="chapter " data-level="1.2" data-path="chapter_1/assembly.html">
+        <li class="chapter " data-level="1.2" data-path="chapter_1/trim.html">
             
                 
-                    <a href="../chapter_1/assembly.html">
+                    <a href="../chapter_1/trim.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.2.</b>
                         
-                         de novo assembly
+                         Fastq 剪切与修饰
                     </a>
                 
             
@@ -136,13 +136,45 @@
         </li>
     
         
-        <li class="chapter " data-level="1.3" data-path="chapter_1/annotation.html">
+        <li class="chapter " data-level="1.3" data-path="chapter_1/assembly.html">
+            
+                
+                    <a href="../chapter_1/assembly.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                         De novo assembly
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.4" data-path="chapter_1/assemble_report.html">
+            
+                
+                    <a href="../chapter_1/assemble_report.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                         Assemble report
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.5" data-path="chapter_1/annotation.html">
             
                 
                     <a href="../chapter_1/annotation.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>1.3.</b>
+                            <b>1.5.</b>
                         
                          Annotation
                     </a>
@@ -152,13 +184,13 @@
         </li>
     
         
-        <li class="chapter " data-level="1.4" data-path="chapter_1/visulization.html">
+        <li class="chapter " data-level="1.6" data-path="chapter_1/visulization.html">
             
                 
                     <a href="../chapter_1/visulization.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>1.4.</b>
+                            <b>1.6.</b>
                         
                          Visulization
                     </a>
@@ -479,6 +511,22 @@
             
         </li>
     
+        
+        <li class="chapter " data-level="5.8" data-path="appendix/ncbi_blast+.html">
+            
+                
+                    <a href="../appendix/ncbi_blast+.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                         NCBI 资料汇总
+                    </a>
+                
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -565,7 +613,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >微生物基因组分析应用教程 CHANGELOGS</a>
+        <a href="../" >开始之前</a>
     </h1>
 </div>
 
@@ -573,16 +621,29 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_517">
+                    <section class="normal" id="section-gitbook_2379">
                     
-                        <h1 id="amazon-ec2-">Amazon EC2 教程</h1>
-<h2 id="-amazon-ec2-">在 Amazon EC2 建立一个运行实例</h2>
+                        <h2 id="amazon-ec2-">Amazon EC2 教程</h2>
 <p>本地电脑如果是 Windows 系统，建议下载一个 putty 来访问连接。如是 Linux 或 Mac OSX 操作系统，则直接开一终端程序用 ssh 命令访问即可。</p>
-<h3 id="1--amazon-aws-">1. 建立一个 Amazon AWS 帐号</h3>
-<h3 id="2-t2large-instance">2. 新建一个t2.large instance</h3>
-<h3 id="3--amazon-ec2-instance">3. 登录 Amazon EC2 instance</h3>
-<h2 id="running-docker-in-amazon-ec2">Running docker in Amazon EC2</h2>
-<p>docker 是一种虚拟环境###</p>
+<p><strong> 1. 注册申请</strong></p>
+<p>首先要去 <a href="https://aws.amazon.com/cn/" target="_blank">https://aws.amazon.com/cn/</a> 注册一个帐号。用新注册帐号登录后，可以看到 <strong>Amazon Web Services</strong> 页面，上面列出了Amazon所有的服务内容。点击<code>Compute &amp; Networking</code>里的<code>EC2</code>，可以进入你的<code>EC2 Dashboard</code>。</p>
+<p>要注意的一点是，顶部工具栏在用户工具右侧有一个地区选项下拉菜单，可以选择不同区域的服务器。个人使用感受，亚洲的服务器比如东京和新加坡的连接速度最快，但是美国的服务器速度也很不错，比一般的VPS商售卖的要快的多！至于选择哪一个地区，可以根据自己的网络实际情况来选择，但是如果你要使用一些<code>AWS Public Datasets</code>，比如<code>Human genome project</code>或者<code>Genbank</code>之类的数据，需要添加<code>volume</code>的<code>snapshot</code>，这些<code>snapshot</code>往往是限定区域的。比如<code>Genbank</code>数据你只能在<code>us-east</code>区域使用，也就是说你要用这个<code>snapshot</code>，你必须把你的<code>Instance</code>建在<code>US East(N.Virginia)</code>区域。</p>
+<p><strong> 2. 建立 Instance</strong>
+在<code>EC2 Dashboard</code>左侧列表里点击<code>Instances</code>，然后点击<code>Launch Instance</code>，会弹出如下图所示的一步步配置Instance的界面。</p>
+<p><code>Step 1: Choose an Amazon Machine Image (AMI)</code>界面里选择<em>Ubuntu Server 14.04LTS</em>。</p>
+<p><img src="../assets/img/appendix_a2_1.png" alt="Instance">
+figure1. 第一步选择操作系统</p>
+<p><code>Step 2: Choose an Instance Type</code>，Type 选择 <code>t2.micro</code>
+是因为这个配置是1年免费的。缺点当然是计算资源比较低，而且当你的计算资源超限额后，会自动把 CPU 性能降低到大概 1/10 左右的情况。要注意的是虽然是免费的，但本质上是1个月720hour的免费计算。如果你同时开了多个 t2.micro Instances，没有在不计算的时候停机stop，仍旧会超出计算时间，被扣美金的。所以如果开了多个Instances，千万别忘了不用的时候关闭。</p>
+<p>然后就可以点击<code>review and launch</code>。如果想再定制其他配置可以点击<code>Next: Configure Instance Details</code>。当需要自动加载 <code>docker</code>，或者添加数据<code>Volumes</code>的时候要到后面的步骤里设置。</p>
+<p><img src="../assets/img/appendix_a2_2.png" alt="Instance">
+figure2. 第二步选择配置类型</p>
+<p><code>Step 7: Review Instance Launch</code>，确认配置无误就点击 Launch，会弹出一个<code>Select an existing key pair or create a new key pair</code>选项窗口。这一步很重要，第一次建立新的 Instance 的话，下拉菜单选择<code>Create a new key pair</code>。然后给 key pair 取个好记的名字，比如<strong>bac_ngs</strong>，然后点击<code>Download Key Pair</code>，就会下载这个密钥文件到你的电脑上。名字叫<strong>bac_ngs.pem</strong>。这时候底部的<code>Launch Instance</code>按钮就变成可以点击状态，把你的鼠标按上去，你的Instance就开始初始化了。</p>
+<p><strong> 3. 访问 Instance</strong>
+如果你的本地电脑操作系统是Linux，可以直接开一个终端程序运行ssh来访问Instance，如果是Windows电脑，推荐使用putty来访问。</p>
+<p><strong>3.1 Linux</strong></p>
+<h4 id="running-docker-in-amazon-ec2">Running docker in Amazon EC2</h4>
+<p>docker 是一种虚拟环境</p>
 
                     
                     </section>
