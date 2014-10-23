@@ -2,7 +2,7 @@
 
 对于单个SRA数据，本地电脑可以通过浏览器下载。这里讨论在服务器端的操作。细菌基因组数据以 illumina MiSeq PE250 的测序 数据为例，其他测序数据格式将在附录中探讨。
 
-### 认识 SRA 数据库
+#### 认识 SRA 数据库
 
 
 
@@ -31,7 +31,7 @@
 ~/data$ ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh --user=anonftp --host=ftp-private.ncbi.nlm.nih.gov --mode=recv /sra/sra-instant/reads/ByRun/sra/ERR/ERR175/ERR175655 .
 ```
 
-### 批量下载数据的方法
+#### 批量下载数据的方法
 
 1. 使用 aspera connect
 2. 编写脚本
