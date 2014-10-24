@@ -1,10 +1,25 @@
 ## Amazon EC2 教程
 
-本地电脑如果是 Windows 系统，建议下载一个 putty 来访问连接。如是 Linux 或 Mac OSX 操作系统，则直接开一终端程序用 ssh 命令访问即可。
+**Amazon Elastic Compute Cloud (Amazon EC2)** 是一种基于 AWS Web 的一项云服务，特点是可在云中提供大小可调的计算量。它的服务接口非常简单，您可以轻松获取和配置容量，可以完全控制您的计算资源，甚至可以直接挂载他人开发的生物信息学工具集合的镜像，减少部署时间。
+
+**Amazon EC2** 启动新服务器实例的速度非常快，当您的计算要求发生变化时，您便可以快速扩展计算容量。服务按您实际使用的容量和计算量收费，还为开发人员提供了创建故障恢复应用程序以及排除常见故障情况的工具。总之，非常适合作为计算攻击来分析二代测序获得的大数据量分析。
+
+**AWS** 的新客户可免费试用 **Amazon EC2**。注册后，新 AWS 客户在一年内每个月都将获得以下 EC2 服务：
+
+1. 750 小时运行 Linux、RHEL 或 SLES t2.micro 实例的 EC2 使用时间
+2. 750 小时运行 Microsoft Windows Server t2.micro 实例的 EC2 使用时间
+3. 750 小时 Elastic Load Balancing 加上 15 GB 数据处理
+4. 30 GB 的 Amazon Elastic Block Storage（以任意方式对通用型 (SSD) 或磁性介质型进行组合），附加 200 万次 I/O（采用磁性介质）和 5. 1 GB 快照存储
+6. 适用于所有 AWS 服务的共计 15 GB 的带宽传出
+7. 1 GB 区域数据传输
+
+简而言之，新注册用户可以获得1年的有限免费使用。如果要偶尔使用的生产Instance，建议选择按按需实例。这样需要计算的时候打开，计算分析完成后关闭实例即可，可以最大程度上节约资源和开销。对于频繁使用的用户，可以申请`专用预留实例`，通过支付预付金，可以获得一定的折扣来减低成本。
 
 #### 1. 注册申请
 
-首先要去 https://aws.amazon.com/cn/ 注册一个帐号。用新注册帐号登录后，可以看到 **Amazon Web Services** 页面，上面列出了Amazon所有的服务内容。点击`Compute & Networking`里的`EC2`，可以进入你的`EC2 Dashboard`。
+首先要去 https://aws.amazon.com/cn/ 注册一个帐号，帐号申请过程中会要求填写一张信用卡，并会电话联系确认卡的有效性。
+
+用新注册帐号登录后，可以看到 **Amazon Web Services** 页面，上面列出了 Amazon 所有的服务内容。点击`Compute & Networking`里的`EC2`，可以进入你的`EC2 Dashboard`。
 
 要注意的一点是，顶部工具栏在用户工具右侧有一个地区选项下拉菜单，可以选择不同区域的服务器。个人使用感受，亚洲的服务器比如东京和新加坡的连接速度最快，但是美国的服务器速度也很不错，比一般的VPS商售卖的要快的多！至于选择哪一个地区，可以根据自己的网络实际情况来选择，但是如果你要使用一些`AWS Public Datasets`，比如`Human genome project`或者`Genbank`之类的数据，需要添加`volume`的`snapshot`，这些`snapshot`往往是限定区域的。比如`Genbank`数据你只能在`us-east`区域使用，也就是说你要用这个`snapshot`，你必须把你的`Instance`建在`US East(N.Virginia)`区域。
 
@@ -16,7 +31,6 @@
 在Image界面里选择*Ubuntu Server 14.04LTS*。
 
 ![Instance](../assets/img/appendix_a2_1.png)
-*fig1. 第一步选择操作系统*
 
 **Step 2: Choose an Instance Type**
 
@@ -26,7 +40,6 @@ Type 选择 `t2.micro`
 然后就可以点击`review and launch`。如果想再定制其他配置可以点击`Next: Configure Instance Details`。当需要自动加载 `docker`，或者添加数据`Volumes`的时候要到后面的步骤里设置。
 
 ![Instance](../assets/img/appendix_a2_2.png)
-*fig2. 第二步选择配置类型*
 
 **Step 7: Review Instance Launch`**
 
@@ -67,5 +80,6 @@ Type 选择 `t2.micro`
 
 docker 是一种虚拟环境，可以很方便的在不同机器上配置环境，近年来快速发展，在云计算服务的领域被高度关注。事实上它的启动速度很快，配置也特别方便，很适合生物信息计算的自动化配置。
 
-你除了可以在Instance里安装docker来实现外，AWS也提供默认的接入方式。
+你除了可以在Instance里安装docker来实现外，AWS也提供默认的接入方式。方法如下：
+
 
