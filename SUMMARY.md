@@ -6,7 +6,7 @@
    * [SRA 数据下载](chapter_1/download_sra.md)
    * [Fastq 剪切与修饰](chapter_1/trim.md)
    * [De novo assembly](chapter_1/assembly.md)
-   * [Assemble report](chapter_1/assemble_report.md)
+   * [Evaluate assemble](chapter_1/assemble_report.md)
    * [Annotation](chapter_1/annotation.md)
    * [Visulization](chapter_1/visulization.md)
 * [双基因组分析](chapter_2/README.md)

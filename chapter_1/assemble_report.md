@@ -1,4 +1,8 @@
-## Assemble report
+## Evaluate assemble
+1. GAEMR
+2. QUAST
+
+### GAEMR
 
 #### 1. GAEMR 安装
 GAEMR 是 BroadInstitute 用 Python 开发的对拼接结果提供分析报告的工具。安装 GAEMR 分析依赖的工具和相关依赖库。
@@ -102,5 +106,21 @@ RNAmmer需要有edu的信箱去申请才能免费下载使用。
 
 ```
 ~/data$ GAEMR.py -s assembly.fasta
+```
 
 
+### QUAST
+
+#### 1. QUAST 的安装
+
+```
+~/tmp$ wget http://softlayer-sng.dl.sourceforge.net/project/quast/quast-2.3.tar.gz
+~/tmp$ tar zxvf quast-2.3.tar.gz -C ~/app
+```
+
+#### 2. QUAST 的使用
+
+```
+~/app$ cd quast-2.3
+~/app$ python quast.py
+```
