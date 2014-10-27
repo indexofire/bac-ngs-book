@@ -27,7 +27,7 @@
 
 物种的核酸特性以及测序技术的发展，不断有针对新技术优化的拼接软件出现。这里比较几个微生物拼接评测中比较优秀的工具，看看针对 Listeria monocytogenes 的拼接结果。
 
-**1. SPAdes**
+##### 1. SPAdes
 
 1.1 下载并安装 SPAdes
 ```
@@ -45,7 +45,7 @@
 
 SPAdes会尝试不同的Kmer，因此拼装时间也会根据Kmer选择数量成倍增加。
 
-**2. MaSuRCA**
+##### 2. MaSuRCA
 
 2.1 下载并安装 MaSuRCA
 
@@ -89,7 +89,8 @@ END
 ~/app$ ./assemble.sh
 ```
 
-**3. A5-miseq**
+##### 3. A5-miseq
+
 A5-miseq是一个用 perl 开发的针对细菌基因组 de novo assembly 的 pipeline 工具。它本身不参与组装，而是通过组合一套工具来完成工作。
 
 3.1 下载并安装
@@ -105,7 +106,27 @@ A5-miseq是一个用 perl 开发的针对细菌基因组 de novo assembly 的 pi
 ~/app$ perl bin/a5_pipeline.pl SRR955386_1.fastq SRR955386_2.fastq ~/data/a5_output
 ```
 
+##### 4.ABySS
 
+4.1 Abyss的安装
+
+```
+~/tmp$ sudo apt-get install sparsehash
+~/tmp$ wget https://github.com/bcgsc/abyss/releases/download/1.5.2/abyss-1.5.2.tar.gz
+~/tmp$ tar zxvf abyss-1.5.2.tar.gz -C ~/app
+~/tmp$ cd ~/app/abyss-1.5.2
+~/tmp$ wget http://jaist.dl.sourceforge.net/project/boost/boost/1.56.0/boost_1_56_0.tar.bz2
+~/tmp$ tar jxvf boost_1_56_0.tar.bz2
+~/app$ ./configure
+~/app$ make
+~/app$ sudo make install
+```
+
+4.2 Abyss 使用
+
+```
+~/data$ abyss-pe name=output k=55 in='SRR955386_1.fastq SRR955386_2.fastq'
+```
 
 
 #### Reference
