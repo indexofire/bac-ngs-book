@@ -1,3 +1,3 @@
-# shotgun 测序
+## shotgun 测序
 
 incoming...
