@@ -17,3 +17,25 @@
 import subprocess
 ```
 
+
+
+
+#### PHYLOViZ
+
+1. 安装
+
+安装 JRE 环境
+
+```
+~/$ sudo apt-get install openjdk-7-jre
+```
+
+安装PHYLOViZ
+
+```
+~/tmp$ wget http://www.phyloviz.net/dist/phyloviz-linux.sh
+~/tmp$ chmod +x phyloviz-linux.sh
+~/tmp$ ./phyloviz-linux.sh
+```
+
+2.
