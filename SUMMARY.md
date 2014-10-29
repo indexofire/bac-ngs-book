@@ -14,7 +14,7 @@
    * [Genome alignment](chapter_2/alignment.md)
    * [Genome mapping](chapter_2/mapping.md)
 * [多基因组分析](chapter_3/README.md)
-   * [SNP analysis](chapter_3/phy.md)
+   * [SNP Phylogenomics](chapter_3/phy.md)
    * [种群分析](chapter_3/structure.md)
 * [宏基因组分析](chapter_4/README.md)
    * [16s 分析种群结构](chapter_4/16s.md)
