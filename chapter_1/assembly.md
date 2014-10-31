@@ -1,30 +1,5 @@
 ## 细菌基因组组装
 
-#### 数据转换与QC
-
-1. 安装 sra toolkit (for ubuntu x64 version)
-```
-~/tmp$ curl -O http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.4.1/sratoolkit.2.4.1-ubuntu64.tar.gz
-~/tmp$ tar zxvf sratoolkit.2.4.1-ubuntu64.tar.gz -C ~/app
-~/tmp$ cd ~/app/sratoolkit.2.4.1-ubuntu64
-~/tmp$ sudo ln -s `pwd`/bin/* /usr/local/sbin/
-```
-
-2. sra数据转成fastq格式
-
- SRR955386 这个数据的样本还用 Pacbio SMRT 平台进行了测序，Pacbio 单分子测序技术获得基因组完成图。用该完成图作为模板，考量一下不同拼接软件的拼接结果。
-
- 将 CSFAN006122 的基因组完成图数据下载。
-```
-~/data$ prefetch -v SRR955386
-~/data$ mv ~/.ncbi/public/sra/SRR955386.sra .
-~/data$ fastq-dump --split-files SRR955386.sra
-```
-
- 完成后可以看到 `data` 目录下新增了2个文件 `SRR955386_1.fastq` 和 `SRR955386_2.fastq`
-
-#### 拼接
-
 物种的核酸特性以及测序技术的发展，不断有针对新技术优化的拼接软件出现。这里比较几个微生物拼接评测中比较优秀的工具，看看针对 Listeria monocytogenes 的拼接结果。
 
 ##### 1. SPAdes
