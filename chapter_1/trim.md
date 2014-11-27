@@ -1,68 +1,52 @@
 ## Fastq 剪切与修饰
 
-### 数据转换
+二代测序单个 RUN 的测序数据量比较大，而微生物基因组比较小，所以测微生物一般都是混样，通过添加 adaptors 接头来区分不同样本。因此首先要对数据进行去除接头的处理。
 
-1. 安装 sra toolkit (for ubuntu x64 version)
-```
-~/tmp$ curl -O http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.4.1/sratoolkit.2.4.1-ubuntu64.tar.gz
-~/tmp$ tar zxvf sratoolkit.2.4.1-ubuntu64.tar.gz -C ~/app
-~/tmp$ cd ~/app/sratoolkit.2.4.1-ubuntu64
-~/tmp$ sudo ln -s `pwd`/bin/* /usr/local/sbin/
-```
+#### 常用测序数据去除接头软件
 
-2. sra数据转成fastq格式
+* Trimmomaic
+* trimAL
 
- SRR955386 这个数据的样本还用 Pacbio SMRT 平台进行了测序，Pacbio 单分子测序技术获得基因组完成图。用该完成图作为模板，考量一下不同拼接软件的拼接结果。
-
- 将 CSFAN006122 的基因组完成图数据下载。
-```
-~/data$ prefetch -v SRR955386
-~/data$ mv ~/.ncbi/public/sra/SRR955386.sra .
-~/data$ fastq-dump --split-files SRR955386.sra
-```
-
- 完成后可以看到 `data` 目录下新增了2个文件 `SRR955386_1.fastq` 和 `SRR955386_2.fastq`
-
-
-### QC 质量控制
-
-测序数据质量控制类软件
 
 * FastQC
-* Trimmomaic
 * Picard
-* trimAL
 * PRINSEQ
 * BMTagger
 
-#### 1. FastQC
-```
-~/tmp$ wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.2.zip
-~/tmp$ unzip fastqc_v0.11.2.zip -d ~/app
-~/tmp$ cd ~/app/FastQC
-~/app$ ./fastqc ~/data/*.fastq
-```
-生成\*.html报告文件和对应的\*.zip压缩，scp传输到本地后用浏览器打开查看。如果只输入`./fastqc`则会调用图形界面显示结果。FastQC结果由11个模块组成，对于结果报告各个模块的说明可以参见 [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) 文档。
 
-| Module | Explanation |
-| -- | -- |
-| **Basic Statistics:** | fastq文件的基本信息，可以看到序列数量和读长，fastq文件版本，GC含量等。 |
-| **Per base sequence quality:** | 最重要的结果模块之一，你可以从这个模块的图示中了解序列中各个碱基的质量。 |
-| **Per sequence quality score:** | ... |
-| **Per base sequence content:** | ... |
+### Remove adaptors
 
+#### 1. Trimmomatic 去除接头
 
-#### 2. Picard
-
-[Picard][] 是 [BroadInstitute][] 使用 Java 语言开发的针对 BAM 等高通量测序数据的处理工具，特别是针对 Illumina 平台的数据。
+**Trimmomatic 安装**
 
 ```
-~/tmp$ wget https://github.com/broadinstitute/picard/releases/download/1.123/picard-tools-1.123.zip
-~/tmp$ unzip -n picard-tools-1.123.zip -d ~/app
+~/tmp$ wget http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.32.zip
+~/tmp$ unzip -d ~/app Trimmomatic-0.32.zip
 ```
 
-[Picard]: http://broadinstitute.github.io/picard/ "Picard"
-[BroadInstitute]: https://www.broadinstitute.org/ "Broad Institute"
+**用 trimmomatic 工具处理测序数据**
+
+1.1 用 illumina secret clip 来处理
+
+```
+~/data$ mkdir -p adaptors
+~/data$ wget https://s3.amazonaws.com/public.ged.msu.edu/illuminaClipping.fa adaptors/
+~/data$ echo 'alias java -jar /usr/local/bin/trimmomatic-0.32.jar=trim'
+~/data$ trim PE ~/data/ecoli_ref-5m_s1.fq ~/data/ecoli_ref-5m_s2.fq \
+>    s1_pe s1_se s2_pe s2_se \
+>    ILLUMINACLIP:~/data/adaptors/illuminaClipping.fa:2:30:10
+```
+
+1.2 用 trimmomatic 自带接头文件处理
+
+```
+~/data$ java -jar ~/apps/Trimmomatic-0.32/trimmomatic-0.32.jar PE \
+>     -threads 20 -phred33 reads1.fastq reads2.fastq \
+>     reads1.clean.fastq reads1.unpaired.fastq reads2.clean.fastq reads2.unpaired.fastq \
+>     ILLUMINACLIP:~/apps/Trimmomatic-0.32/adapters/TruSeq3-PE.fa:2:30:10 \
+>     LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
+```
 
 #### 3. Fastx_toolkit
 ```
@@ -80,23 +64,6 @@
 ~/app$ make
 ~/app$ sudo make install
 ~/app$ sudo ldconfig
-```
-
-#### 4. Trimmomatic
-
-```
-~/tmp$ wget http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.32.zip
-~/tmp$ unzip -d ~/app Trimmomatic-0.32.zip
-```
-
-用trimmomatic工具处理测序数据。
-
-```
-~/data$ java -jar ~/apps/Trimmomatic-0.32/trimmomatic-0.32.jar PE \
->     -threads 20 -phred33 reads1.fastq reads2.fastq \
->     reads1.clean.fastq reads1.unpaired.fastq reads2.clean.fastq reads2.unpaired.fastq \
->     ILLUMINACLIP:~/apps/Trimmomatic-0.32/adapters/TruSeq3-PE.fa:2:30:10 \
->     LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
 ```
 
 #### Reference ###

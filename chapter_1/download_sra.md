@@ -1,12 +1,19 @@
-## 测序数据的获得
+## SRA 数据处理
+
+#### SRA 数据库简介
+
+SRA 与 Trace 最大的区别是将实验数据与元数据分离。元数据现在可以划分为以下几类。
+
+* Study：study 包含了项目的所有 metadata，并有一个 NCBI 和 EBI 共同承认的项目编号（universal project id），一个 study 可以包含多个实验（experiment）。
+* Experiment：一个实验记载实验设计（Design），实验平台（Platform）和结果处理
+（processing）三部分信息，并同时包含多个结果集（run）。
+* Run：一个结果集包括一批测序数据。
+* Submission：一个 study 的数据，可以分多次递交至 SRA 数据库。比如在一个项目启动前期，就可以把 study，experiment 的数据递交上去，随着项目的进展，逐批递交 run 数据。study 等同于项目，submission 等同于批
+次的概念。
+
+#### SRA 数据下载
 
 对于单个SRA数据，本地电脑可以通过浏览器下载。而本节讨论的是在服务器端的操作，终端环境下无法使用GUI软件。所以要掌握命令工具来下载SRA数据。
-
-细菌基因组数据以 illumina MiSeq PE250  的测序数据为例，其他测序数据格式将在附录中探讨。
-
-#### 认识 SRA 数据库
-
-
 
 ##### 1. 安装edirect
 
@@ -16,7 +23,7 @@
 ~/tmp$ sudo ln -s ~/app/edirect/*
 ```
 
-##### 2. 用sra toolkit下载数据
+##### 2. 用 sra toolkit 下载数据
 
 选择美国 FDA 提交的 SRR955386 数据。该数据是在Illumina Miseq平台上PE250的数据。生物样本是一株分离自奶酪的单增李斯特菌 CFSAN006122。如果你已经安装好 NCBI 的 sra_toolkit 工具，可以直接用里面的 prefetch 下载。
 
@@ -66,3 +73,26 @@ with open('acc_list_full.txt', 'rw+') as f:
 ~/data$ mkdir -p sra
 ~/data$ ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh --user=anonftp --host=ftp-private.ncbi.nlm.nih.gov --mode=recv --file-list acc_list_full.txt sra/
 ```
+
+### SRA 数据转换
+
+1. 安装 sra toolkit (for ubuntu x64 version)
+```
+~/tmp$ curl -O http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.4.1/sratoolkit.2.4.1-ubuntu64.tar.gz
+~/tmp$ tar zxvf sratoolkit.2.4.1-ubuntu64.tar.gz -C ~/app
+~/tmp$ cd ~/app/sratoolkit.2.4.1-ubuntu64
+~/tmp$ sudo ln -s `pwd`/bin/* /usr/local/sbin/
+```
+
+2. sra数据转成fastq格式
+
+ SRR955386 这个数据的样本还用 Pacbio SMRT 平台进行了测序，Pacbio 单分子测序技术获得基因组完成图。用该完成图作为模板，考量一下不同拼接软件的拼接结果。
+
+ 将 CSFAN006122 的基因组完成图数据下载。
+```
+~/data$ prefetch -v SRR955386
+~/data$ mv ~/.ncbi/public/sra/SRR955386.sra .
+~/data$ fastq-dump --split-files SRR955386.sra
+```
+
+ 完成后可以看到 `data` 目录下新增了2个文件 `SRR955386_1.fastq` 和 `SRR955386_2.fastq`
