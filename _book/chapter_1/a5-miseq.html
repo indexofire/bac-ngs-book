@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>单基因组分析 | 开始之前</title>
+        <title>A5-miseq | 开始之前</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,10 +18,10 @@
     
     
     
-    <link rel="next" href="../chapter_1/download_sra.html" />
+    <link rel="next" href="../chapter_1/abyss.html" />
     
     
-    <link rel="prev" href="../local_blast.html" />
+    <link rel="prev" href="../chapter_1/spades.html" />
     
 
         
@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="1" data-basepath=".." data-revision="1417139833617">
+    <div class="book"  data-level="1.4.3" data-basepath=".." data-revision="1417139833617">
     
 
 <div class="book-summary">
@@ -135,7 +135,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1" data-path="chapter_1/README.html">
+        <li class="chapter " data-level="1" data-path="chapter_1/README.html">
             
                 
                     <a href="../chapter_1/README.html">
@@ -249,7 +249,7 @@
         </li>
     
         
-        <li class="chapter " data-level="1.4.3" data-path="chapter_1/a5-miseq.html">
+        <li class="chapter active" data-level="1.4.3" data-path="chapter_1/a5-miseq.html">
             
                 
                     <a href="../chapter_1/a5-miseq.html">
@@ -793,11 +793,16 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_2847">
+                    <section class="normal" id="section-gitbook_2852">
                     
-                        <h2 id="">单基因组分析</h2>
-<p>分析流程</p>
-
+                        <h2 id="a5-miseq">A5-miseq</h2>
+<p>A5-miseq是一个用 perl 开发的针对细菌基因组 de novo assembly 的 pipeline 工具。它本身不参与组装，而是通过组合一套工具来完成工作。</p>
+<h4 id="1-">1. 下载并安装</h4>
+<pre><code>~/tmp$ wget http://downloads.sourceforge.net/project/ngopt/a5_miseq_linux_20140604.tar.gz
+~/tmp tar zxvf a5_miseq_linux_20140604.tar.gz -C ~/app
+</code></pre><h4 id="2-">2. 开始拼装</h4>
+<pre><code>~/app$ perl bin/a5_pipeline.pl SRR955386_1.fastq SRR955386_2.fastq ~/data/a5_output
+</code></pre>
                     
                     </section>
                 
@@ -807,10 +812,10 @@
         </div>
 
         
-        <a href="../local_blast.html" class="navigation navigation-prev " aria-label="Previous page: Local Blast"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter_1/spades.html" class="navigation navigation-prev " aria-label="Previous page: SPAdes"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter_1/download_sra.html" class="navigation navigation-next " aria-label="Next page: SRA 数据处理"><i class="fa fa-angle-right"></i></a>
+        <a href="../chapter_1/abyss.html" class="navigation navigation-next " aria-label="Next page: Abyss"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

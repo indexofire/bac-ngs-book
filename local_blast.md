@@ -1,20 +1,29 @@
 ## Local Blast 使用说明
 
-Blast 工具拥有序列相似性比对的功能，在 NGS 数据分析中经常会被使用到，特别是一些工具中需要 Blast 来作为第三方工具调用。不过很多人容易搞混`blast`和`blast+`这2个程序集。NCBI 最早在1989年创建`Basic Local Alignment Search Tool`工具，沿用至2009年无论是命令行工具或是在线程序，都称呼其为`blast`。2009年 NCBI 鉴于老程序的一些不足，重新开发了新的`blast+`命令行工具，新的 blast+ 工具在速度上有了提升，在输入输出上也更为灵活。要区分2者也很简单，blast 是通过 blastall -p 的方式调用子程序来比对搜索的，而 blast+ 则是直接使用 blastn 或 blastp 来比对搜索。另外前者用 formatdb 程序来格式化数据库，后者用 makeblastdb 程序来格式化数据。
+Blast 工具可以进行序列相似性比对，在 NGS 数据分析中经常会被使用到，特别是一些工具中需要 Blast 或 Blast+ 程序来作为第三方比对工具调用。不过有时候容易搞混`blast`和`blast+`这2个程序集。NCBI 最早在1989年创建`Basic Local Alignment Search Tool`工具，沿用至2009年无论是命令行工具或是在线程序，都称呼其为`blast`。2009年 NCBI 鉴于老程序的一些不足，重新开发了新的`blast+`命令行工具，新的 blast+ 工具在速度上有了提升，在输入输出上也更为灵活。
+
+目前 Blast 工具最新版是2012年发布的**2.2.26**（可能已经处于暂停升级的状态？），而 Blast+ 目前一直在更新。要区分2者也很简单，blast 是通过 blastall -p 的方式调用子程序来比对搜索的，而 blast+ 则是直接使用 blastn 或 blastp 等子程序来比对搜索。另外前者用 formatdb 程序来格式化数据库，后者用 makeblastdb 程序来格式化数据。
 
 #### Blast
 
 * **安装**
 
-使用 ubuntu 包安装 Blast。
+1.安装 Ubuntu 编译包。
 
 ```
 $ sudo apt-get install blast2
 ```
 
+2.下载NCBI Linux预编译包
+
+```
+$ wget ftp://ftp.ncbi.nih.gov/blast/executables/release/2.2.26/blast-2.2.26-x64-linux.tar.gz
+$ tar zxvf blast-2.2.26-x64 -C ~/app
+```
+
 * **运行 Blast**
 
-在命令行中输入`blastall`，会打印出一份参数列表。你也可以使用 `man blast` 来查看 Blast 工具的用户手册。
+Blast 通过调用 blastall 这个 gateway 程序，来分别调用不同算法和程序实现序列比对。在命令行中输入`blastall`，会打印出一份参数列表。你也可以使用 `man blast` 来查看 Blast 工具的用户手册。
 
 ```
 $ blastall
@@ -68,6 +77,6 @@ $ formatdb -i custom_genome.fasta -o T -p F
 $ blastall -i myseq.fasta -d custom_genome.fasta -p blastn
 ```
 
-## Blast+
+#### Blast+
 
 incoming...

@@ -5,6 +5,7 @@
    * [Linux Shell](preface/before_start.md)
    * [Ubuntu](ubuntu.md)
    * [Local Blast](local_blast.md)
+   * [Genome Sequencing](genome_sequencing.md)
 * [单基因组分析](chapter_1/README.md)
    * [SRA 数据处理](chapter_1/download_sra.md)
    * [Fastq 剪切处理](chapter_1/trim.md)

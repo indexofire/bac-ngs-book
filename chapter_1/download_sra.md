@@ -96,3 +96,22 @@ with open('acc_list_full.txt', 'rw+') as f:
 ```
 
  完成后可以看到 `data` 目录下新增了2个文件 `SRR955386_1.fastq` 和 `SRR955386_2.fastq`
+
+
+#### short reads simulation
+
+[wgsim](https://github.com/lh3/wgsim) 是大牛 Li heng 写的基因组转成短序列的软件。
+
+安装
+
+```bash
+~/app$ git clone https://github.com/lh3/wgsim.git && cd wgsim
+~/app$ gcc -g -O2 -Wall -o wgsim wgsim.c -lz -lm
+~/app$ sudo ln -s `pwd`/wgsim /usr/local/sbin
+```
+
+运行
+
+```bash
+~/data$ wgsim -Nxxx -1yyy -d0 -S11 -e0 -rzzz hs37m.fa yyy-zzz.fq /dev/null
+```

@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>单基因组分析 | 开始之前</title>
+        <title>Linux Shell | 开始之前</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,10 +18,10 @@
     
     
     
-    <link rel="next" href="../chapter_1/download_sra.html" />
+    <link rel="next" href="../ubuntu.html" />
     
     
-    <link rel="prev" href="../local_blast.html" />
+    <link rel="prev" href="../preface/about.html" />
     
 
         
@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="1" data-basepath=".." data-revision="1417139833617">
+    <div class="book"  data-level="0.2" data-basepath=".." data-revision="1417139833617">
     
 
 <div class="book-summary">
@@ -82,7 +82,7 @@
         </li>
     
         
-        <li class="chapter " data-level="0.2" data-path="preface/before_start.html">
+        <li class="chapter active" data-level="0.2" data-path="preface/before_start.html">
             
                 
                     <a href="../preface/before_start.html">
@@ -135,7 +135,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1" data-path="chapter_1/README.html">
+        <li class="chapter " data-level="1" data-path="chapter_1/README.html">
             
                 
                     <a href="../chapter_1/README.html">
@@ -793,10 +793,135 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_2847">
+                    <section class="normal" id="section-gitbook_2868">
                     
-                        <h2 id="">单基因组分析</h2>
-<p>分析流程</p>
+                        <h2 id="linux--shell-commands">Linux 常用的 shell commands</h2>
+<p>这里以 bash 为例。其他的 shell 比如 csh, tcsh 等大部分命令和参数都是一致的。</p>
+<ul>
+<li><code>ls</code>: 列出文件夹的文件</li>
+</ul>
+<p><strong>基本用法</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># 显示 '~/data' 文件夹里的文件</span>
+$ ls ~/data
+
+<span class="hljs-comment"># 显示包括隐含文件的 '~/data' 文件夹里的所有文件</span>
+$ ls -la ~/data
+
+<span class="hljs-comment"># 文件按照时间排序</span>
+$ ls -t ~/data
+
+<span class="hljs-comment"># 查看所有 fastq 文件</span>
+$ ls ~/data/*.fastq
+</code></pre>
+<ul>
+<li><code>cd</code>: 改变文件夹</li>
+</ul>
+<p><strong>基本用法</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># 从当前文件夹 '~/data' 更换到 '~/app' 文件夹</span>
+~/data$ <span class="hljs-built_in">cd</span> ~/app
+
+<span class="hljs-comment"># 从任何位置切换回用户主目录 '/home/User'</span>
+$ <span class="hljs-built_in">cd</span>
+
+<span class="hljs-comment"># 回退上一个访问目录</span>
+$ <span class="hljs-built_in">cd</span> -
+
+<span class="hljs-comment"># 返回上一级目录</span>
+$ <span class="hljs-built_in">cd</span> ..
+
+<span class="hljs-comment"># 返回多级目录冰前往另一个文件夹，这里 '\' 是转义符，将空格键正确转义</span>
+$ <span class="hljs-built_in">cd</span> ../../../new\ directory
+</code></pre>
+<ul>
+<li><code>pwd</code>: 显示当前目录</li>
+</ul>
+<p><strong>基本用法</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># 当不知道当前处于什么路径时，可以用这个命令显示</span>
+$ <span class="hljs-built_in">pwd</span>
+</code></pre>
+<ul>
+<li><code>mkdir</code>: 建立新文件夹</li>
+</ul>
+<p><strong>基本用法</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># 当前路径下新建一个名叫 'new' 的文件夹</span>
+$ mkdir new
+</code></pre>
+<ul>
+<li><code>rmdir</code>: 删除文件夹</li>
+</ul>
+<p><strong>基本用法</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># 删除当前路径的文件夹 'new'</span>
+$ rmdir new
+</code></pre>
+<ul>
+<li><code>rm</code>: 删除文件</li>
+</ul>
+<p><strong>基本用法</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># 删除当前文件夹的所有后缀是 '.sra' 的文件</span>
+$ rm *.sra
+
+<span class="hljs-comment"># 删除文件夹 'new' 以及 'new' 下的所有子文件与子目录</span>
+$ rm -R new
+
+<span class="hljs-comment"># 不弹出删除确认提示，删除所有 '.tmp' 文件</span>
+$ rm <span class="hljs-operator">-f</span> *.tmp
+</code></pre>
+<ul>
+<li><code>cp</code>: 复制文件</li>
+</ul>
+<p><strong>基本用法</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># 复制 'test.txt' 文件到文件夹 '~/abc' 中</span>
+$ cp test.txt ~/abc
+</code></pre>
+<ul>
+<li><code>mv</code>: 移动文件或文件夹</li>
+</ul>
+<p><strong>基本用法</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># 移动 'test.txt' 文件到文件夹 '~/abc' 中并改名叫 'test1.txt'</span>
+$ mv test.txt ~/abc/test1.txt
+</code></pre>
+<ul>
+<li><code>which</code>: 查找可执行文件的系统路径</li>
+</ul>
+<p><strong>基本用法</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># 打印出系统带的 python 程序的路径</span>
+$ which python
+</code></pre>
+<ul>
+<li><code>wc</code>: 统计一个文件的行，字符和字节数</li>
+</ul>
+<p><strong>基本用法</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># 输出文件 'text.txt' 的行数，字符数和字节数。</span>
+$ wc text.txt
+</code></pre>
+<ul>
+<li><code>cat</code>: 输出文件内容</li>
+</ul>
+<p><strong>基本用法</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># 显示文件 'text.txt' 内容</span>
+$ cat text.txt
+</code></pre>
+<ul>
+<li><code>grep</code>: 对输入字符截取选定 pattern，输出该 pattern 所在的行</li>
+</ul>
+<p><strong>基本用法</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># 显示文件 'text.txt' 中含有字符 'abc' 的行</span>
+$ cat text.txt | grep <span class="hljs-string">'abc'</span>
+</code></pre>
+<ul>
+<li><code>head</code>: 输出文件头部内容</li>
+</ul>
+<p><strong>基本用法</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># 输出文件前5行内容</span>
+$ head -<span class="hljs-number">5</span> text.txt
+</code></pre>
+<ul>
+<li><code>tail</code>: 输出文件尾部内容</li>
+</ul>
+<p><strong>基本用法</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># 输出文件的最后5行内容</span>
+$ tail -<span class="hljs-number">5</span> text.txt
+</code></pre>
 
                     
                     </section>
@@ -807,10 +932,10 @@
         </div>
 
         
-        <a href="../local_blast.html" class="navigation navigation-prev " aria-label="Previous page: Local Blast"><i class="fa fa-angle-left"></i></a>
+        <a href="../preface/about.html" class="navigation navigation-prev " aria-label="Previous page: 关于示例"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter_1/download_sra.html" class="navigation navigation-next " aria-label="Next page: SRA 数据处理"><i class="fa fa-angle-right"></i></a>
+        <a href="../ubuntu.html" class="navigation navigation-next " aria-label="Next page: Ubuntu"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

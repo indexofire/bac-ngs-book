@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>单基因组分析 | 开始之前</title>
+        <title>Fastq 质量控制 | 开始之前</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,10 +18,10 @@
     
     
     
-    <link rel="next" href="../chapter_1/download_sra.html" />
+    <link rel="next" href="../chapter_1/assembly.html" />
     
     
-    <link rel="prev" href="../local_blast.html" />
+    <link rel="prev" href="../chapter_1/trim.html" />
     
 
         
@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="1" data-basepath=".." data-revision="1417139833617">
+    <div class="book"  data-level="1.3" data-basepath=".." data-revision="1417139833617">
     
 
 <div class="book-summary">
@@ -135,7 +135,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1" data-path="chapter_1/README.html">
+        <li class="chapter " data-level="1" data-path="chapter_1/README.html">
             
                 
                     <a href="../chapter_1/README.html">
@@ -184,7 +184,7 @@
         </li>
     
         
-        <li class="chapter " data-level="1.3" data-path="chapter_1/qc.html">
+        <li class="chapter active" data-level="1.3" data-path="chapter_1/qc.html">
             
                 
                     <a href="../chapter_1/qc.html">
@@ -793,10 +793,55 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_2847">
+                    <section class="normal" id="section-gitbook_2855">
                     
-                        <h2 id="">单基因组分析</h2>
-<p>分析流程</p>
+                        <h2 id="">质量控制</h2>
+<p>去除序列接头后，就要对测序质量做个QC。</p>
+<h4 id="1-fastqc">1. FastQC</h4>
+<pre><code>~/tmp$ wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.2.zip
+~/tmp$ unzip fastqc_v0.11.2.zip -d ~/app
+~/tmp$ cd ~/app/FastQC
+~/app$ ./fastqc ~/data/*.fastq
+</code></pre><p>生成*.html报告文件和对应的*.zip压缩，scp传输到本地后用浏览器打开查看。如果只输入<code>./fastqc</code>则会调用图形界面显示结果。FastQC结果由11个模块组成，对于结果报告各个模块的说明可以参见 <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">FastQC</a> 文档。</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic Statistics:</strong></td>
+<td>fastq文件的基本信息，可以看到序列数量和读长，fastq文件版本，GC含量等。</td>
+</tr>
+<tr>
+<td><strong>Per base sequence quality:</strong></td>
+<td>最重要的结果模块之一，你可以从这个模块的图示中了解序列中各个碱基的质量。</td>
+</tr>
+<tr>
+<td><strong>Per sequence quality score:</strong></td>
+<td>...</td>
+</tr>
+<tr>
+<td><strong>Per base sequence content:</strong></td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-picard">2. Picard</h4>
+<p><a href="http://broadinstitute.github.io/picard/" title="Picard" target="_blank">Picard</a> 是 <a href="https://www.broadinstitute.org/" title="Broad Institute" target="_blank">BroadInstitute</a> 使用 Java 语言开发的针对 BAM 等高通量测序数据的处理工具，特别是针对 Illumina 平台的数据。它可以提供一个测序质量和数据基本特性的报告。</p>
+<pre><code>~/tmp$ wget https://github.com/broadinstitute/picard/releases/download/1.123/picard-tools-1.123.zip
+~/tmp$ unzip -n picard-tools-1.123.zip -d ~/app
+</code></pre><h4 id="khmer">khmer</h4>
+<pre><code>~/app$ git clone https://github.com/ged-lab/khmer.git &amp;&amp; cd khmer
+~/app$ git checkout v1.1
+~/app$ sudo make install
+</code></pre><h4 id="reference">Reference</h4>
+<ol>
+<li><a href="http://hannonlab.cshl.edu/fastx_toolkit/" target="_blank">Fastx_toolkit</a></li>
+<li><a href="https://www.broadinstitute.org/files/shared/mpg/plathumgen/plathumgen_fennell.pdf" target="_blank">The Picard Pipeline</a></li>
+</ol>
 
                     
                     </section>
@@ -807,10 +852,10 @@
         </div>
 
         
-        <a href="../local_blast.html" class="navigation navigation-prev " aria-label="Previous page: Local Blast"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter_1/trim.html" class="navigation navigation-prev " aria-label="Previous page: Fastq 剪切处理"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter_1/download_sra.html" class="navigation navigation-next " aria-label="Next page: SRA 数据处理"><i class="fa fa-angle-right"></i></a>
+        <a href="../chapter_1/assembly.html" class="navigation navigation-next " aria-label="Next page: De novo assembly"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

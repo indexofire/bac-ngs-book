@@ -14,25 +14,18 @@ $ sudo apt-get install curl python-dev build-essential gcc g++ \
 本书中所涉及到的默认配置，需要先新建这些文件夹，以免运行命令是出错。数据统一放在 `~/data` 目录；应用程序统一安装在 `~/app` 目录；下载等操作的临时目录在 `~/tmp` 目录建立操作所需的文件夹
 
 ```bash
-$ cd                         # 进入当前用户主目录
-$ mkdir -p data app tmp      # 在当前用户主目录下新建目录 data, app 和 tmp
+# 进入当前用户主目录
+$ cd
+
+# 在当前用户主目录下新建目录 data, app 和 tmp
+$ mkdir -p data app tmp
 ```
 
 对于的病原微生物研究人员，掌握一点最基本的 [Linux][] 命令会有很大帮助。注意一下内容 `$` 后面的是输入命令，`#` 后的是解释，在后面的使用中可能会接触到。用 `man 命令名` 可以查看 manual，直接输入 `命令名 -h` 可以查看参数帮助
 
-```bash
-$ ls                          # 查看当前目录下的文件夹
-$ cd /etc                     # 改变当前目录到/etc目录
-$ pwd                         # 现实当前所在目录的路径
-$ cp ~/a ~/sub/b              # 将用户目录下的文件a复制到sub子目录下命名为b
-$ rm ~/a                      # 删除用户目录下的文件a
-$ wc                          # word count
-$ grep                        # output grep
-$ head                        # file head
-$ tail                        # file tail
-# need add more example
-```
-
 有兴趣的微生物学研究者可以阅读相关资料，增强对 Unix 的相关知识：
 * [Unix and Perl Primer for Biologists](http://korflab.ucdavis.edu/Unix_and_Perl/current.html)
 * [The Linux Command Line](http://billie66.github.io/TLCL/book/zh/)
+
+[Ubuntu]: http://www.ubuntu.com/ "Ubuntu"
+[Linux]: http://www.linux.com/ "Linux"

@@ -37,4 +37,4 @@
 | XP_c | Protein | 2:15 |
 | ZP_c | Protein | 2:15 |
 
-**http://www.personal.psu.edu/iua1/courses/files/2014/lecture-12.pdf**
+http://www.personal.psu.edu/iua1/courses/files/2014/lecture-12.pdf

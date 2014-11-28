@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>单基因组分析 | 开始之前</title>
+        <title>SPAdes | 开始之前</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,10 +18,10 @@
     
     
     
-    <link rel="next" href="../chapter_1/download_sra.html" />
+    <link rel="next" href="../chapter_1/a5-miseq.html" />
     
     
-    <link rel="prev" href="../local_blast.html" />
+    <link rel="prev" href="../chapter_1/masurca.html" />
     
 
         
@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="1" data-basepath=".." data-revision="1417139833617">
+    <div class="book"  data-level="1.4.2" data-basepath=".." data-revision="1417139833617">
     
 
 <div class="book-summary">
@@ -135,7 +135,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1" data-path="chapter_1/README.html">
+        <li class="chapter " data-level="1" data-path="chapter_1/README.html">
             
                 
                     <a href="../chapter_1/README.html">
@@ -233,7 +233,7 @@
         </li>
     
         
-        <li class="chapter " data-level="1.4.2" data-path="chapter_1/spades.html">
+        <li class="chapter active" data-level="1.4.2" data-path="chapter_1/spades.html">
             
                 
                     <a href="../chapter_1/spades.html">
@@ -793,10 +793,17 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_2847">
+                    <section class="normal" id="section-gitbook_2856">
                     
-                        <h2 id="">单基因组分析</h2>
-<p>分析流程</p>
+                        <h2 id="spades">SPAdes</h2>
+<h4 id="1--spades">1. 下载并安装 SPAdes</h4>
+<pre><code>~/tmp$ curl -O http://spades.bioinf.spbau.ru/release3.1.1/SPAdes-3.1.1-Linux.tar.gz
+~/tmp$ tar zxvf SPAdes-3.1.1-Linux.tar.gz -C ~/app
+~/tmp$ cd ~/app
+~/app$ sudo ln -s `pwd`/SPAdes-3.1.1-Linux/bin/* /usr/local/sbin
+</code></pre><h4 id="2-">2. 拼装基因组</h4>
+<pre><code>~/app$ spades.py -t 2 -1 SRR95386_1.fastq -2 SRR955386_2.fastq -o spades_output
+</code></pre><p>SPAdes会尝试不同的Kmer，因此拼装时间也会根据Kmer选择数量成倍增加</p>
 
                     
                     </section>
@@ -807,10 +814,10 @@
         </div>
 
         
-        <a href="../local_blast.html" class="navigation navigation-prev " aria-label="Previous page: Local Blast"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter_1/masurca.html" class="navigation navigation-prev " aria-label="Previous page: MaSuRCA"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter_1/download_sra.html" class="navigation navigation-next " aria-label="Next page: SRA 数据处理"><i class="fa fa-angle-right"></i></a>
+        <a href="../chapter_1/a5-miseq.html" class="navigation navigation-next " aria-label="Next page: A5-miseq"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

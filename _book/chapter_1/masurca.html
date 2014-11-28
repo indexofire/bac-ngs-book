@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>单基因组分析 | 开始之前</title>
+        <title>MaSuRCA | 开始之前</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,10 +18,10 @@
     
     
     
-    <link rel="next" href="../chapter_1/download_sra.html" />
+    <link rel="next" href="../chapter_1/spades.html" />
     
     
-    <link rel="prev" href="../local_blast.html" />
+    <link rel="prev" href="../chapter_1/assembly.html" />
     
 
         
@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="1" data-basepath=".." data-revision="1417139833617">
+    <div class="book"  data-level="1.4.1" data-basepath=".." data-revision="1417139833617">
     
 
 <div class="book-summary">
@@ -135,7 +135,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1" data-path="chapter_1/README.html">
+        <li class="chapter " data-level="1" data-path="chapter_1/README.html">
             
                 
                     <a href="../chapter_1/README.html">
@@ -217,7 +217,7 @@
                 
     
         
-        <li class="chapter " data-level="1.4.1" data-path="chapter_1/masurca.html">
+        <li class="chapter active" data-level="1.4.1" data-path="chapter_1/masurca.html">
             
                 
                     <a href="../chapter_1/masurca.html">
@@ -793,11 +793,38 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_2847">
+                    <section class="normal" id="section-gitbook_2853">
                     
-                        <h2 id="">单基因组分析</h2>
-<p>分析流程</p>
+                        <h2 id="masurca">MaSuRCA</h2>
+<h4 id="1--masurca">1. 下载并安装 MaSuRCA</h4>
+<pre><code>~/tmp$ curl -O ftp://ftp.genome.umd.edu/pub/MaSuRCA/MaSuRCA-2.3.0.tar.gz
+~/tmp$ tar zxvf MaSuRCA-2.3.0.tar.gz -C ~/app
+~/tmp$ cd ~/app
+~/app$ ./MaSuRCA-2.3.0/install.sh
+~/app$ sudo ln -s `pwd`/MaSuRCA-2.3.0/bin/masurca /usr/local/sbin
+</code></pre><h4 id="2-">2. 建立拼装配置文件</h4>
+<p><code>~/data/SRR955386_masurca.config</code></p>
+<pre><code>~/data$ touch SRR955386_masurca.config
+~/data$ nano SRR955386_masurca.config
+</code></pre><p>文件内容修改如下</p>
+<pre><code>DATA
+PE= p1 500 50 SRR955386_1.fastq SRR955386_2.fastq
+END
 
+PARAMETERS
+GRAPH_KMER_SIZE=auto
+USE_LINKING_MATES=1
+LIMIT_JUMP_COVERAGE = 60
+KMER_COUNT_THRESHOLD = 1
+NUM_THREADS= 2
+JF_SIZE=100000000
+DO_HOMOPOLYMER_TRIM=0
+END
+</code></pre><p>设置<code>GRAPH_KMER_SIZE=auto</code>，软件会调用Kmer=31来进行拼装。对于MiSeq PE250以上的插片，可以考虑手动设置使用更大的KmerS</p>
+<h4 id="3-">3. 开始拼装</h4>
+<pre><code>~/app$ masurca SRR955386_masurca.config
+~/app$ ./assemble.sh
+</code></pre>
                     
                     </section>
                 
@@ -807,10 +834,10 @@
         </div>
 
         
-        <a href="../local_blast.html" class="navigation navigation-prev " aria-label="Previous page: Local Blast"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter_1/assembly.html" class="navigation navigation-prev " aria-label="Previous page: De novo assembly"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter_1/download_sra.html" class="navigation navigation-next " aria-label="Next page: SRA 数据处理"><i class="fa fa-angle-right"></i></a>
+        <a href="../chapter_1/spades.html" class="navigation navigation-next " aria-label="Next page: SPAdes"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
