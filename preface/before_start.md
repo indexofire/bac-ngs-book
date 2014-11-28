@@ -124,36 +124,33 @@ $ wc text.txt
 **基本用法**
 
 ```bash
-
+# 显示文件 'text.txt' 内容
+$ cat text.txt
 ```
+
 * `grep`: 对输入字符截取选定 pattern，输出该 pattern 所在的行
 
 **基本用法**
 
 ```bash
-
-$ cat grep                        # output grep
+# 显示文件 'text.txt' 中含有字符 'abc' 的行
+$ cat text.txt | grep 'abc'
 ```
 
-* `head`:
+* `head`: 输出文件头部内容
 
 **基本用法**
 
 ```bash
-
-$ head                        # file head
+# 输出文件前5行内容
+$ head -5 text.txt
 ```
 
-* `tail`:
+* `tail`: 输出文件尾部内容
 
 **基本用法**
 
 ```bash
-$ tail                        # file tail
+# 输出文件的最后5行内容
+$ tail -5 text.txt
 ```
----
-
-
-
----
-

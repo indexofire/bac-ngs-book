@@ -2,6 +2,8 @@
 
 Blast 工具拥有序列相似性比对的功能，在 NGS 数据分析中经常会被使用到，特别是一些工具中需要 Blast 来作为第三方工具调用。不过很多人容易搞混`blast`和`blast+`这2个程序集。NCBI 最早在1989年创建`Basic Local Alignment Search Tool`工具，沿用至2009年无论是命令行工具或是在线程序，都称呼其为`blast`。2009年 NCBI 鉴于老程序的一些不足，重新开发了新的`blast+`命令行工具，新的 blast+ 工具在速度上有了提升，在输入输出上也更为灵活。要区分2者也很简单，blast 是通过 blastall -p 的方式调用子程序来比对搜索的，而 blast+ 则是直接使用 blastn 或 blastp 来比对搜索。另外前者用 formatdb 程序来格式化数据库，后者用 makeblastdb 程序来格式化数据。
 
+#### Blast
+
 * **安装**
 
 使用 ubuntu 包安装 Blast。
@@ -60,6 +62,12 @@ $ blastall
 **应用举例**:
 
 Local blast例子：首先下载一个基因组文件并格式化作为本地数据库，然后使用 blastn 对序列进行比对。
+
 ```
-$
+$ formatdb -i custom_genome.fasta -o T -p F
+$ blastall -i myseq.fasta -d custom_genome.fasta -p blastn
 ```
+
+## Blast+
+
+incoming...
