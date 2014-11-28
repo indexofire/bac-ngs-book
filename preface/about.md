@@ -6,43 +6,8 @@
 
 对于小型单位的生产用户来说，个人认为目前最佳的解决方式是通过在 [Amazon EC2][] 中运行 [Linux][] 实例而非自行配置服务器。[Amazon EC2][] 的最低配置 Linux 实例还提供一年的免费试用，可以用于学习。通过购买适合的配置，即可作为日常工作中的生产工作，通过远程 ssh 访问的方式来开展。这样不仅避免了安装和优化 [Linux][] 系统过程中的大量学习开销，也能保证系统环境配置的一致性。方法参见附录5.2。此外，个人推荐使用 [docker][]（一个轻量级的操作系统虚拟化解决方案） 来建立的配置与主系统隔离的应用环境，可以方便的做到一次创建，任意服务器中运行。
 
-### Linux 热身
 
-##### 准备工作
-[Ubuntu][] 作为最主流的 [Linux][] 发行版之一，有一套自身完善的软件管理命令，因经常会用到，所以来熟悉一下。安装一些必备工具
-```bash
-$ sudo apt-get update
-$ sudo apt-get upgrade
-$ sudo apt-get install curl python-dev build-essential gcc g++ \
-    biopython bioperl libbz2-dev
-```
-
-本书中所涉及到的默认配置，需要先新建这些文件夹，以免运行命令是出错。数据统一放在 `~/data` 目录；应用程序统一安装在 `~/app` 目录；下载等操作的临时目录在 `~/tmp` 目录建立操作所需的文件夹
-```bash
-$ cd                         # 进入当前用户主目录
-$ mkdir -p data app tmp      # 在当前用户主目录下新建目录 data, app 和 tmp
-```
-
-对于的病原微生物研究人员，掌握一点最基本的 [Linux][] 命令会有很大帮助。注意一下内容 `$` 后面的是输入命令，`#` 后的是解释，在后面的使用中可能会接触到。用 `man 命令名` 可以查看 manual，直接输入 `命令名 -h` 可以查看参数帮助
-
-```bash
-$ ls                          # 查看当前目录下的文件夹
-$ cd /etc                     # 改变当前目录到/etc目录
-$ pwd                         # 现实当前所在目录的路径
-$ cp ~/a ~/sub/b              # 将用户目录下的文件a复制到sub子目录下命名为b
-$ rm ~/a                      # 删除用户目录下的文件a
-$ wc                          # word count
-$ grep                        # output grep
-$ head                        # file head
-$ tail                        # file tail
-# need add more example
-```
-
-有兴趣的微生物学研究者可以阅读相关资料，增强对 Unix 的相关知识：
-* [Unix and Perl Primer for Biologists](http://korflab.ucdavis.edu/Unix_and_Perl/current.html)
-* [The Linux Command Line](http://billie66.github.io/TLCL/book/zh/)
-
-# 其他方法？
+## 其他方法？
 
 对于实在不愿意学习命令行工具，无法摆脱Windows使用环境的，但想自己分析微生物数据的用户，推荐尝试 [Orione][] 工具。
 
