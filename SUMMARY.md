@@ -1,8 +1,8 @@
 # Summary
 
 * [关于本书](README.md)
-   * [开始之前](preface/before_start.md)
    * [关于示例](preface/about.md)
+   * [开始之前](preface/before_start.md)
 * [单基因组分析](chapter_1/README.md)
    * [SRA 数据处理](chapter_1/download_sra.md)
    * [Fastq 剪切处理](chapter_1/trim.md)
