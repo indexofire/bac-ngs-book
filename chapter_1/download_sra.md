@@ -1,6 +1,15 @@
 ## SRA 数据处理
 
+内容：
+
+1. SRA 数据库简介
+2. SRA 数据下载
+3. SRA 数据转换
+4. 从基因组数据模拟短序列数据
+
 #### SRA 数据库简介
+
+**SRA** 是 **S**equence **R**ead **A**rchive 的首字母缩写。
 
 SRA 与 Trace 最大的区别是将实验数据与元数据分离。元数据现在可以划分为以下几类。
 
@@ -13,9 +22,11 @@ SRA 与 Trace 最大的区别是将实验数据与元数据分离。元数据现
 
 #### SRA 数据下载
 
-对于单个SRA数据，本地电脑可以通过浏览器下载。而本节讨论的是在服务器端的操作，终端环境下无法使用GUI软件。所以要掌握命令工具来下载SRA数据。
+对于单个SRA数据，带图形界面的电脑可以通过浏览器下载。对于只有命令行的服务器端的操作，终端环境下无法使用GUI软件，所以要通过命令工具来下载SRA数据。
 
-##### 1. 安装edirect
+**1. 用 edirect 下载数据**
+
+edirect 是 NCBI 最近发布的 entrez 数据操作命令行工具。过去往往要通过 biopython 之类的第三方脚本工具来实现查找，索引以及抓取 entrez 的数据。现在可以用 edirect 来很方便的实现。
 
 ```
 ~/tmp$ wget ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/edirect.tar.gz
@@ -23,7 +34,7 @@ SRA 与 Trace 最大的区别是将实验数据与元数据分离。元数据现
 ~/tmp$ sudo ln -s ~/app/edirect/*
 ```
 
-##### 2. 用 sra toolkit 下载数据
+**2. 用 sra toolkit 下载数据**
 
 选择美国 FDA 提交的 SRR955386 数据。该数据是在Illumina Miseq平台上PE250的数据。生物样本是一株分离自奶酪的单增李斯特菌 CFSAN006122。如果你已经安装好 NCBI 的 sra_toolkit 工具，可以直接用里面的 prefetch 下载。
 
@@ -74,7 +85,7 @@ with open('acc_list_full.txt', 'rw+') as f:
 ~/data$ ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh --user=anonftp --host=ftp-private.ncbi.nlm.nih.gov --mode=recv --file-list acc_list_full.txt sra/
 ```
 
-### SRA 数据转换
+#### SRA 数据转换
 
 1. 安装 sra toolkit (for ubuntu x64 version)
 ```
@@ -97,21 +108,61 @@ with open('acc_list_full.txt', 'rw+') as f:
 
  完成后可以看到 `data` 目录下新增了2个文件 `SRR955386_1.fastq` 和 `SRR955386_2.fastq`
 
+#### 从基因组数据模拟短序列数据
 
-#### short reads simulation
+前面介绍如何从 NCBI SRA 数据库下载 NGS 数据并转换成 fastq 格式的文件。可能有些人做的数据分析或验证需要从基因组逆向模拟成短序列格式数据，这种需求也有人开发了相的软件。
 
-[wgsim](https://github.com/lh3/wgsim) 是大牛 Li heng 写的基因组转成短序列的软件。
+[wgsim](https://github.com/lh3/wgsim) 就是这样一个软件，它是由开发了BWA等软件大牛 Li heng 写的基因组转成短序列的软件。
 
-安装
+**安装wgsim**
 
 ```bash
 ~/app$ git clone https://github.com/lh3/wgsim.git && cd wgsim
 ~/app$ gcc -g -O2 -Wall -o wgsim wgsim.c -lz -lm
 ~/app$ sudo ln -s `pwd`/wgsim /usr/local/sbin
+~/app$ wsgim -h
+
+Program: wgsim (short read simulator)
+Version: 0.3.1-r13
+Contact: Heng Li <lh3@sanger.ac.uk>
+
+Usage:   wgsim [options] <in.ref.fa> <out.read1.fq> <out.read2.fq>
+
+Options: -e FLOAT      base error rate [0.020]
+         -d INT        outer distance between the two ends [500]
+         -s INT        standard deviation [50]
+         -N INT        number of read pairs [1000000]
+         -1 INT        length of the first read [70]
+         -2 INT        length of the second read [70]
+         -r FLOAT      rate of mutations [0.0010]
+         -R FLOAT      fraction of indels [0.15]
+         -X FLOAT      probability an indel is extended [0.30]
+         -S INT        seed for random generator [-1]
+         -A FLOAT      disgard if the fraction of ambiguous bases higher than FLOAT [0.05]
+         -h            haplotype mode
 ```
 
-运行
+**模拟基因组短序列数据**
+
+使用所有参数为默认值，将大肠杆菌基因组数据转换为PE250 fastq 格式数据。
 
 ```bash
-~/data$ wgsim -Nxxx -1yyy -d0 -S11 -e0 -rzzz hs37m.fa yyy-zzz.fq /dev/null
+~/data$ wget https://raw.github.com/ecerami/samtools_primer/master/tutorial/genomes/NC_008253.fna
+~/data$ wgsim -S11 -1250 -2250 NC_008253.fna reads_1.fastq reads_2.fastq
+~/data$ head -8 reads_1.fastq
+
+@gi|110640213|ref|NC_008253.1|_3151106_3151623_4:0:0_5:1:0_0/1
+AACATAAGTGGTATTAATTCCCCAAGATTCAAGATTACGAATAGTATTATCCGCAAAAATATCATCACCTACTTTCGTCAGCATCAGGACTTTTGAATTCAATTTAGCCGCCGCCACCGCTTGATTAGCACCTTTGCCACCACATCCGATTTTGAAGGCAGGTGCTTCCAGAGTTTCTCCTTCTTTAGGCATCTGATAAGTGTAAGTAATGAGATCCACCATATTGGAACCAATAAGTGCAATGTCCATT
++
+2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+@gi|110640213|ref|NC_008253.1|_2429297_2429873_8:0:0_7:0:0_1/1
+ACGGTATCACCATGATTGCCCGTTCCGTCAACAGCATGGGGCTGGTCATTATAGGCGGTGGATCGCTTGAAGAAGCGTTAACTGAACTGGAAACCGGACGCGGCGACGCGGTGGTGGTGCTGGAAAACGAACTGCATCGTCACGCTTGCGCTACCCGCGTGAATGCTGCGCTGGCTAAAGCGCCGCTGGTGATTGTGGTTGACCATCAACGCACAGCGATTATGGAAAACGCTCATCTGGTACTATCCGC
++
+2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
 ```
+
+#### Reference
+
+1. [SRA数据库帮助](http://download.bioon.com.cn/view/upload/201401/20235821_1284.pdf)
+2. [SRA Handbook](http://www.ncbi.nlm.nih.gov/books/NBK47528/)
+3. 熊筱晶, NCBI高通量测序数据库SRA介绍, 生命的化学[J]: 2010, 06, 959-962.
