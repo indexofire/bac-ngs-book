@@ -26,13 +26,13 @@
 #### 2. 建立 Instance
 在`EC2 Dashboard`左侧列表里点击`Instances`，然后点击`Launch Instance`，会弹出如下图所示的一步步配置Instance的界面。
 
-**Step 1: Choose an Amazon Machine Image (AMI)**
+**2.1: Choose an Amazon Machine Image (AMI)**
 
 在Image界面里选择*Ubuntu Server 14.04LTS*。
 
 ![Instance](../assets/img/appendix_a2_1.png)
 
-**Step 2: Choose an Instance Type**
+**2.2: Choose an Instance Type**
 
 Type 选择 `t2.micro`
 是因为这个配置是1年免费的。缺点当然是计算资源比较低，而且当你的计算资源超限额后，会自动把 CPU 性能降低到大概 1/10 左右的情况。要注意的是虽然是免费的，但本质上是1个月720hour的免费计算。如果你同时开了多个 t2.micro Instances，没有在不计算的时候停机stop，仍旧会超出计算时间，被扣美金的。所以如果开了多个Instances，千万别忘了不用的时候关闭。
@@ -41,15 +41,17 @@ Type 选择 `t2.micro`
 
 ![Instance](../assets/img/appendix_a2_2.png)
 
-**Step 7: Review Instance Launch`**
+**2.3: Review Instance Launch`**
 
 确认配置无误就点击 Launch，会弹出一个`Select an existing key pair or create a new key pair`选项窗口。这一步很重要，第一次建立新的 Instance 的话，下拉菜单选择`Create a new key pair`。然后给 key pair 取个好记的名字，比如**bac_ngs**，然后点击`Download Key Pair`，就会下载这个密钥文件到你的电脑上。名字叫**bac_ngs.pem**。这时候底部的`Launch Instance`按钮就变成可以点击状态，把你的鼠标按上去，你的Instance就开始初始化了。
 
 #### 3. 访问 Instance
 如果你的本地电脑操作系统是Linux，可以直接开一个终端程序运行ssh来访问Instance，如果是Windows电脑，推荐使用putty来访问。
 
-##### 3.1 Linux
+**3.1 Linux**
+
 将下载的 bac-ngs.pem 文件放在一个妥善的位置上，这里放在~/.pem
+
 ```
 ~/$ mkdir -p .pem
 ~/$ mv ~/downloads/bac-ngs.pem ~/.pem
@@ -57,6 +59,7 @@ Type 选择 `t2.micro`
 ```
 
 现在使用openssh远程访问 AWS Instance 实例。远程的地址可以使用 Dashboard 的 Instance 界面里对应的Public Domain 或者 IP 信息。因为选择的是 ubuntu 操作系统，直接使用 ubuntu 作为用户名，使用 bac-ngs.pem 密钥文件来登录。
+
 ```
 ~/$ ssh -i ~/.pem/bac-ngs.pem ubuntu@your_public_ip
 ```
@@ -64,22 +67,43 @@ Type 选择 `t2.micro`
 连接成功的话就能看到 ubuntu 的登录欢迎界面，就可以开始你的生物信息软件配置过程了。
 
 服务器和本地传递数据最方便的方法之一是使用scp命令，如果本地数据要传到服务器的`/home/ubuntu/data`位置上，可以用下面命令：
+
 ```
 ~/$ scp -i ~/.pem/bac-ngs.pem ~/data/your_data.fasta ubuntu@your_public_ip:/data
 ```
 
 如果是要把服务器上`/home/ubuntu/data/001.tar.gz`文件传输给本地电脑的话，可以使用以下方式：
+
 ```
 ~/$ scp  ~/.pem/bac-ngs.pem ubuntu@your_public_ip:/data/001.tar.gz .
 ```
 
-##### 3.2 Windows
-手头上没有Windows机器，可以参考这个[教程](http://ged.msu.edu/angus/tutorials-2013/log-in-with-ssh-win.html)。
+**3.2 Windows**
+
+对于 windowsxp 或 windows7 可以使用 putty 来建立与 aws ec2 的 ssh 连接，参考这个[教程](http://ged.msu.edu/angus/tutorials-2013/log-in-with-ssh-win.html)。windows8 用户可以用 zoc 来访问，具体操作请自行搜索教程。
 
 ## Running docker in Amazon EC2
 
 docker 是一种虚拟环境，可以很方便的在不同机器上配置环境，近年来快速发展，在云计算服务的领域被高度关注。事实上它的启动速度很快，配置也特别方便，很适合生物信息计算的自动化配置。
 
-你除了可以在Instance里安装docker来实现外，AWS也提供默认的接入方式。方法如下：
+AWS 目前的各个 linux 发行版都已经支持 docker。你可以在上一部分创建好的 AWS EC2 Instance里安装docker:
 
+```
+ubuntu@public_ip:~$ sudo apt-get install docker.io
+```
 
+ubuntu 版本默认的安装包版本比较低，如果想安装最新版本的 docker，需要添加源：
+
+```
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+$ sudo bash -c "echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
+$ sudo apt-get update
+$ sudo apt-get install lxc-docker
+```
+
+如果想对 docker 有更深入的了解，可以先阅读 [Docker 从入门到实践](http://yeasy.gitbooks.io/docker_practice/)，或者阅读 [Docker 官方文档](https://docs.docker.com/)
+
+国外有一些研究者建立了含有不同生物信息分析软件的 docker images，可以根据需要直接下载并运行，避免了在不同机器中部署的各种配置。，下面举几个镜像：
+
+1. [Docker Galaxy](https://github.com/bgruening/docker-galaxy-stable)
+2. [KHP-Bioinformatics](https://github.com/KHP-Informatics/ngs)
