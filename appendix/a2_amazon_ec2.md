@@ -86,6 +86,8 @@ Type 选择 `t2.micro`
 
 docker 是一种虚拟环境，可以很方便的在不同机器上配置环境，近年来快速发展，在云计算服务的领域被高度关注。事实上它的启动速度很快，配置也特别方便，很适合生物信息计算的自动化配置。
 
+#### 安装 docker
+
 AWS 目前的各个 linux 发行版都已经支持 docker。你可以在上一部分创建好的 AWS EC2 Instance里安装docker:
 
 ```
@@ -103,7 +105,51 @@ $ sudo apt-get install lxc-docker
 
 如果想对 docker 有更深入的了解，可以先阅读 [Docker 从入门到实践](http://yeasy.gitbooks.io/docker_practice/)，或者阅读 [Docker 官方文档](https://docs.docker.com/)
 
-国外有一些研究者建立了含有不同生物信息分析软件的 docker images，可以根据需要直接下载并运行，避免了在不同机器中部署的各种配置。，下面举几个镜像：
+国外有一些研究者建立了含有不同生物信息分析软件的 docker images，可以根据需要直接下载并运行，避免了在不同机器中部署的各种配置。比如：
 
 1. [Docker Galaxy](https://github.com/bgruening/docker-galaxy-stable)
 2. [KHP-Bioinformatics](https://github.com/KHP-Informatics/ngs)
+
+#### 运行 docker
+
+接下来我们示例如何安装在docker hub 上他人开发的镜像，假设已经登录到 AWS 并已安装完 docker：
+
+**1. 获取镜像**
+
+首先我们用 docker 的搜索命令，查找含有名字 ngseasy-fastqc 的所有镜像。你会看到终端会打印出所有含有 ngseasy-fastqc 的镜像。
+
+```
+ubuntu@public_ip:~$ sudo docker search ngseasy-fastqc
+```
+
+因为 docker 镜像非常灵活，可以随时修改他人的镜像成为自己的，所以你旺旺能看到多个不同用户创建的相同镜像，这里我们能看到2个用户 snewhouse 和 compbio 创建的 ngseasy-fastqc 镜像。所以区别不同镜像是通过用*户名/镜像名:版本号*来区分的。如果不加版本号则已lastest作为默认。
+
+
+```
+NAME                                 DESCRIPTION
+snewhouse/ngseasy-fastqc             NGSeasy fastqc
+compbio/ngseasy-fastqc
+```
+
+下载镜像 snewhouse/ngseasy-fastqc。
+
+```
+ubuntu@public_ip:~$ sudo docker pull compbio/ngseasy-fastqc
+```
+
+**2. 启动容器**
+
+启动容器有2种方式，我们需要在容器中进行交互，因此选择基于镜像新建容器并启动。
+
+```
+ubuntu@public_ip:~$ sudo docker run -t -i compbio/ngseasy-fastqc /bin/bash
+root@32d858986db7:/# su pipeman
+```
+
+这样你可以开始输入 fastqc 运行程序。
+
+####配置适合自己需求的镜像
+
+**1. base image**
+
+incoming...
