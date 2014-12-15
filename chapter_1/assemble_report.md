@@ -1,13 +1,15 @@
-## Evaluate assemble
+## Evaluate assembly
+
 1. GAEMR
 2. QUAST
 
 ### GAEMR
 
-#### 1. GAEMR 安装
-GAEMR 是 BroadInstitute 用 Python 开发的对拼接结果提供分析报告的工具。安装 GAEMR 分析依赖的工具和相关依赖库。
+GAEMR 是 BroadInstitute 用 Python 开发的对拼接结果提供分析报告的工具。
 
-出具完整报告所需安装的第三方软件：
+#### 1. GAEMR 安装
+
+安装 GAEMR 分析依赖的工具和相关依赖库，其出具完整报告所需安装的第三方软件：
 
 * samtools
 * bwa

@@ -84,7 +84,7 @@ Type 选择 `t2.micro`
 
 ## Running docker in Amazon EC2
 
-docker 是一种虚拟环境，可以很方便的在不同机器上配置环境，近年来快速发展，在云计算服务的领域被高度关注。事实上它的启动速度很快，配置也特别方便，很适合生物信息计算的自动化配置。
+docker 是一种虚拟环境，可以很方便的在不同机器上配置环境，近年来快速发展，在云计算服务的领域被高度关注。事实上它的启动速度很快，配置也特别方便，很适合生物信息计算的自动化配置。它对生物学家最大的好处是直接使用他人创建的虚拟镜像，减少安装和部署的学习与工作曲线。或者根据自己的需求自己创建相应镜像，快速部署与使用。
 
 #### 安装 docker
 
@@ -102,13 +102,6 @@ $ sudo bash -c "echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sou
 $ sudo apt-get update
 $ sudo apt-get install lxc-docker
 ```
-
-如果想对 docker 有更深入的了解，可以先阅读 [Docker 从入门到实践](http://yeasy.gitbooks.io/docker_practice/)，或者阅读 [Docker 官方文档](https://docs.docker.com/)
-
-国外有一些研究者建立了含有不同生物信息分析软件的 docker images，可以根据需要直接下载并运行，避免了在不同机器中部署的各种配置。比如：
-
-1. [Docker Galaxy](https://github.com/bgruening/docker-galaxy-stable)
-2. [KHP-Bioinformatics](https://github.com/KHP-Informatics/ngs)
 
 #### 运行 docker
 
@@ -150,6 +143,44 @@ root@32d858986db7:/# su pipeman
 
 ####配置适合自己需求的镜像
 
-**1. base image**
+**1. Base image**
 
-incoming...
+首先我们需要建立 docker 账号，然后找一个 base image。这里我们用 ubuntu 来创建。首先搜索一下 docker hub 里的 ubuntu 官方镜像。
+
+```
+ubuntu@public_ip:~$ sudo docker search ubuntu | grep Official
+```
+
+**2. 创建Dockerfile**
+
+docker 镜像在创建容器时，主要通过 Dockfile 来配置，本质上是一个类似 shell 脚本来建立部署的工作流。下面举一个最简单的安装 blast 的 dockerfile 例子。
+
+Dockerfiles
+
+```
+FROM ubuntu:12.04
+MAINTAINER My_Name my_email@mail.com
+
+RUN apt-get update && apt-get dist-upgrade -y
+RUN apt-get install -y blast
+RUN apt-get autoclean && apt-get autoremove -y && rm -rf /var/lib/{apt,dpkg,cache,log}/
+```
+
+更完整的实例可以参考官方文档。
+
+**3. 添加工具**
+
+```
+ubuntu@public_ip:~$
+```
+
+#### 进一步学习 Docker
+
+如果想对 docker 有更深入的了解，可以先阅读 [Docker 从入门到实践](http://yeasy.gitbooks.io/docker_practice/)，或者阅读 [Docker 官方文档](https://docs.docker.com/)。关注 docker 技术的朋友推荐订阅
+
+#### 可用镜像
+
+国外有一些研究者建立了含有不同生物信息分析软件的 docker images，可以根据需要直接下载并运行，避免了在不同机器中部署的各种配置。比如：
+
+1. [Docker Galaxy](https://github.com/bgruening/docker-galaxy-stable)
+2. [KHP-Bioinformatics](https://github.com/KHP-Informatics/ngs)

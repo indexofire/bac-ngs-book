@@ -44,6 +44,13 @@ $ git push origin master
 
 ## 版本更新
 
+##### v0.0.7: 2014.12.15
+
+ * 修正一些错误
+ * 更新了 docker in AWS 内容
+ * 更新了 Phylogenomics 内容
+ * 更新了 Visulization 内容
+
 ##### v0.0.6: 2014.12.01
 
  * 修改章节结构

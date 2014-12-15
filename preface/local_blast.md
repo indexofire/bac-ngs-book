@@ -6,22 +6,22 @@ Blast 工具可以进行序列相似性比对，在 NGS 数据分析中经常会
 
 #### Blast
 
-* **安装**
+**1. 安装**
 
-1.安装 Ubuntu 编译包。
+1.1 安装 Ubuntu 编译包。
 
 ```
 $ sudo apt-get install blast2
 ```
 
-2.下载NCBI Linux预编译包
+1.2 下载NCBI Linux预编译包
 
 ```
 $ wget ftp://ftp.ncbi.nih.gov/blast/executables/release/2.2.26/blast-2.2.26-x64-linux.tar.gz
 $ tar zxvf blast-2.2.26-x64 -C ~/app
 ```
 
-* **运行 Blast**
+**2. 运行 Blast**
 
 Blast 通过调用 blastall 这个 gateway 程序，来分别调用不同算法和程序实现序列比对。在命令行中输入`blastall`，会打印出一份参数列表。你也可以使用 `man blast` 来查看 Blast 工具的用户手册。
 
@@ -68,7 +68,7 @@ $ blastall
 
 其他参数参见`man blast`。
 
-**应用举例**:
+**3. 应用举例:**
 
 Local blast例子：首先下载一个基因组文件并格式化作为本地数据库，然后使用 blastn 对序列进行比对。
 

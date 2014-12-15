@@ -96,30 +96,6 @@ Index：标签，在Illumina平台的多重测序（Multiplexed Sequencing）过
 
 **SNP**：single nucleotide polymorphism，单核苷酸多态性，个体间基因组DNA序列同一位置单个核苷酸变异(替代、插入或缺失)所引起的多态性；不同物种个体基因组 DNA 序列同一位置上的单个核苷酸存在差别的现象。有这种差别的基因座、DNA序列等可作为基因组作图的标志。SNP 在CG序列上出现最为频繁，而且多是C转换为T ，原因是CG中的C 常为甲基化的，自发地脱氨后即成为胸腺嘧啶。一般而言，SNP 是指变异频率大于1 %的单核苷酸变异，主要用于高危群体的发现、疾病相关基因的鉴定、药物
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Reference
+
 1. http://www.macrogencn.com/_d275872179.htm
-2.
