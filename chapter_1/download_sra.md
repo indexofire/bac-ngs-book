@@ -51,8 +51,8 @@ edirect 是 NCBI 最近发布的 entrez 数据操作命令行工具。过去往�
 
 ```
 ~/data$ ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh \
-    --user=anonftp --host=ftp-private.ncbi.nlm.nih.gov --mode=recv \
-    /sra/sra-instant/reads/ByRun/sra/ERR/ERR175/ERR175655/ERR175655.sra .
+> --user=anonftp --host=ftp.ncbi.nlm.nih.gov --mode=recv -l100m -T -k 1 \
+> /sra/sra-instant/reads/ByRun/sra/ERR/ERR175/ERR175655/ERR175655.sra .
 ```
 
 ##### 4. 用 ascp 批量下载 sra 数据
@@ -72,7 +72,7 @@ for i in data:
     path = '/sra/sra-instant/reads/ByRun/sra/%s/%s/%s/%s.sra\n' % (i[0:3], i[0:6], i, i)
     list.append(path)
 
-with open('acc_list_full.txt', 'rw+') as f:
+with open('acc_list_full.txt', 'w') as f:
    d = f.writelines(list)
 ```
 
