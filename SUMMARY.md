@@ -40,7 +40,7 @@
    * [Software](appendix/software.md)
        * [Assembly - SPAdes](appendix/spades.md)
        * [Assembly - MaSuRCA](appendix/macurca.md)
-       * [A5_miseq](appendix/a5_miseq.md)
+       * [Assembly - A5_miseq](appendix/a5_miseq.md)
        * [samtools](appendix/samtools.md)
        * [bowtie2](appendix/bowtie2.md)
        * [bwa](appendix/bwa)

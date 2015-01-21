@@ -8,7 +8,7 @@ GFF格式是Sanger研究所定义，是一种简单的、方便的对于DNA、RN
 |----|------|------|
 |**Column 1**| seqid | 序列的编号，编号的有效字符[a-zA-Z0-9.:^*$@!+_?-] |
 |**Column 2**|source|注释信息的来源，比如”Genescan”、”Genbank”等，可以为空，为空用”.”点号代替|
-|Column 3**|type|注释信息的类型，比如Gene、cDNA、mRNA等，或者是SO对应的编号|
+|**Column 3**|type|注释信息的类型，比如Gene、cDNA、mRNA等，或者是SO对应的编号|
 |**Column 4**| start | 序列开始位置|
 |**Column 5**| end | 序列结束位置|
 |**Column 6**| score |得分，数字，是注释信息可能性的说明，可以是序列相似性比对时的E-values值或者基因预测是的P-values值。”.”表示为空。|
