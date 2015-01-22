@@ -1,8 +1,10 @@
-## 1. Galaxy 本地安装与配置
+## 本地安装与基本配置
+
+本节介绍 Galaxy 的最基本下载安装与使用。最适合的场景为个人电脑，单用户使用的情况。
 
 #### 下载与安装
 
-galaxy 的代码库托管在 bitbucket.org ，先安装 mercurial ，然后用 hg 工具将 galaxy 代码库克隆到本地。
+Galaxy 作为一款开源软件，其代码库托管在 http://bitbucket.org ，先安装 mercurial ，然后用 hg 工具将 galaxy 代码库克隆到本地。
 
 ```
 ~app$ sudo apt-get install mercurial
@@ -22,98 +24,7 @@ galaxy 的代码库托管在 bitbucket.org ，先安装 mercurial ，然后用 h
 
 运行 `run.sh`，这个shell脚本程序会自动完成初始化数据，依赖库下载，数据库迁移等一系列操作，当看到终端显示`serving on http://127.0.0.1:8080`时，可以打开浏览器，访问 http://127.0.0.1:8080 即可看到galaxy的界面。
 
-## 2. 构建最基本的生产环境配置
-
-作为个人尝试，前面的步骤在PC机上已经可以正常运行使用。对于要作为生产环境下多用户使用，建议使用专门的代理服务器和数据库来增强效率和速度。这里采用nginx+postgresql构建生产环境下的 Galaxy 服务。这里只是简单的介绍一下最基本的配置方式，对于高负载的web server设置又是另一个很复杂的话题了，这里就不具体展开。也可以参考别人做的[galaxy dockerfile](https://registry.hub.docker.com/u/bgruening/galaxy-stable/dockerfile/)。对于不熟悉服务器设置的用户，直接使用现成的galaxy docker也是一种方案。
-
-首先在ubuntu下新建一个用户galaxy。
-
-```
-~$ sudo adduser galaxy
-```
-
-按照提示，在弹出提示符输入相应内容，主要填好密码即可，其他可以留空。然后切换到galaxy用户：
-
-```
-~$ su galaxy
-~$ cd
-```
-
-重复`Galaxy 本地安装与配置`的第一步`下载与安装`步骤,建立配置文件：
-```
-~$ cp config/galaxy.ini.sample config/galaxy.ini
-~$ vim config/galaxy.ini
-```
-
-将配置文件galaxy.ini设置如下，你也可以将内容直接保存成galaxy.ini
-
-```
-[server:main]
-use = egg:Paste#http
-host = 0.0.0.0
-use_threadpool = True
-threadpool_kill_thread_limit = 10800
-
-[filter:gzip]
-use = egg:Paste#gzip
-
-[filter:proxy-prefix]
-use = egg:PasteDeploy#prefix
-prefix = /galaxy
-
-[app:main]
-paste.app_factory = galaxy.web.buildapp:app_factory
-tool_dependency_dir = tool_dep
-use_nglims = False
-nglims_config_file = tool-data/nglims.yaml
-debug = False
-use_interactive = False
-admin_users = admin@localhost.com
-```
-
-#### 安装 postgresql
-
-安装postgresql并建立galaxy数据库
-
-```
-~$ sudo apt-get install postgresql-9.3
-~$ su - postgres
-~$ psql template1
-
-> CREATE USER galaxy WITH PASSWORD 'galaxy';
-> CREATE DATABASE galaxyserver;
-> GRANT ALL PRIVILEGES ON DATABASE galaxyserver to galaxy;
-> \q
-```
-
-#### 安装 nginx
-
-用nginx做反向代理，处理请求。
-
-```
-~$ sudo apt-get install nginx
-```
-
-设置nginx.conf
-
-```
-http {
-    upstream galaxy_app {
-        server localhost:8080;
-    }
-
-    server {
-        client_max_body_size 10G;
-        location / {
-            proxy_pass   http://galaxy_app;
-            proxy_set_header   X-Forwarded-Host $host;
-            proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
-        }
-    }
-}
-```
-
-## 2. 添加第三方软件
+#### 添加官方 toolshed 中的工具
 
 默认的galaxy只带有基本的工具，对于实际工作中需要的各种分析软件，需要添加到自己建立的 galaxy 实例中。
 
@@ -122,8 +33,6 @@ http {
 galaxy有一个toolshed（工具库）的概念：`https://toolshed.g2.bx.psu.edu/`（官方维护的toolshed），许多著名的工具已经被移植到toolshed中，可以直接被安装到galaxy里，此外也有许多第三方的toolshed包可以添加，甚至掌握了一些python脚本和galaxy xml规范后，也可以自己添加一些分析工具到galaxy中。
 
 除了分析软件外，toolshed还包含创建的数据类型，以及工作流等。
-
-#### 添加官方 toolshed 中的工具
 
 首先修改配置文件 `tool_sheds_conf.xml`
 
@@ -148,11 +57,3 @@ admin_users = admin@localhost.com
 ![Instance](../assets/img/appendix_a5_2.png)
 
 在`add new tool panel section`中输入`Assembly`，将`spades`工具归类到`Assembly`这个新建的工具类别中，点击页面底部的`Install`按钮开始安装。
-
-## 3. 将 Galaxy 运行在 Amazon EC2
-
-#### Reference
-
-1. https://wiki.galaxyproject.org/
-2. http://www.chenlianfu.com/?p=1469
-3. http://methdb.univ-perp.fr/cgrunau/methods/Galaxy_production_mode_installation_walkthrough.html
