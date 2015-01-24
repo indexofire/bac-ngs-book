@@ -62,4 +62,5 @@
        * [Fastq 文件格式](appendix/fastq.md)
    * [NCBI 资料汇总](appendix/ncbi_blast+.md)
    * [脚本语言](appendix/scripting_language.md)
+       * [Python](appendix/python.md)
 

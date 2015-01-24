@@ -89,9 +89,9 @@ with open('acc_list_full.txt', 'w') as f:
 
 1. 安装 sra toolkit (for ubuntu x64 version)
 ```
-~/tmp$ curl -O http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.4.1/sratoolkit.2.4.1-ubuntu64.tar.gz
-~/tmp$ tar zxvf sratoolkit.2.4.1-ubuntu64.tar.gz -C ~/app
-~/tmp$ cd ~/app/sratoolkit.2.4.1-ubuntu64
+~/tmp$ curl -O http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.4.3/sratoolkit.2.4.3-ubuntu64.tar.gz
+~/tmp$ tar zxvf sratoolkit.2.4.3-ubuntu64.tar.gz -C ~/app
+~/tmp$ cd ~/app/sratoolkit.2.4.3-ubuntu64
 ~/tmp$ sudo ln -s `pwd`/bin/* /usr/local/sbin/
 ```
 
