@@ -126,3 +126,45 @@ $ head -5 text.txt
 # 输出文件的最后5行内容
 $ tail -5 text.txt
 ```
+
+#### `ps`: 查看系统进程
+
+ps会在终端打印系统进程，各列的含义是:
+
+* USER: 运行该进程的用户
+* PID: 运行着的命令(CMD)的进程编号
+* %CPU: CPU占用
+* %MEM: 内存占用
+* VSC:
+* RSS:
+* TTY: 命令所运行的位置（终端）
+* STAT:
+* TIME:
+* TIME: 运行着的该命令所占用的CPU处理时间
+* COMMAND: 该进程所运行的命令
+
+```bash
+# 显示详细的进程信息
+$ ps -waux
+
+# 过滤用户root的进程
+$ ps -u root
+
+# 根据不同参数使用来排序进程，并只现实排名前10的进程
+$ ps -aux --sort -pcpu | head -n 11
+$ ps -aux --sort -pmem | head -n 11
+$ ps -aux --sort -pcpu,+pmem | head -n 11
+
+# 过滤进程名
+$ ps -f -C chrome
+
+# 根据PID过滤
+$ ps -L 1000
+
+# 树形现实进程
+$ ps -axjf
+```
+
+#### Reference
+
+1. http://linoxide.com/how-tos/linux-ps-command-examples/
