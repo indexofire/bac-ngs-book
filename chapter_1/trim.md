@@ -6,15 +6,10 @@
 
 * Trimmomaic
 * trimAL
-
-
 * FastQC
 * Picard
 * PRINSEQ
 * BMTagger
-
-
-### Remove adaptors
 
 #### 1. Trimmomatic 去除接头
 
@@ -48,7 +43,7 @@
 >     LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
 ```
 
-#### 3. Fastx_toolkit
+#### 2. Fastx_toolkit
 ```
 ~/tmp$ wget http://cancan.cshl.edu/labmembers/gordon/files/libgtextutils-0.7.tar.bz2
 ~/tmp$ wget http://cancan.cshl.edu/labmembers/gordon/files/fastx_toolkit-0.0.14.tar.bz2

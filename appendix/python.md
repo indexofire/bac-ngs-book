@@ -10,6 +10,7 @@ for index, d in enumerate(dlist):
 ```
 
 ```
+# print output
 string number 0 is abc
 string number 1 is def
 string number 2 is gh

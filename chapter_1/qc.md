@@ -1,6 +1,6 @@
 ## 质量控制
 
-去除序列接头后，就要对测序质量做个QC。
+去除序列接头后，就要对测序质量QC。
 
 #### 1. FastQC
 
@@ -29,13 +29,7 @@
 ~/tmp$ unzip -n picard-tools-1.123.zip -d ~/app
 ```
 
-[Picard]: http://broadinstitute.github.io/picard/ "Picard"
-[BroadInstitute]: https://www.broadinstitute.org/ "Broad Institute"
-
-
-
-
-#### khmer
+#### 3. khmer
 
 ```
 ~/app$ git clone https://github.com/ged-lab/khmer.git && cd khmer
@@ -47,3 +41,6 @@
 
 1. [Fastx_toolkit](http://hannonlab.cshl.edu/fastx_toolkit/)
 2. [The Picard Pipeline](https://www.broadinstitute.org/files/shared/mpg/plathumgen/plathumgen_fennell.pdf)
+
+[Picard]: http://broadinstitute.github.io/picard/ "Picard"
+[BroadInstitute]: https://www.broadinstitute.org/ "Broad Institute"
