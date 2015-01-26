@@ -23,25 +23,7 @@ GAEMR 是 BroadInstitute 用 Python 开发的对拼接结果提供分析报告�
 * matplotlib
 * pysam
 
-##### 1.1 安装samtools
-```
-~/tmp$ sudo apt-get install libncurses-dev
-~/tmp$ wget http://jaist.dl.sourceforge.net/project/samtools/samtools/1.1/samtools-1.1.tar.bz2
-~/tmp$ tar jxvf samtools-1.1.tar.bz2 -C ~/app
-~/tmp$ cd ~/apps/samtools-1.1
-~/app$ make
-~/app$ sudo ln -s `pwd`/samtools /usr/local/sbin
-```
-
-##### 1.2 安装 ncbi-blast+
-
-##### 1.3 安装 bwa
-
-##### 1.4 安装 bowtie2
-
-##### 1.5 安装 Picard
-
-##### 1.6 安装 RNAmmer
+##### 1.1 安装 RNAmmer
 先安装 RNAmmer 的依赖软件 hmmer。但是不要安装 hmmer3，否则不能使用。建议使用低版本的 hmmer2.3.2。
 ```
 ~/tmp$ wget ftp://selab.janelia.org/pub/software/hmmer/2.3.2/hmmer-2.3.2.bin.intel-linux.tar.gz
@@ -83,19 +65,19 @@ RNAmmer需要有edu的信箱去申请才能免费下载使用。
 ~tmp/$ sudo apt-get install bioperl
 ```
 
-##### 1.7 安装 rdp_classifier
+##### 1.2 安装 rdp_classifier
 ```
 ~tmp/$ wget http://jaist.dl.sourceforge.net/project/rdp-classifier/rdp-classifier/rdp_classifier_2.9.zip
 ~tmp/$ unzip rdp_classifier_2.9.zip -d ~/apps
 ```
 
-##### 1.8 安装 Python 依赖包
+##### 1.3 安装 Python 依赖包
 ```
 ~tmp/$ sudo apt-get install python-biopython python-matplotlib python-numpy python-pip
 ~tmp/$ sudo pip install pysam
 ```
 
-##### 1.9 安装GAEMR
+##### 1.4 安装GAEMR
 ```
 ~/tmp$ wget http://www.broadinstitute.org/software/gaemr/wp-content/uploads/2012/12/GAEMR-1.0.1.tar.gz
 ~/tmp$ tar zxvf GAEMR-1.0.1.tar.gz -C ~/app/GAEMR-1.0.1
@@ -103,15 +85,21 @@ RNAmmer需要有edu的信箱去申请才能免费下载使用。
 ~/app$ sudo python setup.py install
 ```
 
+##### 1.5 安装其他依赖程序
+
+samtools, ncbi-blast+, bwa, bowtie2, Picard的安装参见Chapter5。
+
 #### 2. GAEMR 的使用
+
 将上一节用不同拼装工具拼装出基因组数用 GAEMR.py 进行分析
 
 ```
 ~/data$ GAEMR.py -s assembly.fasta
 ```
 
-
 ### QUAST
+
+QUAST是St. Petersburg大学开发的基因组拼接评估软件。软件内建了 MUMmer, GeneMark.hmm, MetaGeneMark, GlimmerHMM, GAGE。因此只要下载安装 QUAST 即可使用。
 
 #### 1. QUAST 的安装
 

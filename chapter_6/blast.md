@@ -84,7 +84,7 @@ $ blastall -i myseq.fasta -d custom_genome.fasta -p blastn
 1. 下载安装 NCBI Blast+
 
 ```
-~/tmp$
+~/tmp$ 
 ```
 
 2. 构建自己的数据库

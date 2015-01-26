@@ -50,4 +50,17 @@ SPAdes会尝试不同的Kmer，因此拼装时间也会根据Kmer选择数量成
 ~/data spades.py --pe1-1 input-1_forward.fastq.gz --pe1-2 input-1_reverse.fastq.gz --pe2-1 input-2_forward.fastq.gz --pe2-2 input-2_reverse.fastq.gz -o output
 ```
 
+#### 3. 结果输出
+
+输出目录中的文件：
+
+corrected 目录 BayesHammer 矫正过的 reads 文件
+config.fasta/config.fastg 是 contig 结果文件
+scaffolds.fasta/scaffolds.fastg 是 scaffold 结果文件
+params.txt 拼接参数信息
+spades.log 运行日志
+dataset.info 内部配置文件
+input_dataset.yaml YAML格式的配置文件
+K<##>/ 目录包含不同kmer运行结果产出的结果
+
 [SPAdes]: http://spades.bioinf.spbau.ru/ "SPAdes"

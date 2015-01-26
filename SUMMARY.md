@@ -42,7 +42,7 @@
        * [circos](chapter_6/circos.md)
        * [Artemis](chapter_6/artemis.md)
    * [Alignment](chapter_6/alignment.md)
-       * [Blast](chapter_6/blast.md)
+       * [Blast 和 Blast+](chapter_6/blast.md)
    * [Phylogeny](chapter_6/phylogeny.md)
        * [RaxML](chapter_6/raxml.md)
        * [PhyML](chapter_6/phyml.md)
