@@ -18,6 +18,7 @@
    * [Genome mapping](chapter_2/mapping.md)
 * [多基因组数据分析](chapter_3/README.md)
    * [Phylogenomics](chapter_3/phy.md)
+       * [Ortholog Detection](chapter_3/ortholog_detection.md)
    * [Core Genome MLST](chapter_3/structure.md)
    * [Surveillance Visulation](chapter_3/surveillance_visulation.md)
 * [元基因组数据分析](chapter_4/README.md)
@@ -60,5 +61,6 @@
    * [NCBI 资料汇总](appendix/ncbi_blast+.md)
    * [脚本语言](appendix/scripting_language.md)
        * [Python](appendix/python.md)
+       * [Perl](appendix/perl.md)
        * [Biopython](appendix/biopython.md)
 
