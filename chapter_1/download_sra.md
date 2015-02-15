@@ -116,7 +116,7 @@ with open('acc_list_full.txt', 'w') as f:
 
 **安装wgsim**
 
-```bash
+```
 ~/app$ git clone https://github.com/lh3/wgsim.git && cd wgsim
 ~/app$ gcc -g -O2 -Wall -o wgsim wgsim.c -lz -lm
 ~/app$ sudo ln -s `pwd`/wgsim /usr/local/sbin
@@ -146,7 +146,7 @@ Options: -e FLOAT      base error rate [0.020]
 
 使用所有参数为默认值，将大肠杆菌基因组数据转换为PE250 fastq 格式数据。
 
-```bash
+```
 ~/data$ wget https://raw.github.com/ecerami/samtools_primer/master/tutorial/genomes/NC_008253.fna
 ~/data$ wgsim -S11 -1250 -2250 NC_008253.fna reads_1.fastq reads_2.fastq
 ~/data$ head -8 reads_1.fastq
