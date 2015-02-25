@@ -1,4 +1,7 @@
-## Ortholog Detection
+ll## Ortholog Detection
+
+### 使用 Orthomcl 来获得ortholog genes
+
 
 MCL算法是 Markov Cluster Algorithm 算法的缩写。
 
@@ -150,9 +153,14 @@ oracleIndexTblSpc=NONE
 ~/apps$ orthomclInstallSchema orthomcl.config install.log
 ```
 
-#### 安装 NCBI Blast+
+#### 4. 安装 NCBI Blast+
 
 ```
 ~$ sudo apt-get install ncbi-blast+
 ```
 
+#### 5. 用 orthomcl-pipeline 来简化操作
+
+---
+
+### 用 Protein
