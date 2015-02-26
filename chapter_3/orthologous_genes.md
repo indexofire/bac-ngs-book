@@ -1,10 +1,12 @@
-## Ortholog Detection
+## Orthologues Identification
 
-### 使用 Orthomcl 来获得ortholog genes
+对于orthologs来说，因为其源自共同祖先，一般而言功能是相同的，因此对于新测序物种的基因组，其基因的功能可以通过 ortholog identification 来了解。
+
+### 1. Orthomcl
 
 MCL算法是 Markov Cluster Algorithm 算法的缩写。
 
-#### 1. 安装和配置 MySQL
+#### 1.1 安装和配置 MySQL
 
 Ubuntu 14.04 安装 MySQL
 
@@ -69,7 +71,7 @@ mysql > show databases;
 +---------------------+
 ```
 
-#### 2. 安装 mcl
+#### 1.2 安装 mcl
 
 从源代码安装 mcl
 
@@ -88,7 +90,7 @@ mysql > show databases;
 ~$ sudo apt-get install mcl
 ```
 
-#### 3. 安装 OrthoMCL
+#### 1.3 安装 OrthoMCL
 
 ```
 ~/tmp$ wget http://orthomcl.org/common/downloads/software/v2.0/orthomclSoftware-v2.0.9.tar.gz
@@ -152,14 +154,28 @@ oracleIndexTblSpc=NONE
 ~/apps$ orthomclInstallSchema orthomcl.config install.log
 ```
 
-#### 4. 安装 NCBI Blast+
+#### 1.4 安装 NCBI Blast+
 
 ```
 ~$ sudo apt-get install ncbi-blast+
 ```
 
-#### 5. 用 orthomcl-pipeline 来简化操作
+#### 1.5 用 orthomcl-pipeline 来简化操作
 
 ---
 
-### 用 Protein
+### 2. Proteinortho
+
+---
+
+### 3. get_homologues
+
+#### 3.1 安装 get_homologues
+
+```
+```
+
+
+#### Reference
+
+
