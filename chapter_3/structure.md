@@ -15,8 +15,6 @@ srst2 是一个 由墨尔本大学学院开发的 pipeline 工具集，用以实
 
 **1.2 从一个菌株fastq数据了解 ST 型别和毒力与耐药基因**
 
-
-
 **1.3 批量筛选 SRA 数据库数据**
 
 用 aspera 批量下载 SRA 数据，用 Python 脚本执行批量处理。
@@ -39,7 +37,7 @@ for acc in accs:
 
 **2.1 安装 PHYLOViZ 以及依赖库**
 
-运行 PHYLOViZ 需要安装 JRE 环境，方便期间直接用 Ubuntu 自带的 openjdk-7。如果你的电脑上安装的是其它 JRE 环境而无法使用的，可以尝试换成 openjdk 试一下。PHYLOViZ 是 Java 开发的带有图形化 GUI 界面的程序，操作比较简便，需要安装在支持 GUI 图形操作系统的个人电脑上使用。这里以安装 XWindows 的 Ubuntu 为例。
+运行 PHYLOViZ 需要安装 JRE 环境，方便期间直接用 Ubuntu 自带的 openjdk-7。如果你的电脑上安装的是其它 JRE 环境而无法使用的，可以尝试换成 openjdk 试一下。PHYLOViZ 是 Java 开发的带有图形化 GUI 界面的程序，操作比较简便，需要安装在支持 GUI 图形操作系统的个人电脑上使用。
 
 ```
 ~/tmp$ sudo apt-get install openjdk-7-jre
