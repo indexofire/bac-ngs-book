@@ -12,8 +12,6 @@
 
 #### 2. 建立拼装配置文件
 
-`~/data/SRR955386_masurca.config`
-
 ```
 ~/data$ touch SRR955386_masurca.config
 ~/data$ nano SRR955386_masurca.config
@@ -36,7 +34,7 @@ JF_SIZE=100000000
 DO_HOMOPOLYMER_TRIM=0
 END
 ```
-设置`GRAPH_KMER_SIZE=auto`，软件会调用Kmer=31来进行拼装。对于MiSeq PE250以上的插片，可以考虑手动设置使用更大的KmerS
+设置`GRAPH_KMER_SIZE=auto`，软件会调用Kmer=31来进行拼装。对于MiSeq PE250以上的长插入片段，建议手动设置使用更大的Kmer。
 
 #### 3. 开始拼装
 
