@@ -24,6 +24,8 @@
    * [Phylogenomics](chapter_3/phy.md)
    * [Core Genome MLST](chapter_3/structure.md)
    * [Surveillance Visulation](chapter_3/surveillance_visulation.md)
+       * [circos](chapter_3/circos.md)
+       * [GenomeDiagram](chapter_3/genomediagram.md)
 * [元基因组数据分析](chapter_4/README.md)
    * [16s rRNA](chapter_4/16s.md)
    * [Shotgun Sequencing](chapter_4/shotgun.md)
