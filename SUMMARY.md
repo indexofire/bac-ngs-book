@@ -5,7 +5,7 @@
    * [Linux Shell](preface/before_start.md)
    * [Ubuntu](preface/ubuntu.md)
 * [基因组数据处理](chapter_1/README.md)
-   * [SRA 数据下载](chapter_1/download_sra.md)
+   * [SRA 数据处理](chapter_1/download_sra.md)
    * [Trimming Fastq](chapter_1/trim.md)
    * [QC](chapter_1/qc.md)
    * [De novo assembly](chapter_1/assembly.md)
