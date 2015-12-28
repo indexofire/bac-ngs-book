@@ -1,15 +1,15 @@
 ## SPAdes
 
-[SPAdes][] 是由俄罗斯科学院 St. Petersburg Academic University 与美国科学家合作开发的主要应用于小型基因组如细菌，真菌等基因组测序数据的拼接软件。目前的最新版本 v3.5.0 可以支持常见的 illumina miseq/hiseq 和 ion torrent 测序数据，对单分子测序平台的 pacbio 和 nanopore 的测序数据也能进行拼装。
+[SPAdes][] 是由俄罗斯科学院 St. Petersburg Academic University 与美国科学家合作开发的主要应用于小型基因组如细菌，真菌等基因组测序数据的拼接软件。目前的最新版本 v3.6.2 可以支持常见的 illumina miseq/hiseq 和 ion torrent 测序数据，对单分子测序平台的 pacbio 和 nanopore 的测序数据也能进行拼装。
 
 #### 1. 下载并安装 SPAdes
 
 直接下载预编译安装包，并添加路径到环境变量中。
 
 ```
-~/tmp$ curl -O http://spades.bioinf.spbau.ru/release3.5.0/SPAdes-3.5.0-Linux.tar.gz
-~/tmp$ tar zxvf SPAdes-3.5.0-Linux.tar.gz -C ~/app
-~/tmp$ echo 'export PATH=$PATH:~/app/SPAdes-3.5.0-Linux/bin' >> ~/.bashrc
+~/tmp$ curl -O http://spades.bioinf.spbau.ru/release3.6.2/SPAdes-3.6.2-Linux.tar.gz
+~/tmp$ tar -zxf SPAdes-3.6.2-Linux.tar.gz -C ~/app
+~/tmp$ echo 'export PATH=$PATH:~/app/SPAdes-3.6.2-Linux/bin' >> ~/.bashrc
 ~/tmp$ source ~/.bashrc
 ```
 
@@ -39,9 +39,9 @@ Thank you for using SPAdes!
 然后下载源代码，自行编译安装。
 
 ```
-~/tmp$ curl -O http://spades.bioinf.spbau.ru/release3.5.0/SPAdes-3.5.0.tar.gz
-~/tmp$ tar zxvf SPAdes-3.5.0.tar.gz -C ~/app
-~/tmp$ cd ~/app/SPAdes-3.5.0
+~/tmp$ curl -O http://spades.bioinf.spbau.ru/release3.6.2/SPAdes-3.6.2.tar.gz
+~/tmp$ tar -zxf SPAdes-3.6.2.tar.gz -C ~/app
+~/tmp$ cd ~/app/SPAdes-3.6.2
 ~/app$ sudo PREFIX=/usr/local ./spades_compile.sh
 ```
 
