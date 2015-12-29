@@ -57,10 +57,19 @@ Thank you for using SPAdes!
 
 ```
 ~/data$ prefetch -v ERR571271
-# or using: ~/$ ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh --user=anonftp --host=ftp.ncbi.nlm.nih.gov -T -k 1 -l 100m /sra/sra-instant/reads/ByRun/sra/ERR/ERR571/ERR571271/ERR571271.sra .
-# or using: ~/$ curl -O ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/ERR/ERR571/ERR571271/ERR571271.sra
 
+# 也可以使用ascp下载
+~/data$ ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh \
+> --user=anonftp --host=ftp.ncbi.nlm.nih.gov -T -k 1 -l 100m \
+> /sra/sra-instant/reads/ByRun/sra/ERR/ERR571/ERR571271/ERR571271.sra .
+
+# 或者直接从ftp下载
+~/data$ curl -O ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/ERR/ERR571/ERR571271/ERR571271.sra
+
+# 用fastq-dump将sra文件转换成fastq格式
 ~/data$ fastq-dump --split-files ERR571271.sra
+
+# 用spades.py进行数据拼接
 ~/data$ spades.py -m 8 -1 SRR95386_1.fastq -2 SRR955386_2.fastq -o spades_output/
 ```
 
@@ -69,14 +78,16 @@ SPAdes会尝试不同的Kmer，因此拼装时间也会根据Kmer选择数量成
 对于多组PE数据，可以用以下参数来组装：
 
 ```
-~/data$ spades.py --pe1-1 input-1_forward.fastq.gz --pe1-2 input-1_reverse.fastq.gz --pe2-1 input-2_forward.fastq.gz --pe2-2 input-2_reverse.fastq.gz -o output
+~/data$ spades.py --pe1-1 input-1_forward.fastq.gz --pe1-2 input-1_reverse.fastq.gz \
+> --pe2-1 input-2_forward.fastq.gz --pe2-2 input-2_reverse.fastq.gz -o output
 ```
 
 对于目前常见的Miseq/Hiseq的PE150/PE250的长片断测序数据，可以用以下参数运行拼装:
 
 ```
-# for PE250
-~/data$ spades.py -k 21,33,55,77,99,127 --careful -1 input_forward.fastq -2 input_backward.fastq -o spades_output/
+# 对于PE250的数据，官方推荐直接用以下kmer来拼接
+~/data$ spades.py -k 21,33,55,77,99,127 --careful \
+> -1 input_forward.fastq -2 input_backward.fastq -o spades_output/
 ```
 
 **ion torrent数据**
