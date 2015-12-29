@@ -75,4 +75,5 @@
        * [Python](appendix/python.md)
        * [Perl](appendix/perl.md)
        * [Biopython](appendix/biopython.md)
+       * [R](appendix/r.md)
 
