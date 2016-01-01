@@ -18,7 +18,7 @@ $ ls -t ~/data
 $ ls ~/data/*.fastq
 ```
 
-#### `cd`: 改变文件夹
+`cd`: 改变文件夹
 
 ```bash
 # 从当前文件夹 '~/data' 更换到 '~/app' 文件夹
