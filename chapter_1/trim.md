@@ -28,7 +28,6 @@ illumina的测序数据 raw data 含有2个文件，1个是序列文件（\*_seq
 > LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
 ```
 
-
 1.2 用自定义序列来处理
 
 如果文库制备用的是非官方的第三方试剂，或者是自己设计合成的引物接头，那接头序列文件需要自己定义。
@@ -42,7 +41,7 @@ ACACTCTTTCCCTACACGACGCTCTTCCGATCT' > adaptors/custom.fa
 ~/data$ echo 'alias java -jar /usr/local/bin/trimmomatic-0.32.jar=trim'
 ~/data$ trim PE ~/data/ecoli_ref-5m_s1.fq ~/data/ecoli_ref-5m_s2.fq \
 > s1_pe s1_se s2_pe s2_se \
-> ILLUMINACLIP:~/data/adaptors/illuminaClipping.fa:2:30:10
+> ILLUMINACLIP:~/data/adaptors/custom.fa:2:30:10
 ```
 
 #### 2. Fastx_toolkit
