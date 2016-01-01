@@ -6,7 +6,7 @@ illumina的测序数据 raw data 含有2个文件，1个是序列文件（\*_seq
 
 我们可以采用 `Trimmomatic` 来去除接头序列。
 
-**Trimmomatic 安装**
+#### **Trimmomatic 安装**
 
 软件安装很简单，直接下载 Trimmomatic 的软件包解压缩即可使用。
 
@@ -15,9 +15,9 @@ illumina的测序数据 raw data 含有2个文件，1个是序列文件（\*_seq
 ~/tmp$ unzip Trimmomatic-0.32.zip -d ~/app
 ```
 
-**用 trimmomatic 工具处理测序数据**
+#### **用 trimmomatic 工具处理测序数据**
 
-1.1 用 trimmomatic 自带接头文件处理
+**1.1 用 trimmomatic 自带接头文件处理**
 
 ```
 ~/data$ java -jar ~/apps/Trimmomatic-0.32/trimmomatic-0.32.jar PE \
@@ -28,7 +28,7 @@ illumina的测序数据 raw data 含有2个文件，1个是序列文件（\*_seq
 > LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
 ```
 
-1.2 用自定义序列来处理
+**1.2 用自定义序列来处理**
 
 如果文库制备用的是非官方的第三方试剂，或者是自己设计合成的引物接头，那接头序列文件需要自己定义。
 
