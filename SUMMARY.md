@@ -9,7 +9,7 @@
    * [Trimming Fastq](chapter_1/trim.md)
    * [QC](chapter_1/qc.md)
    * [de novo assembly](chapter_1/assembly.md)
-   * [Evaluate assembly](chapter_1/assemble_report.md)
+   * [evaluate assembly](chapter_1/assemble_report.md)
    * [Annotation](chapter_1/annotation.md)
    * [Visulization](chapter_1/visulization.md)
 * [双基因组数据比较](chapter_2/README.md)
