@@ -37,7 +37,8 @@
 ```
 ~/data$ java -jar ~/apps/Trimmomatic-0.32/trimmomatic-0.32.jar PE \
 > -threads 20 -phred33 reads1.fastq reads2.fastq \
-> reads1.clean.fastq reads1.unpaired.fastq reads2.clean.fastq reads2.unpaired.fastq \
+> reads1.clean.fastq reads1.unpaired.fastq \
+> reads2.clean.fastq reads2.unpaired.fastq \
 > ILLUMINACLIP:~/apps/Trimmomatic-0.32/adapters/TruSeq3-PE.fa:2:30:10 \
 > LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
 ```
