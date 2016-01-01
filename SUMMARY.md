@@ -4,7 +4,7 @@
    * [关于示例](preface/about.md)
    * [Linux Shell](preface/before_start.md)
    * [Ubuntu](preface/ubuntu.md)
-* [单基因组数据分析](chapter_1/README.md)
+* [基因组数据处理](chapter_1/README.md)
    * [SRA 数据库](chapter_1/download_sra.md)
    * [Trimming Fastq](chapter_1/trim.md)
    * [QC](chapter_1/qc.md)
@@ -78,4 +78,5 @@
        * [Perl](appendix/perl.md)
        * [Biopython](appendix/biopython.md)
        * [R](appendix/r.md)
+       * [awk](appendix/awk.md)
 
