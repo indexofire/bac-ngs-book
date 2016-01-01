@@ -8,7 +8,7 @@
    * [SRA 数据库](chapter_1/download_sra.md)
    * [Trimming Fastq](chapter_1/trim.md)
    * [QC](chapter_1/qc.md)
-   * [De novo assembly](chapter_1/assembly.md)
+   * [de novo assembly](chapter_1/assembly.md)
    * [Evaluate assembly](chapter_1/assemble_report.md)
    * [Annotation](chapter_1/annotation.md)
    * [Visulization](chapter_1/visulization.md)
