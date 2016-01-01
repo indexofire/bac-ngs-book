@@ -72,6 +72,7 @@
 
 * *[Next Generation Sequencing](http://www.slideshare.net/suryasaha/sequencing-32243702)*
 * *[Assembly before and after](http://www.slideshare.net/flxlex/assembly-before-and-after)*
+* *[Clinical application of NGS](http://www.slideshare.net/lampweb/clinical-applications-of-next-generation-sequencing)*
 
 #### 视频资料
 
