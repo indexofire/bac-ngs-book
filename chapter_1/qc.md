@@ -14,7 +14,9 @@
 生成\*.html报告文件和对应的\*.zip压缩，scp传输到本地后用浏览器打开查看。
 
 ```
+# scp to your linux laptop and open it by google-chrome
 ~$ scp -i 
+~$ google-chrome *.html
 ```
 
 
