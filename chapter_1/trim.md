@@ -17,18 +17,7 @@ illumina的测序数据 raw data 含有2个文件，1个是序列文件（\*_seq
 
 **用 trimmomatic 工具处理测序数据**
 
-1.1 用 illumina secret clip 来处理
-
-```
-~/data$ mkdir -p adaptors
-~/data$ wget https://s3.amazonaws.com/public.ged.msu.edu/illuminaClipping.fa adaptors/
-~/data$ echo 'alias java -jar /usr/local/bin/trimmomatic-0.32.jar=trim'
-~/data$ trim PE ~/data/ecoli_ref-5m_s1.fq ~/data/ecoli_ref-5m_s2.fq \
-> s1_pe s1_se s2_pe s2_se \
-> ILLUMINACLIP:~/data/adaptors/illuminaClipping.fa:2:30:10
-```
-
-1.2 用 trimmomatic 自带接头文件处理
+1.1 用 trimmomatic 自带接头文件处理
 
 ```
 ~/data$ java -jar ~/apps/Trimmomatic-0.32/trimmomatic-0.32.jar PE \
@@ -39,7 +28,22 @@ illumina的测序数据 raw data 含有2个文件，1个是序列文件（\*_seq
 > LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
 ```
 
-如果文库制备用的是非官方的第三方试剂，那污染序列需要自己定义。
+
+1.2 用自定义序列来处理
+
+如果文库制备用的是非官方的第三方试剂，或者是自己设计合成的引物接头，那接头序列文件需要自己定义。
+
+```
+~/data$ mkdir -p adaptors
+~/data$ echo '>Prefix/1
+> GATCGGAAGAGCGGTTCAGCAGGAATGCCGAG
+> >Prefix/2
+ACACTCTTTCCCTACACGACGCTCTTCCGATCT' > adaptors/custom.fa
+~/data$ echo 'alias java -jar /usr/local/bin/trimmomatic-0.32.jar=trim'
+~/data$ trim PE ~/data/ecoli_ref-5m_s1.fq ~/data/ecoli_ref-5m_s2.fq \
+> s1_pe s1_se s2_pe s2_se \
+> ILLUMINACLIP:~/data/adaptors/illuminaClipping.fa:2:30:10
+```
 
 #### 2. Fastx_toolkit
 
