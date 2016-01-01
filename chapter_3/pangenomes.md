@@ -16,6 +16,8 @@
 
 对于微生物而言，因为基因组有频繁的重组现象，
 
+参看omictools的pan-genome工具，里面罗列了一大堆软件，大部分都是通过构建自己的pipeline来实现。
+
 
 #### Reference
 
