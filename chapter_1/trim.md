@@ -42,6 +42,8 @@
 >     LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
 ```
 
+如果文库制备用的是非官方的第三方试剂，那污染序列需要自己定义。
+
 #### 2. Fastx_toolkit
 ```
 ~/tmp$ wget http://cancan.cshl.edu/labmembers/gordon/files/libgtextutils-0.7.tar.bz2
