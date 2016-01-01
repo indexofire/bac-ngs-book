@@ -33,7 +33,8 @@
 
 关于生物信息学与高通量测序技术相关内容的博客和网站。
 
-* *[糗世界](http://pgfe.umassmed.edu/ou/)*
+* *[糗世界](http://qiuworld.com)*
+最近域名被墙了，暂时用这个地址访问：http://blog.qiuworld.com:8080/
 * *[YGC](http://ygc.name/)*
 * *[Biostack](http://www.biostack.org/)*
 * *[宠辱不惊 一心问学](http://www.chenlianfu.com/)*
