@@ -84,6 +84,7 @@
 * *[Broad Institute](https://www.youtube.com/channel/UCv4IbnP9j9RC_aZAs8wqdeQ)*
 * *[NAID Bioinformatics](https://www.youtube.com/channel/UC4xRg9e4mrYBZQUDUhBHNiQ)*
 * *[NBIC](https://vimeo.com/nbic)*
+* *[VIB](https://vimeo.com/vibinflanders)*
 
 #### 网络学校
 
