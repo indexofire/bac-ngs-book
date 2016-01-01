@@ -24,8 +24,8 @@ $ mkdir -p data app tmp
 
 有兴趣的微生物学研究者可以阅读相关资料，增强对 Unix 的相关知识：
 
-* [Unix and Perl Primer for Biologists](http://korflab.ucdavis.edu/Unix_and_Perl/current.html)
-* [The Linux Command Line](http://billie66.github.io/TLCL/book/zh/)
+ * [Unix and Perl Primer for Biologists](http://korflab.ucdavis.edu/Unix_and_Perl/current.html)
+ * [The Linux Command Line](http://billie66.github.io/TLCL/book/zh/)
 
 [Ubuntu]: http://www.ubuntu.com/ "Ubuntu"
 [Linux]: http://www.linux.com/ "Linux"
