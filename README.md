@@ -15,7 +15,6 @@ Project reload...
 #### Fork笔记方法
 
 1. 在GitHub上fork本书作为自己的仓库，如`indexofire/bac-ngs-book`，然后`git clone`到本地，并设置用户信息。
-
 ```
 $ git clone git@github.com:your_github_username/bac-ngs-book.git
 $ cd bac-ngs-book
@@ -24,7 +23,6 @@ $ cd bac-ngs-book
 ```
 
 2. 修改内容后提交，并`git push`到之前`fork`的仓库。
-
 ```
 ~/bac-ngs-book$ git commit -am "Fix issue #1: change typo: helo to hello"
 ~/bac-ngs-book$ git push
@@ -33,7 +31,6 @@ $ cd bac-ngs-book
 3. 在GitHub网站上提交`pull request`。
 
 4. 定期使用项目仓库内容更新自己仓库内容。
-
 ```
 ~/bac-ngs-book$ git remote add upstream https://github.com/indexofire/bac-ngs-book.git
 ~/bac-ngs-book$ git fetch upstream
