@@ -7,8 +7,7 @@ Linux 有多个不同的发行版，最主流的几个如 Debian/Ubuntu, CentOS,
 ```bash
 $ sudo apt-get update
 $ sudo apt-get upgrade
-$ sudo apt-get install curl python-dev build-essential gcc g++ \
-    biopython bioperl libbz2-dev
+$ sudo apt-get install curl python-dev build-essential gcc g++ biopython bioperl libbz2-dev
 ```
 
 本书中所涉及到的默认配置，需要先新建这些文件夹，以免运行命令是出错。数据统一放在 `~/data` 目录；应用程序统一安装在 `~/app` 目录；下载等操作的临时目录在 `~/tmp` 目录建立操作所需的文件夹
