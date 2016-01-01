@@ -1,1 +1,5 @@
 /* CSS for print */
+h2 {
+    background-color: #6699DD;
+    font-size: 12px;
+}
