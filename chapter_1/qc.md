@@ -37,6 +37,12 @@
 ~/app$ sudo make install
 ```
 
+数据处理：
+对于smallRNA测序或者实验过程中出现一些问题比如文库被污染了接头等情况时，往往需要对数据进行去除污染序列的处理。
+
+
+
+
 #### Reference ###
 
 1. [Fastx_toolkit](http://hannonlab.cshl.edu/fastx_toolkit/)
