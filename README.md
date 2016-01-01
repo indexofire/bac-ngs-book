@@ -19,15 +19,15 @@ Reload
 ```
 $ git clone git@github.com:your_github_username/bac-ngs-book.git
 $ cd bac-ngs-book
-$ git config user.name "your github username"
-$ git config user.email your_email@something.com
+~/bac-ngs-book$ git config user.name "your github username"
+~/bac-ngs-book$ git config user.email your_email@something.com
 ```
 
 2. 修改内容后提交，并`git push`到之前`fork`的仓库。
 
 ```
-$ git commit -am "Fix issue #1: change typo: helo to hello"
-$ git push
+~/bac-ngs-book$ git commit -am "Fix issue #1: change typo: helo to hello"
+~/bac-ngs-book$ git push
 ```
 
 3. 在GitHub网站上提交`pull request`。
@@ -35,11 +35,11 @@ $ git push
 4. 定期使用项目仓库内容更新自己仓库内容。
 
 ```
-$ git remote add upstream https://github.com/indexofire/bac-ngs-book.git
-$ git fetch upstream
-$ git checkout master
-$ git merge upstream/master
-$ git push origin master
+~/bac-ngs-book$ git remote add upstream https://github.com/indexofire/bac-ngs-book.git
+~/bac-ngs-book$ git fetch upstream
+~/bac-ngs-book$ git checkout master
+~/bac-ngs-book$ git merge upstream/master
+~/bac-ngs-book$ git push origin master
 ```
 
 ## 版本更新
