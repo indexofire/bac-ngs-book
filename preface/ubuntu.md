@@ -1,6 +1,6 @@
 ## Ubuntu 热身
 
-Linux 有多个不同的发行版，最主流的几个如 Debian/Ubuntu, CentOS, Archlinux，SuSE Linux等等。每个发行版的系统管理设计会有些差别，特别是程序包管理工具会有些不同，本文全部是以 Ubuntu 为例开展的。其他 Linux 发行版或者 Mac 系统请参考该系统相应文档。
+>Linux 有多个不同的发行版，最主流的几个如 Debian/Ubuntu, CentOS, Archlinux，SuSE Linux等等。每个发行版的系统管理设计会有些差别，特别是程序包管理工具会有些不同，本文全部是以 Ubuntu 为例开展的。其他 Linux 发行版或者 Mac 系统请参考该系统相应文档。
 
 [Ubuntu][] 作为最主流的 [Linux][] 发行版之一，有一套自身完善的软件管理命令，因经常会用到，所以来熟悉一下。安装一些必备工具
 
