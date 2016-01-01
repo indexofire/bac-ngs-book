@@ -26,6 +26,7 @@
 * *[ANGUS bioinformatics](http://angus.readthedocs.org/en/2014/)*
 * *[UC Davis training](http://training.bioinformatics.ucdavis.edu/)*
 * *[UC Texas at Austin wiki](https://wikis.utexas.edu/display/bioiteam/Home)*
+* *[BPA-CSIRO Workshops](http://bpa-csiro-workshops.github.io/)*
 
 #### 教学与资源
 
