@@ -5,6 +5,7 @@
 #### 常用测序数据去除接头软件
 
 * Trimmomaic
+* Fastx_toolkit
 * trimAL
 * Picard
 * PRINSEQ
