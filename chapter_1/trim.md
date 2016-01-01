@@ -28,8 +28,8 @@
 ~/data$ wget https://s3.amazonaws.com/public.ged.msu.edu/illuminaClipping.fa adaptors/
 ~/data$ echo 'alias java -jar /usr/local/bin/trimmomatic-0.32.jar=trim'
 ~/data$ trim PE ~/data/ecoli_ref-5m_s1.fq ~/data/ecoli_ref-5m_s2.fq \
->    s1_pe s1_se s2_pe s2_se \
->    ILLUMINACLIP:~/data/adaptors/illuminaClipping.fa:2:30:10
+> s1_pe s1_se s2_pe s2_se \
+> ILLUMINACLIP:~/data/adaptors/illuminaClipping.fa:2:30:10
 ```
 
 1.2 用 trimmomatic 自带接头文件处理
