@@ -4,14 +4,7 @@
 
 illumina的测序数据 raw data 含有2个文件，1个是序列文件（\*_seq.txt），一个是质量文件（\*_prb.txt）。前者储存了测序碱基结果，后者是测序过程中每个 cycle 的碱基质量值。一般我们比较熟悉的 Fastq 格式文件则是包含了这2个内容的文件。
 
-#### 常用测序数据去除接头软件
-
-* Trimmomaic
-* Fastx_toolkit
-* trimAL
-* Picard
-* PRINSEQ
-* BMTagger
+我们可以采用 `Trimmomatic` 来去除接头序列。
 
 #### 1. Trimmomatic
 
@@ -70,6 +63,16 @@ illumina的测序数据 raw data 含有2个文件，1个是序列文件（\*_seq
 ~/app$ sudo make install
 ~/app$ sudo ldconfig
 ```
+
+#### 常用测序数据去除接头软件
+
+* Trimmomaic
+* Fastx_toolkit
+* trimAL
+* Picard
+* PRINSEQ
+* BMTagger
+
 
 
 #### Reference ###
