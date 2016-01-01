@@ -12,7 +12,7 @@ Project reload...
 
 本笔记代码托管在 [Github][], 所有内容可以在 http://github.com/indexofire/bac-ngs-book.git 获得。笔者接触 NGS 时间不长，内容中肯定会有许多错误之处，希望能有NGS领域的专家帮助指正。欢迎大家提交 [issues](https://github.com/indexofire/bac-ngs-book/issues)，帮助完善笔记内容。
 
-#### Fork笔记
+#### Fork笔记方法
 
 1. 在GitHub上fork本书作为自己的仓库，如`indexofire/bac-ngs-book`，然后`git clone`到本地，并设置用户信息。
 
