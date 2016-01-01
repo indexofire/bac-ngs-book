@@ -1,5 +1,9 @@
 ## Core Genome MLST
 
+1. 从fasta序列文件从获得 MLST 型别数据
+2. 从fastq测序数据中获得 MLST 型别
+
+
 #### 1. 从基因组 reads 数据获取 MLST 型别
 
 本节介绍如果用 srst2 做基因组 in silico MLST 实验和 gene screening 实验。
