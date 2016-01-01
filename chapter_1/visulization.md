@@ -4,7 +4,7 @@
 
 #### 工具分类
 
-1. Online: UCSC, NCBI Ensembl, GBrowse
+1. Online: [UCSC](), NCBI Ensembl, GBrowse
 2. GUI: IGV, IGB, BamView, Savant, Tablet, GenoViewer, MochiView, SeqMonk, inGAP
 3. Web2.0: Anno-J, JBrowse
 
@@ -37,3 +37,7 @@
 circos 是一个高大上的基因组圈图显示工具。它由加拿大的 用 perl 开发。circos 更像一个工具框架，通过对分析数据结果进行配置，从而绘制结果。circos 的学习几乎可以单独出书，这里只简单介绍一下安装和应用，想深入了解可以去官网看教学。目前还没有看到特别深入的 circos 数据，可能参考他人的配置文件对学习更有帮助。
 
 #### Alas Blast
+
+
+
+[UCSC]: https://genome.ucsc.edu/cgi-bin/hgTracks
