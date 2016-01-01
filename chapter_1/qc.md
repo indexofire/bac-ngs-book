@@ -8,10 +8,18 @@
 ~/tmp$ wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.2.zip
 ~/tmp$ unzip fastqc_v0.11.2.zip -d ~/app
 ~/tmp$ cd ~/app/FastQC
-~/app$ ./fastqc ~/data/*.fastq
+~/app$ ./fastqc -f fastq ~/data/*.fastq
 ```
 
-生成\*.html报告文件和对应的\*.zip压缩，scp传输到本地后用浏览器打开查看。如果只输入`./fastqc`则会调用图形界面显示结果。FastQC结果由11个模块组成，对于结果报告各个模块的说明可以参见 [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) 文档。
+生成\*.html报告文件和对应的\*.zip压缩，scp传输到本地后用浏览器打开查看。
+
+```
+~$ scp -i 
+```
+
+
+
+如果只输入`./fastqc`则会调用图形界面显示结果。FastQC结果由11个模块组成，对于结果报告各个模块的说明可以参见 [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) 文档。
 
 | Module | Explanation |
 | -- | -- |
