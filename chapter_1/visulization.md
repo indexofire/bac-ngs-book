@@ -4,7 +4,7 @@
 
 #### 工具分类
 
-1. Online: [UCSC](), NCBI Ensembl, GBrowse
+1. Online: [UCSC][], NCBI Ensembl, GBrowse
 2. GUI: IGV, IGB, BamView, Savant, Tablet, GenoViewer, MochiView, SeqMonk, inGAP
 3. Web2.0: Anno-J, JBrowse
 
