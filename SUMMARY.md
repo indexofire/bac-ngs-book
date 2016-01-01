@@ -37,6 +37,7 @@
        * [小型测序实验室快速部署方案](chapter_5/galaxy_docker.md)
    * [R 语言基础](chapter_5/r.md)
        * [ggplot2](chapter_5/ggplot2.md)
+       * Bioconductor
 * [常用软件的安装与设置](chapter_6/README.md)
    * [Assembly](chapter_6/assembly.md)
        * [SPAdes](chapter_6/spades.md)
