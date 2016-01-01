@@ -29,7 +29,7 @@
 * *[UC Davis training](http://training.bioinformatics.ucdavis.edu/)*
 * *[UC Texas at Austin wiki](https://wikis.utexas.edu/display/bioiteam/Home)*
 
-#### 教学与
+#### 教学与资源
 
 关于生物信息学与高通量测序技术相关内容的博客网站。
 
@@ -52,6 +52,7 @@
 * *[YOKOFAKUN](http://plindenbaum.blogspot.com/)*
 * *[In between lines of code](https://flxlexblog.wordpress.com/)*
 * *[Core-genome](http://core-genomics.blogspot.com/)*
+* *[NGS wiki book](https://en.wikibooks.org/wiki/Next_Generation_Sequencing_(NGS))*
 
 #### 在线工具和数据库
 
