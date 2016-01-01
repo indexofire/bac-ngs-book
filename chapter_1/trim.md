@@ -76,3 +76,4 @@ illumina的测序数据 raw data 含有2个文件，1个是序列文件（\*_seq
 1. [Trimmomatic: a flexible trimmer for Illumina sequence data](http://bioinformatics.oxfordjournals.org/content/early/2014/04/12/bioinformatics.btu170.full.pdf)
 2. [Fastx_toolkit](http://hannonlab.cshl.edu/fastx_toolkit/)
 3. [The Picard Pipeline](https://www.broadinstitute.org/files/shared/mpg/plathumgen/plathumgen_fennell.pdf)
+4. [NGS Training](http://data.bits.vib.be/pub/trainingen/NGSIntro/NGSbasics.pdf)
