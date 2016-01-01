@@ -6,9 +6,9 @@ illumina的测序数据 raw data 含有2个文件，1个是序列文件（\*_seq
 
 我们可以采用 `Trimmomatic` 来去除接头序列。
 
-#### 1. Trimmomatic
-
 **Trimmomatic 安装**
+
+软件安装很简单，直接下载 Trimmomatic 的软件包解压缩即可使用。
 
 ```
 ~/tmp$ wget http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.32.zip
