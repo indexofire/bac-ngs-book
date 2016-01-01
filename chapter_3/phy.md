@@ -104,6 +104,8 @@ WGA 应用列表
 
 **2. kSNP**
 
+kSNP是一个软件
+
 
 **3. REALPHY**
 
@@ -130,7 +132,7 @@ Realphy需要以下工具，这些工具的安装已经在前文中实现过了�
 **3.3 运行程序并分析**
 
 ```
-~/data$ java -Xm
+~/data$ java -XmM8000 
 ```
 
 **4. core-phylogenomics**
