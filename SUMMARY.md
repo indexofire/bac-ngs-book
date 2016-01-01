@@ -60,7 +60,7 @@
        * [RaxML](chapter_6/raxml.md)
        * [PhyML](chapter_6/phyml.md)
    * [Anotation](chapter_6/anotation.md)
-       * [Prokka](chapter_6/prokka)
+       * [Prokka](chapter_6/prokka.md)
        * [GeneMakerS](chapter_6/genemakers.md)
 * [附录](appendix/README.md)
    * [测序平台](appendix/a1_sequencing_platform.md)
