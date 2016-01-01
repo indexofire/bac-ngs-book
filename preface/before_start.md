@@ -85,50 +85,51 @@ $ cp test.txt ~/abc
 $ mv test.txt ~/abc/test1.txt
 ```
 
-#### `which`: 查找可执行文件的系统路径
+- `which`: 查找可执行文件的系统路径
 
 ```bash
 # 打印出系统带的 python 程序的路径
 $ which python
 ```
 
-#### `wc`: 统计一个文件的行，字符和字节数
+- `wc`: 统计一个文件的行，字符和字节数
 
 ```bash
 # 输出文件 'text.txt' 的行数，字符数和字节数。
 $ wc text.txt
 ```
 
-#### `cat`: 输出文件内容
+- `cat`: 输出文件内容
 
 ```bash
 # 显示文件 'text.txt' 内容
 $ cat text.txt
 ```
 
-#### `grep`: 截取输入字符的选定 pattern 并输出所在的行
+- `grep`: 截取输入字符的选定 pattern 并输出所在的行
 
 ```bash
 # 显示文件 'text.txt' 中含有字符 'abc' 的行
 $ cat text.txt | grep 'abc'
 ```
 
-#### `head`: 输出文件头部内容
+- `head`: 输出文件头部内容
 
 ```bash
 # 输出文件前5行内容
 $ head -5 text.txt
 ```
 
-#### `tail`: 输出文件尾部内容
+- `tail`: 输出文件尾部内容
 
 ```bash
 # 输出文件的最后5行内容
 $ tail -5 text.txt
 ```
 
-#### `ps`: 查看系统进程
+- `ps`: 查看系统进程
 
+```
 ps会在终端打印系统进程，各列的含义是:
 
 * USER: 运行该进程的用户
@@ -142,6 +143,7 @@ ps会在终端打印系统进程，各列的含义是:
 * TIME:
 * TIME: 运行着的该命令所占用的CPU处理时间
 * COMMAND: 该进程所运行的命令
+```
 
 ```bash
 # 显示详细的进程信息
@@ -165,6 +167,6 @@ $ ps -L 1000
 $ ps -axjf
 ```
 
-#### Reference
+- Reference
 
 1. http://linoxide.com/how-tos/linux-ps-command-examples/
