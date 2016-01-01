@@ -78,5 +78,5 @@
        * [Perl](appendix/perl.md)
        * [Biopython](appendix/biopython.md)
        * [R](appendix/r.md)
-       * awk
+       * [awk](appendix/awk.md)
 
