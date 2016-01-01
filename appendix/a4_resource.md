@@ -82,6 +82,7 @@
 * *[Pathogenomics](https://www.youtube.com/channel/UCa2HSyCToFAAqQlKmd5-l8g)*
 * *[Broad Institute](https://www.youtube.com/channel/UCv4IbnP9j9RC_aZAs8wqdeQ)*
 * *[NAID Bioinformatics](https://www.youtube.com/channel/UC4xRg9e4mrYBZQUDUhBHNiQ)*
+* *[NBIC](https://vimeo.com/nbic)*
 
 #### 网络学校
 
@@ -96,7 +97,7 @@
 * *[Galaxy](http://www.galaxy.org)* 基于Web的数据分析平台，可以方便添加各种终端工具。
 * *[circos](http://circos.ca)* 比较基因组数据可视化工具
 
-### 生物信息数据分析
+#### 生物信息数据分析
 
 * *[DNAnexus](https://platform.dnanexus.com/)* DNAnexus基于云计算的生物信息分析平台
 * *[Seven Bridges](https://www.sbgenomics.com)*
