@@ -16,8 +16,8 @@ Project reload...
 
 1. 在GitHub上fork本书作为自己的仓库，如`indexofire/bac-ngs-book`，然后`git clone`到本地，并设置用户信息。
 ```
-$ git clone git@github.com:your_github_username/bac-ngs-book.git
-$ cd bac-ngs-book
+~$ git clone git@github.com:your_github_username/bac-ngs-book.git
+~$ cd bac-ngs-book
 ~/bac-ngs-book$ git config user.name "your github username"
 ~/bac-ngs-book$ git config user.email your_email@something.com
 ```
