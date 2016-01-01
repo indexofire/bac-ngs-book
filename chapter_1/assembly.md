@@ -5,3 +5,7 @@
 #### Reference
 
 * http://arxiv.org/pdf/1401.5130v2.pdf
+
+
+
+个人最常用的拼接软件是spades，目前版本是3.6。
