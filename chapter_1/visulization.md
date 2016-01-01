@@ -40,4 +40,4 @@ circos 是一个高大上的基因组圈图显示工具。它由加拿大的 用
 
 
 
-[UCSC]: (https://genome.ucsc.edu/cgi-bin/hgTracks)
+[UCSC]: https://genome.ucsc.edu/cgi-bin/hgTracks "UCSC"
