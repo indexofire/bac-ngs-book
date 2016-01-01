@@ -29,7 +29,7 @@
 
 #### 教学与资源
 
-关于生物信息学与高通量测序技术相关内容的博客网站。
+关于生物信息学与高通量测序技术相关内容的博客和网站。
 
 * *[糗世界](http://pgfe.umassmed.edu/ou/)*
 * *[YGC](http://ygc.name/)*
@@ -50,7 +50,9 @@
 * *[YOKOFAKUN](http://plindenbaum.blogspot.com/)*
 * *[In between lines of code](https://flxlexblog.wordpress.com/)*
 * *[Core-genome](http://core-genomics.blogspot.com/)*
-* *[NGS wiki book](https://en.wikibooks.org/wiki/Next_Generation_Sequencing_(NGS))*
+* *[NGS wiki book](https://en.wikibooks.org/wiki/Next_Generation_Sequencing_(NGS) )*
+* *[omictools](http://omictools.com)*
+* *[omicsmaps](http://omicsmaps.com/)*
 
 #### 在线工具和数据库
 
