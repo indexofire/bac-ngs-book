@@ -78,7 +78,7 @@ $ rm -f *.tmp
 $ cp test.txt ~/abc
 ```
 
-#### `mv`: 移动文件或文件夹
+- `mv`: 移动文件或文件夹
 
 ```bash
 # 移动 'test.txt' 文件到文件夹 '~/abc' 中并改名叫 'test1.txt'
