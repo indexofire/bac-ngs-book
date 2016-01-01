@@ -27,6 +27,7 @@
 * *[UC Davis training](http://training.bioinformatics.ucdavis.edu/)*
 * *[UC Texas at Austin wiki](https://wikis.utexas.edu/display/bioiteam/Home)*
 * *[BPA-CSIRO Workshops](http://bpa-csiro-workshops.github.io/)*
+* *[VIB Traning](http://www.vib.be/en/training/Pages/Training-Categories.aspx)*
 
 #### 教学与资源
 
