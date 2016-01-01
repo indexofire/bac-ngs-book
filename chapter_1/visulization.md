@@ -10,7 +10,7 @@
 
 #### 1. IGV
 
-* 用 samtools 转换数据格式**
+* 用 samtools 转换数据格式
 ```
 ~/data$ samtools faidx NC_012967.1.fasta
 ~/data$ samtools view -b -S -o bowtie/SRR030257.bam bowtie/SRR030257.sam
@@ -18,7 +18,7 @@
 ~/data$ samtools index bowtie/SRR030257.sorted.bam
 ```
 
-* 1.2 IGV下载及安装**
+* 1.2 IGV下载及安装
 ```
 ~/tmp$ wget -O ~/app/readseq http://iubio.bio.indiana.edu/soft/molbio/readseq/java/readseq.jar
 ~/tmp$ java -cp ~/app/readseq/readseq.jar run NC_012967.1.gbk -f GFF -o NC_012967.1.gff
@@ -28,8 +28,7 @@
 ~/app$ java -Xmx2g -jar igv.jar
 ```
 
-**1.3 图形化结果**
-
+* 1.3 图形化结果
 弹出的IGV图形界面，下拉菜单选择`Genomes`/`Create .genome File...`,在弹出的窗口中`FASTA file`选项选择基因组fasta文件，在`Gene File`选项选择转换的文件。
 
 #### 2. Circos
