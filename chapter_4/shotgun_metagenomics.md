@@ -253,7 +253,9 @@ Three Krona files are also generated:
 
 #### Mash
 
-
+```
+~$
+```
 
 ## Reference
 
