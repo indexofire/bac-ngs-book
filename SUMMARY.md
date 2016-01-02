@@ -11,6 +11,7 @@
    * [evaluate assembly](chapter_1/assemble_report.md)
    * [annotation](chapter_1/annotation.md)
    * [visulization](chapter_1/visulization.md)
+   * Local aligment
 * [双基因组数据比较](chapter_2/README.md)
    * [Codon perefence analysis](chapter_2/code.md)
    * [Genome alignment](chapter_2/alignment.md)
