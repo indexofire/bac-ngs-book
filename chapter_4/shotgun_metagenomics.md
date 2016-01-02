@@ -180,10 +180,11 @@ Decompressing this file
 ``` 
 should give you:
 ```
-    SRS013948.denovo_duplicates_marked.trimmed.1.fastq
-    SRS013948.denovo_duplicates_marked.trimmed.2.fastq
-    SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq
+SRS013948.denovo_duplicates_marked.trimmed.1.fastq
+SRS013948.denovo_duplicates_marked.trimmed.2.fastq
+SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq
 ```
+
 We need to normalise the lengths of these sequences and put them all in one file:
 
     beetl-convert \
