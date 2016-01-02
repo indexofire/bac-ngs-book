@@ -228,16 +228,13 @@ Alternatively, if you have enough RAM, you can try `metabeetl-convertMetagenomic
 
 Run:
 ```
-    cat BeetlCompareOutput/cycle*.subset* | \
-    metabeetl-convertMetagenomicRangesToTaxa \
-      ${METAGENOME_DATABASE_PATH}/ncbiFileNumToTaxTree \
-      ${METAGENOME_DATABASE_PATH}/ncbiMicros \
-      ${METAGENOME_DATABASE_PATH}/metaBeetlTaxonomyNames.dmp \
-      ${METAGENOME_DATABASE_PATH}/normalisation.txt \
-      20 \
-      50 \
-      - \
-      > metaBeetl.log
+~$ cat BeetlCompareOutput/cycle*.subset* | \
+> metabeetl-convertMetagenomicRangesToTaxa \
+> ${METAGENOME_DATABASE_PATH}/ncbiFileNumToTaxTree \
+> ${METAGENOME_DATABASE_PATH}/ncbiMicros \
+> ${METAGENOME_DATABASE_PATH}/metaBeetlTaxonomyNames.dmp \
+> ${METAGENOME_DATABASE_PATH}/normalisation.txt \
+> 20 50 - > metaBeetl.log
 ```
 
 Three TSV (tab-separated values) files are generated (column 1: Taxonomy Id, column 2: Taxonomy level, column 3: k-mer count, column 4: k-mer count including children):
