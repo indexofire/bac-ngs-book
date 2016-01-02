@@ -77,7 +77,7 @@ $ formatdb -i custom_genome.fasta -o T -p F
 $ blastall -i myseq.fasta -d custom_genome.fasta -p blastn
 ```
 
-## Blast+
+#### 1.2 Blast+
 
 #### 本地 NCBI blast+
 
