@@ -42,8 +42,9 @@ your newly assembled sequences.
 ~/tmp$ tar xzf blast-2.2.24-x64-linux.tar.gz -C ~/app
 ~/tmp$ sudo cp ~/app/blast-2.2.24/bin/* /usr/local/sbin
 ~/tmp$ sudo cp -r ~/app/blast-2.2.24/data /usr/local/blast-data
+```
 
-And put in blastkit::
+安装 blastkit::
 
    cd /root
    git clone https://github.com/ctb/blastkit.git -b ec2
