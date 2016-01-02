@@ -15,20 +15,20 @@
 
 **Blast的下载与安装**
 
-1.1 安装 Ubuntu 编译包。
+安装 Ubuntu 编译包。
 
 ```
 $ sudo apt-get install blast2
 ```
 
-1.2 下载NCBI Linux预编译包
+下载NCBI Linux预编译包
 
 ```
 $ wget ftp://ftp.ncbi.nih.gov/blast/executables/release/2.2.26/blast-2.2.26-x64-linux.tar.gz
 $ tar zxvf blast-2.2.26-x64 -C ~/app
 ```
 
-**2. 运行 Blast**
+**运行 Blast**
 
 Blast 通过调用 blastall 这个 gateway 程序，来分别调用不同算法和程序实现序列比对。在命令行中输入`blastall`，会打印出一份参数列表。你也可以使用 `man blast` 来查看 Blast 工具的用户手册。
 
