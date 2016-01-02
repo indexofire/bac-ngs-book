@@ -24,10 +24,13 @@ Otherwise, all the references and associated metadata used in the paper are avai
 ```
 
 
-After downloading these files, decompress them in a directory which we will then refer to as `${METAGENOME_DATABASE_PATH}`
+After downloading these files, decompress them in a directory which we will then refer to as
+```
+`${METAGENOME_DATABASE_PATH}`
 
-    bunzip2 *.bz2
-    export METAGENOME_DATABASE_PATH=`pwd`
+~$ bunzip2 *.bz2
+~$ export METAGENOME_DATABASE_PATH=`pwd`
+```
 
 If you downloaded those files, you can skip the next section.
 
