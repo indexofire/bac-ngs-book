@@ -17,3 +17,4 @@ A5-miseq 是一个用 perl 开发的针对细菌基因组 de novo assembly 的 p
 
 #### Reference
 
+* http://arxiv.org/pdf/1401.5130v2.pdf
