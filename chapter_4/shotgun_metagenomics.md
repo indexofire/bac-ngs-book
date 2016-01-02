@@ -186,21 +186,21 @@ SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq
 ```
 
 We need to normalise the lengths of these sequences and put them all in one file:
-
-    beetl-convert \
-      -i SRS013948.denovo_duplicates_marked.trimmed.1.fastq \
-      -o paddedSeq1.seq \
-      --sequence-length=100
-    beetl-convert \
-      -i SRS013948.denovo_duplicates_marked.trimmed.2.fastq \
-      -o paddedSeq2.seq \
-      --sequence-length=100
-    beetl-convert \
-      -i SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq \
-      -o paddedSeqSingleton.seq \
-      --sequence-length=100
-    cat paddedSeq1.seq paddedSeq2.seq paddedSeqSingleton.seq > SRS013948.seq
-
+```
+~$ beetl-convert \
+> -i SRS013948.denovo_duplicates_marked.trimmed.1.fastq \
+> -o paddedSeq1.seq \
+> --sequence-length=100
+~$ beetl-convert \
+> -i SRS013948.denovo_duplicates_marked.trimmed.2.fastq \
+> -o paddedSeq2.seq \
+> --sequence-length=100
+~$ beetl-convert \
+> -i SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq \
+> -o paddedSeqSingleton.seq \
+> --sequence-length=100
+~$ cat paddedSeq1.seq paddedSeq2.seq paddedSeqSingleton.seq > SRS013948.seq
+```
 
 **Running BEETL in metagenomic mode**
 
