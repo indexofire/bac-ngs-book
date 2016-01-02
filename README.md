@@ -14,9 +14,9 @@
 
 #### Fork笔记方法
 
-1. 在GitHub上访问本书源码，并fork成为自己的仓库。如下图所示，点击fork按钮
-![](assets/img/fork.png)，然后用 `git clone` 到本地，设置好代码仓库用户信息。就可以修改并提交代码了。
+1. 在GitHub上访问本书源码，并fork成为自己的仓库。如下图所示，点击fork按钮，然后用 `git clone` 到本地，设置好代码仓库用户信息。就可以修改并提交代码了。
 ```
+![](assets/img/fork.png)
 ~$ git clone git@github.com:your_github_username/bac-ngs-book.git
 ~$ cd bac-ngs-book
 ~/bac-ngs-book$ git config user.name "your github username"
