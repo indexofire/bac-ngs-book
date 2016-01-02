@@ -47,6 +47,7 @@ your newly assembled sequences.
 安装 blastkit
 
 ```
+~/tmp$ cd app
 ~/tmp$ git clone https://github.com/ctb/blastkit.git -b ec2
 ~/tmp$ cd blastkit/www
 ~/tmp$ sudo ln -fs $PWD /var/www/blastkit
