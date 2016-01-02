@@ -44,16 +44,16 @@ your newly assembled sequences.
 ~/tmp$ sudo cp -r ~/app/blast-2.2.24/data /usr/local/blast-data
 ```
 
-安装 blastkit::
+安装 blastkit
 
-   cd /root
-   git clone https://github.com/ctb/blastkit.git -b ec2
-   cd blastkit/www
-   ln -fs $PWD /var/www/blastkit
-
-   mkdir files
-   chmod a+rxwt files
-   chmod +x /root
+```
+~/tmp$ git clone https://github.com/ctb/blastkit.git -b ec2
+~/tmp$ cd blastkit/www
+~/tmp$ sudo ln -fs $PWD /var/www/blastkit
+~/tmp$ mkdir files
+~/tmp$ chmod a+rxwt files
+~/tmp$ chmod +x /root
+```
 
 and run check.py::
 
