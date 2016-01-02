@@ -37,7 +37,7 @@
    * [R 语言基础](chapter_5/r.md)
        * [ggplot2](chapter_5/ggplot2.md)
        * [Bioconductor](chapter_5/bioconductor.md/bioconductor.md)
-   * NGS那点事儿
+* NGS那点事儿
 * [常用软件的安装与设置](chapter_6/README.md)
    * [Assembly](chapter_6/assembly.md)
        * [SPAdes](chapter_6/spades.md)
