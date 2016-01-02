@@ -1,7 +1,6 @@
 {
     "plugins": [
-        "mathjax",
-        "exercises"
+        "mathjax"
     ],
     "pluginsConfig": {
         "mathjax": {
