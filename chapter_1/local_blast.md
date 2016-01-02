@@ -14,13 +14,15 @@ your newly assembled sequences.
 
 #### 2.1 安装 blastkit
 
-安装依赖包Installing some prerequisites::
+安装依赖包
+
 ```
 ~$ pip install pygr
 ~$ pip install whoosh
 ~$ pip install git+https://github.com/ctb/pygr-draw.git
 ~$ pip install git+https://github.com/ged-lab/screed.git
 ~$ apt-get -y install lighttpd
+```
 
 and configure them::
 
