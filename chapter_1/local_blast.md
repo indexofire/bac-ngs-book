@@ -10,7 +10,7 @@ One thing everyone wants to do is BLAST sequence data, right?  Here's a
 simple way to set up a stylish little BLAST server that lets you search
 your newly assembled sequences.
 
-
+#### 1.1 安装NCBI Blast+
 
 #### 2.1 安装 blastkit
 
