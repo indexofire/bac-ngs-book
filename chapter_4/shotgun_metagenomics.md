@@ -162,7 +162,7 @@ How to create a database of reference genomes for metaBEETL:
 
 Now everything should be ready to run metaBEETL!  :-)
 
-#### Downloading the metagenomic input dataset
+**Downloading the metagenomic input dataset**
 
 The sample SRS013948 from the Human Microbiome project should be available from:
 
@@ -217,7 +217,6 @@ Run BEETL metagenomic classification:
 
 It currently generates many output files in a `BeetlCompareOutput` directory, organised per cycle and containing the information about the BWT ranges of k-mers that start diverging between the input dataset and the database.
 Setting k = sequence length gets you the maximal amount of information but the output file will be large.
-
 
 **Gathering and visualisation of metagenomic results**
 
