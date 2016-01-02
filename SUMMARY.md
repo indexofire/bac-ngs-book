@@ -9,7 +9,7 @@
    * [QC](chapter_1/qc.md)
    * [微生物基因组从头拼接](chapter_1/assembly.md)
    * [evaluate assembly](chapter_1/assemble_report.md)
-   * [annotation](chapter_1/annotation.md)
+   * [Annotation](chapter_1/annotation.md)
    * [Visulization](chapter_1/visulization.md)
 * [基因组数据比较](chapter_2/README.md)
    * [Codon perefence analysis](chapter_2/code.md)
