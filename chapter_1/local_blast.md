@@ -34,12 +34,12 @@ your newly assembled sequences.
 ~$ sudo /etc/init.d/lighttpd restart
 ```
 
-Next, install BLAST::
+本地安装 Blast
 
-   cd /root
-
-   curl -O ftp://ftp.ncbi.nih.gov/blast/executables/release/2.2.24/blast-2.2.24-x64-linux.tar.gz
-   tar xzf blast-2.2.24-x64-linux.tar.gz
+```
+~$ cd tmp
+~/tmp$ curl -O ftp://ftp.ncbi.nih.gov/blast/executables/release/2.2.24/blast-2.2.24-x64-linux.tar.gz
+~/tmp$ tar xzf blast-2.2.24-x64-linux.tar.gz -C ~/app
    cp blast-2.2.24/bin/* /usr/local/bin
    cp -r blast-2.2.24/data /usr/local/blast-data
 
