@@ -6,9 +6,7 @@
 
 内容上主要以台式测序仪 Illumina Miseq 以及其数据为基础进行操作。例子都是运行在安装了 Ubuntu 发行版的 Linux PC服务器以及个人电脑上。
 
-![](miseq.jpg)
-
-![](ubuntu.jpg)
+![](miseq.jpg) ![](ubuntu.jpg)
 
 本笔记使用开源工具 [Gitbook][] 创作，介绍的工具也几乎均为开源软件。笔记中的许多内容都是来源于网络上的资料，部分来源可能有误或记忆不全，如果原作者发现没有内容链接，或者链接错误，请发送 [电子邮件](mailto:indexofire@gmail.com) 通知修改。同时希望 [Open Source][] 思想能对科研工作和科研工作者有所帮助。
 
