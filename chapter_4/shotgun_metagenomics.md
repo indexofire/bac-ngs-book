@@ -251,7 +251,7 @@ Three Krona files are also generated:
 - metaBeetl_krona_normalised2.html
 
 
-#### 2. Mash
+#### Mash
 
 
 
