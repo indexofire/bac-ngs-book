@@ -30,7 +30,7 @@
 ~/bac-ngs-book$ git push
 ```
 
-3. 在GitHub网站上提交`pull request`。
+3. 这样你自己的代码分支`master`与源代码分支就会出现差异，要合并这些差异，就要在GitHub网站上提交`pull request`。
 
 4. 定期使用项目仓库内容更新自己仓库内容。
 ```
