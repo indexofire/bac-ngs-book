@@ -52,12 +52,10 @@ How to create a database of reference genomes for metaBEETL:
 ~/metaBeetlDb$ tar xzf downloads/all.fna.tar.gz -C all.fna/
 ```
 
-3. Create single sequence files with the reverse complement of all genomes but exclude plasmids.  
-   For this, use metabeetl-db-genomesToSingleSeq.  
-   Do NOT change the names of the generated files.
+3. Create single sequence files with the reverse complement of all genomes but exclude plasmids. For this, use metabeetl-db-genomesToSingleSeq. Do NOT change the names of the generated files.
 ```
-   metabeetl-db-genomesToSingleSeq -f all.fna/*/*.fna -s singleSeqGenomes
-   cd singleSeqGenomes
+~$ metabeetl-db-genomesToSingleSeq -f all.fna/*/*.fna -s singleSeqGenomes
+~$ cd singleSeqGenomes
 ```
 
 4. Open the script metabeetl-db-arrayBWT.sh and adapt the paths.  
