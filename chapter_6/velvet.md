@@ -1,6 +1,6 @@
-## 1.Velvet
+## Velvet
 
-#### 1.1下载并安装
+#### 1. 下载并安装
 
 Velvet 是一个老牌的基因组测序数据拼接软件。Velvet最新版本是1.2.10，可以访问 [官方网站](https://www.ebi.ac.uk/~zerbino/velvet/) 下载源代码包，也可以通过克隆 [软件仓库](https://github.com/dzerbino/velvet.git) 的方式获得最新的源代码。
 
@@ -33,7 +33,7 @@ $ make MAXKMERLENGTH=127
 $ sudo cp velveth velvetg /usr/local/sbin
 ```
 
-#### 1.2 拼接基因组
+#### 2. 拼接基因组
 
 首先来了解一下velvet的组成。
 
@@ -41,6 +41,8 @@ $ sudo cp velveth velvetg /usr/local/sbin
 $ velvet
 ```
 
+
+#### 3. 其他组建
 
 
 ## Reference
