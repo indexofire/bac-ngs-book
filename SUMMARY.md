@@ -63,7 +63,6 @@
        * [Prokka](chapter_6/prokka.md)
        * [GeneMakerS](chapter_6/genemakers.md)
 * [附录](appendix/README.md)
-   * [测序平台](appendix/a1_sequencing_platform.md)
    * [Amazon EC2 教程](appendix/a2_amazon_ec2.md)
    * [名词解释](appendix/a3_explanation.md)
    * [网上资源](appendix/a4_resource.md)
