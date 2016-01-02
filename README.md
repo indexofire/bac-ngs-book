@@ -43,8 +43,6 @@
 
 v0.0.1: 2016.01.01
 
-{% youtube %}https://www.youtube.com/watch?v=9bZkp7q19f0{% endyoutube %}
-
  * reload
 
 [Linux]: http://www.linux.com/ "Linux"
