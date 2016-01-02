@@ -66,9 +66,9 @@ How to create a database of reference genomes for metaBEETL:
 ```
  OR
 ```
-   ( echo -n "all: " ; for i in G_*; do echo -n " bwt_${i}-B00"; done ; echo -e "\n" ; \
-      for i in G_*; do echo "bwt_${i}-B00: ${i}"; echo -e "\tmetabeetl-db-makeBWTSkew ${i} ${i}\n" ; done ) > Makefile
-   make -j
+~$ (echo -n "all: " ; for i in G_*; do echo -n " bwt_${i}-B00"; done ; echo -e "\n" ; \
+> for i in G_*; do echo "bwt_${i}-B00: ${i}"; echo -e "\tmetabeetl-db-makeBWTSkew ${i} ${i}\n" ; done ) > Makefile
+~$ make -j
 ```
 
 5. Login on a machine with enough memory to load all sequences in RAM (~60GB) and run mergeBacteria on all files.  
