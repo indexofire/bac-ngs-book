@@ -58,7 +58,7 @@ your newly assembled sequences.
 ~/app/blastkit$ python ./check.py
 ```
 
-如果安装顺利，就会提示一切已经准备完毕
+如果安装顺利，就会提示一切已经准备完毕。接下来要准备数据。
 
 Adding the data
 ---------------
