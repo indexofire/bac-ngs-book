@@ -17,16 +17,11 @@
 
 **Blast的下载与安装**
 
-
-
 ```
 # 安装 Ubuntu 编译包。
 ~$ sudo apt-get install blast2
-```
 
-下载NCBI Linux预编译包
-
-```
+# 下载NCBI Linux预编译包
 ~$ wget ftp://ftp.ncbi.nih.gov/blast/executables/release/2.2.26/blast-2.2.26-x64-linux.tar.gz
 ~$ tar zxvf blast-2.2.26-x64 -C ~/app
 ```
