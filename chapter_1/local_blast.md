@@ -58,12 +58,7 @@ your newly assembled sequences.
 ~/app/blastkit$ python ./check.py
 ```
 
-and run check.py::
-
-   cd /root/blastkit
-   python ./check.py
-
-It should say everything is OK.
+如果安装顺利，就会提示一切已经准备完毕
 
 Adding the data
 ---------------
