@@ -24,6 +24,9 @@ your newly assembled sequences.
 ~$ sudo apt-get -y install lighttpd
 ```
 
+对lighttpd webserver进行配置
+
+```
 and configure them::
 
    cd /etc/lighttpd/conf-enabled
