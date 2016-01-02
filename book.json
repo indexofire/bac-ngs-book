@@ -1,9 +1,10 @@
 {
     "plugins": [
-        "mathjax"
+        "mathjax",
+        "exercises"
     ],
     "pluginsConfig": {
-        "mathjax":{
+        "mathjax": {
             "forceSVG": true
         }
     }
