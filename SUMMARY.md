@@ -27,7 +27,7 @@
        * [GenomeDiagram](chapter_3/genomediagram.md)
 * [元基因组数据分析](chapter_4/README.md)
    * [16s rRNA](chapter_4/16s.md)
-   * [Shotgun Sequencing](chapter_4/shotgun.md)
+   * [Shotgun Metagenomics Sequencing](chapter_4/shotgun.md)
        * [数据分析](chapter_4/shotgun_metagenomics.md)
 * [专题](chapter_5/README.md)
    * [Amazon EC2 教程](appendix/a2_amazon_ec2.md)
