@@ -175,9 +175,9 @@ ftp://public-ftp.hmpdacc.org/Illumina/throat/SRS013948.tar.bz2
 ```
 
 Decompressing this file
-
-    tar xjf SRS013948.tar.bz2
-    
+```
+~$ tar xjf SRS013948.tar.bz2
+``` 
 should give you:
 
     SRS013948.denovo_duplicates_marked.trimmed.1.fastq
