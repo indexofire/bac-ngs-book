@@ -97,6 +97,8 @@ http://www.personal.psu.edu/iua1/courses/files/2014/lecture-12.pdf
 
 #### 2.1 blastkit
 
+blastkit 是一个包含webserver等工具的blast工具集。
+
 **安装依赖包**
 
 ```
