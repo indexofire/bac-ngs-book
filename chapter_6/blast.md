@@ -24,7 +24,7 @@
 # 或者直接下载NCBI Linux预编译包，并解压缩安装
 ~$ wget ftp://ftp.ncbi.nih.gov/blast/executables/release/2.2.26/blast-2.2.26-x64-linux.tar.gz
 ~$ tar zxvf blast-2.2.26-x64 -C ~/app
-~$ sudo cp ~/app/blast-2.2.26-x64/blastall /usr/local/sbin
+~$ sudo ln -s ~/app/blast-2.2.26-x64/blastall /usr/local/sbin
 ```
 
 **运行 Blast**
