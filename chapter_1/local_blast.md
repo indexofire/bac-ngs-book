@@ -10,8 +10,10 @@ One thing everyone wants to do is BLAST sequence data, right?  Here's a
 simple way to set up a stylish little BLAST server that lets you search
 your newly assembled sequences.
 
-Installing blastkit
--------------------
+
+
+#### 2.1 安装 blastkit
+
 
 Installing some prerequisites::
 
