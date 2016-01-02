@@ -34,7 +34,7 @@
        * [单机生产配置](chapter_5/galaxy_production.md)
        * [云服务器部署](chapter_5/galaxy_aws.md)
        * [小型测序实验室快速部署方案](chapter_5/galaxy_docker.md)
-   * NGS那点事儿
+   * [NGS那点事儿](chapter_5/ngs.md)
    * [R 语言基础](chapter_5/r.md)
        * [ggplot2](chapter_5/ggplot2.md)
        * [Bioconductor](chapter_5/bioconductor.md/bioconductor.md)
