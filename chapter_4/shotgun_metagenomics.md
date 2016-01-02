@@ -208,6 +208,7 @@ Create the BWT of the input dataset:
 ```
 ~$ beetl-bwt -i SRS013948.seq -o bwt_SRS013948
 ```
+
 Run BEETL metagenomic classification:
 
     beetl-compare \
