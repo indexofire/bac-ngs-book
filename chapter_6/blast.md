@@ -66,12 +66,9 @@ $ blastall
 | 10 | ASN, text |
 | 11 | ASN, binary [Integer] |
 
-
-
-
 其他参数参见`man blast`。
 
-**3. 应用举例:**
+**应用举例:**
 
 Local blast例子：首先下载一个基因组文件并格式化作为本地数据库，然后使用 blastn 对序列进行比对。
 
