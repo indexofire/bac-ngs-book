@@ -17,9 +17,10 @@
 
 **Blast的下载与安装**
 
-安装 Ubuntu 编译包。
+
 
 ```
+# 安装 Ubuntu 编译包。
 $ sudo apt-get install blast2
 ```
 
