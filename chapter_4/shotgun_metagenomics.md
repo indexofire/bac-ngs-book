@@ -34,8 +34,7 @@ After downloading these files, decompress them in a directory which we will then
 
 If you downloaded those files, you can skip the next section.
 
-
-#### 自己建立数据库
+**自己建立数据库**
 
 How to create a database of reference genomes for metaBEETL: 
 
