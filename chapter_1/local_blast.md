@@ -12,6 +12,9 @@ your newly assembled sequences.
 
 #### 1.1 安装 NCBI-Blast+
 
+```
+```
+
 #### 2.1 安装 blastkit
 
 安装依赖包
