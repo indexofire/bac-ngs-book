@@ -35,12 +35,6 @@ $ mkdir -p data app tmp
  * [Unix and Perl Primer for Biologists](http://korflab.ucdavis.edu/Unix_and_Perl/current.html)
  * [The Linux Command Line](http://billie66.github.io/TLCL/book/zh/)
 
-[Ubuntu]: http://www.ubuntu.com/ "Ubuntu"
-[Linux]: http://www.linux.com/ "Linux"
-
-
-
-
 
 
 ## 其他方法？
