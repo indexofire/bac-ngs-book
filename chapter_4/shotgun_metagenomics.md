@@ -1,6 +1,6 @@
 ## Shotgun metagenomics 数据分析
 
-用metaBEETL 获取shotgun元基因组数据中微生物种群比例。
+用 `metaBEETL` 获取 Shotgun metagenomics 数据中微生物种群比例。
 
 #### Meta-BEETL Metagenomics
 
