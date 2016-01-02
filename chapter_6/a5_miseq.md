@@ -15,6 +15,6 @@ A5-miseq 是一个用 perl 开发的针对细菌基因组 de novo assembly 的 p
 ~/app$ perl bin/a5_pipeline.pl SRR955386_1.fastq SRR955386_2.fastq ~/data/a5_output
 ```
 
-#### Reference
+## Reference
 
 * http://arxiv.org/pdf/1401.5130v2.pdf
