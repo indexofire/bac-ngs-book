@@ -252,6 +252,10 @@ Three Krona files are also generated:
 - metaBeetl_krona_normalised2.html
 
 
+#### 2. Mash
+
+
+
 ## Reference
 
 * http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3622627/
