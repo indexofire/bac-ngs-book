@@ -29,10 +29,9 @@ your newly assembled sequences.
 ```
 ~$ cd /etc/lighttpd/conf-enabled
 ~$ sudo ln -fs ../conf-available/10-cgi.conf ./
-~$ echo 'cgi.assign = ( ".cgi" => "" )' >> 10-cgi.conf
-~$ echo 'index-file.names += ( "index.cgi" ) ' >> 10-cgi.conf
-
-   /etc/init.d/lighttpd restart
+~$ sudo echo 'cgi.assign = ( ".cgi" => "" )' >> 10-cgi.conf
+~$ sudo echo 'index-file.names += ( "index.cgi" ) ' >> 10-cgi.conf
+~$ sudo /etc/init.d/lighttpd restart
 ```
 
 Next, install BLAST::
