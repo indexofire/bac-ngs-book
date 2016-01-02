@@ -50,10 +50,12 @@ your newly assembled sequences.
 ~/tmp$ cd ~/app
 ~/app$ git clone https://github.com/ctb/blastkit.git -b ec2
 ~/app$ cd blastkit/www
-~/app$ sudo ln -fs $PWD /var/www/blastkit
-~/app$ mkdir files
-~/app$ chmod a+rxwt files
-~/app$ chmod +x /root
+~/app/blastkit/www$ sudo ln -fs $PWD /var/www/blastkit
+~/app/blastkit/www$ mkdir files
+~/app/blastkit/www$ chmod a+rxwt files
+~/app/blastkit/www$ chmod +x /root
+~/app/blastkit/www$ cd ..
+~/app/blastkit$ python ./check.py
 ```
 
 and run check.py::
