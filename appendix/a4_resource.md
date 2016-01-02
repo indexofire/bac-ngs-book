@@ -115,4 +115,4 @@
 * *[genohub](https://genohub.com/)* 提供测序技术及相关服务供应商的搜索信息
 
 
-[]: https://en.wikibooks.org/wiki/Next_Generation_Sequencing_(NGS)
+[NGS wiki book]: https://en.wikibooks.org/wiki/Next_Generation_Sequencing_(NGS)
