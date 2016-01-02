@@ -45,7 +45,7 @@ $ velvet
 
 ## Reference
 
-* http://fhqdddddd.blog.163.com/blog/static/186991542013799262437/
+* http://www.chenlianfu.com/?p=1635
 * http://www.bbioo.com/lifesciences/40-116878-1.html
 * http://www.plob.org/2012/11/21/4797.html
 * http://ged.msu.edu/angus/tutorials-2011/short-read-assembly-velvet.html
