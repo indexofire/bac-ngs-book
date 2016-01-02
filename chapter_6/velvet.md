@@ -9,9 +9,9 @@ Velvet 是一个老牌的基因组测序数据拼接软件。Velvet最新版本�
 普通用户可以下载源代码包自行编译获得软件。
 
 ```
-$ cd /tmp
-$ wget https://www.ebi.ac.uk/~zerbino/velvet/velvet_1.2.10.tgz
-$ tar xvf -C velvet velvet_1.2.10.tgz
+~$ cd /tmp
+~$ wget https://www.ebi.ac.uk/~zerbino/velvet/velvet_1.2.10.tgz
+~$ tar xvf -C velvet velvet_1.2.10.tgz
 ```
 
 **克隆代码仓库**
@@ -19,7 +19,7 @@ $ tar xvf -C velvet velvet_1.2.10.tgz
 如果在软件运行中遇到问题，想试用最新版代码，或是有能力提交issues，或者想改进软件参与开源代码编写的可以选择克隆代码库的方式。
 
 ```
-$ cd ~/tmp
+~$ cd ~/tmp
 ~/tmp$ git clone https://github.com/dzerbino/velvet.git
 ```
 
@@ -38,11 +38,15 @@ $ sudo cp velveth velvetg /usr/local/sbin
 首先来了解一下velvet的组成。
 
 ```
-$ velvet
+~$ velvet
 ```
 
 
 #### 3. 其他组建
+
+```
+~$ 
+```
 
 
 ## Reference
