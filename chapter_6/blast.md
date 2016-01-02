@@ -85,7 +85,7 @@ $ blastall -i myseq.fasta -d custom_genome.fasta -p blastn
 ~/tmp$ 
 ```
 
-**构建自己的数据库**
+**构建数据库**
 
 ```
 ~$ makeblastdb -in data/database.fasta -dbtype nucl -parse_seqids
