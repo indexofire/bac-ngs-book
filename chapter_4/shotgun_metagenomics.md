@@ -25,9 +25,9 @@ Otherwise, all the references and associated metadata used in the paper are avai
 
 
 After downloading these files, decompress them in a directory which we will then refer to as
-```
-`${METAGENOME_DATABASE_PATH}`
 
+```
+~$ {METAGENOME_DATABASE_PATH}
 ~$ bunzip2 *.bz2
 ~$ export METAGENOME_DATABASE_PATH=`pwd`
 ```
