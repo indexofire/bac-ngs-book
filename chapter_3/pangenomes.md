@@ -1,6 +1,6 @@
 ## Pangenomes
 
-对于 homolog, ortholog 和 paralog 的概念以前看书的时候容易对定义有所忽略，[这篇博客](http://blog.sciencenet.cn/blog-217859-280960.html)讲述的比较清楚：
+>对于微生物基因组，首先对于 homolog, ortholog 和 paralog 的概念需要明确，以前看书的时候容易对定义有所忽略，[这篇博客](http://blog.sciencenet.cn/blog-217859-280960.html)讲述的比较清楚：
 
 **Homolog**: A gene related to a second gene by descent from a common ancestral DNA sequence. The term "homolog" may apply to the relationship between genes separated by speciation (ortholog), OR to the relationship betwen genes originating via genetic duplication (see paralog).
 
