@@ -1,6 +1,6 @@
 ## shotgun 元基因组测序数据分析
 
-
+#### 用metaBEETL 获取shotgun元基因组数据中微生物种群比例
 
 
 
