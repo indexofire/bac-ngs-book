@@ -10,3 +10,4 @@
 ~/app$ make
 ~/app$ sudo ln -s `pwd`/samtools /usr/local/sbin
 ```
+
