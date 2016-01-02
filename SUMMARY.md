@@ -68,6 +68,7 @@
    * [名词解释](appendix/a3_explanation.md)
    * [网上资源](appendix/a4_resource.md)
    * [NCBI 资料汇总](appendix/ncbi_blast+.md)
+   * [拼接工具比较](appendix/evaluation.md)
    * [数据格式](appendix/a7_file_format.md)
        * [DNA序列文件](appendix/dna.md)
        * [GFF 文件格式](appendix/gff.md)
@@ -78,5 +79,4 @@
        * [Biopython](appendix/biopython.md)
        * [R](appendix/r.md)
        * [awk](appendix/awk.md)
-   * [拼接工具比较](appendix/evaluation.md)
 
