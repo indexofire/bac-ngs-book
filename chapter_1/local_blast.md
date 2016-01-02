@@ -40,8 +40,8 @@ your newly assembled sequences.
 ~$ cd tmp
 ~/tmp$ curl -O ftp://ftp.ncbi.nih.gov/blast/executables/release/2.2.24/blast-2.2.24-x64-linux.tar.gz
 ~/tmp$ tar xzf blast-2.2.24-x64-linux.tar.gz -C ~/app
-~/tmp$ cp ~/app/blast-2.2.24/bin/* /usr/local/bin
-   cp -r blast-2.2.24/data /usr/local/blast-data
+~/tmp$ sudo cp ~/app/blast-2.2.24/bin/* /usr/local/sbin
+~/tmp$ sudo cp -r ~/app/blast-2.2.24/data /usr/local/blast-data
 
 And put in blastkit::
 
