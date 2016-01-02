@@ -69,4 +69,4 @@ your newly assembled sequences.
 
 ## Reference
 
-* [Blastkit](https://github.com/dib-lab/2013-caltech-workshop/blob/master/blastkit.txt)
+* [Caltech workshop](https://github.com/dib-lab/2013-caltech-workshop/blob/master/blastkit.txt)
