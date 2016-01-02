@@ -79,15 +79,13 @@ $ blastall -i myseq.fasta -d custom_genome.fasta -p blastn
 
 #### 1.2 Blast+
 
-#### 本地 NCBI blast+
-
-1. 下载安装 NCBI Blast+
+**下载安装 NCBI Blast+**
 
 ```
-~/tmp$
+~/tmp$ 
 ```
 
-2. 构建自己的数据库
+**构建自己的数据库**
 
 ```
 ~$ makeblastdb -in data/database.fasta -dbtype nucl -parse_seqids
