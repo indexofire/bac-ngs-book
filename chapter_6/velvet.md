@@ -10,8 +10,8 @@ Velvet 是一个老牌的基因组测序数据拼接软件。Velvet最新版本�
 
 ```
 ~$ cd /tmp
-~$ wget https://www.ebi.ac.uk/~zerbino/velvet/velvet_1.2.10.tgz
-~$ tar xvf -C velvet velvet_1.2.10.tgz
+~/tmp$ wget https://www.ebi.ac.uk/~zerbino/velvet/velvet_1.2.10.tgz
+~/tmp$ tar xvf velvet_1.2.10.tgz -C ~/app/velvet
 ```
 
 **克隆代码仓库**
