@@ -91,8 +91,7 @@ $ blastall -i myseq.fasta -d custom_genome.fasta -p blastn
 ~$ makeblastdb -in data/database.fasta -dbtype nucl -parse_seqids
 ```
 
-
-#### Accession 前缀含义
+**Accession 前缀含义**
 
 | Accession 前缀| 分子类型 | 含义 |
 | --            | --       | --   |
