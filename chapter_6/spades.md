@@ -47,7 +47,7 @@ Thank you for using SPAdes!
 
 #### 2. 拼装基因组
 
-**illumina数据**
+**2.1 illumina数据**
 
 对于PE数据，命令行支持最多5组PE，如果要使用更多PE数据，可以使用YAML文件来配置。
 
@@ -90,7 +90,11 @@ SPAdes会尝试不同的Kmer，因此拼装时间也会根据Kmer选择数量成
 > -1 input_forward.fastq -2 input_backward.fastq -o spades_output/
 ```
 
-**ion torrent数据**
+**2.2 ion torrent数据**
+
+```
+
+```
 
 #### 3. 结果输出
 
