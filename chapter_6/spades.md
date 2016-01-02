@@ -102,8 +102,8 @@ SPAdes会尝试不同的Kmer，因此拼装时间也会根据Kmer选择数量成
 
 ```
 corrected 目录 BayesHammer 矫正过的 reads 文件
-config.fasta/config.fastg 是 contig 结果文件
-scaffolds.fasta/scaffolds.fastg 是 scaffold 结果文件
+config.fasta 是 contig 结果文件
+scaffolds.fasta 是 scaffold 结果文件
 params.txt 拼接参数信息
 spades.log 运行日志
 dataset.info 内部配置文件
