@@ -29,7 +29,7 @@ make可以进行编译，有几个编译参数可以选择，分别是MAXKMERLEN
 
 ```
 ~$ cd ~/app/velvet
-~/app/velvet$ make MAXKMERLENGTH=127
+~/app/velvet$ make 'MAXKMERLENGTH=127'
 ~/app/velvet$ sudo cp velveth velvetg /usr/local/sbin
 ```
 
