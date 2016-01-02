@@ -100,6 +100,7 @@ SPAdes会尝试不同的Kmer，因此拼装时间也会根据Kmer选择数量成
 
 输出目录中的文件：
 
+```
 corrected 目录 BayesHammer 矫正过的 reads 文件
 config.fasta/config.fastg 是 contig 结果文件
 scaffolds.fasta/scaffolds.fastg 是 scaffold 结果文件
@@ -108,5 +109,6 @@ spades.log 运行日志
 dataset.info 内部配置文件
 input_dataset.yaml YAML格式的配置文件
 K<##>/ 目录包含不同kmer运行结果产出的结果
+```
 
 [SPAdes]: http://spades.bioinf.spbau.ru/ "SPAdes"
