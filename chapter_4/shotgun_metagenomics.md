@@ -197,7 +197,7 @@ We need to normalise the lengths of these sequences and put them all in one file
     cat paddedSeq1.seq paddedSeq2.seq paddedSeqSingleton.seq > SRS013948.seq
 
 
-#### Running BEETL in metagenomic mode
+**Running BEETL in metagenomic mode**
 
 Create the BWT of the input dataset:
 
@@ -219,7 +219,7 @@ It currently generates many output files in a `BeetlCompareOutput` directory, or
 Setting k = sequence length gets you the maximal amount of information but the output file will be large.
 
 
-#### Gathering and visualisation of metagenomic results
+**Gathering and visualisation of metagenomic results**
 
 The `metabeetl-convertMetagenomicRangesToTaxa` tool converts the BWT ranges of k-mer matches from the previous stage into genome and ancestor IDs and generates text and graphical output files (currently html files using the Krona javascript visualisation library).
 
