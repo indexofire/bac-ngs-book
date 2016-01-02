@@ -78,7 +78,7 @@ Blast 通过调用 blastall 这个 gateway 程序，来分别调用不同算法�
 Local blast例子：首先下载一个基因组文件并格式化作为本地数据库，然后使用 blastn 对序列进行比对。
 
 ```
-~$ formatdb -i custom_genome.fasta -o T -p F
+$ formatdb -i custom_genome.fasta -o T -p F
 ~$ blastall -i myseq.fasta -d custom_genome.fasta -p blastn
 ```
 
