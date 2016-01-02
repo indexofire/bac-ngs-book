@@ -43,7 +43,7 @@
 
 v0.0.1: 2016.01.01
 
- * reload
+ * 对原有内容做了适当调整，逐步补充完整原计划的章节内容。
 
 [Linux]: http://www.linux.com/ "Linux"
 [Illumina]: http://www.illumina.com/ "Illumina"
