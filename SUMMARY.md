@@ -29,6 +29,7 @@
    * [16s rRNA](chapter_4/16s.md)
    * [Shotgun Sequencing](chapter_4/shotgun.md)
 * [专题](chapter_5/README.md)
+   * NGS那点事儿
    * [Galaxy 本地化配置](others/galaxy.md)
        * [本地安装与基本配置](chapter_5/galaxy_local.md)
        * [单机生产配置](chapter_5/galaxy_production.md)
@@ -37,7 +38,6 @@
    * [R 语言基础](chapter_5/r.md)
        * [ggplot2](chapter_5/ggplot2.md)
        * [Bioconductor](chapter_5/bioconductor.md/bioconductor.md)
-* NGS那点事儿
 * [常用软件的安装与设置](chapter_6/README.md)
    * [Assembly](chapter_6/assembly.md)
        * [SPAdes](chapter_6/spades.md)
