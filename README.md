@@ -16,8 +16,6 @@
 
 1. 在GitHub上访问本书源码，并fork成为自己的仓库。如下图所示，点击fork按钮
 ![](assets/img/fork.png)，然后用 `git clone` 到本地，设置好代码仓库用户信息。就可以修改并提交代码了。
-
-
 ```
 ~$ git clone git@github.com:your_github_username/bac-ngs-book.git
 ~$ cd bac-ngs-book
@@ -32,9 +30,9 @@
 ~/bac-ngs-book$ git push
 ```
 
-3. 这样你自己的代码分支`master`与源代码分支就会出现差异，要合并这些差异，就要在GitHub网站上提交`pull request`。
+3. 这样你自己的代码分支`master`与源代码分支就会出现差异，要合并这些差异，就要在GitHub网站上提交`pull request`。如下图所示如果有代码
 
-4. 定期使用项目仓库内容更新自己仓库内容。
+4. 由于源代码仓库也会经常更新或者合并其他pull request代码，需要定期使用源项目仓库内容来更新自己仓库内容。
 ```
 ~/bac-ngs-book$ git remote add upstream https://github.com/indexofire/bac-ngs-book.git
 ~/bac-ngs-book$ git fetch upstream
