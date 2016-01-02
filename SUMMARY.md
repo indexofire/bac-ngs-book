@@ -67,6 +67,7 @@
    * [Amazon EC2 教程](appendix/a2_amazon_ec2.md)
    * [名词解释](appendix/a3_explanation.md)
    * [网上资源](appendix/a4_resource.md)
+   * [NCBI 资料汇总](appendix/ncbi_blast+.md)
    * [脚本语言](appendix/scripting_language.md)
        * [Python](appendix/python.md)
        * [Perl](appendix/perl.md)
@@ -78,5 +79,4 @@
        * [DNA序列文件](appendix/dna.md)
        * [GFF 文件格式](appendix/gff.md)
        * [Fastq 文件格式](appendix/fastq.md)
-   * [NCBI 资料汇总](appendix/ncbi_blast+.md)
 
