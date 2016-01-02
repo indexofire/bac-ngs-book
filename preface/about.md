@@ -35,8 +35,6 @@ $ mkdir -p data app tmp
  * [Unix and Perl Primer for Biologists](http://korflab.ucdavis.edu/Unix_and_Perl/current.html)
  * [The Linux Command Line](http://billie66.github.io/TLCL/book/zh/)
 
-
-
 ## 其他方法？
 
 对于实在不愿意学习命令行工具，不愿意尝试 [Linux][] 使用环境的，但想自己分析微生物数据的用户，可以尝试 [Orione][] 工具。
