@@ -60,23 +60,12 @@ your newly assembled sequences.
 
 如果安装顺利，就会提示一切已经准备完毕。接下来要准备数据。
 
-Adding the data
----------------
-
-Take an assembly of interest, and copy it into /root/blaskit/db/db.fa; e.g. ::
-
 ```
 ~$ cp /mnt/assembly/ecoli.21/contigs.fa ~/app/blastkit/db/db.fa
 ~$ cd ~/app/blastkit
 ~$ formatdb -i db/db.fa -o T -p F
 ~$ python index-db.py db/db.fa
 ```
-
-Formatting the database
-~~~~~~~~~~~~~~~~~~~~~~~
-
-After you've done either of the above, format and install the database
-for blastkit::
 
 
 
