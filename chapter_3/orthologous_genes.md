@@ -173,6 +173,7 @@ oracleIndexTblSpc=NONE
 #### 3.1 安装 get_homologues
 
 ```
+~$ 
 ```
 
 
