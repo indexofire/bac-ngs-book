@@ -35,7 +35,7 @@ make可以进行编译，有几个编译参数可以选择，分别是MAXKMERLEN
 
 #### 2. 拼接基因组
 
-首先来了解一下velvet的组成。
+velvet软件由2个可执行文件 `velveth` 和 `velvetg` 组成。
 
 ```
 ~$ velvet
