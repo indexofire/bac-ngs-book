@@ -65,8 +65,9 @@ Adding the data
 
 Take an assembly of interest, and copy it into /root/blaskit/db/db.fa; e.g. ::
 
-   cp /mnt/assembly/ecoli.21/contigs.fa /root/blastkit/db/db.fa
-
+```
+~$ cp /mnt/assembly/ecoli.21/contigs.fa /root/blastkit/db/db.fa
+```
 Formatting the database
 ~~~~~~~~~~~~~~~~~~~~~~~
 
