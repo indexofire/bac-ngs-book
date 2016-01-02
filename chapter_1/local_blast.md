@@ -66,17 +66,19 @@ Adding the data
 Take an assembly of interest, and copy it into /root/blaskit/db/db.fa; e.g. ::
 
 ```
-~$ cp /mnt/assembly/ecoli.21/contigs.fa /root/blastkit/db/db.fa
+~$ cp /mnt/assembly/ecoli.21/contigs.fa ~/app/blastkit/db/db.fa
+~$ cd /root/blastkit
+~$ formatdb -i db/db.fa -o T -p F
+~$ python index-db.py db/db.fa
 ```
+
 Formatting the database
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 After you've done either of the above, format and install the database
 for blastkit::
 
-   cd /root/blastkit
-   formatdb -i db/db.fa -o T -p F
-   python index-db.py db/db.fa
+
 
 Done!
 
