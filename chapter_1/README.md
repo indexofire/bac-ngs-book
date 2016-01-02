@@ -4,3 +4,4 @@
 * [QC](qc.md)
 * [序列拼接](assembly.md)
 * [拼接软件评估](assemble_report.md)
+* [基因组注释](annotation.md)
