@@ -71,10 +71,9 @@ How to create a database of reference genomes for metaBEETL:
 ~$ make -j
 ```
 
-5. Login on a machine with enough memory to load all sequences in RAM (~60GB) and run mergeBacteria on all files.  
-   You will have to call this once for each of the piles created by BEETL which means six times overall e.g.  
+5. Login on a machine with enough memory to load all sequences in RAM (~60GB) and run mergeBacteria on all files. You will have to call this once for each of the piles created by BEETL which means six times overall e.g.  
 ```
-   for pileNum in `seq 0 5`; do metabeetl-db-mergeBacteria $pileNum ncbiMicros <( ls G_* ) ; done
+~$ for pileNum in `seq 0 5`; do metabeetl-db-mergeBacteria $pileNum ncbiMicros <( ls G_* ) ; done
 ```  
    For each pile this will create 3 files and one fileCounter.csv (which doesn't change)  
    The output files will be called: ncbiMicros-A0\*, -B0\* and -C0\*  
