@@ -93,7 +93,7 @@ SPAdes会尝试不同的Kmer，因此拼装时间也会根据Kmer选择数量成
 **2.2 ion torrent数据**
 
 ```
-
+~/data$ spades.py
 ```
 
 #### 3. 结果输出
