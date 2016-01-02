@@ -45,7 +45,6 @@ Blast 通过调用 blastall 这个 gateway 程序，来分别调用不同算法�
   `psitblastn`
   `tblastn`
   `tblastx`
-  与网页版的Blast调用的算法是一致的。
 -d: 指定要调用数据库，默认值是非冗余(nr)数据库。本地 Blast 比对一般来说都是调用 formatdb 格式化的数据库。
 -i: 输入，默认值是终端输入，也可以使用文件的方式，比如`-i seq.fasta`
 -o: 输出，默认值是终端打印输出，也可以使用文件的方式，比如`-o result.txt`
