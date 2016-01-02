@@ -5,8 +5,7 @@
 1. 用命令行进行 Blast
 2. 快速构建 Web Blast 服务
 
-
-不过有时候容易搞混 `blast` 和 `blast+` 这2个程序集。NCBI 最早在1989年创建`Basic Local Alignment Search Tool`工具，沿用至2009年无论是命令行工具或是在线程序，都称呼其为`blast`。2009年 NCBI 鉴于老程序的一些不足，重新开发了新的`blast+`命令行工具，新的 blast+ 工具在速度上有了提升，在输入输出上也更为灵活。
+### 1. 基于命令行的 Local Blast不过有时候容易搞混 `blast` 和 `blast+` 这2个程序集。NCBI 最早在1989年创建`Basic Local Alignment Search Tool`工具，沿用至2009年无论是命令行工具或是在线程序，都称呼其为`blast`。2009年 NCBI 鉴于老程序的一些不足，重新开发了新的`blast+`命令行工具，新的 blast+ 工具在速度上有了提升，在输入输出上也更为灵活。
 
 目前 Blast 工具最新版是2012年发布的**2.2.26**（可能已经处于暂停升级的状态？），而 Blast+ 目前一直在更新。要区分2者也很简单，blast 是通过 blastall -p 的方式调用子程序来比对搜索的，而 blast+ 则是直接使用 blastn 或 blastp 等子程序来比对搜索。另外前者用 formatdb 程序来格式化数据库，后者用 makeblastdb 程序来格式化数据。
 
