@@ -12,7 +12,7 @@ The first challenge is to get the metagenomic database. You can either download 
 Note: If you are at Illumina, you can use the pre-installed data: 
 
 ```
-`export METAGENOME_DATABASE_PATH=/illumina/scratch/BWT/metagenomics/metaBeetlNcbiDb/stable` (Note: use the `testing` 
+~$ export METAGENOME_DATABASE_PATH=/illumina/scratch/BWT/metagenomics/metaBeetlNcbiDb/stable
 ```
 
 version if you are also using the testing version of the tools)
