@@ -17,11 +17,11 @@ your newly assembled sequences.
 安装依赖包
 
 ```
-~$ pip install pygr
-~$ pip install whoosh
-~$ pip install git+https://github.com/ctb/pygr-draw.git
-~$ pip install git+https://github.com/ged-lab/screed.git
-~$ apt-get -y install lighttpd
+~$ sudo pip install pygr
+~$ sudo pip install whoosh
+~$ sudo pip install git+https://github.com/ctb/pygr-draw.git
+~$ sudo pip install git+https://github.com/ged-lab/screed.git
+~$ sudo apt-get -y install lighttpd
 ```
 
 and configure them::
