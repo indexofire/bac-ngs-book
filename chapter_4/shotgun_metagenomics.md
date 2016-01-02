@@ -16,9 +16,10 @@ version if you are also using the testing version of the tools)
 
 Otherwise, all the references and associated metadata used in the paper are available from Amazon S3 (24GB of files):
 
-    mkdir BeetlMetagenomeDatabase
-    cd BeetlMetagenomeDatabase
-    for i in `curl https://s3.amazonaws.com/metaBEETL | grep -oP "[^>]*bz2"` ; \
+```
+~$ mkdir BeetlMetagenomeDatabase
+~$ cd BeetlMetagenomeDatabase
+~/BeetlMetagenomDatabase$ for i in `curl https://s3.amazonaws.com/metaBEETL | grep -oP "[^>]*bz2"` ; \
         do wget https://s3.amazonaws.com/metaBEETL/$i & done
 
 After downloading these files, decompress them in a directory which we will then refer to as `${METAGENOME_DATABASE_PATH}`
