@@ -67,27 +67,6 @@ your newly assembled sequences.
 ~$ python index-db.py db/db.fa
 ```
 
+## Reference
 
-
-Done!
-
-.. note::
-
-   You can install any file of DNA sequences you want this way; just copy
-   it into /root/blastkit/db/db.fa and run the indexing commands, above.
-
-Running blastkit
-----------------
-
-Figure out what your machine name is
-(ec2-???-???-???-???.compute-1.amazonaws.com) and go to::
-
-    http://machine-name/blastkit/
-
-Make sure you have enabled port 80 in your security settings on Amazon.
-
-...and you should see a BLAST page.  If you're searching E. coli, try::
-
-   IRHEQEAFVLHGRLQGEERETAIGLTKDKQGDSKVRIDGTDGHKVAELAHLMPMQLITPE
-   GFTLLNGGPKYRRAFLDWGCFHNEPGFFTAWSNLKRLLKQRNAALRQVTRYEQLRPWDKE
-   LIPLAEQISTWRAEYSAGIAADMADTCKQFLPEFSLTFSFQRGWEKETEYAEVLERNFER
+* [Blastkit](https://github.com/dib-lab/2013-caltech-workshop/blob/master/blastkit.txt)
