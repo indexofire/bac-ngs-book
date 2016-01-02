@@ -44,13 +44,13 @@ How to create a database of reference genomes for metaBEETL:
    If you do this, all executables mentioned below will be compiled automatically and copied into /installPath/bin.
 
 2. Download all bacteria, archea and virus genomes from ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/
+
 ```
-   mkdir metaBeetlDb
-   cd metaBeetlDb
-   wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/all.fna.tar.gz -P downloads      # 2.7 GB
-   
-   mkdir all.fna
-   tar xzf downloads/all.fna.tar.gz -C all.fna/
+~$ mkdir metaBeetlDb
+~$ cd metaBeetlDb
+~/metaBeetlDb$ wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/all.fna.tar.gz -P downloads
+~/metaBeetlDb$ mkdir all.fna
+~/metaBeetlDb$ tar xzf downloads/all.fna.tar.gz -C all.fna/
 ```
 
 3. Create single sequence files with the reverse complement of all genomes but exclude plasmids.  
