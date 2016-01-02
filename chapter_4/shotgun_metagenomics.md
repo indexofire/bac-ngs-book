@@ -210,16 +210,16 @@ Create the BWT of the input dataset:
 ```
 
 Run BEETL metagenomic classification:
-
-    beetl-compare \
-      --mode=metagenomics \
-      -a bwt_SRS013948 \
-      -b ${METAGENOME_DATABASE_PATH}/ncbiMicros \
-      -t ${METAGENOME_DATABASE_PATH}/ncbiFileNumToTaxTree \
-      -w 20 \
-      -n 1 \
-      -k 50 \
-      --no-comparison-skip
+```
+~$ beetl-compare \
+> --mode=metagenomics \
+> -a bwt_SRS013948 \
+> -b ${METAGENOME_DATABASE_PATH}/ncbiMicros \
+> -t ${METAGENOME_DATABASE_PATH}/ncbiFileNumToTaxTree \
+> -w 20 \
+> -n 1 \
+> -k 50 \
+> --no-comparison-skip
 
 It currently generates many output files in a `BeetlCompareOutput` directory, organised per cycle and containing the information about the BWT ranges of k-mers that start diverging between the input dataset and the database.
 Setting k = sequence length gets you the maximal amount of information but the output file will be large.
