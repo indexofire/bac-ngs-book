@@ -73,7 +73,7 @@ Thank you for using SPAdes!
 ~/data$ spades.py -m 8 -1 SRR95386_1.fastq -2 SRR955386_2.fastq -o spades_output/
 ```
 
-SPAdes会尝试不同的Kmer，因此拼装时间也会根据Kmer选择数量成倍增加。一般一个大肠杆菌基因组拼接，最好在4核/16G内存的机器上运行，大约要几个小时左右的时间。虽然相对于velvet等默认采用固定kmer的工具来说，开销会大一些，但是出来的拼接结果在GAGB中评价是比较高的，特别是针对PE250的Miseq平台，目前Hiseq也可以PE250。
+SPAdes会尝试不同的Kmer，因此拼装时间也会根据Kmer选择数量成倍增加。一般一个大肠杆菌基因组拼接，最好在4核/16G内存的机器上运行，大约要几个小时左右的时间。虽然相对于velvet等默认采用固定kmer的工具来说(velvet也可以使用多kmer来拼接)，时间开销会大一些，但是出来的拼接结果在GAGB中评价是比较高的，特别是针对PE250的Miseq平台，目前Hiseq也可以PE250。
 
 对于多组PE数据，可以用以下参数来组装：
 
