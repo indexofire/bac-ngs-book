@@ -205,9 +205,9 @@ We need to normalise the lengths of these sequences and put them all in one file
 **Running BEETL in metagenomic mode**
 
 Create the BWT of the input dataset:
-
-    beetl-bwt -i SRS013948.seq -o bwt_SRS013948
-
+```
+~$ beetl-bwt -i SRS013948.seq -o bwt_SRS013948
+```
 Run BEETL metagenomic classification:
 
     beetl-compare \
