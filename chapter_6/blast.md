@@ -38,7 +38,14 @@ Blast 通过调用 blastall 这个 gateway 程序，来分别调用不同算法�
 **参数说明：**
 
 ```
--p: 指定要运行的 blast 程序。可以调用的有`blastp`, `blastn`, `blastx`, `psitblastn`, `tblastn`, `tblastx` 这些子程序。这与网页版的 Blast 调用的算法是一致的。最常用的`blastp`是将氨基酸序列与蛋白质数据库比对，`blastn`是将核酸序列与核酸数据库比对，`blastx`是将核酸序列翻译成蛋白序列后与非冗余(nr)蛋白质数据库比对。
+-p: 指定要运行的 blast 程序。可以调用的有:
+  `blastp`
+  `blastn`
+  `blastx`
+  `psitblastn`
+  `tblastn`
+  `tblastx`
+  这些子程序。这与网页版的Blast调用的算法是一致的。最常用的`blastp`是将氨基酸序列与蛋白质数据库比对，`blastn`是将核酸序列与核酸数据库比对，`blastx`是将核酸序列翻译成蛋白序列后与非冗余(nr)蛋白质数据库比对。
 -d: 指定要调用数据库，默认值是非冗余(nr)数据库。本地 Blast 比对一般来说都是调用 formatdb 格式化的数据库。
 -i: 输入，默认值是终端输入，也可以使用文件的方式，比如`-i seq.fasta`
 -o: 输出，默认值是终端打印输出，也可以使用文件的方式，比如`-o result.txt`
