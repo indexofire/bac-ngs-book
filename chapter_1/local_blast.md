@@ -4,9 +4,7 @@
 
 1. 用命令行进行 Blast
 2. 快速构建 Web Blast 服务
-============================
-BLASTing your assembled data
-============================
+
 
 One thing everyone wants to do is BLAST sequence data, right?  Here's a
 simple way to set up a stylish little BLAST server that lets you search
