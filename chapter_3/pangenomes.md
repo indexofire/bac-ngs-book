@@ -16,7 +16,7 @@
 
 **Pangenomes**:
 
-参看omictools的pan-genome工具，里面罗列了一大堆软件，大部分都是通过构建自己的pipeline来实现。
+对于pangenomes分析的工具可以参看omictools的pan-genome工具，里面罗列了一大堆软件，大部分都是通过构建自己的pipeline来实现。
 
 
 #### Reference
