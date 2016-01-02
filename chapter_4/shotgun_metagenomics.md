@@ -44,7 +44,6 @@ How to create a database of reference genomes for metaBEETL:
    If you do this, all executables mentioned below will be compiled automatically and copied into /installPath/bin.
 
 2. Download all bacteria, archea and virus genomes from ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/
-
 ```
 ~$ mkdir metaBeetlDb
 ~$ cd metaBeetlDb
