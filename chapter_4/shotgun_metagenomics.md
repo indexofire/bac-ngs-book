@@ -4,9 +4,6 @@
 
 #### Meta-BEETL Metagenomics
 
-We describe here how to reproduce the results presented in our paper [metaBEETL: high-throughput analysis of heterogeneous microbial populations from shotgun DNA sequences](http://www.biomedcentral.com/1471-2105/14/S5/S2).  
-The first challenge is to get the metagenomic database. You can either download it or rebuild it yourself:
-
 **下载数据库**
 
 Note: If you are at Illumina, you can use the pre-installed data: 
