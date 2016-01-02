@@ -93,3 +93,4 @@ $ blastall -i myseq.fasta -d custom_genome.fasta -p blastn
 
 http://www.personal.psu.edu/iua1/courses/files/2014/lecture-12.pdf
 
+### 2. 构建自己的blast web服务
