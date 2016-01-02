@@ -51,7 +51,6 @@
        * [circos](chapter_6/circos.md)
        * [Artemis](chapter_6/artemis.md)
        * [BRIG](chapter_6/brig.md)
-       * [R](chapter_6/ggplot.md)
    * [Alignment](chapter_6/alignment.md)
        * [Blast 和 Blast+](chapter_6/blast.md)
        * [mafft](chapter_6/mafft.md)
