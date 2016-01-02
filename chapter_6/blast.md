@@ -31,7 +31,7 @@
 Blast 通过调用 blastall 这个 gateway 程序，来分别调用不同算法和程序实现序列比对。在命令行中输入`blastall`，会打印出一份参数列表。你也可以使用 `man blast` 来查看 Blast 工具的用户手册。
 
 ```
-$ blastall
+~$ blastall
 ```
 
 **参数说明：**
