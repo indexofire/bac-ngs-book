@@ -227,7 +227,7 @@ Since the algorithm repeatedly looks up the filenumbers for each BWT position we
 Alternatively, if you have enough RAM, you can try `metabeetl-convertMetagenomicRangesToTaxa_withMmap`, which maps these files to RAM.
 
 Run:
-
+```
     cat BeetlCompareOutput/cycle*.subset* | \
     metabeetl-convertMetagenomicRangesToTaxa \
       ${METAGENOME_DATABASE_PATH}/ncbiFileNumToTaxTree \
@@ -238,6 +238,7 @@ Run:
       50 \
       - \
       > metaBeetl.log
+```
 
 Three TSV (tab-separated values) files are generated (column 1: Taxonomy Id, column 2: Taxonomy level, column 3: k-mer count, column 4: k-mer count including children):
 - metaBeetl.tsv: raw k-mer counts for every leaves and ancestors.
