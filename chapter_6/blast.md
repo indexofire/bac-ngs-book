@@ -5,6 +5,8 @@
 1. 用命令行进行 Blast
 2. 快速构建 Web Blast 服务
 
+---
+
 ### 1. 基于命令行的 Local Blast
 
 `blast` 和 `blast+` 这2个程序集容易搞混。NCBI 最早在1989年创建`Basic Local Alignment Search Tool`工具，沿用至2009年无论是命令行工具或是在线程序，都称呼其为`blast`。2009年 NCBI 鉴于 `blast` 的一些不足，重新开发了新的`blast+`命令行工具，新的 blast+ 工具在速度上有了提升，在输入输出上也更为灵活。
