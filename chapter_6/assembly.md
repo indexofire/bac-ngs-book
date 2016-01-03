@@ -1,12 +1,10 @@
 ## 常用基因组短序列组装软件
 
-### Assembly tools for bacterial genome
-
-- SPAdes
-- velvet
-- ABySS
-- MIRA
-- SOAPdenovo
+* SPAdes
+* velvet
+* ABySS
+* MIRA
+* SOAPdenovo
 
 
 
