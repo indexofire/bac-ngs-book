@@ -44,7 +44,7 @@
        * [Bioconductor](chapter_5/bioconductor.md/bioconductor.md)
 * [常用软件的安装与设置](chapter_6/README.md)
    * [Trimming](chapter_6/trimming.md)
-       * Fastx_toolkit
+       * [Fastx_toolkit](chapter_6/fastxtoolkit.md)
    * [Assembly](chapter_6/assembly.md)
        * [SPAdes](chapter_6/spades.md)
        * [MaSuRCA](chapter_6/masurca.md)
