@@ -65,6 +65,7 @@
    * [Anotation](chapter_6/anotation.md)
        * [Prokka](chapter_6/prokka.md)
        * [GeneMakerS](chapter_6/genemakers.md)
+   * Trimming
 * [附录](appendix/README.md)
    * [名词解释](appendix/a3_explanation.md)
    * [网上资源](appendix/a4_resource.md)
