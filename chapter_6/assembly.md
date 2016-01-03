@@ -19,7 +19,7 @@
 
 
 
-### 拼接算法
+## 拼接算法
 
 - Greedy extension (已被淘汰)
 - Overlap Layout Concensus
