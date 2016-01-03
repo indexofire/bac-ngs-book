@@ -1,6 +1,6 @@
 ## samtools
 
-**安装samtools**
+**安装 samtools**
 
 `samtools`软件库已经移植到了`github`，你可以直接`git clone`软件仓库，也可以直接下载新版的软件包。
 
@@ -17,3 +17,5 @@
 ~/app/samtools-1.3$ make
 ~/app/samtools-1.3$ sudo cp samtools /usr/local/sbin
 ```
+
+**使用 samtools**
