@@ -45,7 +45,7 @@
 * [常用软件的安装与设置](chapter_6/README.md)
    * [Assembly](chapter_6/assembly.md)
        * [SPAdes](chapter_6/spades.md)
-       * [MaSuRCA](chapter_6/macurca.md)
+       * [MaSuRCA](chapter_6/masurca.md)
        * [A5_miseq](chapter_6/a5_miseq.md)
        * [Velvet](chapter_6/velvet.md)
    * [Mapping](chapter_6/mapping.md)
