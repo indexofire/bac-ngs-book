@@ -1,7 +1,7 @@
 ## 常用基因组短序列组装软件
 
 * SPAdes
-* velvet
+* Velvet
 * ABySS
 * MIRA
 * SOAPdenovo
