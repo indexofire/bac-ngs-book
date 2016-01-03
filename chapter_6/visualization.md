@@ -2,3 +2,4 @@
 
 * [IGV]()
 * [Artemis](artemis.md)
+* [BRIG](brig.md)
