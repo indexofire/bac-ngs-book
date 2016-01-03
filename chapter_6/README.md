@@ -3,5 +3,5 @@
 1. [Assembly](assembly.md)
 2. [Mapping](mapping.md)
 3. [Visualization](visualization.md)
-4. Alignment
-5. Phylogeny
+4. [Alignment](alignment.md)
+5. [Phylogeny](phylogeny.md)
