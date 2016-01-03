@@ -2,7 +2,7 @@
 
 #### 安装samtools
 
-`samtools`软件库已经移植到了`github`，你可以直接`git clone`软件仓库，也可以直接下载新版的release包。
+`samtools`软件库已经移植到了`github`，你可以直接`git clone`软件仓库，也可以直接下载新版的软件包。
 
 ```
 # 安装依赖包
