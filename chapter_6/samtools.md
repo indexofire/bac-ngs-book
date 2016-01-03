@@ -11,3 +11,7 @@
 ~/app$ sudo ln -s `pwd`/samtools /usr/local/sbin
 ```
 
+
+```
+# install required
+~/tmp$ sudo apt-get install libncurses-dev
