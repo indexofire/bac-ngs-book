@@ -2,6 +2,7 @@
 
 * [SPAdes](spades.md)
 * [Velvet](velvet.md)
+* [MaSuRCA](masurca.md)
 * ABySS
 * MIRA
 * SOAPdenovo
