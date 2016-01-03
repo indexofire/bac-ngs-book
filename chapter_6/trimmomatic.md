@@ -7,3 +7,4 @@
 ~/tmp$ wget http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.32.zip
 ~/tmp$ unzip Trimmomatic-0.32.zip -d ~/app
 ```
+
