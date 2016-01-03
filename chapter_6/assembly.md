@@ -1,6 +1,6 @@
 ## 常用基因组短序列组装软件
 
-* SPAdes
+* [SPAdes](spades.md)
 * Velvet
 * ABySS
 * MIRA
