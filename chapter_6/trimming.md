@@ -1,4 +1,4 @@
 ## Trimming
 
-* [Fastx_toolkit](fastx_toolkit.md)
+* [Fastx_toolkit](fastxtoolkit.md)
 * 
