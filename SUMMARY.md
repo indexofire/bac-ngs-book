@@ -48,7 +48,7 @@
        * [MaSuRCA](chapter_6/macurca.md)
        * [A5_miseq](chapter_6/a5_miseq.md)
        * [Velvet](chapter_6/velvet.md)
-   * [Basic](chapter_6/base.md)
+   * [Mapping](chapter_6/mapping.md)
        * [samtools](chapter_6/samtools.md)
        * [bowtie2](chapter_6/bowtie2.md)
        * [bwa](chapter_6/bwa.md)
