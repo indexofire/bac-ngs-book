@@ -1,7 +1,7 @@
 ## 常用软件的安装与设置
 
-1. [Assembly](assembly.md)
-2. [Mapping](mapping.md)
-3. [Visualization](visualization.md)
-4. [Alignment](alignment.md)
-5. [Phylogeny](phylogeny.md)
+* [Assembly](assembly.md)
+* [Mapping](mapping.md)
+* [Visualization](visualization.md)
+* [Alignment](alignment.md)
+* [Phylogeny](phylogeny.md)
