@@ -10,7 +10,7 @@
 
 
 
-### Quality
+## Assembly Quality Evaluation
 
 - [GAGE-B](http://ccb.jhu.edu/gage_b/)
 - [Assemblathon 2](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3844414/)
