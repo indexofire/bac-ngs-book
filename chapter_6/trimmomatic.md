@@ -1,2 +1,2 @@
-# Trimmomatic
+## Trimmomatic
 
