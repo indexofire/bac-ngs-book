@@ -43,6 +43,7 @@
        * [ggplot2](chapter_5/ggplot2.md)
        * [Bioconductor](chapter_5/bioconductor.md/bioconductor.md)
 * [常用软件的安装与设置](chapter_6/README.md)
+   * Trimming
    * [Assembly](chapter_6/assembly.md)
        * [SPAdes](chapter_6/spades.md)
        * [MaSuRCA](chapter_6/masurca.md)
@@ -65,7 +66,6 @@
    * [Anotation](chapter_6/anotation.md)
        * [Prokka](chapter_6/prokka.md)
        * [GeneMakerS](chapter_6/genemakers.md)
-   * Trimming
 * [附录](appendix/README.md)
    * [名词解释](appendix/a3_explanation.md)
    * [网上资源](appendix/a4_resource.md)
