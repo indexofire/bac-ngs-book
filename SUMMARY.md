@@ -46,6 +46,7 @@
    * [Trimming](chapter_6/trimming.md)
        * [Fastx_toolkit](chapter_6/fastxtoolkit.md)
        * [Trimmomatic](chapter_6/trimmomatic.md)
+       * seqtk
    * [Assembly](chapter_6/assembly.md)
        * [SPAdes](chapter_6/spades.md)
        * [MaSuRCA](chapter_6/masurca.md)
