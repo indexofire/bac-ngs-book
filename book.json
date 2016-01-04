@@ -1,7 +1,8 @@
 {
     "plugins": [
         "mathjax",
-        "youtube"
+        "youtube",
+        "tocstyles"
     ],
     "pluginsConfig": {
         "mathjax": {
