@@ -26,7 +26,7 @@ Linux 主流发行版一般都会开发自己的软件管理工具，不同发�
 # 搜索软件包中汉fastq信息的软件
 ~$ sudo apt-cache search fastq
 
-# 打印出结果：
+# 打印出结果，你可以看到一些常见的fastq格式文件处理软件，ubuntu软件仓库中都已经包含，可以直接安装。
 
 fastqc - quality control for high throughput sequence data
 fastx-toolkit - FASTQ/A short nucleotide reads pre-processing tools
@@ -39,3 +39,13 @@ sra-toolkit - utilities for the NCBI Sequence Read Archive
 trimmomatic - flexible read trimming tool for Illumina NGS data
 ```
 
+当然生物软件发展也很快，版本会经常更性，所以ubuntu不同发行版，比如LTS发行版为了稳定，软件版本的更新不会那么快。对于想要知道软件仓库中fastqc是哪个版本（因为老版本的fastqc缺少一些分析模块），可以用下面命令：
+```
+~$ sudo apt-cache show fastqc | grep 'Version'
+
+# 打印结果：
+
+Version: 0.10.1+dfsg-2
+```
+
+这样就可以决定是否要安装的自己需要的那个版本fastqc。对于要安装新版本软件，一种方法是添加别人设置的含有顶起更新的最新软件源，另一种就是直接从官方网站上下载预编译包或者源代码。下面各小节中的安装方式，基本都是以下载源代码自行编译或者下载安装预编译包的方式来完成的。
