@@ -66,7 +66,7 @@
    * [Phylogeny](chapter_6/phylogeny.md)
        * [RaxML](chapter_6/raxml.md)
        * [PhyML](chapter_6/phyml.md)
-   * [Anotation](chapter_6/anotation.md)
+   * [Anotation](chapter_6/annotation.md)
        * [Prokka](chapter_6/prokka.md)
        * [GeneMakerS](chapter_6/genemakers.md)
 * [附录](appendix/README.md)
