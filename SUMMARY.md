@@ -4,7 +4,7 @@
    * [关于示例](preface/about.md)
    * [Linux Shell](preface/before_start.md)
 * [基因组数据处理](chapter_1/README.md)
-   * [SRA 数据库](chapter_1/download_sra.md)
+   * [公共数据库的测序数据](chapter_1/sra.md)
    * [Trimming Fastq](chapter_1/trim.md)
    * [QC](chapter_1/qc.md)
    * [De novo Assembly](chapter_1/assembly.md)
