@@ -69,7 +69,7 @@
    * [Anotation](chapter_6/annotation.md)
        * [Prokka](chapter_6/prokka.md)
        * [GeneMakerS](chapter_6/genemakers.md)
-   * others
+* others
 * [附录](appendix/README.md)
    * [名词解释](appendix/a3_explanation.md)
    * [网上资源](appendix/a4_resource.md)
