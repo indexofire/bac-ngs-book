@@ -44,6 +44,7 @@
        * [Bioconductor](chapter_5/bioconductor.md/bioconductor.md)
 * [常用软件的安装与设置](chapter_6/README.md)
    * others
+       * SRA_toolkit
    * [Trimming](chapter_6/trimming.md)
        * [Fastx_toolkit](chapter_6/fastxtoolkit.md)
        * [Trimmomatic](chapter_6/trimmomatic.md)
