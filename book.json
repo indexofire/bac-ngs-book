@@ -2,8 +2,7 @@
     "plugins": [
         "mathjax",
         "youtube",
-        "mermaid-2",
-        "structured-toc"
+        "mermaid-2"
     ],
     "pluginsConfig": {
         "mathjax": {
