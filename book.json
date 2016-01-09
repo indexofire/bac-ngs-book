@@ -2,7 +2,8 @@
     "plugins": [
         "mathjax",
         "youtube",
-        "mermaid-2"
+        "mermaid-2",
+        "gtoc"
     ],
     "pluginsConfig": {
         "mathjax": {
