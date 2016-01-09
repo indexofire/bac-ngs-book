@@ -2,7 +2,7 @@
     "plugins": [
         "mathjax",
         "youtube",
-        "tocstyles",
+        "-tocstyles",
         "mermaid-2"
     ],
     "pluginsConfig": {
