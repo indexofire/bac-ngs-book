@@ -3,7 +3,6 @@
         "mathjax",
         "youtube",
         "mermaid-2",
-        "gtoc",
         "structured-toc"
     ],
     "pluginsConfig": {
