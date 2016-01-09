@@ -8,7 +8,7 @@
     "pluginsConfig": {
         "mathjax": {
             "forceSVG": true
-        }
+        },
         "atoc": {
             "addClass": true,
             "className": "atoc"
