@@ -1,6 +1,6 @@
 ## Pangenomes
 
-对于 homolog, ortholog 和 paralog 的概念以前看书的时候容易对定义有所忽略，[这篇博客](http://blog.sciencenet.cn/blog-217859-280960.html)讲述的比较清楚：
+>对于微生物基因组，首先对于 homolog, ortholog 和 paralog 的概念需要明确，以前看书的时候容易对定义有所忽略，[这篇博客](http://blog.sciencenet.cn/blog-217859-280960.html)讲述的比较清楚：
 
 **Homolog**: A gene related to a second gene by descent from a common ancestral DNA sequence. The term "homolog" may apply to the relationship between genes separated by speciation (ortholog), OR to the relationship betwen genes originating via genetic duplication (see paralog).
 
@@ -14,7 +14,9 @@
 
 旁系／横向／并行同源（基因）：指在一个特定的基因组中由于基因复制产生的同源。通常比较这些基因时，它们可能已经彼此具有了新的（不同）功能，也可能已经成为假基因了。
 
-参看omictools的pan-genome工具，里面罗列了一大堆软件，大部分都是通过构建自己的pipeline来实现。
+**Pangenomes**:
+
+对于pangenomes分析的工具可以参看omictools的pan-genome工具列表，里面罗列了许多软件，大部分都是通过构建自己的pipeline来实现。
 
 
 #### Reference

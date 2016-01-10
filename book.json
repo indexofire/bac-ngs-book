@@ -1,0 +1,17 @@
+{
+    "plugins": [
+        "mathjax",
+        "youtube",
+        "mermaid-2",
+        "atoc"
+    ],
+    "pluginsConfig": {
+        "mathjax": {
+            "forceSVG": true
+        },
+        "atoc": {
+            "addClass": true,
+            "className": "atoc"
+        }
+    }
+}

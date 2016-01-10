@@ -47,7 +47,7 @@ Thank you for using SPAdes!
 
 #### 2. 拼装基因组
 
-**illumina数据**
+**2.1 illumina数据**
 
 对于PE数据，命令行支持最多5组PE，如果要使用更多PE数据，可以使用YAML文件来配置。
 
@@ -73,9 +73,9 @@ Thank you for using SPAdes!
 ~/data$ spades.py -m 8 -1 SRR95386_1.fastq -2 SRR955386_2.fastq -o spades_output/
 ```
 
-SPAdes会尝试不同的Kmer，因此拼装时间也会根据Kmer选择数量成倍增加。一般一个大肠杆菌基因组拼接，最好在4核/16G内存的机器上运行，大约要几个小时左右的时间。虽然相对于velvet等固定kmer的工具来说，开销会大一些，但是出来的拼接结果在GAGB中评价是比较高的，特别是针对PE250的Miseq平台，目前Hiseq也可以PE250。
+SPAdes会尝试不同的Kmer，因此拼装时间也会根据Kmer选择数量成倍增加。一般一个大肠杆菌基因组拼接，最好在4核/16G内存的机器上运行，大约要几个小时左右的时间。虽然相对于velvet等默认采用固定kmer的工具来说(velvet也可以使用多kmer来拼接)，时间开销会大一些，但是出来的拼接结果质量是比较高的，特别是针对PE250的Miseq平台。对于Hiseq PE150的数据，之前的评估显示 MaSuRCA 的拼接结果要更好。
 
-对于多组PE数据，可以用以下参数来组装：
+如果测了多次，对于多组PE数据，可以用以下参数来组装：
 
 ```
 ~/data$ spades.py --pe1-1 input-1_forward.fastq.gz --pe1-2 input-1_reverse.fastq.gz \
@@ -90,19 +90,25 @@ SPAdes会尝试不同的Kmer，因此拼装时间也会根据Kmer选择数量成
 > -1 input_forward.fastq -2 input_backward.fastq -o spades_output/
 ```
 
-**ion torrent数据**
+**2.2 ion torrent数据**
+
+```
+~/data$ spades.py
+```
 
 #### 3. 结果输出
 
 输出目录中的文件：
 
+```
 corrected 目录 BayesHammer 矫正过的 reads 文件
-config.fasta/config.fastg 是 contig 结果文件
-scaffolds.fasta/scaffolds.fastg 是 scaffold 结果文件
+config.fasta 是 contig 结果文件
+scaffolds.fasta 是 scaffold 结果文件
 params.txt 拼接参数信息
 spades.log 运行日志
 dataset.info 内部配置文件
 input_dataset.yaml YAML格式的配置文件
 K<##>/ 目录包含不同kmer运行结果产出的结果
+```
 
 [SPAdes]: http://spades.bioinf.spbau.ru/ "SPAdes"
