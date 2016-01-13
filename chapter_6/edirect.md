@@ -23,13 +23,13 @@
 | **xtract** | converts XML into a table of data values. |
 | **nquire** | sends a URL request to a web page or CGI service. |
 
-#####抓取2012年至今发表的霍乱弧菌CTX相关文献摘要
+**抓取2012年至今发表的霍乱弧菌CTX相关文献摘要**
 
 ```bash
 ~$ esearch -db pubmed -mindate 2012 -maxdate 2016 -datetype PDAT -query "vibrio cholerae CTX" | efetch -format abstract > abstract.txt
 ```
 
-#####查看2016年CDC发布的所有用 miseq 测序的沙门菌文库制备方法
+**查看2016年CDC发布的所有用 miseq 测序的沙门菌文库制备方法**
 
 ```bash
 ~$ esearch -db sra -query "salmonella miseq CDC" -mindate 2016 -maxdate 2016 -datetype PDAT | efetch -format runinfo | cut -d ',' -f 12 > library.txt
