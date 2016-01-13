@@ -45,7 +45,7 @@
 * [常用软件的安装与设置](chapter_6/README.md)
    * [others](chapter_6/others.md)
        * [SRA_toolkit](chapter_6/sratoolkit.md)
-       * edirect
+       * [edirect](chapter_6/edirect.md)
    * [Trimming](chapter_6/trimming.md)
        * [Fastx_toolkit](chapter_6/fastxtoolkit.md)
        * [Trimmomatic](chapter_6/trimmomatic.md)
