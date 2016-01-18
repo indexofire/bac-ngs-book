@@ -64,6 +64,7 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ~/apps$ git clone https://github.com/seqan/seqan.git && cd seqan
 ~/apps/seqan$ git checkout -b develop origin/develop
 
+
 ```
 
 ##### 2.2 下载目标序列
@@ -84,7 +85,8 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ```
 
 4. Open the script metabeetl-db-arrayBWT.sh and adapt the paths. To create the BWTs for all the G\_\* and G\_\*\_rev files using a Grid Engine cluster, submit `qsub -t n metabeetl-db-arrayBWT.sh`, where n should be 1-500 if you have the files G\_1 till G\_500. As an alternative you can also run metabeetl-db-makeBWTSkew for each of the files individually.
-```
+
+```bash
 ~$ cp `which metabeetl-db-arrayBWT.sh` .
 ~$ vim metabeetl-db-arrayBWT.sh  # Adjust paths in this file
 ~$ qsub -t n metabeetl-db-arrayBWT.sh
@@ -122,12 +124,12 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 
 7. Download the NCBI taxonomy from ftp://ftp.ncbi.nih.gov/pub/taxonomy/  
    You will need the files names.dmp, nodes.dmp and the gi\_taxid\_nucl.dmp, which are packaged as taxdump.tar.gz and gi\_taxid\_nucl.dmp.gz:  
-```
-   cd downloads
-   wget ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz         # 26 MB
-   wget ftp://ftp.ncbi.nih.gov/pub/taxonomy/gi_taxid_nucl.dmp.gz   # 800 MB
 
-   tar xzf taxdump.tar.gz names.dmp nodes.dmp
+```bash
+~$ cd tmp
+~/tmp$ wget ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz
+~/tmp$ wget ftp://ftp.ncbi.nih.gov/pub/taxonomy/gi_taxid_nucl.dmp.gz
+~/tmp$ tar xzf taxdump.tar.gz names.dmp nodes.dmp
    gunzip gi_taxid_nucl.dmp.gz
    cd ..
 ```
