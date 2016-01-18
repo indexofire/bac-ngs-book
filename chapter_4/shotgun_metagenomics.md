@@ -239,12 +239,7 @@ SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq
 
 ```bash
 ~/data$ beetl-bwt -i SRS013948.seq -o bwt_SRS013948
-```
-
-
-
-```bash
-~$ beetl-compare \
+~/data$ beetl-compare \
 > --mode=metagenomics \
 > -a bwt_SRS013948 \
 > -b ${METAGENOME_DATABASE_PATH}/ncbiMicros \
