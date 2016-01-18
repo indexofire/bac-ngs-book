@@ -204,6 +204,7 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 
 # 解压缩
 ~/data$ tar xjf SRS013948.tar.bz2
+~/data$ ls -l
 ``` 
 should give you:
 ```
