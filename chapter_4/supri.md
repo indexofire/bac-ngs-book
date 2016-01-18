@@ -1,5 +1,35 @@
 # SUPRI
 
+SUPRI 是主要用来对临床样品的 shotgun metagenomics 测序数据中寻找并鉴定病原的工具。它有2种模式：Fast mode 和 Comprehensive mode。前者可以快速对测序的 reads 进行 Mapping，找到细菌或病毒 reads。后者分析更为详细，除了细菌病毒外还比对了真菌，寄生虫等其他物种数据库，并且进行de novo assembly，对contig也进行 Mapping，虽然耗时更长，但可以获得覆盖度，taxonomic 分类等信息。
+
+## 安装依赖工具
+
+先要安装依赖工具：
+
+    • fastQValidator
+		http://genome.sph.umich.edu/wiki/FastQValidator
+	• Minimo (v1.6)
+		http://sourceforge.net/projects/amos/files/amos/3.1.0/
+	• Abyss (v1.3.5)
+		http://www.bcgsc.ca/platform/bioinfo/software/abyss
+	• RAPSearch (v2.12)
+		http://omics.informatics.indiana.edu/mg/RAPSearch2/
+	• seqtk (v 1.0r31)
+		https://github.com/lh3/seqtk
+	• SNAP (v0.15)
+		http://snap.cs.berkeley.edu
+	• gt (v1.5.1)
+		http://genometools.org/index.html
+	• fastq
+		https://github.com/brentp/bio-playground/tree/master/reads-utils
+	• fqextract
+		https://gist.github.com/drio/1168330
+	• cutadapt (v1.2.1)
+		https://code.google.com/p/cutadapt/
+	• prinseq-lite.pl
+		http://prinseq.sourceforge.net
+	• dropcache
+		http://stackoverflow.com/questions/13646925/allowing-a-non-root-user-to-drop-cache
 
 
 ## Reference 
