@@ -30,8 +30,8 @@
        * [文库制备注意事项](chapter_4/library_note.md)
    * [Shotgun Metagenomics Sequencing](chapter_4/shotgun.md)
        * [Meta-BEETL](chapter_4/shotgun_metagenomics.md)
+           * Mash
            * [ViroCap](chapter_4/virocap.md)
-       * Mash
 * [专题](chapter_5/README.md)
    * [NGS那点事儿](chapter_5/ngs.md)
        * [一代测序与二代测序](chapter_5/1st_2nd_ngs.md)
