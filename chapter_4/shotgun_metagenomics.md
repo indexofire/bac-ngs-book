@@ -297,8 +297,8 @@ SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq
 
 * http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3622627/
 * https://github.com/BEETL/BEETL.git
-* https://github.com/marbl/Mash.git
-* http://mash.readthedocs.org/en/latest/
+
+
 
 
 [metaBEETL]: https://github.com/BEETL/BEETL
