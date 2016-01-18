@@ -218,19 +218,19 @@ SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq
 ##### 3.2 转换数据和合并数据
 
 ```bash
-~$ beetl-convert \
+~/data$ beetl-convert \
 > -i SRS013948.denovo_duplicates_marked.trimmed.1.fastq \
 > -o paddedSeq1.seq \
 > --sequence-length=100
-~$ beetl-convert \
+~/data$ beetl-convert \
 > -i SRS013948.denovo_duplicates_marked.trimmed.2.fastq \
 > -o paddedSeq2.seq \
 > --sequence-length=100
-~$ beetl-convert \
+~/data$ beetl-convert \
 > -i SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq \
 > -o paddedSeqSingleton.seq \
 > --sequence-length=100
-~$ cat paddedSeq1.seq paddedSeq2.seq paddedSeqSingleton.seq > SRS013948.seq
+~/data$ cat paddedSeq1.seq paddedSeq2.seq paddedSeqSingleton.seq > SRS013948.seq
 ```
 
 **Running BEETL in metagenomic mode**
