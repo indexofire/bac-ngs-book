@@ -29,6 +29,7 @@
    * [16s rRNA Sequencing](chapter_4/16s.md)
        * [文库制备注意事项](chapter_4/library_note.md)
    * [Shotgun Metagenomics Sequencing](chapter_4/shotgun.md)
+       * [Mash](chapter_4/mash.md)
        * [Meta-BEETL](chapter_4/shotgun_metagenomics.md)
            * [Mash](chapter_4/mash.md)
            * [ViroCap](chapter_4/virocap.md)
