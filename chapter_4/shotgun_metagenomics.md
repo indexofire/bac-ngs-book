@@ -193,7 +193,9 @@ Now everything should be ready to run metaBEETL!  :-)
 
 **Downloading the metagenomic input dataset**
 
-The sample SRS013948 from the Human Microbiome project should be available from:
+#### 3. 分析数据
+
+用 SRS013948 这个人类肠道细菌组研究项目的数据作为例子。
 
 ```bash
 # http download
