@@ -27,7 +27,7 @@
        * [circos](chapter_3/circos.md)
        * [GenomeDiagram](chapter_3/genomediagram.md)
 * [元基因组数据分析](chapter_4/README.md)
-   * [16s rRNA Sequencing](chapter_4/16s.md)
+   * [16s rRNA Metagenomics](chapter_4/16s.md)
        * [文库制备注意事项](chapter_4/library_note.md)
    * [Shotgun Metagenomics Sequencing](chapter_4/shotgun.md)
        * [ViroCap](chapter_4/virocap.md)
