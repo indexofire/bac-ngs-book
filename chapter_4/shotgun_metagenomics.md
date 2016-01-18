@@ -192,10 +192,11 @@ for genome in ../singleSeqGenomes/G_*; do
    grep FINAL r2977 > ../normalisation.txt
 ```
 
-9. Link (or move) all the useful files to a final directory
-```
-   mkdir metaBeetlNcbiDb
-   cd metaBeetlNcbiDb
+##### 2.9 创建数据库文件夹
+
+```bash
+~$ mkdir metaBeetlNcbiDb
+~$ cd ~/metaBeetlNcbiDb
    ln -s ../ncbiFileNumToTaxTree
    ln -s ../normalisation.txt
    ln -s ../downloads/metaBeetlTaxonomyNames.dmp
