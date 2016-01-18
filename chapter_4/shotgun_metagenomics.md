@@ -49,13 +49,20 @@ https://s3.amazonaws.com/metaBEETL/ncbiMicros-C06.bz2
 
 处于实际目的，有时候我们不需要这么大的数据库，或者需要更多其他的数据加入到数据库，那就需要自行建立数据库。
 
+##### 2.1 安装 SeqAn
+
+[SeqAn](www.seqan.de) 是一个高效的 C++ 算法库，访问 [SeqAn](www.seqan.de) 下载并安装。
 
 Creating a new metagenomic database requires an installation of the SeqAn library (www.seqan.de).  
    You can set the location of your SeqAn installation before compiling BEETL by using the configure parameter --with-seqan.  
    If you do this, all executables mentioned below will be compiled automatically and copied into /installPath/bin.
 
+```bash
+# 安装依赖包
 
-##### 2.1 下载目标序列
+```
+
+##### 2.2 下载目标序列
 
 下载需要的序列，比如NCBI上细菌的基因组 ref 数据。
 
@@ -65,6 +72,7 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ~/BeetlMetagenomDatabase$ tar xzf downloads/all.fna.tar.gz -C all.fna/
 ```
 
+##### 2.3
 3. Create single sequence files with the reverse complement of all genomes but exclude plasmids. For this, use metabeetl-db-genomesToSingleSeq. Do NOT change the names of the generated files.
 ```
 ~$ metabeetl-db-genomesToSingleSeq -f all.fna/*/*.fna -s singleSeqGenomes
