@@ -103,8 +103,8 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ##### 2.5 合并序列
 
 在一台内存>60G的机器上将序列加载到内存中，并吧所有文件合并。
-5. Login on a machine with enough memory to load all sequences in RAM (~60GB) and run mergeBacteria on all files. You will have to call this once for each of the piles created by BEETL which means six times overall e.g.  
-```
+
+```bash
 ~/BeetlMetagenomDatabase$ for pileNum in `seq 0 5`; do metabeetl-db-mergeBacteria $pileNum ncbiMicros <( ls G_* ) ; done
 ```  
    For each pile this will create 3 files and one fileCounter.csv (which doesn't change)  
