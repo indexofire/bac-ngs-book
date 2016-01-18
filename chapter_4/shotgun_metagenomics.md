@@ -130,7 +130,7 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ~/tmp$ wget ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz
 ~/tmp$ wget ftp://ftp.ncbi.nih.gov/pub/taxonomy/gi_taxid_nucl.dmp.gz
 ~/tmp$ tar xzf taxdump.tar.gz names.dmp nodes.dmp
-   gunzip gi_taxid_nucl.dmp.gz
+~/tmp$ gunzip gi_taxid_nucl.dmp.gz
    cd ..
 ```
    Use the metabeetl-db-findTaxa script to find the taxonomic tree corresponding to the file numbers in the database.  
