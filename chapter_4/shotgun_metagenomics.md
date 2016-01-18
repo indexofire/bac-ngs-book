@@ -196,11 +196,11 @@ Now everything should be ready to run metaBEETL!  :-)
 The sample SRS013948 from the Human Microbiome project should be available from:
 
 ```bash
+# http download
 ~/data$ wget http://downloads.hmpdacc.org/data/Illumina/throat/SRS013948.tar.bz2
-```
-or  
-```
-ftp://public-ftp.hmpdacc.org/Illumina/throat/SRS013948.tar.bz2
+
+# ftp download
+~/data$ wget ftp://public-ftp.hmpdacc.org/Illumina/throat/SRS013948.tar.bz2
 ```
 
 Decompressing this file
