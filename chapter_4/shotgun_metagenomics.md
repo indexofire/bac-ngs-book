@@ -264,7 +264,7 @@ Alternatively, if you have enough RAM, you can try `metabeetl-convertMetagenomic
 
 
 ```bash
-~$ cat BeetlCompareOutput/cycle*.subset* | \
+~/data$ cat BeetlCompareOutput/cycle*.subset* | \
 > metabeetl-convertMetagenomicRangesToTaxa \
 > ${METAGENOME_DATABASE_PATH}/ncbiFileNumToTaxTree \
 > ${METAGENOME_DATABASE_PATH}/ncbiMicros \
