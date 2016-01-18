@@ -167,19 +167,23 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ```bash
 ~/BeetlMetagenomDatabase$ mkdir normalisation
 ~/BeetlMetagenomDatabase$ cd normalisation
-~/BeetlMetagenomDatabase/normalisation$ for genome in ../singleSeqGenomes/G_*; do
-     (
-      genomeNum=`basename ${genome}`
-      mkdir ${genomeNum}
-      cd ${genomeNum}
-      for i in ../../singleSeqGenomes/bwt_${genomeNum}-B0?; do ln -s ${i} ; done
-      for i in `seq 0 6`; do touch bwt_${genomeNum}-B0${i}; done
-      time beetl-compare --mode=metagenomics -a bwt_${genomeNum} -b ../../singleSeqGenomes/ncbiMicros -t ../../ncbiFileNumToTaxTree -w 20 -n 1 -k 50 --no-comparison-skip -v &> out.step1
-      rm -f BeetlCompareOutput/cycle51.subset*
-                  touch empty.txt
-      time cat BeetlCompareOutput/cycle*.subset* | metabeetl-convertMetagenomicRangesToTaxa ../../ncbiFileNumToTaxTree ../../singleSeqGenomes/ncbiMicros ../../metaBeetlTaxonomyNames.dmp empty.txt 20 50 - &> out.step2
-      cd ..
-     ) &
+~/BeetlMetagenomDatabase/normalisation$ touch normalize.sh
+```
+
+```
+for genome in ../singleSeqGenomes/G_*; do
+    (
+        genomeNum=`basename ${genome}`
+        mkdir ${genomeNum}
+        cd ${genomeNum}
+        for i in ../../singleSeqGenomes/bwt_${genomeNum}-B0?; do ln -s ${i} ; done
+        for i in `seq 0 6`; do touch bwt_${genomeNum}-B0${i}; done
+        time beetl-compare --mode=metagenomics -a bwt_${genomeNum} -b ../../singleSeqGenomes/ncbiMicros -t ../../ncbiFileNumToTaxTree -w 20 -n 1 -k 50 --no-comparison-skip -v &> out.step1
+        rm -f BeetlCompareOutput/cycle51.subset*
+            touch empty.txt
+        time cat BeetlCompareOutput/cycle*.subset* | metabeetl-convertMetagenomicRangesToTaxa ../../ncbiFileNumToTaxTree ../../singleSeqGenomes/ncbiMicros ../../metaBeetlTaxonomyNames.dmp empty.txt 20 50 - &> out.step2
+        cd ..
+    ) &
    done ; wait
 
    for i in `seq 1 2977`; do echo "G_$i"; X=`grep -P "G_${i}$" ../singleSeqGenomes/filecounter.csv |cut -f 1 -d ','`; TAX=`grep -P "^${X} " ../ncbiFileNumToTaxTree | tr -d "\n\r"` ; echo "TAX(${X}): ${TAX}."; TAXID=`echo "${TAX}" | sed 's/\( 0\)*$//g' |awk '{print $NF}'`; echo "TAXID=${TAXID}"; COUNTS=`grep Counts G_${i}/out.step2 | head -1`; echo "COUNTS=${COUNTS}"; MAIN_COUNT=`echo "${COUNTS}  " | sed "s/^.* ${TAXID}:\([0-9]*\) .*$/\1/ ; s/Counts.*/0/"` ; echo "MAIN_COUNT=${MAIN_COUNT}" ; SUM=`echo "${COUNTS}  " | tr ' ' '\n' | sed 's/.*://' | awk 'BEGIN { sum=0 } { sum+=$1 } END { print sum }'` ; echo "SUM=$SUM"; PERCENT=`echo -e "scale=5\n100*${MAIN_COUNT}/${SUM}" | bc` ; echo "PERCENT=${PERCENT}" ; echo "FINAL: G_${i} ${TAXID} ${MAIN_COUNT} ${SUM} ${COUNTS}" ; done > r2977
