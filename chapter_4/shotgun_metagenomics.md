@@ -189,10 +189,6 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
    for i in ../singleSeqGenomes/ncbiMicros-[BC]0[0-5]; do ln -s $i ; done
 ```
 
-Now everything should be ready to run metaBEETL!  :-)
-
-**Downloading the metagenomic input dataset**
-
 #### 3. 分析数据
 
 用 SRS013948 这个人类肠道细菌组研究项目的数据作为例子。
