@@ -106,12 +106,12 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 
 ```bash
 ~/BeetlMetagenomDatabase$ for pileNum in `seq 0 5`; do metabeetl-db-mergeBacteria $pileNum ncbiMicros <( ls G_* ) ; done
-```  
-   For each pile this will create 3 files and one fileCounter.csv (which doesn't change)  
-   The output files will be called: ncbiMicros-A0\*, -B0\* and -C0\*  
-   - -A0\* contain, for each position in the BWT, the suffix position in the file where this BWT came from.  
-   - -B0\* are the BWTs for all files.  
-   - -C0\* contain, for each position in the BWT, the file number where the char at this position came from.  
+```
+生成的文件名称类似：ncbiMicros-A0\*, -B0\* and -C0\*  
+
+- -A0\* 包含每个BWT的位置
+- -B0\* 文件的BWTs 
+- -C0\* contain, for each position in the BWT, the file number where the char at this position came from.  
   
    Files -B0\* and -C0\* are needed for the countWords algorithm. 
 
