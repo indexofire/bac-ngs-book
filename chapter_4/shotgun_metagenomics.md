@@ -95,7 +95,7 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ~/BeetlMetagenomDatabase$ qsub -t n metabeetl-db-arrayBWT.sh
 
 # 或者
-~$ (echo -n "all: " ; for i in G_*; do echo -n " bwt_${i}-B00"; done ; echo -e "\n" ; \
+~/BeetlMetagenomDatabase$ (echo -n "all: " ; for i in G_*; do echo -n " bwt_${i}-B00"; done ; echo -e "\n" ; \
 > for i in G_*; do echo "bwt_${i}-B00: ${i}"; echo -e "\tmetabeetl-db-makeBWTSkew ${i} ${i}\n" ; done ) > Makefile
 ~$ make -j
 ```
