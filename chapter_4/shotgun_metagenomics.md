@@ -233,10 +233,11 @@ SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq
 ~/data$ cat paddedSeq1.seq paddedSeq2.seq paddedSeqSingleton.seq > SRS013948.seq
 ```
 
-**Running BEETL in metagenomic mode**
+##### 3.3 以 metagenomic 模式运行 BEETL
 
-Create the BWT of the input dataset:
-```
+创建 BWT 变换
+
+```bash
 ~$ beetl-bwt -i SRS013948.seq -o bwt_SRS013948
 ```
 
