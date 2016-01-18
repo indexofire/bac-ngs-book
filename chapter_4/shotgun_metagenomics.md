@@ -1,31 +1,48 @@
-# metaBEETL
+# Meta-BEETL
 
-[metaBEETL] 是 `BEETL` 下的一个子项目，用来分析基于 Shotgun metagenomics 的微生物数据。
+`BEETL` 是一套做 `Burrows-Wheeler Transform` 的工具集，[Meta-BEETL] 是 `BEETL` 下的一个子项目，用来分析基于 Shotgun metagenomics 的微生物数据。
 
-#### Meta-BEETL Metagenomics
+## Meta-BEETL Metagenomics
 
-**下载数据库**
+### 下载数据库
 
+#### 1. 已整理的数据库
 
+作者已经将研究所用到的数据库整理后提交到 Amazon S3 服务器上，可以直接下载。总数据量在24G左右。
 
-version if you are also using the testing version of the tools)
-
-Otherwise, all the references and associated metadata used in the paper are available from Amazon S3 (24GB of files):
-
-```
-~$ mkdir BeetlMetagenomeDatabase
-~$ cd BeetlMetagenomeDatabase
+```bash
+~$ mkdir BeetlMetagenomeDatabase && cd BeetlMetagenomeDatabase
 ~/BeetlMetagenomDatabase$ for i in `curl https://s3.amazonaws.com/metaBEETL | grep -oP "[^>]*bz2"` ; \
 > do wget https://s3.amazonaws.com/metaBEETL/$i & done
 ```
 
-
-After downloading these files, decompress them in a directory which we will then refer to as
+静态文件的 URL 地址，也可以直接下载。
 
 ```
-~$ {METAGENOME_DATABASE_PATH}
-~$ bunzip2 *.bz2
-~$ export METAGENOME_DATABASE_PATH=`pwd`
+https://s3.amazonaws.com/metaBEETL/filecounter.csv.bz2
+https://s3.amazonaws.com/metaBEETL/headerFile.csv.bz2
+https://s3.amazonaws.com/metaBEETL/names.dmp.bz2
+https://s3.amazonaws.com/metaBEETL/ncbiFileNumToTaxTree.bz2
+https://s3.amazonaws.com/metaBEETL/ncbiMicros-B00.bz2
+https://s3.amazonaws.com/metaBEETL/ncbiMicros-B01.bz2
+https://s3.amazonaws.com/metaBEETL/ncbiMicros-B02.bz2
+https://s3.amazonaws.com/metaBEETL/ncbiMicros-B03.bz2
+https://s3.amazonaws.com/metaBEETL/ncbiMicros-B04.bz2
+https://s3.amazonaws.com/metaBEETL/ncbiMicros-B05.bz2
+https://s3.amazonaws.com/metaBEETL/ncbiMicros-B06.bz2
+https://s3.amazonaws.com/metaBEETL/ncbiMicros-C00.bz2
+https://s3.amazonaws.com/metaBEETL/ncbiMicros-C01.bz2
+https://s3.amazonaws.com/metaBEETL/ncbiMicros-C02.bz2
+https://s3.amazonaws.com/metaBEETL/ncbiMicros-C03.bz2
+https://s3.amazonaws.com/metaBEETL/ncbiMicros-C04.bz2
+https://s3.amazonaws.com/metaBEETL/ncbiMicros-C05.bz2
+https://s3.amazonaws.com/metaBEETL/ncbiMicros-C06.bz2
+```
+下载完成后解压缩。
+
+```
+~/BeetlMetagenomDatabase$ bunzip2 *.bz2
+~/BeetlMetagenomDatabase$ export METAGENOME_DATABASE_PATH=`pwd`
 ```
 
 If you downloaded those files, you can skip the next section.
