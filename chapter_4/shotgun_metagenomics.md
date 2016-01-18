@@ -77,10 +77,10 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ~/BeetlMetagenomDatabase$ tar xzf downloads/all.fna.tar.gz -C all.fna/
 ```
 
-##### 2.3
-3. Create single sequence files with the reverse complement of all genomes but exclude plasmids. For this, use metabeetl-db-genomesToSingleSeq. Do NOT change the names of the generated files.
-```
-~$ metabeetl-db-genomesToSingleSeq -f all.fna/*/*.fna -s singleSeqGenomes
+##### 2.3 创建去除质粒序列的单基因组序列
+
+```bash
+~/BeetlMetagenomDatabase$ metabeetl-db-genomesToSingleSeq -f all.fna/*/*.fna -s singleSeqGenomes
 ~$ cd singleSeqGenomes
 ```
 
