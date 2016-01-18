@@ -197,12 +197,12 @@ for genome in ../singleSeqGenomes/G_*; do
 ```bash
 ~$ mkdir metaBeetlNcbiDb
 ~$ cd ~/metaBeetlNcbiDb
-   ln -s ../ncbiFileNumToTaxTree
-   ln -s ../normalisation.txt
-   ln -s ../downloads/metaBeetlTaxonomyNames.dmp
-   ln -s ../singleSeqGenomes/filecounter.csv
-   ln -s ../singleSeqGenomes/headerFile.csv
-   for i in ../singleSeqGenomes/ncbiMicros-[BC]0[0-5]; do ln -s $i ; done
+~$ ln -s ../ncbiFileNumToTaxTree
+~$ ln -s ../normalisation.txt
+~$ ln -s ../downloads/metaBeetlTaxonomyNames.dmp
+~$ ln -s ../singleSeqGenomes/filecounter.csv
+~$ ln -s ../singleSeqGenomes/headerFile.csv
+~$ for i in ../singleSeqGenomes/ncbiMicros-[BC]0[0-5]; do ln -s $i ; done
 ```
 
 #### 3. 分析数据
