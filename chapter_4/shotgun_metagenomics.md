@@ -253,6 +253,8 @@ SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq
 `beetl-compare` 命令会在文件夹 `BeetlCompareOutput` 里生成许多文件。k值设置越大，可以获得越多的信息数据，但是输出文件也会变得越大。
 
 
+##### 3.4 图形化显示结果
+
 **Gathering and visualisation of metagenomic results**
 
 The `metabeetl-convertMetagenomicRangesToTaxa` tool converts the BWT ranges of k-mer matches from the previous stage into genome and ancestor IDs and generates text and graphical output files (currently html files using the Krona javascript visualisation library).
@@ -260,8 +262,8 @@ The `metabeetl-convertMetagenomicRangesToTaxa` tool converts the BWT ranges of k
 Since the algorithm repeatedly looks up the filenumbers for each BWT position we recommend to put these ncbiMicros-C0* files on a disk with fast read access.
 Alternatively, if you have enough RAM, you can try `metabeetl-convertMetagenomicRangesToTaxa_withMmap`, which maps these files to RAM.
 
-Run:
-```
+
+```bash
 ~$ cat BeetlCompareOutput/cycle*.subset* | \
 > metabeetl-convertMetagenomicRangesToTaxa \
 > ${METAGENOME_DATABASE_PATH}/ncbiFileNumToTaxTree \
