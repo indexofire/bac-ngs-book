@@ -13,3 +13,4 @@ Mash 是一个使用 MinHash 方法来做快速的基因组与元基因组距离
 ## Reference
 
 1. [Mash文档](http://mash.readthedocs.org/en/latest/)
+2. [Mash Git Repos](https://github.com/marbl/Mash.git)
