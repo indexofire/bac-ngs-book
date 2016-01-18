@@ -171,6 +171,7 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ```
 
 ```
+# normalize.sh
 for genome in ../singleSeqGenomes/G_*; do
     (
         genomeNum=`basename ${genome}`
