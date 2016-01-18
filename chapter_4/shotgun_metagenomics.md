@@ -238,7 +238,7 @@ SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq
 创建 BWT 变换
 
 ```bash
-~$ beetl-bwt -i SRS013948.seq -o bwt_SRS013948
+~$ beetl-bwt -i ~/data/SRS013948.seq -o bwt_SRS013948
 ```
 
 Run BEETL metagenomic classification:
