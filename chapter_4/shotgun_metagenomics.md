@@ -131,8 +131,8 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ~/tmp$ wget ftp://ftp.ncbi.nih.gov/pub/taxonomy/gi_taxid_nucl.dmp.gz
 ~/tmp$ tar xzf taxdump.tar.gz names.dmp nodes.dmp
 ~/tmp$ gunzip gi_taxid_nucl.dmp.gz
-   cd ..
 ```
+
    Use the metabeetl-db-findTaxa script to find the taxonomic tree corresponding to the file numbers in the database.  
    You will need the headerFile produced by running "metabeetl-db-genomesToSingleSeq" and 
    fileCounter created during the merging of the bacterial reference genomes.  
@@ -140,6 +140,7 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
    There will be some 0 in the taxonomic tree. This is a taxonomic id which could not be 
    matched to: Superkingdom, Phylum, Order, Class, Family, Genus, Species or Strain.  
    Sometimes there are just missing taxa in the taxonomy. We supplement this with the file `metaBeetlExtraNames.dmp` below. 
+   
 ```
    metabeetl-db-findTaxa \
      -nA downloads/names.dmp \
@@ -194,8 +195,8 @@ Now everything should be ready to run metaBEETL!  :-)
 
 The sample SRS013948 from the Human Microbiome project should be available from:
 
-```
-http://downloads.hmpdacc.org/data/Illumina/throat/SRS013948.tar.bz2  
+```bash
+~/data$ wget http://downloads.hmpdacc.org/data/Illumina/throat/SRS013948.tar.bz2
 ```
 or  
 ```
