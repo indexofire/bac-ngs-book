@@ -55,6 +55,17 @@ SUPRI 是主要用来对临床样品的 shotgun metagenomics 测序数据中寻�
 
 ## 5.输出结果
 
+当以 Comprehensive mode 运行后，会产生以下文件夹：
+
+```
+DATASETS_input
+deNovoASSEMBLY_input
+LOG_input
+OUTPUT_input
+TRASH_input
+```
+
+结果文件在`OUTPUT_input`文件夹里，“.annotated” 文件是 SAM 格式或者 -m8 格式的比对结果, taxonomic 信息也在文件中的最后一行中。 “.counttable” 文件是 tab 分割的总结文件。每一行表示不同层面的 taxonomic 注释信息。
 
 ## Reference 
 
