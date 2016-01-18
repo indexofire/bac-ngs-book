@@ -32,6 +32,13 @@ SUPRI 是主要用来对临床样品的 shotgun metagenomics 测序数据中寻�
 		http://stackoverflow.com/questions/13646925/allowing-a-non-root-user-to-drop-cache
 
 
+## 安装 SUPRI
+
+```bash
+~/apps$ wget https://github.com/chiulab/surpi/releases/download/v1.0.18/surpi-1.0.18.tar.gz
+~/apps$ tar zxf surpi-1.0.18.tar.gz -C surpi
+```
+
 ## Reference 
 
 1. [SUPRI office](http://chiulab.ucsf.edu/surpi)
