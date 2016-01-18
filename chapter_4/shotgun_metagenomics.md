@@ -163,11 +163,11 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 
 ##### 2.8 计算 normalisation 因子
 
-8. (Experimental, but nice) Run meta-BEETL on each of the genomes to calculate the normalisation factors
-```
-   mkdir normalisation
-   cd normalisation
-   for genome in ../singleSeqGenomes/G_*; do
+
+```bash
+~/BeetlMetagenomDatabase$ mkdir normalisation
+~/BeetlMetagenomDatabase$ cd normalisation
+~/BeetlMetagenomDatabase/normalisation$ for genome in ../singleSeqGenomes/G_*; do
      (
       genomeNum=`basename ${genome}`
       mkdir ${genomeNum}
