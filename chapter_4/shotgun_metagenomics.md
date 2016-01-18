@@ -215,8 +215,9 @@ SRS013948.denovo_duplicates_marked.trimmed.2.fastq
 SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq
 ```
 
-We need to normalise the lengths of these sequences and put them all in one file:
-```
+##### 3.2 转换数据和合并数据
+
+```bash
 ~$ beetl-convert \
 > -i SRS013948.denovo_duplicates_marked.trimmed.1.fastq \
 > -o paddedSeq1.seq \
