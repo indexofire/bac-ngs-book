@@ -16,4 +16,4 @@
 #### Reference
 
 1. [Illumina Method](http://applications.illumina.com/applications/microbiology/microbial-sequencing-methods/shotgun-metagenomic-sequencing.html)
-2. http://hmpdacc.org/doc/d1.s2.t2%20-%20Makedonka%20Mitreva%20-%20WGS%20at%20WashU.pdf
+2. [SHOTGUN METAGENOMIC SEQUENCING AND ANALYSIS AT THE WASHINGTON UNIVERSITY GENOME CENTER]http://hmpdacc.org/doc/d1.s2.t2%20-%20Makedonka%20Mitreva%20-%20WGS%20at%20WashU.pdf
