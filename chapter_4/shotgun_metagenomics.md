@@ -60,11 +60,9 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 下载需要的序列，比如NCBI上细菌的基因组 ref 数据。
 
 ```bash
-~$ mkdir metaBeetlDb
-~$ cd metaBeetlDb
-~/metaBeetlDb$ wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/all.fna.tar.gz -P downloads
-~/metaBeetlDb$ mkdir all.fna
-~/metaBeetlDb$ tar xzf downloads/all.fna.tar.gz -C all.fna/
+~/BeetlMetagenomDatabase$ wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/all.fna.tar.gz -P downloads
+~/BeetlMetagenomDatabase$ mkdir all.fna
+~/BeetlMetagenomDatabase$ tar xzf downloads/all.fna.tar.gz -C all.fna/
 ```
 
 3. Create single sequence files with the reverse complement of all genomes but exclude plasmids. For this, use metabeetl-db-genomesToSingleSeq. Do NOT change the names of the generated files.
