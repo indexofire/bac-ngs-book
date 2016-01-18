@@ -2,7 +2,7 @@
 
 SUPRI 是主要用来对临床样品的 shotgun metagenomics 测序数据中寻找并鉴定病原的工具。它有2种模式：Fast mode 和 Comprehensive mode。前者可以快速对测序的 reads 进行 Mapping，找到细菌或病毒 reads。后者分析更为详细，除了细菌病毒外还比对了真菌，寄生虫等其他物种数据库，并且进行de novo assembly，对contig也进行 Mapping，虽然耗时更长，但可以获得覆盖度，taxonomic 分类等信息。
 
-## 安装依赖工具
+## 1.安装依赖工具
 
 先要安装依赖工具：
 
@@ -32,12 +32,28 @@ SUPRI 是主要用来对临床样品的 shotgun metagenomics 测序数据中寻�
 		http://stackoverflow.com/questions/13646925/allowing-a-non-root-user-to-drop-cache
 
 
-## 安装 SUPRI
+## 2.安装 SUPRI
 
 ```bash
 ~/apps$ wget https://github.com/chiulab/surpi/releases/download/v1.0.18/surpi-1.0.18.tar.gz
 ~/apps$ tar zxf surpi-1.0.18.tar.gz -C surpi
 ```
+
+## 3.建立数据库
+
+```bash
+~/data$ mkdir -p SNAP_db
+~/data$ ~/apps/surpi/create_taxonomy_db.sh
+```
+
+## 4.运行SURPI
+
+```bash
+~/data$ ~/apps/surpi/SURPI.sh -z input.fastq
+~/apps/surpi$ ./go_input &
+```
+
+## 
 
 ## Reference 
 
