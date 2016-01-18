@@ -191,7 +191,9 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 
 #### 3. 分析数据
 
-用 SRS013948 这个人类肠道细菌组研究项目的数据作为例子。
+##### 3.1 获取数据
+
+用 SRS013948 这个人类肠道细菌组研究项目的数据作为例子。首先下载数据
 
 ```bash
 # http download
@@ -201,7 +203,7 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ~/data$ wget ftp://public-ftp.hmpdacc.org/Illumina/throat/SRS013948.tar.bz2
 ```
 
-Decompressing this file
+
 ```
 ~$ tar xjf SRS013948.tar.bz2
 ``` 
