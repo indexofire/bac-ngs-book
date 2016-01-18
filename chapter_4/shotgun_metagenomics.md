@@ -86,15 +86,15 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 
 ##### 2.4 创建BWT
 
-4. Open the script metabeetl-db-arrayBWT.sh and adapt the paths. To create the BWTs for all the G\_\* and G\_\*\_rev files using a Grid Engine cluster, submit `qsub -t n metabeetl-db-arrayBWT.sh`, where n should be 1-500 if you have the files G\_1 till G\_500. As an alternative you can also run metabeetl-db-makeBWTSkew for each of the files individually.
+修改`metabeetl-db-arrayBWT.sh`文件里数据库路径，创建G\_\* 和 G\_\*\_rev 文件的BWTs，用qsub来向系统提交任务。也可以运行`metabeetl-db-makeBWTSkew`来一个个创建。
 
 ```bash
-~$ cp `which metabeetl-db-arrayBWT.sh` .
-~$ vim metabeetl-db-arrayBWT.sh  # Adjust paths in this file
-~$ qsub -t n metabeetl-db-arrayBWT.sh
-```
- OR
-```
+~/BeetlMetagenomDatabase$ cp `which metabeetl-db-arrayBWT.sh` .
+~/BeetlMetagenomDatabase$ vim metabeetl-db-arrayBWT.sh
+# 如果文件是 G_1 - G_500，那么n=1-500
+~/BeetlMetagenomDatabase$ qsub -t n metabeetl-db-arrayBWT.sh
+
+# 或者
 ~$ (echo -n "all: " ; for i in G_*; do echo -n " bwt_${i}-B00"; done ; echo -e "\n" ; \
 > for i in G_*; do echo "bwt_${i}-B00: ${i}"; echo -e "\tmetabeetl-db-makeBWTSkew ${i} ${i}\n" ; done ) > Makefile
 ~$ make -j
