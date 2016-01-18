@@ -53,7 +53,8 @@ SUPRI 是主要用来对临床样品的 shotgun metagenomics 测序数据中寻�
 ~/apps/surpi$ ./go_input &
 ```
 
-## 
+## 5.输出结果
+
 
 ## Reference 
 
