@@ -1,16 +1,12 @@
-## Shotgun metagenomics 数据分析
+# metaBEETL
 
-用 `metaBEETL` 获取 Shotgun metagenomics 数据中微生物种群比例。
+[metaBEETL] 获取 Shotgun metagenomics 数据中微生物种群比例。
 
 #### Meta-BEETL Metagenomics
 
 **下载数据库**
 
-Note: If you are at Illumina, you can use the pre-installed data: 
 
-```
-~$ export METAGENOME_DATABASE_PATH=/illumina/scratch/BWT/metagenomics/metaBeetlNcbiDb/stable
-```
 
 version if you are also using the testing version of the tools)
 
@@ -270,3 +266,6 @@ Three Krona files are also generated:
 * https://github.com/BEETL/BEETL.git
 * https://github.com/marbl/Mash.git
 * http://mash.readthedocs.org/en/latest/
+
+
+[metaBEETL]: https://github.com/BEETL/BEETL
