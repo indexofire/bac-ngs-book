@@ -255,13 +255,10 @@ SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq
 
 ##### 3.4 图形化显示结果
 
-**Gathering and visualisation of metagenomic results**
 
-The `metabeetl-convertMetagenomicRangesToTaxa` tool converts the BWT ranges of k-mer matches from the previous stage into genome and ancestor IDs and generates text and graphical output files (currently html files using the Krona javascript visualisation library).
+`metabeetl-convertMetagenomicRangesToTaxa` 工具根据kmer匹配，从而获得基因组以及上一级分类的ID号，并生成文字与图形结果（采用Krona js可视化库来形成网页格式的报告文件）。
 
-Since the algorithm repeatedly looks up the filenumbers for each BWT position we recommend to put these ncbiMicros-C0* files on a disk with fast read access.
-Alternatively, if you have enough RAM, you can try `metabeetl-convertMetagenomicRangesToTaxa_withMmap`, which maps these files to RAM.
-
+由于算法原因需要频繁读取BWT位置，因此数据库文件 `ncbiMicros-C0*` 最好放在读取速度比较块的磁盘扇区或者磁盘里如SSD硬盘。另外如果内存足够，可以用 `metabeetl-convertMetagenomicRangesToTaxa_withMmap` 工具，将这些比对文件读入内存中加快速度。
 
 ```bash
 ~/data$ cat BeetlCompareOutput/cycle*.subset* | \
@@ -273,13 +270,23 @@ Alternatively, if you have enough RAM, you can try `metabeetl-convertMetagenomic
 > 20 50 - > metaBeetl.log
 ```
 
-Three TSV (tab-separated values) files are generated (column 1: Taxonomy Id, column 2: Taxonomy level, column 3: k-mer count, column 4: k-mer count including children):
+**生成的TSV（制表符分隔）文件各列含义：**
+
+| 列 | 字段含义 |
+| -- | -- |
+| column 1 | Taxonomy Id |
+| column 2 | Taxonomy level |
+| column 3 | k-mer count |
+| column 4 | k-mer count including children |
+
+**TSV文件用途：**
+
 - metaBeetl.tsv: raw k-mer counts for every leaves and ancestors.
 - metaBeetl_normalised.tsv: some counts from ancestors are moved towards leaf items. The proportion thereof is pre-computed by aligning each individual genome to the full database.
 - metaBeetl_normalised2.tsv: Only leaves
  of the taxonomy tree are kept, and counts are normalised relatively to genome sizes. 
 
-Three Krona files are also generated:
+**Krona JS 结果文件**
 - metaBeetl_krona.html
 - metaBeetl_krona_normalised.html
 - metaBeetl_krona_normalised2.html
