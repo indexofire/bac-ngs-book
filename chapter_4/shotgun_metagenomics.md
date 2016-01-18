@@ -242,6 +242,8 @@ SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq
 ```
 
 Run BEETL metagenomic classification:
+
+运行 metagenomic 模式的 BEETL
 ```
 ~$ beetl-compare \
 > --mode=metagenomics \
