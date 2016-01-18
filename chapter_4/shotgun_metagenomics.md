@@ -203,7 +203,7 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ~/data$ wget ftp://public-ftp.hmpdacc.org/Illumina/throat/SRS013948.tar.bz2
 
 # 解压缩
-~$ tar xjf SRS013948.tar.bz2
+~/data$ tar xjf SRS013948.tar.bz2
 ``` 
 should give you:
 ```
