@@ -15,6 +15,7 @@
    * [Codon perefence analysis](chapter_2/code.md)
    * [Genome alignment](chapter_2/alignment.md)
    * [Genome mapping](chapter_2/mapping.md)
+* [Mash](chapter_4/mash.md)
 * [多基因组数据分析](chapter_3/README.md)
    * [Pangenomes](chapter_3/pangenomes.md)
        * [Orthologues Identification](chapter_3/orthologous_genes.md)
