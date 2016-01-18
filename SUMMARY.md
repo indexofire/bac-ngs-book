@@ -14,7 +14,7 @@
 * [基因组数据比较](chapter_2/README.md)
    * [Codon perefence analysis](chapter_2/code.md)
    * [Genome alignment](chapter_2/alignment.md)
-   * [Mash](chapter_4/mash.md)
+   * [Genome Distant](chapter_4/mash.md)
    * [Genome mapping](chapter_2/mapping.md)
 * [多基因组数据分析](chapter_3/README.md)
    * [Pangenomes](chapter_3/pangenomes.md)
