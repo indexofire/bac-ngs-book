@@ -51,11 +51,7 @@ https://s3.amazonaws.com/metaBEETL/ncbiMicros-C06.bz2
 
 ##### 2.1 安装 SeqAn
 
-[SeqAn](www.seqan.de) 是一个高效的 C++ 算法库，访问 [SeqAn](www.seqan.de) 下载并安装。
-
-Creating a new metagenomic database requires an installation of the SeqAn library (www.seqan.de).  
-   You can set the location of your SeqAn installation before compiling BEETL by using the configure parameter --with-seqan.  
-   If you do this, all executables mentioned below will be compiled automatically and copied into /installPath/bin.
+[SeqAn](www.seqan.de) 是一个高效的 C++ 算法和数据结构库，用于分析生物序列等用途。访问 [SeqAn](www.seqan.de) 下载并安装。安装完成后编译BEETL时可以添加`--with-seqan`参数。
 
 ```bash
 # 安装依赖包
@@ -63,8 +59,6 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ~$ cd ~/apps
 ~/apps$ git clone https://github.com/seqan/seqan.git && cd seqan
 ~/apps/seqan$ git checkout -b develop origin/develop
-
-
 ```
 
 ##### 2.2 下载目标序列
@@ -155,8 +149,9 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 > -nO downloads/nodes.dmp \
 > -nG downloads/gi_taxid_nucl.dmp \
 > -h singleSeqGenomes/headerFile.csv \
-> -f singleSeqGenomes/filecounter.csv \
-> ncbiFileNumToTaxTree ( grep scientific downloads/names.dmp ; cat ${BEETL_INSTALL_DIR}/share/beetl/metaBeetlExtraNames.dmp ) > metaBeetlTaxonomyNames.dmp
+> -f singleSeqGenomes/filecounter.csv > ncbiFileNumToTaxTree 
+
+~/BeetlMEtagenomDatabase$ ( grep scientific downloads/names.dmp ; cat ${BEETL_INSTALL_DIR}/share/beetl/metaBeetlExtraNames.dmp ) > metaBeetlTaxonomyNames.dmp
 ```
 
 ##### 2.8 计算 normalisation 因子
