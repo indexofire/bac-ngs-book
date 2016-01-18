@@ -59,6 +59,10 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 
 ```bash
 # 安装依赖包
+~$ sudo apt-get install g++ cmake python zlib1g-dev libbz2-dev libboost-dev
+~$ cd ~/apps
+~/apps$ git clone https://github.com/seqan/seqan.git && cd seqan
+~/apps/seqan$ git checkout -b develop origin/develop
 
 ```
 
