@@ -1,6 +1,6 @@
 # metaBEETL
 
-[metaBEETL] 获取 Shotgun metagenomics 数据中微生物种群比例。
+[metaBEETL] 是 `BEETL` 下的一个子项目，用来分析基于 Shotgun metagenomics 的微生物数据。
 
 #### Meta-BEETL Metagenomics
 
