@@ -45,18 +45,21 @@ https://s3.amazonaws.com/metaBEETL/ncbiMicros-C06.bz2
 ~/BeetlMetagenomDatabase$ export METAGENOME_DATABASE_PATH=`pwd`
 ```
 
-If you downloaded those files, you can skip the next section.
+#### 2. 自己建立数据库
 
-**自己建立数据库**
+处于实际目的，有时候我们不需要这么大的数据库，或者需要更多其他的数据加入到数据库，那就需要自行建立数据库。
 
-How to create a database of reference genomes for metaBEETL: 
 
-1. Creating a new metagenomic database requires an installation of the SeqAn library (www.seqan.de).  
+Creating a new metagenomic database requires an installation of the SeqAn library (www.seqan.de).  
    You can set the location of your SeqAn installation before compiling BEETL by using the configure parameter --with-seqan.  
    If you do this, all executables mentioned below will be compiled automatically and copied into /installPath/bin.
 
-2. Download all bacteria, archea and virus genomes from ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/
-```
+
+##### 2.1 下载目标序列
+
+下载需要的序列，比如NCBI上细菌的基因组 ref 数据。
+
+```bash
 ~$ mkdir metaBeetlDb
 ~$ cd metaBeetlDb
 ~/metaBeetlDb$ wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/all.fna.tar.gz -P downloads
