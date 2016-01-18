@@ -206,7 +206,9 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ~/data$ tar xjf SRS013948.tar.bz2
 ~/data$ ls -l
 ``` 
-should give you:
+
+解压缩后可以看到下面3个文件：
+
 ```
 SRS013948.denovo_duplicates_marked.trimmed.1.fastq
 SRS013948.denovo_duplicates_marked.trimmed.2.fastq
