@@ -149,16 +149,14 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
    matched to: Superkingdom, Phylum, Order, Class, Family, Genus, Species or Strain.  
    Sometimes there are just missing taxa in the taxonomy. We supplement this with the file `metaBeetlExtraNames.dmp` below. 
    
-```
-   metabeetl-db-findTaxa \
-     -nA downloads/names.dmp \
-     -nO downloads/nodes.dmp \
-     -nG downloads/gi_taxid_nucl.dmp \
-     -h singleSeqGenomes/headerFile.csv \
-     -f singleSeqGenomes/filecounter.csv \
-     > ncbiFileNumToTaxTree
-
-   ( grep scientific downloads/names.dmp ; cat ${BEETL_INSTALL_DIR}/share/beetl/metaBeetlExtraNames.dmp ) > metaBeetlTaxonomyNames.dmp
+```bash
+~/BeetlMetagenomDatabase$ metabeetl-db-findTaxa \
+> -nA downloads/names.dmp \
+> -nO downloads/nodes.dmp \
+> -nG downloads/gi_taxid_nucl.dmp \
+> -h singleSeqGenomes/headerFile.csv \
+> -f singleSeqGenomes/filecounter.csv \
+> ncbiFileNumToTaxTree ( grep scientific downloads/names.dmp ; cat ${BEETL_INSTALL_DIR}/share/beetl/metaBeetlExtraNames.dmp ) > metaBeetlTaxonomyNames.dmp
 ```
 
 ##### 2.8 计算 normalisation 因子
@@ -172,7 +170,7 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 
 ```
 # normalize.sh
-for genome in ../singleSeqGenomes/G_*; do
+    for genome in ../singleSeqGenomes/G_*; do
     (
         genomeNum=`basename ${genome}`
         mkdir ${genomeNum}
