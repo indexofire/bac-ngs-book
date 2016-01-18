@@ -110,25 +110,27 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 生成的文件名称类似：ncbiMicros-A0\*, -B0\* and -C0\*  
 
 - -A0\* 包含每个BWT的位置
-- -B0\* 文件的BWTs 
-- -C0\* contain, for each position in the BWT, the file number where the char at this position came from.  
+- -B0\* BWTs 
+- -C0\* 包含每个BWT位置的文件号
   
-   Files -B0\* and -C0\* are needed for the countWords algorithm. 
+   文件 -B0\* and -C0\* 用于计数算法
 
-6. Optionally, convert the ASCII BWT files to RLE BWT, to make subsequent processing faster:  
-```
-   for pileNum in `seq 0 5`; do \  
-     mv ncbiMicros-B0${pileNum} ncbiMicros-B0${pileNum}.ascii ;  \
-     beetl-convert \  
-       --input-format=bwt_ascii \  
-       --output-format=bwt_rle \  
-       -i ncbiMicros-B0${pileNum}.ascii \  
-       -o ncbiMicros-B0${pileNum} ; \  
-   done
+##### 2.6 转换BWT文件格式
+
+可选操作：将BWT文件转换成RLE BWT格式，运行可以更快。
+
+```bash
+~/BeetlMetagenomDatabase$ for pileNum in `seq 0 5`; do \
+> mv ncbiMicros-B0${pileNum} ncbiMicros-B0${pileNum}.ascii ;  \
+> beetl-convert \  
+> --input-format=bwt_ascii \  
+> --output-format=bwt_rle \  
+> -i ncbiMicros-B0${pileNum}.ascii \  
+> -o ncbiMicros-B0${pileNum} ; \  
+> done
 ```
 
-7. Download the NCBI taxonomy from ftp://ftp.ncbi.nih.gov/pub/taxonomy/  
-   You will need the files names.dmp, nodes.dmp and the gi\_taxid\_nucl.dmp, which are packaged as taxdump.tar.gz and gi\_taxid\_nucl.dmp.gz:  
+##### 2.7 下载NCBI Taxoonmy
 
 ```bash
 ~$ cd tmp
@@ -138,6 +140,7 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ~/tmp$ gunzip gi_taxid_nucl.dmp.gz
 ```
 
+用`metabeetl-db-findTaxa`脚本查找数据库中的taxonomic树。
    Use the metabeetl-db-findTaxa script to find the taxonomic tree corresponding to the file numbers in the database.  
    You will need the headerFile produced by running "metabeetl-db-genomesToSingleSeq" and 
    fileCounter created during the merging of the bacterial reference genomes.  
@@ -157,6 +160,8 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 
    ( grep scientific downloads/names.dmp ; cat ${BEETL_INSTALL_DIR}/share/beetl/metaBeetlExtraNames.dmp ) > metaBeetlTaxonomyNames.dmp
 ```
+
+##### 2.8 计算 normalisation 因子
 
 8. (Experimental, but nice) Run meta-BEETL on each of the genomes to calculate the normalisation factors
 ```
