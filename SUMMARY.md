@@ -32,7 +32,7 @@
    * [Shotgun Metagenomics Sequencing](chapter_4/shotgun.md)
        * [ViroCap](chapter_4/virocap.md)
        * [Meta-BEETL](chapter_4/shotgun_metagenomics.md)
-       * SUPRI
+       * [SUPRI](chapter_4/supri.md)
 * [专题](chapter_5/README.md)
    * [NGS那点事儿](chapter_5/ngs.md)
        * [一代测序与二代测序](chapter_5/1st_2nd_ngs.md)
