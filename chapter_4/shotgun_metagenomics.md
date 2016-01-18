@@ -250,11 +250,7 @@ SRS013948.denovo_duplicates_marked.trimmed.singleton.fastq
 > --no-comparison-skip
 ```
 
-`beetl-compare` 命令会在文件夹 `BeetlCompareOutput`里生成许多文件。
-It currently generates many output files in a `BeetlCompareOutput` directory, organised per cycle and containing the information about the BWT ranges of k-mers that start diverging between the input dataset and the database.
-Setting k = sequence length gets you the maximal amount of information but the output file will be large.
-
-k值设置越大，可以获得越多的信息数据，但是输出文件也会变得越大。
+`beetl-compare` 命令会在文件夹 `BeetlCompareOutput` 里生成许多文件。k值设置越大，可以获得越多的信息数据，但是输出文件也会变得越大。
 
 
 **Gathering and visualisation of metagenomic results**
