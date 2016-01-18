@@ -84,6 +84,8 @@ Creating a new metagenomic database requires an installation of the SeqAn librar
 ~/BeetlMetagenomDatabase$ cd singleSeqGenomes
 ```
 
+##### 2.4 创建BWT
+
 4. Open the script metabeetl-db-arrayBWT.sh and adapt the paths. To create the BWTs for all the G\_\* and G\_\*\_rev files using a Grid Engine cluster, submit `qsub -t n metabeetl-db-arrayBWT.sh`, where n should be 1-500 if you have the files G\_1 till G\_500. As an alternative you can also run metabeetl-db-makeBWTSkew for each of the files individually.
 
 ```bash
