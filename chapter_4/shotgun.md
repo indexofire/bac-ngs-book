@@ -4,21 +4,14 @@
 
 #### Methods Protocol
 
-**1. DNA isolation**
-
-**2. Library preparation**
-
-**3. Sequencing**
-
-**4. Data Analysis**
-
-4.1 数据质量验证：FastQC, FastX_toolkit
-
-4.2 Reads拼接：IDBA-UD, Mira, Velvet/MetaVelvet
-
-4.3 分类：FCP，Phymm/PhymmBL, AMPHORA2, NBC, MEGAN, MG-RAST, CAMERA, IMG/M
-
-4.4 数据分析：MetaPhAln, PhyloSift/pplacer
+1. DNA isolation
+2. Library preparation
+3. Sequencing
+4. Data Analysis
+ 4.1 数据质量验证：FastQC, FastX_toolkit
+ 4.2 Reads拼接：IDBA-UD, Mira, Velvet/MetaVelvet
+ 4.3 分类：FCP，Phymm/PhymmBL, AMPHORA2, NBC, MEGAN, MG-RAST, CAMERA, IMG/M
+ 4.4 数据分析：MetaPhAln, PhyloSift/pplacer
 
 #### Reference
 
