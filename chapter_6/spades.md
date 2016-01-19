@@ -7,9 +7,9 @@
 直接下载预编译安装包，并添加路径到环境变量中。
 
 ```
-~/tmp$ curl -O http://spades.bioinf.spbau.ru/release3.6.2/SPAdes-3.6.2-Linux.tar.gz
-~/tmp$ tar -zxf SPAdes-3.6.2-Linux.tar.gz -C ~/app
-~/tmp$ echo 'export PATH=$PATH:~/app/SPAdes-3.6.2-Linux/bin' >> ~/.bashrc
+~/tmp$ wget http://spades.bioinf.spbau.ru/release3.6.2/SPAdes-3.6.2-Linux.tar.gz
+~/tmp$ tar -zxf SPAdes-3.6.2-Linux.tar.gz -C ~/apps
+~/tmp$ echo 'export PATH=$PATH:~/apps/SPAdes-3.6.2-Linux/bin' >> ~/.bashrc
 ~/tmp$ source ~/.bashrc
 ```
 
