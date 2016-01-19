@@ -2,7 +2,7 @@
 
 物种的核酸特性以及测序技术的发展，不断有针对新技术优化的拼接软件出现。这里比较几个微生物拼接评测中比较优秀的工具，看看针对目标物种的拼接结果。个人最常用的拼接软件是spades，目前版本是3.6。也可以先对自己的测序物种做一个 assembly evaluation，选择比较适合的拼接软件。
 
-参见 [Chapter6/Assembly](chapter_6/assembly.md)
+参见 [Chapter6/Assembly](chapter_6/assembly.html)
 
 
 ## 病毒基因组从头拼接
