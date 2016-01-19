@@ -11,7 +11,7 @@
 ```bash
 ~/tmp$ wget http://spades.bioinf.spbau.ru/release3.6.2/SPAdes-3.6.2-Linux.tar.gz
 ~/tmp$ tar -zxf SPAdes-3.6.2-Linux.tar.gz -C ~/apps
-~/tmp$ echo 'export PATH=$PATH:~/apps/SPAdes-3.6.2-Linux/bin' >> ~/.bashrc
+~/tmp$ echo 'export PATH=$PATH:$HOME/apps/SPAdes-3.6.2-Linux/bin' >> ~/.bashrc
 ~/tmp$ source ~/.bashrc
 ```
 
