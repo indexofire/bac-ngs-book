@@ -1,6 +1,6 @@
 # SPAdes
 
-[SPAdes][] 是由俄罗斯科学院 [St. Petersburg Academic University](http://spbau.ru) 与美国科学家合作开发的主要应用于小型基因组如细菌，真菌等基因组测序数据的拼接软件。目前的最新版本 v3.6.2 可以支持常见的 illumina miseq/hiseq 和 ion torrent 测序数据，对单分子测序平台的 pacbio 和 nanopore 的测序数据也能进行拼装，还能进行混合数据的拼装。在 [GAGE-B](http://ccb.jhu.edu/gage_b/) 的测拼里，在Miseq平台获得了最好的评价。
+[SPAdes][] 是由俄罗斯科学院 [St. Petersburg Academic University](http://spbau.ru) 与美国科学家合作开发的主要应用于小型基因组如细菌，真菌等基因组测序数据的拼接软件。目前的最新版本 v3.6.2 可以支持常见的 illumina miseq/hiseq 和 ion torrent 测序数据，对单分子测序平台的 pacbio 和 nanopore 的测序数据也能进行拼装，还能进行混合数据的拼装。在 [GAGE-B](http://ccb.jhu.edu/gage_b/) 的测拼里，在 Miseq 平台上的结果获得了最好的评价。
 
 ## 1. 下载并安装 SPAdes
 
