@@ -291,10 +291,10 @@ png   = yes
 svg   = yes
 
 # radius of inscribed circle in image
-radius         = 1000p
+radius = 1000p
 
 # by default angle=0 is at 3 o'clock position
-angle_offset      = -90
+angle_offset = -90
 
 #angle_orientation = counterclockwise
 
