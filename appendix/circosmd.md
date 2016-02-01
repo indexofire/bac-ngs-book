@@ -1,6 +1,8 @@
 # Circos
 
-circos 是特别著名的以圈图展示关系型数据的可视化应用程序。它并非只是用于展现基因组数据，而是可以解析各种相关数据的应用程序。
+[circos][]是特别著名的以圈图展示关系型数据的可视化应用程序。它并非只是用于展现基因组数据，而是可以解析各种相关数据的应用程序。
+
+## 解析 circos
 
 在它的圈图体系中，各种 tracks 可以分成一下一种表现图示：
 
@@ -12,6 +14,15 @@ circos 是特别著名的以圈图展示关系型数据的可视化应用程序�
 * Highlights 加亮图示
 * Ticks 圈图标尺
 * Grid 圈图网格
+
+
+
+以[mit](http://jura.wi.mit.edu/bio/education/hot_topics/Circos/Circos.pdf)的circos图为例，可以看出一个circos绘制的圈图中可以包含什么类型的图示。
+
+![Circos](../assets/circos-anatomy.png)
+
+
+
 
 绘制一个circos图时，首先要考虑的是如何理解并展示复杂的数据关系。通过不同维度来解析数据，
 
@@ -512,21 +523,6 @@ fill_color = eval(sprintf("spectral-9-div-%d", remap_int(var(value), 0,1,1,9)))
 #### 3.3.2 配置文件
 
 ---
-
-## 解析 circos
-
-以[mit](http://jura.wi.mit.edu/bio/education/hot_topics/Circos/Circos.pdf)的circos图为例，可以看出一个circos绘制的圈图中可以包含什么类型的图示。
-
-![Circos](../assets/circos-anatomy.png)
-
-1. histogram 柱状图
-2. ideogram 表意文字
-3. heatmap 热力图
-4. links 关系线条
-5. highlights 高亮强调区域
-6. grids 网格图
-7. ticks 圈图标尺
-
 
 
 > #### 完整circos配置文件结构
