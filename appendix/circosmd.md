@@ -517,7 +517,7 @@ fill_color = eval(sprintf("spectral-9-div-%d", remap_int(var(value), 0,1,1,9)))
 
 以[mit](http://jura.wi.mit.edu/bio/education/hot_topics/Circos/Circos.pdf)的circos图为例，可以看出一个circos绘制的圈图中可以包含什么类型的图示。
 
-![Alt text](../assets/circos-anatomy.png)
+![Circos](../assets/circos-anatomy.png)
 
 1. histogram 柱状图
 2. ideogram 表意文字
