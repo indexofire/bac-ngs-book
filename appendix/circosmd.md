@@ -132,7 +132,7 @@ $ circos -conf circos.conf
 
 ---
 
-#### 2.3.6circos.conf 参数
+#### 2.3.6 circos.conf 参数
 
 	# 染色体的数据集
 	karyotype = data.txt
