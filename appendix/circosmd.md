@@ -141,7 +141,6 @@ $ circos -conf circos.conf
 	# 如果设置成yes，所有ideogram上都会现实ticks
 	chromosomes_display_default = yes
 
-
 ---
 
 ## 3.用[circos][]来绘图
