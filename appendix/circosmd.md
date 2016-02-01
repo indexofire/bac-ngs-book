@@ -226,7 +226,14 @@ $ circos -conf circos.conf
 </links>
 ```
 
+#### 2.3.8 circos配置的单位概念
 
+**一共有4种单位：p, r, u, b**
+
+* p表示像素，1p表示1像素
+* r表示相对大小，0.95r表示95% ring 大小。
+* u表示相对chromosomes\_unit的长度，如果chromosomes\_unit = 1000，则1u就是千分之一的染色体长度。
+* b表示碱基，如果染色体长1M，那么1b就是百万分之一的长度。
 
 ---
 
@@ -580,19 +587,6 @@ fill_color = eval(sprintf("spectral-9-div-%d", remap_int(var(value), 0,1,1,9)))
 #### 3.3.2 配置文件
 
 ---
-
-
-
----
-
-> #### circos配置的单位概念
-
-**一共有4种单位：p, r, u, b**
-
-* p表示像素，1p表示1像素
-* r表示相对大小，0.95r表示95% ring 大小。
-* u表示相对chromosomes\_unit的长度，如果chromosomes\_unit = 1000，则1u就是千分之一的染色体长度。
-* b表示碱基，如果染色体长1M，那么1b就是百万分之一的长度。
 
 ## Reference
 
