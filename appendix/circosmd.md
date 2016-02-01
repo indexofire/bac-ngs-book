@@ -139,6 +139,95 @@ $ circos -conf circos.conf
 	# 如果设置成yes，所有ideogram上都会现实ticks
 	chromosomes_display_default = yes
 
+
+#### 2.3.7 完整circos配置文件结构
+
+```
+# ---- 定义图的颜色信息 ---- #
+<colors>
+</colors>
+
+# ---- 定义图的字体信息 ---- #
+<fonts>
+</fonts>
+
+# ---- 定义填充模式图 ---- #
+<patterns>
+</patterns>
+
+# ---- 图像的基本设置信息 ---- #
+<image>
+</image>
+
+# ---- ideogram 图 ---- #
+<ideogram>
+  <spacing>
+    ideograms之间的间隔
+    <pairwise>
+      ideograms对（如人染色体）之间的距离
+    </pairwise>
+  </spacing>
+</ideogram>
+
+# ---- 标尺信息 ---- #
+<ticks>
+  <tick>
+    各个tick的配置
+  </tick>
+</ticks>
+
+# ---- 区域的放大缩小信息 ---- #
+<zooms>
+  <zoom>
+  </zoom>
+</zooms>
+
+# ---- highlights 数据 ---- #
+<highlights>
+  <highlight>
+    <rules>
+      <rule>
+        某一个具体 data track 的配置修改
+      </rule>
+    </rules>
+  </highlight>
+</highlights>
+
+# ---- Data tracks 数据 ---- #
+<plots>
+  <plot>
+    <rules>
+      <rule>
+        某一个具体 data track 的配置修改
+      </rule>
+    </rules>
+    <axes>
+      <axis>
+        plot 的半径轴
+      </axis>
+    </axes>
+    <backgrounds>
+      <background>
+        plot 的背景设置
+      </background>
+    </backgrounds>
+  </plot>
+</plots>
+
+# ---- links 数据 ---- #
+<links>
+  <link>
+    <rules>
+      <rule>
+        某一个具体 link 数据的配置修改
+      </rule>
+    </rules>
+  </link>
+</links>
+```
+
+
+
 ---
 
 ## 3.用[circos][]来绘图
@@ -493,91 +582,6 @@ fill_color = eval(sprintf("spectral-9-div-%d", remap_int(var(value), 0,1,1,9)))
 ---
 
 
-> #### 完整circos配置文件结构
-
-```
-# ---- 定义图的颜色信息 ---- #
-<colors>
-</colors>
-
-# ---- 定义图的字体信息 ---- #
-<fonts>
-</fonts>
-
-# ---- 定义填充模式图 ---- #
-<patterns>
-</patterns>
-
-# ---- 图像的基本设置信息 ---- #
-<image>
-</image>
-
-# ---- ideogram 图 ---- #
-<ideogram>
-  <spacing>
-    ideograms之间的间隔
-    <pairwise>
-      ideograms对（如人染色体）之间的距离
-    </pairwise>
-  </spacing>
-</ideogram>
-
-# ---- 标尺信息 ---- #
-<ticks>
-  <tick>
-    各个tick的配置
-  </tick>
-</ticks>
-
-# ---- 区域的放大缩小信息 ---- #
-<zooms>
-  <zoom>
-  </zoom>
-</zooms>
-
-# ---- highlights 数据 ---- #
-<highlights>
-  <highlight>
-    <rules>
-      <rule>
-        某一个具体 data track 的配置修改
-      </rule>
-    </rules>
-  </highlight>
-</highlights>
-
-# ---- Data tracks 数据 ---- #
-<plots>
-  <plot>
-    <rules>
-      <rule>
-        某一个具体 data track 的配置修改
-      </rule>
-    </rules>
-    <axes>
-      <axis>
-        plot 的半径轴
-      </axis>
-    </axes>
-    <backgrounds>
-      <background>
-        plot 的背景设置
-      </background>
-    </backgrounds>
-  </plot>
-</plots>
-
-# ---- links 数据 ---- #
-<links>
-  <link>
-    <rules>
-      <rule>
-        某一个具体 link 数据的配置修改
-      </rule>
-    </rules>
-  </link>
-</links>
-```
 
 ---
 
