@@ -116,7 +116,7 @@ $ circos -conf circos.conf
 
 ---
 
-### 2.3可视化的组成要素
+### 2.3 可视化的组成要素
 
 变量分为 Global 和 Local，对发挥作用的区块起作用。如果是某个变量在多个block中都重复使用，那么可以设置成 global 的参数，当某个block要使用新的值时，再用 local 的参数覆盖即可。
 
@@ -132,7 +132,7 @@ $ circos -conf circos.conf
 
 ---
 
-#### circos.conf 参数
+#### 2.3.6circos.conf 参数
 
 	# 染色体的数据集
 	karyotype = data.txt
