@@ -137,8 +137,6 @@ $ circos -conf circos.conf
 
 #### 1. ideogram
 
-
-
 #### 2. highlight
 
 #### 3. tick
