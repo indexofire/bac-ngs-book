@@ -118,11 +118,7 @@ $ circos -conf circos.conf
 
 ### 可视化的组成要素
 
-\<plots\>\<\/plots\>，\<links\>\<\/links\> 区块内的参数是属于 Global 的。
-\<plot\>\<\/plot\> 区块内的参数是属于 Local 的。
-
-
-如果是某个参数在多个block中都重复使用，那么可以设置成 global 的参数，当某个block要使用新的值时，再用 local 的参数覆盖即可。
+变量分为 Global 和 Local，对发挥作用的区块起作用。如果是某个变量在多个block中都重复使用，那么可以设置成 global 的参数，当某个block要使用新的值时，再用 local 的参数覆盖即可。
 
     # plot可以理解为图层，多个圈图图层构成一个plots
     <plot></plot>
