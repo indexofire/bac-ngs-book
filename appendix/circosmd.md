@@ -116,20 +116,9 @@ $ circos -conf circos.conf
 
 ---
 
-### 可视化的组成要素
+### 2.3可视化的组成要素
 
 变量分为 Global 和 Local，对发挥作用的区块起作用。如果是某个变量在多个block中都重复使用，那么可以设置成 global 的参数，当某个block要使用新的值时，再用 local 的参数覆盖即可。
-
-    # plot可以理解为图层，多个圈图图层构成一个plots
-    <plot></plot>
-    # plots 由
-    # type 描述图层内容类型，如text
-    type = text
-	# r0, r1 表示圈图半径，<1在内圈，>1在外圈, r0-r1为宽度
-	r0 = 0.95r
-	r1 = 0.85r
-	# 
-
 
 #### 1. ideogram
 
