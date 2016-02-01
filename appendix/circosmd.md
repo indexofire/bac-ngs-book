@@ -255,7 +255,7 @@ get_reverse_strand(reverse)
 建立circos.conf配置文件
 
 ```bash
-~$ cd circos_data
+~$ mkdir circos_data && cd circos_data
 ~/circos_data$ touch circos.conf
 ```
 
