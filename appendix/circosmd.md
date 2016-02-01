@@ -130,8 +130,6 @@ $ circos -conf circos.conf
 
 #### 2.3.5 links
 
----
-
 #### 2.3.6 circos.conf 参数
 
 	# 染色体的数据集
