@@ -120,15 +120,15 @@ $ circos -conf circos.conf
 
 变量分为 Global 和 Local，对发挥作用的区块起作用。如果是某个变量在多个block中都重复使用，那么可以设置成 global 的参数，当某个block要使用新的值时，再用 local 的参数覆盖即可。
 
-#### 1. ideogram
+#### 2.3.1 ideogram
 
-#### 2. highlight
+#### 2.3.2 highlights
 
-#### 3. tick
+#### 2.3.3 ticks
 
-#### 4. label
+#### 2.3.4 label
 
-#### 5. link
+#### 2.3.5 links
 
 ---
 
