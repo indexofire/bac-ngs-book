@@ -13,7 +13,7 @@
 
 以[mit](http://jura.wi.mit.edu/bio/education/hot_topics/Circos/Circos.pdf)的circos图为例，可以看出一个circos绘制的圈图中可以包含什么类型的图示。
 
-![Circos](../assets/circos-anatomy.png)
+![Circos](circos-anatomy.png)
 
 
 绘制一个circos图时，首先要考虑的是如何理解并展示复杂的数据关系。通过不同维度来解析数据，
