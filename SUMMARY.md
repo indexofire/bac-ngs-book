@@ -22,7 +22,7 @@
        * [Paralogues Identification](chapter_3/paralogues_identification.md)
        * [Pangenomes Identification](chapter_3/pangenomes_identification.md)
    * [Phylogenomics](chapter_3/phy.md)
-       * 开发框架
+       * [开发框架](chapter_3/framework.md)
    * [Core Genome MLST](chapter_3/structure.md)
    * [Surveillance Visulation](chapter_3/surveillance_visulation.md)
        * [circos](chapter_3/circos.md)
