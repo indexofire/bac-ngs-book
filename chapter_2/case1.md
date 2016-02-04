@@ -149,6 +149,8 @@ Snippy需要以下软件支持：
 **安装Snippy**
 
 ```bash
+~$ wget https://github.com/tseemann/snippy/archive/v2.9.tar.gz
+~$ tar xzf v2.9.tar.gz -C ~/app
 ```
 
 
