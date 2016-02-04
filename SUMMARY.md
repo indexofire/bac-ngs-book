@@ -16,6 +16,7 @@
    * [Genome alignment](chapter_2/alignment.md)
    * [Genome Distant](chapter_4/mash.md)
    * [Mapping](chapter_2/mapping.md)
+       * 案例分析一
 * [多基因组数据分析](chapter_3/README.md)
    * [Pangenomes](chapter_3/pangenomes.md)
        * [Orthologues Identification](chapter_3/orthologous_genes.md)
