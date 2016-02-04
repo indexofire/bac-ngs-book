@@ -132,16 +132,16 @@ ggplot(cov, aes(x=V3, y=V4)) + geom_histogram(stat="identity") + xlab("Coverage"
 
 Snippy需要一下软件支持：
 
--Perl >= 5.6
--BioPerl >= 1.6
--bwa mem >= 0.7.12
--samtools >= 1.1
--GNU parallel > 2013xxxx
--freebayes >= 0.9.20
--freebayes sripts (freebayes-parallel,fasta_generate_regions.py)
--vcflib (vcffilter, vcfstreamsort, vcfuniq, vcffirstheader)
--vcftools (vcf-consensus)
--snpEff >= 4.1
+- Perl >= 5.6
+- BioPerl >= 1.6
+- bwa mem >= 0.7.12
+- samtools >= 1.1
+- GNU parallel > 2013xxxx
+- freebayes >= 0.9.20
+- freebayes sripts ( freebayes-parallel,fasta_generate_regions.py)
+- vcflib (vcffilter, vcfstreamsort, vcfuniq, vcffirstheader)
+- vcftools (vcf-consensus)
+- snpEff >= 4.1
 
 **安装Snippy**
 
