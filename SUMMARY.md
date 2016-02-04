@@ -1,6 +1,6 @@
 # Summary
 
-* [关于本书](README.md)
+* [关于笔记](README.md)
    * [关于示例](preface/about.md)
    * [Linux Shell](preface/before_start.md)
 * [基因组数据处理](chapter_1/README.md)
