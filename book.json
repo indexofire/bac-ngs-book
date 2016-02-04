@@ -3,7 +3,8 @@
         "mathjax",
         "youtube",
         "mermaid-2",
-        "atoc"
+        "atoc",
+        "ga"
     ],
     "pluginsConfig": {
         "mathjax": {
