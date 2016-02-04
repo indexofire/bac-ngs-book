@@ -1,6 +1,6 @@
 # 案例分析一
 
-利用 bwa 等比对软件将目标基因组reads比对到参考基因组，将SNPs提取出来进行分析。
+利用 bwa 等比对软件将目标基因组reads比对到参考基因组，用freebays做variant calling，对SNPs进行分析。
 
 ## 铜绿假单胞菌临床株与环境株溯源
 
