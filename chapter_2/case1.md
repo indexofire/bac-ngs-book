@@ -162,6 +162,13 @@ Snippy 不仅可以获得SNP，也可以获得insert和indel。查看结果文�
 >$ head output/snps.tab
 ```
 
+Snippy还可以生成多个基因组的编码区SNPs的比对文件。
+
+```bash
+~$ snippy-core --prefix core output1 output2 output3 ...
+~$ cat core.aln
+```
+
 ## 参考资料
 
 1. [Jupyter Notebook for Pseudomonas Practical](http://nbviewer.jupyter.org/github/nickloman/nickloman.github.com/blob/master/tutorials/Pseudomonas-practical.ipynb)
