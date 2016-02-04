@@ -25,4 +25,4 @@
 
 
 [bwa]: http://bio-bwa.sourceforge.net
-[bowtie]: http://bowtie-bio.sourceforge.net/
+[bowtie]: http://bowtie-bio.sourceforge.net
