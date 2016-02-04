@@ -2,6 +2,8 @@
 
 利用 bwa 等比对软件将目标基因组reads比对到参考基因组，用freebays做variant calling，对SNPs进行分析。
 
+QC reads --bwa--> Mapping --freebays--> Variant calling --vcftools--> 
+
 ## 铜绿假单胞菌临床株与环境株溯源
 
 一例从基因组学角度，利用高通量测序技术对铜绿假单胞菌的临床分离株与环境分离株在基因组水平上进行溯源与耐药分析的实例。可以作为今后实验室开展工作的一个技术指导依据。工作流程将从以下几个方面对于这个Case开展数据分析：
