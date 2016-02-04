@@ -123,7 +123,7 @@ ggplot(cov, aes(x=V3, y=V4)) + geom_histogram(stat="identity") + xlab("Coverage"
 
 ### Snippy
 
-日常工作中我们需要更简便的软件或者pipelines来帮助完成整个分析工作。因此这里我们推荐[snippy](https://github.com/tseemann/snippy/blob/master/bin/snippy)
+日常工作中我们需要更简便的软件或者pipelines来帮助完成整个分析工作。因此这里我们使用[snippy](https://github.com/tseemann/snippy/blob/master/bin/snippy)来帮助我们完成分析
 
 
 #### 1. Snippy 安装
@@ -138,7 +138,7 @@ Snippy需要以下软件支持：
 - samtools >= 1.1
 - GNU parallel > 2013xxxx
 - freebayes >= 0.9.20
-- freebayes sripts ( freebayes-parallel,fasta_generate_regions.py)
+- freebayes sripts ( freebayes-parallel,fasta\_generate\_regions.py)
 - vcflib (vcffilter, vcfstreamsort, vcfuniq, vcffirstheader)
 - vcftools (vcf-consensus)
 - snpEff >= 4.1
