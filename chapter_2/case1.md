@@ -158,3 +158,4 @@ Snippy需要以下软件支持：
 2. [Seeking the source of Pseudomonas aeruginosa infections in a recently opened hospital: an observational study using whole-genome sequencing.](http://bmjopen.bmj.com/content/4/11/e006278.full)
 3. [Vcflib Git Repository](https://github.com/ekg/vcflib)
 4. [Freebayes Git Repository](https://github.com/ekg/freebayes)
+5. [Snippy](https://github.com/tseemann/snippy)
