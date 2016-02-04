@@ -23,9 +23,9 @@
 
 [TOC]
 
-## 分析流程
+### 分析流程
 
-### 1. 下载数据
+#### 1. 下载数据
 
 数据可以从[这里](http://www.microbesng.uk/filedist/pseudomonas-practical/)下载获得，可以用`wget -m`递归下载路径下所有文件。文件包括：
 
@@ -41,7 +41,7 @@
 ~$ mv www.microbesng.uk/filedist/pseudomonas-practical/* .
 ```
 
-### 2. 建立 ST17 型参考菌株索引
+#### 2. 建立 ST17 型参考菌株索引
 
 **Mapping** 软件使用`bwa`来对参考基因组ST17建立索引，以便后续比对。
 
@@ -49,7 +49,7 @@
 ~$ bwa index ST17.fasta
 ```
 
-### 3. 将测序 reads 比对到 ST17 并排序索引
+#### 3. 将测序 reads 比对到 ST17 并排序索引
 
 用`bwa mem`进行比对，输出的结果通过管道由samtools转换成BAM文件并进行排序和索引
 
@@ -67,7 +67,7 @@
 对其他2株环境株和2株临床株重复以上步骤。
 
 
-### 4. 绘制测序 reads 的覆盖度
+#### 4. 绘制测序 reads 的覆盖度
 
 ```bash
 ~$ samtools stats TAP1.sorted.bam | grep "maximum length"
@@ -86,7 +86,7 @@ cov[1,]
 ggplot(cov, aes(x=V3, y=V4)) + geom_histogram(stat="identity") + xlab("Coverage") + ylab("Count")
 ```
 
-### 5. 比较1号临床株与环境株的SNPs差异
+#### 5. 比较1号临床株与环境株的SNPs差异
 
 ```bash
 ~$ freebayes --ploidy 1 -C 5 -f ST17.fasta TAP1.sorted.bam PATIENT1.sorted.bam  > compare_tap1.vcf
@@ -111,7 +111,7 @@ ggplot(cov, aes(x=V3, y=V4)) + geom_histogram(stat="identity") + xlab("Coverage"
 ~$ bedtools intersect -a ST17.gff -b tap_differences.vcf
 ```
 
-### 6. 2个临床株的耐药变迁
+#### 6. 2个临床株的耐药变迁
 
 了解2个临床株的SNPs差异，并查看这些SNPs所影响的gene
 
@@ -120,6 +120,34 @@ ggplot(cov, aes(x=V3, y=V4)) + geom_histogram(stat="identity") + xlab("Coverage"
 ~$ vcfsamplediff SAME PATIENT1 TAP1 compare_patient.vcf  | vcffilter -f "QUAL / AO > 10" | vcffilter -f "NS = 2" | vcffilter -f "! ( SAME = germline ) " > patient_differences.vcf
 ~$ bedtools intersect -a ST17.gff -b patient_differences.vcf
 ```
+
+### Snippy
+
+日常工作中我们需要更简便的软件或者pipelines来帮助完成整个分析工作。因此这里我们推荐[snippy](https://github.com/tseemann/snippy/blob/master/bin/snippy)
+
+
+#### 1. Snippy 安装
+
+**安装以来软件**
+
+Snippy需要一下软件支持：
+
+-Perl >= 5.6
+-BioPerl >= 1.6
+-bwa mem >= 0.7.12
+-samtools >= 1.1
+-GNU parallel > 2013xxxx
+-freebayes >= 0.9.20
+-freebayes sripts (freebayes-parallel,fasta_generate_regions.py)
+-vcflib (vcffilter, vcfstreamsort, vcfuniq, vcffirstheader)
+-vcftools (vcf-consensus)
+-snpEff >= 4.1
+
+**安装Snippy**
+
+```
+```
+
 
 ## 参考资料
 
