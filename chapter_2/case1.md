@@ -143,6 +143,9 @@ Snippy需要以下软件支持：
 - vcftools (vcf-consensus)
 - snpEff >= 4.1
 
+常见软件安装已在其他章节有所介绍，这里之简单介绍安装freebayes和vcftools等软件。
+
+
 **安装Snippy**
 
 ```
