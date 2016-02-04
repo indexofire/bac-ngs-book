@@ -128,9 +128,9 @@ ggplot(cov, aes(x=V3, y=V4)) + geom_histogram(stat="identity") + xlab("Coverage"
 
 #### 1. Snippy 安装
 
-**安装以来软件**
+**安装Snippy**
 
-Snippy需要以下软件支持：
+Snippy是比较适合新手的工具，它提供了All in One的工具套装。虽然Snippy需要以下软件支持：
 
 - Perl >= 5.6
 - BioPerl >= 1.6
@@ -143,14 +143,15 @@ Snippy需要以下软件支持：
 - vcftools (vcf-consensus)
 - snpEff >= 4.1
 
-常见软件安装已在其他章节有所介绍，这里之简单介绍安装freebayes和vcftools等软件。
+但这些工具在Snippy安装包里都已经提供了，我们只需要根据自己的系统设置将以来工具添加到系统路径中去即可。
 
-
-**安装Snippy**
 
 ```bash
 ~$ wget https://github.com/tseemann/snippy/archive/v2.9.tar.gz
 ~$ tar xzf v2.9.tar.gz -C ~/app
+~$ echo "export PATH=$PATH:$HOME/app/snippy-2.9/bin:$HOME/app/snippy-2.9/binaries/linux/" >> ~/.bashrc
+~$ source ~/.bashrc
+
 ```
 
 
