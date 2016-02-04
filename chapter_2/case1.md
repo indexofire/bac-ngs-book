@@ -166,7 +166,7 @@ Snippy还可以生成多个基因组的编码区SNPs的比对文件。
 
 ```bash
 ~$ snippy-core --prefix core output1 output2 output3 ...
-~$ cat core.aln
+~$ head core.aln
 ```
 
 ## 参考资料
