@@ -13,6 +13,9 @@
         "atoc": {
             "addClass": true,
             "className": "atoc"
+        },
+        "ga": {
+            "token": "UA-55420348-1"
         }
     }
 }
