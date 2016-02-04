@@ -4,7 +4,7 @@
         "youtube",
         "mermaid-2",
         "atoc",
-        "-ga"
+        "ga"
     ],
     "pluginsConfig": {
         "mathjax": {
