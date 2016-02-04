@@ -48,7 +48,7 @@
        * [小型测序实验室快速部署方案](chapter_5/galaxy_docker.md)
    * [Amazon EC2 教程](appendix/a2_amazon_ec2.md)
    * [Circos](appendix/circosmd.md)
-   * Automation Pipeline Framwork
+   * [Automation Pipeline Framwork](chapter_5/automation_pipeline_framwork.md)
 * [常用软件的安装与设置](chapter_6/README.md)
    * [others](chapter_6/others.md)
        * [SRA_toolkit](chapter_6/sratoolkit.md)
