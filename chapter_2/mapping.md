@@ -13,7 +13,7 @@
 一般有2种技术路线：
 
 - 先对基因组测序数据进行 de novo assembly，然后比对contigs与reference，构建SNPs。
-- 直接用 Reads Mapping 软件将
+- 直接用 Reads Mapping 软件将测序短序列比对到 reference 并获得SNPs等结果。
 
 ## 基因组 Reads Mapping 软件
 
