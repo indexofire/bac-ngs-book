@@ -130,7 +130,7 @@ ggplot(cov, aes(x=V3, y=V4)) + geom_histogram(stat="identity") + xlab("Coverage"
 
 **安装以来软件**
 
-Snippy需要一下软件支持：
+Snippy需要以下软件支持：
 
 - Perl >= 5.6
 - BioPerl >= 1.6
