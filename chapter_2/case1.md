@@ -123,7 +123,7 @@ ggplot(cov, aes(x=V3, y=V4)) + geom_histogram(stat="identity") + xlab("Coverage"
 
 ### Snippy
 
-日常工作中我们需要更简便的软件或者pipelines来帮助完成整个分析工作。因此这里我们使用[snippy](https://github.com/tseemann/snippy/blob/master/bin/snippy)来帮助我们完成分析
+日常工作中我们需要更简便的软件或者pipelines来帮助完成整个分析工作。因此这里我们使用[snippy](https://github.com/tseemann/snippy/blob/master/bin/snippy)来帮助我们完成分析SNPs。
 
 
 #### 1. Snippy 安装
