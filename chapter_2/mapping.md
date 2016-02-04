@@ -8,7 +8,14 @@
 
 也有用距离法来分析的项目，比如100k pathogen project由于菌株数量太大，数据需要实时更新，且分析意义主要不在于进化关系，因此采用的是计算kmer距离，Jaccard distance的方法，并用FastME来构建进化树。
 
-#### 基因组 Mapping 软件
+## 构建SNPs的方法
+
+一般有2种技术路线：
+
+- 先对基因组测序数据进行 de novo assembly，然后比对contigs与reference，构建SNPs。
+- 直接用 Reads Mapping 软件将
+
+## 基因组 Reads Mapping 软件
 
 - bwa
 - bowtie
