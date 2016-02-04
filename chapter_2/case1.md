@@ -154,7 +154,7 @@ Snippy是比较适合新手的工具，它提供了All in One的工具套装。�
 
 #### 2. 使用 Snippy
 
-Snippy 不仅可以获得SNP(包括MultiSNP)，也可以获得insertion和indeletion。查看结果文件中的snps.tab。
+Snippy 不仅可以获得SNP(包括MultiSNP)，也可以获得insertion, indeletion以及Comibination。查看结果文件中的snps.tab。
 
 ```bash
 ~$ snippy --cpus 4 --outdir output --ref ST17.fasta \
