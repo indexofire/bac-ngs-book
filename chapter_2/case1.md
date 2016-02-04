@@ -128,8 +128,6 @@ ggplot(cov, aes(x=V3, y=V4)) + geom_histogram(stat="identity") + xlab("Coverage"
 
 #### 1. Snippy 安装
 
-**安装Snippy**
-
 Snippy是比较适合新手的工具，它提供了All in One的工具套装。虽然Snippy需要以下软件支持：
 
 - Perl >= 5.6
@@ -154,6 +152,7 @@ Snippy是比较适合新手的工具，它提供了All in One的工具套装。�
 
 ```
 
+#### 2. Snippy 使用
 
 ## 参考资料
 
