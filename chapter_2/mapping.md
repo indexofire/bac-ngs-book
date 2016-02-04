@@ -17,7 +17,12 @@
 
 ## 基因组 Reads Mapping 软件
 
-- bwa
-- bowtie
+- [bwa][]
+- [bowtie][]
 
-#### 
+## Reference
+
+
+
+[bwa]: http://bio-bwa.sourceforge.net
+[bowtie]: http://bowtie-bio.sourceforge.net/
