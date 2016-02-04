@@ -154,6 +154,14 @@ Snippy是比较适合新手的工具，它提供了All in One的工具套装。�
 
 #### 2. 使用 Snippy
 
+Snippy 不仅可以获得SNP，也可以获得insert和indel。查看结果文件中的snps.tab，就可以
+
+```bash
+~$ snippy --cpus 4 --outdir output --ref ST17.fasta \
+> --R1 TAP1_R1_paired.fastq.gz --R2 TAP1_R2_paired.fastq.gz
+>$ head output/snps.tab
+```
+
 ## 参考资料
 
 1. [Jupyter Notebook for Pseudomonas Practical](http://nbviewer.jupyter.org/github/nickloman/nickloman.github.com/blob/master/tutorials/Pseudomonas-practical.ipynb)
