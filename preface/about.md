@@ -28,7 +28,7 @@
 ~$ mkdir -p data app tmp
 ```
 
-### [Ubuntu][]安装软件的几种方式：
+### [Ubuntu][] 常见安装软件的几种方式：
 
 ```bash
 # apt-get 安装
@@ -45,6 +45,16 @@
 ~$ wget http://somewhere/your_software.tar.gz
 ~$ tar xzf your_software.tar.gz -C ~/app
 ~$ echo "export PATH=$PATH:$HOME/app/your_software_path
+
+# 下载源代码，编译后安装。具体编译方法参考软件说明文档
+~$ git clone https://github.com/some_rep
+~$ cd some_rep && make
+~$ sudo make install
+or
+~$ wget http://somewhere/software_sourcecode.tar.gz
+~$ tar xzf software_sourcecode.tar.gz -C ~/app
+~$ cd ~/app/software_sourcecode_path && make
+~$ sudo make install
 ```
 
 对于的病原微生物研究人员，掌握一点最基本的 [Linux][] 命令会有很大帮助。注意一下内容 `$` 后面的是输入命令，`#` 后的是解释，在后面的使用中可能会接触到。用 `man 命令名` 可以查看 manual，直接输入 `命令名 -h` 可以查看参数帮助
