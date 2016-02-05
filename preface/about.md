@@ -44,7 +44,8 @@
 # 下载预编译包，解压缩直接运行
 ~$ wget http://somewhere/your_software.tar.gz
 ~$ tar xzf your_software.tar.gz -C ~/app
-~$ echo "export PATH=$PATH:$HOME/app/your_software_path
+~$ echo "export PATH=$PATH:$HOME/app/your_software_path" >> ~/.bashrc
+~$ source ~/.bashrc
 
 # 下载源代码，编译后安装。具体编译方法参考软件说明文档
 ~$ git clone https://github.com/some_rep
