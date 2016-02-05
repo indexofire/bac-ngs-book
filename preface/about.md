@@ -28,7 +28,7 @@
 ~$ mkdir -p data app tmp
 ```
 
-### [Ubuntu][] 常见安装软件的几种方式：
+** [Ubuntu][] 常见安装软件的几种方式：**
 
 ```bash
 # apt-get 安装
