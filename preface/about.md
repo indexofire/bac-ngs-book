@@ -50,7 +50,7 @@
 ~$ git clone https://github.com/some_rep
 ~$ cd some_rep && make
 ~$ sudo make install
-or
+# or
 ~$ wget http://somewhere/software_sourcecode.tar.gz
 ~$ tar xzf software_sourcecode.tar.gz -C ~/app
 ~$ cd ~/app/software_sourcecode_path && make
