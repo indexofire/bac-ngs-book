@@ -69,4 +69,4 @@ TRASH_input
 
 ## Reference 
 
-1. [SUPRI office](http://chiulab.ucsf.edu/surpi)
+1. [SUPRI official](http://chiulab.ucsf.edu/surpi)
