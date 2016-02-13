@@ -20,6 +20,43 @@ Linux 主流发行版一般都会开发自己的软件管理工具，不同发�
 ~$ sudo apt-get install pkg_name
 ```
 
+中国国内由于G×F×W的问题，有时候会导致一些更新服务器无法连接（比如有时候自行添加的launchpad源就无法连接），需要通过一些特殊的手段来克服。方法有许多，这里介绍用socks代理来实现。
+```
+# 安装proxychains4
+~$ git clone https://github.com/rofl0r/proxychains-ng
+~$ cd proxychains-ng
+~$ ./configure --prefix=/usr --sysconfdir=/etc
+~$ make
+~$ sudo make install
+~$ sudo make install-config
+
+# 编辑配置文件
+~$ vim ~/.proxychains.conf
+
+# proxychains.conf
+strict_chain
+proxy_dns
+remote_dns_subnet 224
+tcp_read_time_out 15000
+tcp_connect_time_out 8000
+localnet 127.0.0.0/255.0.0.0
+quiet_mode
+[ProxyList]
+socks5  127.0.0.1 7070
+```
+
+到网上购买一个socks5代理，或者自己买VPS搭建自己的socks代理服务。
+
+```
+# 建立ssh连接
+~$ ssh -qTfnN -D 7070 yoursshuser@yoursshserver.com
+
+# 通过ssh 使用程序
+~$ sudo proxychains4 -q apt-get update
+~$ sudo proxychains4 -q apt-get upgrade
+```
+
+
 如果你不知道在 Ubuntu 软件数据库里你所要安装的软件名称是什么，你可以用正则表达式来匹配。不过这样做有时候会出现匹配结果过多，且结果之间有相互依赖性不符的问题。所以当你不清楚软件包名称时可以先搜索。
 ```
 # 确保软件仓库为最新
