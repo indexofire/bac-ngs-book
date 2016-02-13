@@ -115,5 +115,6 @@
 * *[genohub](https://genohub.com/)* 提供测序技术及相关服务供应商的搜索信息
 * *[AMD](http://www.cdc.gov/amd/index.html)* 美国CDC的病原微生物分子检测
 * *[PHGKB of AMD](https://phgkb.cdc.gov/GAPPKB/amdClip.do?action=home)* 美国CDC的病原微生物知识库中的AMD相关内容
+* *[Clinicl Informatrics News](http://www.clinicalinformaticsnews.com/eCliniqua/clinical_news_and_analysis.aspx)* 临床信息学分析新闻综合
 
 [NGS wiki book]: https://en.wikibooks.org/wiki/Next_Generation_Sequencing_(NGS)
