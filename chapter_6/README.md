@@ -28,7 +28,6 @@ Linux 主流发行版一般都会开发自己的软件管理工具，不同发�
 ~$ sudo apt-cache search fastq
 
 # 打印出结果，你可以看到一些常见的fastq格式文件处理软件，ubuntu软件仓库中都已经包含，可以直接安装。
-
 fastqc - quality control for high throughput sequence data
 fastx-toolkit - FASTQ/A short nucleotide reads pre-processing tools
 librubberband-dev - audio time-stretching and pitch-shifting library (development files)
