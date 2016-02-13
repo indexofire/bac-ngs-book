@@ -19,3 +19,4 @@
 #### Reference
 
 1. An Introduction to Metagenomics Data Analysis. Vall d'Hebron, Insitut de Recerca
+2. [Introduction to Metagenomics Data Analysis](http://www.slideshare.net/ueb52/2013-08mg-training)
