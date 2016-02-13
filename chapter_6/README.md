@@ -6,6 +6,7 @@
 * [Alignment](alignment.md)
 * [Phylogeny](phylogeny.md)
 * [Annotation](annotation.md)
+* [Others](others.md)
 
 **Ubuntu软件安装**
 
