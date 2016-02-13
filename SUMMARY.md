@@ -50,7 +50,7 @@
    * [Circos](appendix/circosmd.md)
    * [Automation Pipeline Framwork](chapter_5/automation_pipeline_framwork.md)
 * [常用软件的安装与设置](chapter_6/README.md)
-   * [others](chapter_6/others.md)
+   * [Others](chapter_6/others.md)
        * [SRA_toolkit](chapter_6/sratoolkit.md)
        * [edirect](chapter_6/edirect.md)
    * [Trimming](chapter_6/trimming.md)
