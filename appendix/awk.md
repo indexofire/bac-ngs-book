@@ -280,3 +280,5 @@ while 控制语句要换行，用4个空格划分控制块。
 ```bash
 ~$  bioawk -c fastx '{print $name, meanqual($seq)}' my_fastq.tar.gz > meanqual.txt
 ```
+
+## Reference
