@@ -84,7 +84,6 @@ bam文件含有比对的信息，可以用`stats`参数查看
 ```r
 > library(ggplot2)
 > cov=read.table("TAP1.coverage.txt", sep="\t")
-> cov[1,]
 > ggplot(cov, aes(x=V3, y=V4)) + geom_bar(stat="identity") + xlab("Coverage") + ylab("Count")
 ```
 
