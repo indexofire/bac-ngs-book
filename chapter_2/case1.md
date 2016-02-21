@@ -215,7 +215,7 @@ Constructing alignment object for core.aln
 
 生成的进化树图类似下图
 
-![Alt text](./RAxML_bestTree.ex.png)
+![Alt text](RAxML_bestTree.ex.png)
 
 >因为比对的是fasta格式的文件，所以snps不止是编码区CDS的，而是整个基因组上的snps。
 
