@@ -90,7 +90,6 @@ bam文件含有比对的信息，可以用`stats`参数查看
 
 ![Alt text](./Rplot.png)
 
-
 #### 2.5 比较1号临床株与环境株的SNPs差异
 
 用同样的方法对其他几个样本进行操作，获得sorted的bam格式文件，用`freebayes`对临床与环境株比较获得vcf文件。然后用vcflib工具过滤`QUAL/AO>10`的部分(VCF元数据部分可以参考[文档](http://samtools.github.io/hts-specs/VCFv4.1.pdf))，并用`wc-l`计算行数统计结果。
