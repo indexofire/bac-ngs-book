@@ -103,7 +103,7 @@
 正常的 sra 文件的 metadata 应该包含测序采用的是 SE 还是 PE 的方式。但如果你不知道所下载的到底是 SE 还是 PE 格式的文件可以用`fastq-dump -X 1 --split-spot`的方法来判断。
 
 ```bash
-# it's SE if nreads=1, and PE when nreads=2
+# it's SE if nreads=1, and PE when nreads=2，统计整个文件，因此速度比较慢
 ~$ sra-stat -xs SRR955386.sra | grep "nreads"
 
 # 如果输出是4，那么就是SE，如果是8,则是PE
