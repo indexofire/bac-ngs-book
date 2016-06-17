@@ -31,12 +31,10 @@
 * 1.3 图形化结果
 弹出的IGV图形界面，下拉菜单选择`Genomes`/`Create .genome File...`,在弹出的窗口中`FASTA file`选项选择基因组fasta文件，在`Gene File`选项选择转换的文件。
 
-#### 2. Circos
-
-circos 是一个高大上的基因组圈图显示工具。它由加拿大的 用 perl 开发。circos 更像一个工具框架，通过对分析数据结果进行配置，从而绘制结果。circos 的学习几乎可以单独出书，这里只简单介绍一下安装和应用，想深入了解可以去官网看教学。目前还没有看到特别深入的 circos 数据，可能参考他人的配置文件对学习更有帮助。
+#### 2. DNAplotter
 
 #### 3. Alas Blast
 
-
+#### 4. Silbea!
 
 [UCSC]: https://genome.ucsc.edu/cgi-bin/hgTracks "UCSC"

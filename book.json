@@ -2,12 +2,20 @@
     "plugins": [
         "mathjax",
         "youtube",
-        "tocstyles",
-        "mermaid-2"
+        "mermaid-2",
+        "atoc",
+        "ga"
     ],
     "pluginsConfig": {
         "mathjax": {
             "forceSVG": true
+        },
+        "atoc": {
+            "addClass": true,
+            "className": "atoc"
+        },
+        "ga": {
+            "token": "UA-55420348-1"
         }
     }
 }

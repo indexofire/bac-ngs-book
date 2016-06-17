@@ -18,24 +18,3 @@ circos 是特别著名的以圈图展示关系型数据的可视化应用程序�
 ```
 $ circos -conf circos.conf
 ```
-
-配置文件的语法风格与XML格式有点接近，但不完全相同。它用`<conf>...</conf>`区分定义功能区块，但与XML不同的是它用 `abc = blablabla` 来赋值。例如：
-
-```
-<ideogram>
-  thickness = 30p
-  fill = yes
-</ideogram>
-<plots>
-  <plot>
-    file = data/set1.txt
-    color = black
-  </plot>
-  <plot>
-    file = data/set2.txt
-    color = red
-  </plot>
-</plots>
-...
-```
-

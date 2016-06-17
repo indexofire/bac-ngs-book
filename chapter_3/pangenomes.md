@@ -19,7 +19,7 @@
 对于pangenomes分析的工具可以参看omictools的pan-genome工具列表，里面罗列了许多软件，大部分都是通过构建自己的pipeline来实现。
 
 
-#### Reference
+## Reference
 
 1. Fitch WM (1970) "Distinguishing homologous from analogous proteins". Syst Zool, 19:99-113.
 2. Li WH, Yang J, Gu X (2005) "Expression divergence between duplicate genes". Trends Genet, 21:602-607.
