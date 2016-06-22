@@ -1,27 +1,42 @@
-## QC 质量控制
+# 质量控制
 
-去除序列接头后，下一步我们要对测序结果的质量进行验证。
+查看测序数据的质量情况。
 
-#### 1. FastQC
+## 1. FastQC
 
+FastQC 可能是最常用，也是最直观的测序数据质量控制软件。
+
+### 安装 FastQC
+
+FastQC 可以在图形界面下运行，如果在不带有图形界面的系统环境里也可以通过生成 html 报告再通过浏览器打开来查看结果。
+
+```bash
+~/tmp$ wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip
+~/tmp$ unzip fastqc_v0.11.5.zip -d ~/app
+~/tmp$ sudo ln -s ~/app/FastQC/fastqc /usr/local/sbin
 ```
-~/tmp$ wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.2.zip
-~/tmp$ unzip fastqc_v0.11.2.zip -d ~/app
-~/tmp$ cd ~/app/FastQC
-~/app$ ./fastqc -f fastq ~/data/*.fastq
+
+```bash
+# run fastqc in GUI mode
+~$ fastqc
+# run fastqc in command line mode
+~$ fastqc -f fastq ~/data/*.fastq
 ```
 
-生成\*.html报告文件和对应的\*.zip压缩，scp传输到本地后用浏览器打开查看。
+### 生成报告
 
-```
-# scp to your linux laptop and open it by google-chrome
-~$ scp -i 
+生成 html 报告文件和对应的 zip 压缩文件，并通过 scp 命令传输到本地后用浏览器打开查看。
+
+```bash
+# scp  your linux/mac desktop system
+~$ scp -i username@server-ip:~/data/* ~/
+# open it by google-chrome
 ~$ google-chrome *.html
 ```
 
+### 结果说明
 
-
-如果只输入`./fastqc`则会调用图形界面显示结果。FastQC结果由11个模块组成，对于结果报告各个模块的说明可以参见 [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) 文档。
+FastQC 结果由11个模块组成，对于结果报告各个模块的说明可以参见 [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) 文档。
 
 | Module | Explanation |
 | -- | -- |
